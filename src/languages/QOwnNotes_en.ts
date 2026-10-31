@@ -8,6 +8,16 @@
         <source>About QOwnNotes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../dialogs/aboutdialog.cpp" line="48"/>
+        <source>&amp;Copy version information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/aboutdialog.cpp" line="55"/>
+        <source>Version information copied</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ActionDialog</name>
@@ -178,7 +188,7 @@
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.ui" line="20"/>
-        <source>Image filename or URL</source>
+        <source>File name or URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -193,55 +203,80 @@
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.ui" line="46"/>
-        <source>Title of the image link</source>
+        <source>Title of the attachment link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.ui" line="49"/>
-        <source>Title</source>
+        <source>The file name will be used if no title is entered</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.ui" line="94"/>
+        <location filename="../dialogs/attachmentdialog.ui" line="52"/>
+        <source>Title (optional)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/attachmentdialog.ui" line="97"/>
         <source>Cancel download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.ui" line="117"/>
+        <location filename="../dialogs/attachmentdialog.ui" line="120"/>
         <source>Download URL</source>
         <comment>The URL will be downloaded</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
+        <location filename="../dialogs/attachmentdialog.cpp" line="23"/>
+        <source>&amp;Insert attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/attachmentdialog.cpp" line="47"/>
         <source>Select file to insert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="148"/>
+        <location filename="../dialogs/attachmentdialog.cpp" line="77"/>
+        <source>This is not a valid path or URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/attachmentdialog.cpp" line="86"/>
+        <source>The file will be downloaded when inserting the attachment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/attachmentdialog.cpp" line="94"/>
+        <source>The file doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/attachmentdialog.cpp" line="183"/>
         <source>Download error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="149"/>
+        <location filename="../dialogs/attachmentdialog.cpp" line="184"/>
         <source>Error while downloading:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="176"/>
-        <location filename="../dialogs/attachmentdialog.cpp" line="198"/>
+        <location filename="../dialogs/attachmentdialog.cpp" line="211"/>
+        <location filename="../dialogs/attachmentdialog.cpp" line="233"/>
         <source>File error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="177"/>
+        <location filename="../dialogs/attachmentdialog.cpp" line="212"/>
         <source>Could not open temporary file:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="199"/>
+        <location filename="../dialogs/attachmentdialog.cpp" line="234"/>
         <source>Could not store downloaded file:
 %1</source>
         <translation type="unfinished"></translation>
@@ -250,7 +285,7 @@
 <context>
     <name>BacklinkWidget</name>
     <message>
-        <location filename="../widgets/backlinkwidget.cpp" line="86"/>
+        <location filename="../widgets/backlinkwidget.cpp" line="91"/>
         <source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -264,7 +299,7 @@
     </message>
     <message>
         <location filename="../services/cloudservice.cpp" line="285"/>
-        <location filename="../services/cloudservice.cpp" line="532"/>
+        <location filename="../services/cloudservice.cpp" line="544"/>
         <source>not connected</source>
         <translation type="unfinished"></translation>
     </message>
@@ -279,139 +314,156 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="368"/>
-        <location filename="../services/cloudservice.cpp" line="369"/>
-        <location filename="../services/cloudservice.cpp" line="377"/>
         <location filename="../services/cloudservice.cpp" line="378"/>
-        <location filename="../services/cloudservice.cpp" line="423"/>
-        <location filename="../services/cloudservice.cpp" line="505"/>
-        <location filename="../services/cloudservice.cpp" line="511"/>
-        <location filename="../services/cloudservice.cpp" line="525"/>
+        <location filename="../services/cloudservice.cpp" line="379"/>
+        <location filename="../services/cloudservice.cpp" line="387"/>
+        <location filename="../services/cloudservice.cpp" line="388"/>
+        <location filename="../services/cloudservice.cpp" line="435"/>
+        <location filename="../services/cloudservice.cpp" line="517"/>
+        <location filename="../services/cloudservice.cpp" line="523"/>
+        <location filename="../services/cloudservice.cpp" line="537"/>
         <source>ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="371"/>
+        <location filename="../services/cloudservice.cpp" line="381"/>
         <source>not correct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="380"/>
+        <location filename="../services/cloudservice.cpp" line="390"/>
         <source>not detected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="425"/>
-        <location filename="../services/cloudservice.cpp" line="527"/>
+        <location filename="../services/cloudservice.cpp" line="437"/>
+        <location filename="../services/cloudservice.cpp" line="539"/>
         <source>not found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="483"/>
-        <location filename="../services/cloudservice.cpp" line="484"/>
+        <location filename="../services/cloudservice.cpp" line="495"/>
+        <location filename="../services/cloudservice.cpp" line="496"/>
         <source>unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="491"/>
+        <location filename="../services/cloudservice.cpp" line="503"/>
         <source>version %1 too low</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="494"/>
+        <location filename="../services/cloudservice.cpp" line="506"/>
         <source>%1: ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="507"/>
-        <location filename="../services/cloudservice.cpp" line="513"/>
+        <location filename="../services/cloudservice.cpp" line="519"/>
+        <location filename="../services/cloudservice.cpp" line="525"/>
         <source>not enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="577"/>
+        <location filename="../services/cloudservice.cpp" line="589"/>
         <source>API app version too low</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="578"/>
+        <location filename="../services/cloudservice.cpp" line="590"/>
         <source>Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1307"/>
-        <location filename="../services/cloudservice.cpp" line="2001"/>
+        <location filename="../services/cloudservice.cpp" line="1358"/>
+        <location filename="../services/cloudservice.cpp" line="2083"/>
         <source>Nextcloud / ownCloud server connection error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1311"/>
+        <location filename="../services/cloudservice.cpp" line="1362"/>
         <source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your Nextcloud / ownCloud configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1328"/>
+        <location filename="../services/cloudservice.cpp" line="1379"/>
         <source>You need to setup your Nextcloud / ownCloud server!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1401"/>
+        <location filename="../services/cloudservice.cpp" line="1452"/>
         <source>Done with loading note versions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1440"/>
+        <location filename="../services/cloudservice.cpp" line="1507"/>
         <source>No versions found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1441"/>
+        <location filename="../services/cloudservice.cpp" line="1508"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1463"/>
+        <location filename="../services/cloudservice.cpp" line="1530"/>
         <source>Done with loading trashed notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1504"/>
+        <location filename="../services/cloudservice.cpp" line="1588"/>
         <source>No trashed notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1505"/>
+        <location filename="../services/cloudservice.cpp" line="1589"/>
         <source>No trashed notes were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1527"/>
-        <location filename="../services/cloudservice.cpp" line="1561"/>
+        <location filename="../services/cloudservice.cpp" line="1609"/>
+        <location filename="../services/cloudservice.cpp" line="1643"/>
         <source>Error while loading todo lists!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1528"/>
+        <location filename="../services/cloudservice.cpp" line="1610"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="1562"/>
+        <location filename="../services/cloudservice.cpp" line="1644"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="2002"/>
+        <location filename="../services/cloudservice.cpp" line="2084"/>
         <source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="2378"/>
+        <location filename="../services/cloudservice.cpp" line="2343"/>
+        <source>Unexpected HTTP response: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="2370"/>
+        <source>Task could not be saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="2371"/>
+        <source>Could not save the task on the server. The cached task has not been changed.
+
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/cloudservice.cpp" line="2500"/>
         <source>No bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="2379"/>
+        <location filename="../services/cloudservice.cpp" line="2501"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -827,6 +879,19 @@ Connection error message: </source>
     </message>
 </context>
 <context>
+    <name>CommandBar</name>
+    <message>
+        <location filename="../dialogs/commandbar.cpp" line="244"/>
+        <source>Search for actions…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/commandbar.cpp" line="257"/>
+        <source>No action matches your search</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DebugOptionSettingsWidget</name>
     <message>
         <location filename="../widgets/settings/debugoptionsettingswidget.ui" line="30"/>
@@ -1020,16 +1085,26 @@ Connection error message: </source>
     </message>
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
+        <source>No dictionaries were downloaded yet. Select a dictionary on the left side to download it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/dictionarymanagerdialog.ui" line="186"/>
         <source>If checked only the downloaded dictionaries will be used</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
+        <location filename="../dialogs/dictionarymanagerdialog.ui" line="189"/>
         <source>Disable external dictionaries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
+        <location filename="../dialogs/dictionarymanagerdialog.ui" line="196"/>
+        <source>Please restart QOwnNotes to use the changed dictionaries.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/dictionarymanagerdialog.ui" line="206"/>
         <source>Delete selected dictionaries</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1559,30 +1634,48 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="270"/>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="278"/>
         <source>Download error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="271"/>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="279"/>
         <source>Error while downloading:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="284"/>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="389"/>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="292"/>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="441"/>
         <source>File error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="285"/>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="293"/>
         <source>Could not store downloaded file:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="390"/>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="397"/>
+        <source>This dictionary was already downloaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="419"/>
+        <source>Delete dictionaries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="420"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="442"/>
         <source>Could not remove dictionary file:
 %1</source>
         <translation type="unfinished"></translation>
@@ -1843,47 +1936,57 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="253"/>
+        <source>Do not append a space after autocompletion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../widgets/settings/editorsettingswidget.ui" line="256"/>
+        <source>Do not insert a space after autocompletion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="266"/>
         <source>Tabs and Indents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="264"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="274"/>
         <source>Use tab character instead of spaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="271"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="281"/>
         <source>Indent:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="301"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="311"/>
         <source>Enable hanging indentation for Markdown lists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="313"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="323"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="316"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="326"/>
         <source>Insert current time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="322"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="332"/>
         <source>Time format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="329"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="339"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/settings/editorsettingswidget.ui" line="339"/>
+        <location filename="../widgets/settings/editorsettingswidget.ui" line="349"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1946,122 +2049,140 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="122"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="131"/>
         <source>Enex files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="123"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="132"/>
         <source>Select Evernote enex file to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="247"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="256"/>
         <source>Invalid XML!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="248"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="257"/>
         <source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="361"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="370"/>
         <source>Basic attributes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="362"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="371"/>
         <source>Created date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="363"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="372"/>
         <source>Updated date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="365"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="374"/>
         <source>Note attributes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="366"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="375"/>
         <source>Subject date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="368"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="377"/>
         <source>Latitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="370"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="379"/>
         <source>Longitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="372"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="381"/>
         <source>Altitude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="374"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="383"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="376"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="385"/>
         <source>Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="378"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="387"/>
         <source>Source URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="380"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="389"/>
         <source>Source application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="383"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="392"/>
         <source>Reminder order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="385"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="394"/>
         <source>Reminder time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="387"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="396"/>
         <source>Reminder done time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="390"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="399"/>
         <source>Place name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="392"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="401"/>
         <source>Content class</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="394"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="403"/>
         <source>Application data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="813"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="459"/>
+        <source>The file couldn&apos;t be opened: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="467"/>
+        <source>Importing notes…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="476"/>
+        <source>%n note(s) were imported</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="827"/>
         <source>Attribute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="813"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="827"/>
         <source>Value</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2069,62 +2190,85 @@ Connection error message: </source>
 <context>
     <name>ExportPrintManager</name>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="46"/>
+        <location filename="../managers/exportprintmanager.cpp" line="50"/>
         <source>Print note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="114"/>
+        <location filename="../managers/exportprintmanager.cpp" line="118"/>
         <source>Letter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="122"/>
+        <location filename="../managers/exportprintmanager.cpp" line="126"/>
         <source>Page size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="122"/>
+        <location filename="../managers/exportprintmanager.cpp" line="126"/>
         <source>Page size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="140"/>
+        <location filename="../managers/exportprintmanager.cpp" line="144"/>
         <source>Portrait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="140"/>
+        <location filename="../managers/exportprintmanager.cpp" line="144"/>
         <source>Landscape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="145"/>
+        <location filename="../managers/exportprintmanager.cpp" line="149"/>
         <source>Orientation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="145"/>
+        <location filename="../managers/exportprintmanager.cpp" line="149"/>
         <source>Orientation:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="164"/>
+        <location filename="../managers/exportprintmanager.cpp" line="176"/>
         <source>PDF files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="165"/>
+        <location filename="../managers/exportprintmanager.cpp" line="177"/>
         <source>Export current note as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="354"/>
+        <location filename="../managers/exportprintmanager.cpp" line="258"/>
+        <source>Select folder for exported PDFs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../managers/exportprintmanager.cpp" line="288"/>
+        <source>PDF export failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../managers/exportprintmanager.cpp" line="289"/>
+        <source>Could not export the note to &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../managers/exportprintmanager.cpp" line="294"/>
+        <source>Exported %n note(s) as PDF.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../managers/exportprintmanager.cpp" line="435"/>
         <source>HTML files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/exportprintmanager.cpp" line="355"/>
+        <location filename="../managers/exportprintmanager.cpp" line="436"/>
         <source>Export current note as HTML file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3882,48 +4026,48 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="40"/>
-        <source>Image filename or URL</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/imagedialog.ui" line="46"/>
+        <location filename="../dialogs/imagedialog.ui" line="56"/>
         <source>Path to file or URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="121"/>
+        <location filename="../dialogs/imagedialog.ui" line="69"/>
+        <source>Title (optional)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="131"/>
         <source>Scaling width:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="217"/>
+        <location filename="../dialogs/imagedialog.ui" line="227"/>
         <source>Crop image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="220"/>
+        <location filename="../dialogs/imagedialog.ui" line="230"/>
         <source>&amp;Crop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="30"/>
+        <location filename="../dialogs/imagedialog.ui" line="40"/>
         <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="33"/>
+        <location filename="../dialogs/imagedialog.ui" line="43"/>
         <source>Don&apos;t copy image to media folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="56"/>
-        <source>Title of the image link</source>
+        <location filename="../dialogs/imagedialog.ui" line="50"/>
+        <source>Image file name or URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="59"/>
-        <source>Title</source>
+        <location filename="../dialogs/imagedialog.ui" line="66"/>
+        <source>Title of the image link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3932,18 +4076,64 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.cpp" line="74"/>
+        <location filename="../dialogs/imagedialog.cpp" line="30"/>
+        <source>&amp;Insert image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="44"/>
+        <source>Image from the clipboard, %1 × %2 pixels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="85"/>
         <source>Image files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.cpp" line="77"/>
+        <location filename="../dialogs/imagedialog.cpp" line="88"/>
         <source>Any files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.cpp" line="83"/>
+        <location filename="../dialogs/imagedialog.cpp" line="94"/>
         <source>Select image to insert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="223"/>
+        <source>This is not a valid path or URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="232"/>
+        <source>The image couldn&apos;t be downloaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="240"/>
+        <source>The downloaded file isn&apos;t an image that can be shown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="246"/>
+        <location filename="../dialogs/imagedialog.cpp" line="281"/>
+        <source>%1 × %2 pixels, %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="264"/>
+        <source>The file doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="269"/>
+        <source>The file is empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="276"/>
+        <source>The file isn&apos;t an image that can be shown</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4495,16 +4685,51 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <context>
     <name>IssueAssistantDialog</name>
     <message>
-        <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
+        <location filename="../dialogs/issueassistantdialog.ui" line="218"/>
         <source>Minimum 8 characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
-        <location filename="../dialogs/issueassistantdialog.ui" line="260"/>
-        <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
-        <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
+        <location filename="../dialogs/issueassistantdialog.ui" line="261"/>
+        <location filename="../dialogs/issueassistantdialog.ui" line="277"/>
+        <location filename="../dialogs/issueassistantdialog.ui" line="293"/>
+        <location filename="../dialogs/issueassistantdialog.ui" line="309"/>
         <source>Minimum 10 characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/issueassistantdialog.cpp" line="84"/>
+        <source>Describe your issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/issueassistantdialog.cpp" line="86"/>
+        <source>Please enter a title with at least 8 characters and at least 10 characters in every text field to continue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/issueassistantdialog.cpp" line="90"/>
+        <source>Log output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/issueassistantdialog.cpp" line="93"/>
+        <source>Debug information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/issueassistantdialog.cpp" line="94"/>
+        <source>The debug information is needed to report a problem.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/issueassistantdialog.cpp" line="97"/>
+        <source>Submit your issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/issueassistantdialog.cpp" line="104"/>
+        <source>Step %1 of %2: %3</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4571,9 +4796,37 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/joplinimportdialog.cpp" line="95"/>
+        <location filename="../dialogs/joplinimportdialog.cpp" line="37"/>
+        <source>Turn on note subfolders for the current note folder to be able to import folders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/joplinimportdialog.cpp" line="105"/>
         <source>Select &apos;RAW - Joplin Export Directory&apos; to import</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/joplinimportdialog.cpp" line="136"/>
+        <source>The selected directory doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/joplinimportdialog.cpp" line="160"/>
+        <source>Importing notes…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/joplinimportdialog.cpp" line="249"/>
+        <source>No Joplin files were found in the selected directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/joplinimportdialog.cpp" line="250"/>
+        <source>%n note(s) were imported</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -5069,57 +5322,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/linkdialog.ui" line="118"/>
-        <location filename="../dialogs/linkdialog.ui" line="165"/>
+        <location filename="../dialogs/linkdialog.ui" line="168"/>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="170"/>
+        <location filename="../dialogs/linkdialog.ui" line="173"/>
         <source>Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="175"/>
+        <location filename="../dialogs/linkdialog.ui" line="178"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="180"/>
+        <location filename="../dialogs/linkdialog.ui" line="183"/>
         <source>Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="200"/>
+        <location filename="../dialogs/linkdialog.ui" line="210"/>
         <source>Search for a heading to link to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="220"/>
-        <source>Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/linkdialog.ui" line="223"/>
-        <source>Create wiki-style link ([[...]])</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/linkdialog.ui" line="237"/>
-        <source>Enter the name of the link (optional)</source>
+        <location filename="../dialogs/linkdialog.ui" line="230"/>
+        <source>The selected note has no headings, the link will point to the whole note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/linkdialog.ui" line="240"/>
+        <source>Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/linkdialog.ui" line="243"/>
+        <source>Create wiki-style link ([[...]])</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/linkdialog.ui" line="257"/>
+        <source>Enter the name of the link (optional)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/linkdialog.ui" line="260"/>
         <source>Name of link (optional)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="250"/>
+        <location filename="../dialogs/linkdialog.ui" line="270"/>
         <source>Enter a description for the link (optional)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="253"/>
+        <location filename="../dialogs/linkdialog.ui" line="273"/>
         <source>Description of link (optional)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5129,33 +5387,82 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="405"/>
+        <location filename="../dialogs/linkdialog.cpp" line="69"/>
+        <source>Fetching the title of the webpage…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/linkdialog.cpp" line="73"/>
+        <source>&amp;Insert link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/linkdialog.cpp" line="237"/>
+        <source>%n note(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/linkdialog.cpp" line="248"/>
+        <source>%1 of %n note(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/linkdialog.cpp" line="485"/>
         <source>Select file to link to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="456"/>
+        <location filename="../dialogs/linkdialog.cpp" line="536"/>
         <source>Select directory to link to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="508"/>
+        <location filename="../dialogs/linkdialog.cpp" line="589"/>
         <source>Select file to link to (relative)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="514"/>
+        <location filename="../dialogs/linkdialog.cpp" line="595"/>
         <source>Select file to link to (absolute)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="521"/>
+        <location filename="../dialogs/linkdialog.cpp" line="602"/>
         <source>Select directory to link to (relative)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="529"/>
+        <location filename="../dialogs/linkdialog.cpp" line="610"/>
         <source>Select directory to link to (absolute)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LoadingOverlayWidget</name>
+    <message>
+        <location filename="../widgets/loadingoverlaywidget.cpp" line="56"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/loadingoverlaywidget.cpp" line="153"/>
+        <source>%1 of %2 received · %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/loadingoverlaywidget.cpp" line="158"/>
+        <source>%1 received · %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/loadingoverlaywidget.cpp" line="161"/>
+        <source>Waiting for the server · %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5168,53 +5475,58 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/localtrashdialog.ui" line="55"/>
-        <source>Find note name</source>
+        <source>Find note name or text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.ui" line="81"/>
+        <location filename="../dialogs/localtrashdialog.ui" line="84"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.ui" line="86"/>
+        <location filename="../dialogs/localtrashdialog.ui" line="89"/>
         <source>Trashed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="45"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="53"/>
+        <source>Select a trashed note to see its text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.cpp" line="58"/>
         <source>Restore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="46"/>
-        <location filename="../dialogs/localtrashdialog.cpp" line="196"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="59"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="228"/>
         <source>Restore selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="53"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="67"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="54"/>
-        <location filename="../dialogs/localtrashdialog.cpp" line="238"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="68"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="270"/>
         <source>Remove selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="99"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="110"/>
         <source>File will be restored to: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="117"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/localtrashdialog.cpp" line="197"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="229"/>
         <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -5222,12 +5534,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="217"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="249"/>
         <source>Notes restored</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="250"/>
         <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -5235,7 +5547,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/localtrashdialog.cpp" line="239"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="271"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -5243,17 +5555,48 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="259"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="291"/>
         <source>Notes removed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/localtrashdialog.cpp" line="260"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="292"/>
         <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/localtrashdialog.cpp" line="353"/>
+        <source>%n trashed note(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/localtrashdialog.cpp" line="354"/>
+        <source>%1 of %n trashed note(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.cpp" line="366"/>
+        <source>No trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.cpp" line="367"/>
+        <source>No trashed note matches the search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.cpp" line="368"/>
+        <source>No trashed note selected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5382,7 +5725,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <location filename="../mainwindow.ui" line="436"/>
         <location filename="../mainwindow.ui" line="504"/>
         <location filename="../mainwindow.ui" line="1014"/>
-        <location filename="../mainwindow.cpp" line="1342"/>
+        <location filename="../mainwindow.cpp" line="1345"/>
         <source>Navigation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6685,10 +7028,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4850"/>
-        <location filename="../mainwindow.cpp" line="4877"/>
-        <location filename="../mainwindow.cpp" line="6135"/>
-        <location filename="../mainwindow.cpp" line="8003"/>
+        <location filename="../mainwindow.cpp" line="4858"/>
+        <location filename="../mainwindow.cpp" line="4885"/>
+        <location filename="../mainwindow.cpp" line="6155"/>
+        <location filename="../mainwindow.cpp" line="8023"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6700,17 +7043,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3465"/>
+        <location filename="../mainwindow.cpp" line="3471"/>
         <source>new version %1 available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3603"/>
+        <location filename="../mainwindow.cpp" line="3609"/>
         <source>Please select the folder where your notes will get stored</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3627"/>
+        <location filename="../mainwindow.cpp" line="3633"/>
         <source>No folder was selected</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6749,97 +7092,97 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4653"/>
+        <location filename="../mainwindow.cpp" line="4661"/>
         <source>Restart application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4654"/>
+        <location filename="../mainwindow.cpp" line="4662"/>
         <source>You may need to restart the application to let the changes take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4843"/>
+        <location filename="../mainwindow.cpp" line="4851"/>
         <source>Todo lists disabled!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4844"/>
+        <location filename="../mainwindow.cpp" line="4852"/>
         <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5575"/>
+        <location filename="../mainwindow.cpp" line="5595"/>
         <source>File extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5575"/>
+        <location filename="../mainwindow.cpp" line="5595"/>
         <source>Extension of file attachment:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5583"/>
+        <location filename="../mainwindow.cpp" line="5603"/>
         <source>File base name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5584"/>
+        <location filename="../mainwindow.cpp" line="5604"/>
         <source>Base name of file attachment:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5585"/>
+        <location filename="../mainwindow.cpp" line="5605"/>
         <source>Leave empty for automatic name</source>
         <comment>Leave the base name empty for automatic name</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5634"/>
+        <location filename="../mainwindow.cpp" line="5654"/>
         <source>Inserted text as text attachment file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5793"/>
+        <location filename="../mainwindow.cpp" line="5813"/>
         <source>Bookmarked note position at slot %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5849"/>
+        <location filename="../mainwindow.cpp" line="5869"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6018"/>
+        <location filename="../mainwindow.cpp" line="6038"/>
         <source>Redo action: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6169"/>
-        <location filename="../mainwindow.cpp" line="6248"/>
+        <location filename="../mainwindow.cpp" line="6189"/>
+        <location filename="../mainwindow.cpp" line="6268"/>
         <source>Inserting image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6174"/>
-        <location filename="../mainwindow.cpp" line="6252"/>
+        <location filename="../mainwindow.cpp" line="6194"/>
+        <location filename="../mainwindow.cpp" line="6272"/>
         <source>Done inserting image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6160"/>
-        <location filename="../mainwindow.cpp" line="6176"/>
+        <location filename="../mainwindow.cpp" line="6180"/>
+        <location filename="../mainwindow.cpp" line="6196"/>
         <source>Inserting attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6162"/>
-        <location filename="../mainwindow.cpp" line="6181"/>
+        <location filename="../mainwindow.cpp" line="6182"/>
+        <location filename="../mainwindow.cpp" line="6201"/>
         <source>Done inserting attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6193"/>
+        <location filename="../mainwindow.cpp" line="6213"/>
         <source>Copied %n note(s) to %1</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -6847,7 +7190,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6203"/>
+        <location filename="../mainwindow.cpp" line="6223"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -6855,7 +7198,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6222"/>
+        <location filename="../mainwindow.cpp" line="6242"/>
         <source>Skipped inserting %n file(s) because the current note is read-only</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -6863,37 +7206,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6236"/>
+        <location filename="../mainwindow.cpp" line="6256"/>
         <source>Saving temporary image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6493"/>
+        <location filename="../mainwindow.cpp" line="6513"/>
         <source>Note folder does not exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6494"/>
+        <location filename="../mainwindow.cpp" line="6514"/>
         <source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7998"/>
+        <location filename="../mainwindow.cpp" line="8018"/>
         <source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8054"/>
+        <location filename="../mainwindow.cpp" line="8076"/>
+        <source>%1 of up to %2 versions found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8107"/>
         <source>No versions available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8055"/>
+        <location filename="../mainwindow.cpp" line="8108"/>
         <source>No versions are available for this note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8259"/>
+        <location filename="../mainwindow.cpp" line="8310"/>
         <source>%n script update(s) were installed</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -6901,94 +7249,104 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8803"/>
+        <location filename="../mainwindow.cpp" line="8572"/>
+        <source>Loading bookmarks…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8573"/>
+        <source>Bookmarks are currently loaded from your Nextcloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8865"/>
         <source>Note path &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8812"/>
+        <location filename="../mainwindow.cpp" line="8874"/>
         <source>Note filename &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8867"/>
+        <location filename="../mainwindow.cpp" line="8929"/>
         <source>Clipboard sent successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8869"/>
+        <location filename="../mainwindow.cpp" line="8931"/>
         <source>Failed to send clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8882"/>
+        <location filename="../mainwindow.cpp" line="8944"/>
         <source>Clipboard text sent successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8885"/>
+        <location filename="../mainwindow.cpp" line="8947"/>
         <source>Failed to send clipboard text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5603"/>
-        <location filename="../mainwindow.cpp" line="6254"/>
+        <location filename="../mainwindow.cpp" line="5623"/>
+        <location filename="../mainwindow.cpp" line="6274"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6297"/>
+        <location filename="../mainwindow.cpp" line="6317"/>
         <source>Downloading %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6473"/>
+        <location filename="../mainwindow.cpp" line="6493"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6984"/>
+        <location filename="../mainwindow.cpp" line="7004"/>
         <source>The scripting engine was reloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8252"/>
+        <location filename="../mainwindow.cpp" line="8303"/>
         <source>A script update was found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8265"/>
+        <location filename="../mainwindow.cpp" line="8316"/>
         <source>Script updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8266"/>
+        <location filename="../mainwindow.cpp" line="8317"/>
         <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8240"/>
+        <location filename="../mainwindow.cpp" line="8291"/>
         <source>No script updates were found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1837"/>
+        <location filename="../mainwindow.cpp" line="1840"/>
         <source>Layout selector</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4622"/>
+        <location filename="../mainwindow.cpp" line="4630"/>
         <source>AI toolbar disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4623"/>
+        <location filename="../mainwindow.cpp" line="4631"/>
         <source>An AI backend is configured, but the AI toolbar is currently disabled. Do you want to turn it on?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6212"/>
+        <location filename="../mainwindow.cpp" line="6232"/>
         <source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -6996,25 +7354,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6270"/>
+        <location filename="../mainwindow.cpp" line="6290"/>
         <source>Paste &amp;HTML as Markdown</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8029"/>
+        <location filename="../mainwindow.cpp" line="8058"/>
         <source>Latest %n note versions are currently gathered from your local git repository</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="8034"/>
-        <source>Done with gathering note versions from git</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8062"/>
+        <location filename="../mainwindow.cpp" line="8055"/>
         <source>Latest %n git versions of note: %1</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7022,369 +7375,380 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8164"/>
+        <location filename="../mainwindow.cpp" line="8215"/>
         <source>Disallow all note editing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8182"/>
+        <location filename="../mainwindow.cpp" line="8233"/>
         <source>Note editing disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8183"/>
+        <location filename="../mainwindow.cpp" line="8234"/>
         <source>Note editing is currently disabled, do you want to allow it again?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8371"/>
+        <location filename="../mainwindow.cpp" line="8422"/>
         <source>Select text files to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8400"/>
+        <location filename="../mainwindow.cpp" line="8451"/>
         <source>Importing: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8466"/>
+        <location filename="../mainwindow.cpp" line="8517"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2794"/>
-        <location filename="../mainwindow.cpp" line="8165"/>
+        <location filename="../mainwindow.cpp" line="8216"/>
         <source>Allow all note editing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4528"/>
+        <location filename="../mainwindow.cpp" line="4536"/>
         <source>Current notes folder: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4529"/>
+        <location filename="../mainwindow.cpp" line="4537"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4871"/>
+        <location filename="../mainwindow.cpp" line="4879"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
-        <location filename="../mainwindow.cpp" line="1315"/>
+        <location filename="../mainwindow.cpp" line="1318"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8385"/>
+        <location filename="../mainwindow.cpp" line="8436"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7195"/>
+        <location filename="../mainwindow.cpp" line="7215"/>
         <source>Create a new folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7195"/>
+        <location filename="../mainwindow.cpp" line="7215"/>
         <source>Folder name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1813"/>
+        <location filename="../mainwindow.cpp" line="1816"/>
         <source>quit toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4821"/>
+        <location filename="../mainwindow.cpp" line="4829"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4826"/>
+        <location filename="../mainwindow.cpp" line="4834"/>
         <source>&amp;Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1730"/>
+        <location filename="../mainwindow.cpp" line="1733"/>
         <source>Your tasks are being loaded from your server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4870"/>
+        <location filename="../mainwindow.cpp" line="4878"/>
         <source>No selected todo lists!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="777"/>
+        <location filename="../mainwindow.cpp" line="780"/>
         <source>Action not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="778"/>
+        <location filename="../mainwindow.cpp" line="781"/>
         <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1288"/>
+        <location filename="../mainwindow.cpp" line="1291"/>
         <source>Subfolders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1297"/>
+        <location filename="../mainwindow.cpp" line="1300"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1306"/>
+        <location filename="../mainwindow.cpp" line="1309"/>
         <source>Note search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1333"/>
+        <location filename="../mainwindow.cpp" line="1336"/>
         <source>Note list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1460"/>
+        <location filename="../mainwindow.cpp" line="1463"/>
         <source>Note edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1359"/>
+        <location filename="../mainwindow.cpp" line="1362"/>
         <source>Note tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1478"/>
+        <location filename="../mainwindow.cpp" line="1481"/>
         <source>Note preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1373"/>
+        <location filename="../mainwindow.cpp" line="1376"/>
         <source>Note relations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1155"/>
+        <location filename="../mainwindow.cpp" line="1158"/>
         <source>Note folder &quot;%1&quot; does not exist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1157"/>
+        <location filename="../mainwindow.cpp" line="1160"/>
         <source>Switched to note folder &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1174"/>
+        <location filename="../mainwindow.cpp" line="1177"/>
         <source>Switched to layout &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1183"/>
+        <location filename="../mainwindow.cpp" line="1186"/>
         <source>KDE Plasma activity changed: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1383"/>
+        <location filename="../mainwindow.cpp" line="1386"/>
         <source>Document overview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1391"/>
+        <location filename="../mainwindow.cpp" line="1394"/>
         <source>Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1400"/>
+        <location filename="../mainwindow.cpp" line="1403"/>
         <source>Scripting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1773"/>
+        <location filename="../mainwindow.cpp" line="1776"/>
         <source>formatting toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1782"/>
+        <location filename="../mainwindow.cpp" line="1785"/>
         <source>inserting toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1789"/>
+        <location filename="../mainwindow.cpp" line="1792"/>
         <source>encryption toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1796"/>
+        <location filename="../mainwindow.cpp" line="1799"/>
         <source>AI toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1803"/>
+        <location filename="../mainwindow.cpp" line="1806"/>
         <source>window toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1808"/>
+        <location filename="../mainwindow.cpp" line="1811"/>
         <source>custom action toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1916"/>
+        <location filename="../mainwindow.cpp" line="1919"/>
         <source>Show %1 panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1960"/>
+        <location filename="../mainwindow.cpp" line="1963"/>
         <source>Show %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2500"/>
+        <location filename="../mainwindow.cpp" line="2503"/>
         <source>Switch to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2559"/>
+        <location filename="../mainwindow.cpp" line="2562"/>
         <source>Could not switch note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2560"/>
+        <location filename="../mainwindow.cpp" line="2563"/>
         <source>Modified notes could not be written to disk. Please resolve the problem and try switching note folders again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2950"/>
+        <location filename="../mainwindow.cpp" line="2956"/>
         <source>Toolbar could not be loaded without name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3339"/>
+        <location filename="../mainwindow.cpp" line="3345"/>
         <source>Read-only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3341"/>
+        <location filename="../mainwindow.cpp" line="3347"/>
         <source>Note editing is disabled, click to enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3356"/>
+        <location filename="../mainwindow.cpp" line="3362"/>
         <source>Line numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3377"/>
+        <location filename="../mainwindow.cpp" line="3383"/>
         <source>Click here to see what has changed and to be able to update to the latest version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3390"/>
+        <location filename="../mainwindow.cpp" line="3396"/>
         <source>Web</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3420"/>
+        <location filename="../mainwindow.cpp" line="3426"/>
         <source>Web app is connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3421"/>
+        <location filename="../mainwindow.cpp" line="3427"/>
         <source>Web app is not connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3444"/>
+        <location filename="../mainwindow.cpp" line="3450"/>
         <source>Web app connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3444"/>
+        <location filename="../mainwindow.cpp" line="3450"/>
         <source>Web app disconnected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3447"/>
+        <location filename="../mainwindow.cpp" line="3453"/>
         <source>Connected systems</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3449"/>
+        <location filename="../mainwindow.cpp" line="3455"/>
         <source>No connected systems</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3628"/>
+        <location filename="../mainwindow.cpp" line="3634"/>
         <source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4396"/>
-        <location filename="../mainwindow.cpp" line="4430"/>
+        <location filename="../mainwindow.cpp" line="4404"/>
+        <location filename="../mainwindow.cpp" line="4438"/>
         <source>Send note to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4403"/>
-        <location filename="../mainwindow.cpp" line="4429"/>
+        <location filename="../mainwindow.cpp" line="4411"/>
+        <location filename="../mainwindow.cpp" line="4437"/>
         <source>Send notes to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5240"/>
+        <location filename="../mainwindow.cpp" line="5253"/>
+        <location filename="../mainwindow.cpp" line="8057"/>
+        <source>Loading note versions…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5254"/>
         <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5258"/>
+        <location filename="../mainwindow.cpp" line="5277"/>
+        <source>Loading trashed notes…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5278"/>
         <source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6127"/>
+        <location filename="../mainwindow.cpp" line="6147"/>
         <source>Insert note file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6128"/>
+        <location filename="../mainwindow.cpp" line="6148"/>
         <source>How should the file &lt;strong&gt;%1&lt;/strong&gt; be handled?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6132"/>
+        <location filename="../mainwindow.cpp" line="6152"/>
         <source>Add as &amp;new note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6134"/>
+        <location filename="../mainwindow.cpp" line="6154"/>
         <source>Insert as &amp;attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6141"/>
+        <location filename="../mainwindow.cpp" line="6161"/>
         <source>The current note is read-only and cannot accept attachments.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6271"/>
+        <location filename="../mainwindow.cpp" line="6291"/>
         <source>Paste as &amp;text file attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6300"/>
+        <location filename="../mainwindow.cpp" line="6320"/>
         <source>Downloading images finished</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4828"/>
-        <location filename="../mainwindow.cpp" line="4849"/>
-        <location filename="../mainwindow.cpp" line="4876"/>
-        <location filename="../mainwindow.cpp" line="8002"/>
+        <location filename="../mainwindow.cpp" line="4836"/>
+        <location filename="../mainwindow.cpp" line="4857"/>
+        <location filename="../mainwindow.cpp" line="4884"/>
+        <location filename="../mainwindow.cpp" line="8022"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7643,32 +8007,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/markdowntabledialog.cpp" line="357"/>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="39"/>
+        <source>&amp;Update table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="72"/>
+        <source>Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="419"/>
         <source>Cannot remove header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/markdowntabledialog.cpp" line="358"/>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="420"/>
         <source>The header row cannot be removed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/markdowntabledialog.cpp" line="362"/>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="424"/>
         <source>Cannot remove row</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/markdowntabledialog.cpp" line="363"/>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="425"/>
         <source>The table must have at least one data row.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/markdowntabledialog.cpp" line="391"/>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="456"/>
         <source>Cannot remove column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/markdowntabledialog.cpp" line="392"/>
+        <location filename="../dialogs/markdowntabledialog.cpp" line="457"/>
         <source>The table must have at least one column.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8058,137 +8432,210 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../dialogs/newnotedialog.ui" line="24"/>
-        <source>Note name</source>
+        <source>Note name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/newnotedialog.ui" line="34"/>
+        <source>Enter the name of the new note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/newnotedialog.cpp" line="28"/>
+        <source>&amp;Create note</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>NextcloudDeckDialog</name>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="84"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="151"/>
         <source>-10min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="63"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="177"/>
         <source>+10min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="77"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="197"/>
         <source>+1d</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="98"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="131"/>
         <source>-1d</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="139"/>
-        <source>Move card to another board or stack</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="41"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="823"/>
+        <source>New card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="142"/>
-        <source>Move…</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="48"/>
+        <source>Select a card from the list, or type a title into the search field and press Enter to create a new card.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="153"/>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="790"/>
-        <source>Archive card</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="58"/>
+        <source>Title:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="156"/>
-        <source>Archive</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="78"/>
+        <source>Set a due date for the card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="167"/>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="775"/>
-        <source>Delete card</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="128"/>
+        <source>Move the due date one day earlier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="170"/>
-        <source>Delete</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="138"/>
+        <source>Move the due date one hour earlier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="213"/>
-        <source>Show archived cards</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="148"/>
+        <source>Move the due date ten minutes earlier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="220"/>
-        <source>This doesn&apos;t work for sub-items, because they may be hidden by the parent item!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="223"/>
-        <source>Show only items due today</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="237"/>
-        <source>Summary</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="278"/>
-        <source>Reload the card item list from server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="281"/>
-        <source>Reload…</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="295"/>
-        <source>Search or create card</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="305"/>
-        <source>Select the board and stack to work with</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="181"/>
-        <source>Create card and insert link into current note</source>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="174"/>
+        <source>Move the due date ten minutes later</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/nextclouddeckdialog.ui" line="184"/>
+        <source>Move the due date one hour later</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="194"/>
+        <source>Move the due date one day later</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="230"/>
+        <source>Add a description using Markdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="258"/>
+        <source>Move card to another board or stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="261"/>
+        <source>Move…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="272"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1023"/>
+        <source>Archive card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="275"/>
+        <source>Archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="286"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1008"/>
+        <source>Delete card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="289"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="313"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="824"/>
+        <source>Create card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="327"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="829"/>
+        <source>Create card, insert a link to it into the current note and close the dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="330"/>
+        <source>Create and insert link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="438"/>
+        <source>Show archived cards</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="445"/>
+        <source>This doesn&apos;t work for sub-items, because they may be hidden by the parent item!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="448"/>
+        <source>Show only items due today</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="478"/>
+        <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="410"/>
+        <source>Summary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="381"/>
+        <source>Search or create card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="368"/>
+        <source>Select the board and stack to work with</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="316"/>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="70"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="187"/>
         <source>+1h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="29"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="68"/>
         <source>Title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="91"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="141"/>
         <source>-1h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="36"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="220"/>
         <source>Description:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="46"/>
-        <location filename="../dialogs/nextclouddeckdialog.ui" line="242"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="81"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="415"/>
         <source>Due date</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8198,47 +8645,54 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="45"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="46"/>
         <source>Insert Nextcloud Deck card links</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="48"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="50"/>
         <source>Search cards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="52"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="54"/>
         <source>Insert links</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="107"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="126"/>
         <source>Save and insert into note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="111"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="130"/>
         <source>Save the current card item and insert a link to it into the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="125"/>
-        <source>Reload from server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="128"/>
+        <location filename="../dialogs/nextclouddeckdialog.ui" line="475"/>
         <source>Reload boards, stacks and cards from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="207"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="153"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="516"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="683"/>
+        <source>Loading Nextcloud Deck cards…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="179"/>
+        <source>Data is currently loaded from your Nextcloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="301"/>
         <source>Do you want to delete the selected Nextcloud Deck card?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="208"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="302"/>
         <source>Do you want to delete %n Nextcloud Deck card(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8246,79 +8700,135 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="210"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="304"/>
         <source>Delete card(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="258"/>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="268"/>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="293"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="352"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="362"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="388"/>
         <source>Move card(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="259"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="353"/>
         <source>The current card has unsaved changes. Discard them and move the saved card?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="270"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="365"/>
         <source>Destination board / stack:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="294"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="389"/>
         <source>There is no other board or stack available. Reload the boards and stacks and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="300"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="395"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="440"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="539"/>
+        <source>Loading Nextcloud Deck boards…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="560"/>
         <source>%1 / %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="590"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="732"/>
         <source>The due date is in the past</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="593"/>
-        <source>No due date</source>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="738"/>
+        <source>The card is due today</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="776"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="741"/>
+        <source>No due date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="782"/>
+        <source>%n card(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="793"/>
+        <source>%1 of %n card(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="815"/>
+        <source>Edit archived card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="816"/>
+        <source>Edit card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="817"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="819"/>
+        <source>Save the changes to the card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="823"/>
+        <source>No card selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="826"/>
+        <source>Create card and keep the dialog open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1009"/>
         <source>Do you want to delete the current Nextcloud Deck card?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="791"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1024"/>
         <source>Do you want to archive the current Nextcloud Deck card?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="841"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1074"/>
         <source>&amp;Open card in browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="844"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1077"/>
         <source>&amp;Add card link to note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="847"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1080"/>
         <source>&amp;Search for card link in notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="858"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1091"/>
         <source>&amp;Move %n card(s)…</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8326,7 +8836,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/nextclouddeckdialog.cpp" line="867"/>
+        <location filename="../dialogs/nextclouddeckdialog.cpp" line="1100"/>
         <source>&amp;Delete %n card(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -8337,92 +8847,92 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>NextcloudDeckService</name>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="147"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="155"/>
         <source>Error while updating card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="148"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="156"/>
         <source>Updating card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="152"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="160"/>
         <source>Error while creating card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="153"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="161"/>
         <source>Creating card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="294"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="302"/>
         <source>Error while archiving card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="406"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="414"/>
         <source>Error while deleting card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="295"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="303"/>
         <source>Archiving the card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="245"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="253"/>
         <source>Error while moving card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="232"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="240"/>
         <source>Moving the card timed out. Reload the cards to check its location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="235"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="243"/>
         <source>The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="240"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="248"/>
         <source>Moving the card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="407"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="415"/>
         <source>Deleting the card failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="526"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="537"/>
         <source>Error while loading boards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="527"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="538"/>
         <source>Loading the boards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="661"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="675"/>
         <source>Error while loading cards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="662"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="676"/>
         <source>Loading the cards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="787"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="805"/>
         <source>Error while loading archived cards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/nextclouddeckservice.cpp" line="788"/>
+        <location filename="../services/nextclouddeckservice.cpp" line="806"/>
         <source>Loading the archived cards failed with status code %1 and message: %2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8431,21 +8941,21 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <name>NoteBookmarkDialog</name>
     <message>
         <location filename="../dialogs/notebookmarkdialog.ui" line="14"/>
-        <source>Note Bookmarks</source>
+        <source>Note bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.ui" line="36"/>
+        <location filename="../dialogs/notebookmarkdialog.ui" line="39"/>
         <source>Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.ui" line="41"/>
+        <location filename="../dialogs/notebookmarkdialog.ui" line="44"/>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.ui" line="46"/>
+        <location filename="../dialogs/notebookmarkdialog.ui" line="49"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8460,28 +8970,46 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.cpp" line="35"/>
-        <location filename="../dialogs/notebookmarkdialog.cpp" line="134"/>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="36"/>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="174"/>
         <source>Delete bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.cpp" line="39"/>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="40"/>
         <source>Delete the selected bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.cpp" line="42"/>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="44"/>
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.cpp" line="46"/>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="48"/>
         <source>Reload the bookmark list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notebookmarkdialog.cpp" line="135"/>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="102"/>
+        <source>Cursor position in the note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="117"/>
+        <source>%n bookmark(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="120"/>
+        <source>No bookmarks are stored yet. Use the &quot;Store bookmark at slot&quot; actions to store the current note and cursor position as bookmark.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notebookmarkdialog.cpp" line="175"/>
         <source>Are you sure you want to delete the bookmark at slot %1?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8494,33 +9022,48 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notedialog.ui" line="42"/>
+        <location filename="../dialogs/notedialog.ui" line="61"/>
         <source>Note text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notedialog.ui" line="74"/>
+        <location filename="../dialogs/notedialog.ui" line="93"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notedialog.cpp" line="30"/>
+        <location filename="../dialogs/notedialog.cpp" line="33"/>
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notedialog.cpp" line="34"/>
+        <location filename="../dialogs/notedialog.cpp" line="37"/>
         <source>Reload the note text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notedialog.cpp" line="37"/>
+        <location filename="../dialogs/notedialog.cpp" line="40"/>
         <source>Jump to note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notedialog.cpp" line="41"/>
+        <location filename="../dialogs/notedialog.cpp" line="44"/>
         <source>Jump to the note in the main window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notedialog.cpp" line="65"/>
+        <source>Folder: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notedialog.cpp" line="68"/>
+        <source>Last modified at %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notedialog.cpp" line="72"/>
+        <source>The note is encrypted and can&apos;t be decrypted</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8532,38 +9075,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="41"/>
+        <location filename="../dialogs/notediffdialog.ui" line="38"/>
         <source>The current note was modified outside of this application!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/notediffdialog.ui" line="48"/>
+        <source>Text with a red background was removed outside of QOwnNotes, text with a green background was added.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notediffdialog.ui" line="58"/>
         <source>Differences:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="76"/>
+        <location filename="../dialogs/notediffdialog.ui" line="86"/>
         <source>Always accept external changes in the future</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="83"/>
+        <location filename="../dialogs/notediffdialog.ui" line="96"/>
         <source>Accept external changes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="69"/>
+        <location filename="../dialogs/notediffdialog.ui" line="79"/>
         <source>Ignore all external modifications in the future</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.cpp" line="34"/>
-        <source>Yes</source>
+        <location filename="../dialogs/notediffdialog.cpp" line="37"/>
+        <source>&amp;Reload from disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.cpp" line="39"/>
-        <source>No</source>
+        <location filename="../dialogs/notediffdialog.cpp" line="38"/>
+        <source>Accept the external changes and load the note text from disk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notediffdialog.cpp" line="45"/>
+        <source>&amp;Keep current text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notediffdialog.cpp" line="47"/>
+        <source>Ignore the external changes and overwrite the note on disk with the current text</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9008,12 +9566,12 @@ Restore current note?</source>
 <context>
     <name>NoteOperationsManager</name>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="54"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="55"/>
         <source>Note has backlinks</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="55"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="56"/>
         <source>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9021,22 +9579,22 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="67"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="68"/>
         <source>Remove current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="68"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="69"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="183"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="184"/>
         <source>Notes have backlinks</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="184"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="185"/>
         <source>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9044,17 +9602,17 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="204"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="205"/>
         <source>Remove selected notes and folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="217"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="218"/>
         <source>Remove selected folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="218"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="219"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9062,7 +9620,7 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="226"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="227"/>
         <source>Remove selected notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9080,7 +9638,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="205"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="206"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
 
 If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</source>
@@ -9090,7 +9648,7 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="228"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="229"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</source>
@@ -9100,18 +9658,18 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="286"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="287"/>
         <source>Removed note subfolder: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="340"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="584"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="341"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="585"/>
         <source>Move selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="341"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="342"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform>Move one selected note to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -9119,13 +9677,13 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="399"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="711"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="400"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="712"/>
         <source>Copy selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="400"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="401"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform>Copy one selected note to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -9133,12 +9691,12 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="426"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="427"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="427"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="428"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation type="unfinished">
             <numerusform>One note was copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -9146,14 +9704,14 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="441"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="468"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="442"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="469"/>
         <source>Note</source>
         <comment>name for new note</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="579"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="580"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9161,7 +9719,7 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="680"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="681"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9169,7 +9727,7 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="706"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="707"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9177,7 +9735,7 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="777"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="778"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9185,48 +9743,48 @@ If the trash is enabled on your Nextcloud / ownCloud server you should be able t
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="820"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="878"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="824"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="885"/>
         <source>Copy to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="820"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="878"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="824"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="885"/>
         <source>Move to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="821"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="879"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="825"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="886"/>
         <source>Copy to this subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="821"/>
-        <location filename="../managers/noteoperationsmanager.cpp" line="879"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="825"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="886"/>
         <source>Move to this subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="894"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="901"/>
         <source>Split note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="895"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="902"/>
         <source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="1064"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1071"/>
         <source>The deleted note(s) had &lt;strong&gt;%1 image(s)&lt;/strong&gt; and &lt;strong&gt;%2 attachment(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="1071"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1078"/>
         <source>The deleted note(s) had &lt;strong&gt;%n image(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</source>
@@ -9236,7 +9794,7 @@ Do you want to delete those files as well?</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="1077"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1084"/>
         <source>The deleted note(s) had &lt;strong&gt;%n attachment(s)&lt;/strong&gt; that are not used in any other note.
 
 Do you want to delete those files as well?</source>
@@ -9246,12 +9804,12 @@ Do you want to delete those files as well?</source>
         </translation>
     </message>
     <message>
-        <location filename="../managers/noteoperationsmanager.cpp" line="1095"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1102"/>
         <source>Delete orphaned images and attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../managers/noteoperationsmanager.cpp" line="1120"/>
+        <location filename="../managers/noteoperationsmanager.cpp" line="1127"/>
         <source>Removed %n orphaned file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -9262,32 +9820,32 @@ Do you want to delete those files as well?</source>
 <context>
     <name>NotePreviewWidget</name>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="332"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="373"/>
         <source>Copy image file path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="333"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="374"/>
         <source>Copy image to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="352"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="393"/>
         <source>Copy link location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="355"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="396"/>
         <source>Export generated raw HTML</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="424"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="465"/>
         <source>HTML files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="426"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="467"/>
         <source>Export preview as raw HTML file</source>
         <comment>&quot;Raw&quot; means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
         <translation type="unfinished"></translation>
@@ -9427,174 +9985,179 @@ Do you want to delete those files as well?</source>
 <context>
     <name>NoteTreeManager</name>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="55"/>
-        <location filename="../managers/notetreemanager.cpp" line="71"/>
+        <location filename="../managers/notetreemanager.cpp" line="57"/>
+        <location filename="../managers/notetreemanager.cpp" line="73"/>
         <source>External diff tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="56"/>
+        <location filename="../managers/notetreemanager.cpp" line="58"/>
         <source>Please select at least two notes to diff.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="72"/>
+        <location filename="../managers/notetreemanager.cpp" line="74"/>
         <source>The external diff tool &lt;strong&gt;%1&lt;/strong&gt; could not be started.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="467"/>
+        <location filename="../managers/notetreemanager.cpp" line="475"/>
         <source>New note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="471"/>
-        <location filename="../managers/notetreemanager.cpp" line="723"/>
+        <location filename="../managers/notetreemanager.cpp" line="483"/>
+        <location filename="../managers/notetreemanager.cpp" line="776"/>
         <source>Rename note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="473"/>
+        <location filename="../managers/notetreemanager.cpp" line="485"/>
         <source>Allows you to rename the filename of the note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="480"/>
+        <location filename="../managers/notetreemanager.cpp" line="492"/>
         <source>&amp;Remove notes and folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="482"/>
+        <location filename="../managers/notetreemanager.cpp" line="494"/>
         <source>&amp;Remove folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="484"/>
+        <location filename="../managers/notetreemanager.cpp" line="496"/>
         <source>&amp;Remove notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="496"/>
+        <location filename="../managers/notetreemanager.cpp" line="508"/>
         <source>&amp;Move notes to…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="497"/>
+        <location filename="../managers/notetreemanager.cpp" line="509"/>
         <source>&amp;Copy notes to…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="532"/>
+        <location filename="../managers/notetreemanager.cpp" line="549"/>
         <source>Jump to the note&apos;s subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="535"/>
+        <location filename="../managers/notetreemanager.cpp" line="552"/>
         <source>Move notes to subfolder…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="538"/>
+        <location filename="../managers/notetreemanager.cpp" line="555"/>
         <source>Copy notes to subfolder…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="546"/>
+        <location filename="../managers/notetreemanager.cpp" line="563"/>
         <source>&amp;Tag selected notes with…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="572"/>
+        <location filename="../managers/notetreemanager.cpp" line="593"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="598"/>
+        <location filename="../managers/notetreemanager.cpp" line="623"/>
         <source>Open selected notes in tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="604"/>
+        <location filename="../managers/notetreemanager.cpp" line="633"/>
         <source>Diff selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="615"/>
+        <location filename="../managers/notetreemanager.cpp" line="637"/>
+        <source>Export selected notes to individual PDFs…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../managers/notetreemanager.cpp" line="650"/>
         <source>Open note in external editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="616"/>
+        <location filename="../managers/notetreemanager.cpp" line="652"/>
         <source>Open note in different window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="618"/>
+        <location filename="../managers/notetreemanager.cpp" line="658"/>
         <source>Open note in Nextcloud Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="619"/>
+        <location filename="../managers/notetreemanager.cpp" line="660"/>
         <source>Open note in Nextcloud Notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="621"/>
+        <location filename="../managers/notetreemanager.cpp" line="663"/>
         <source>Show note in file manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="622"/>
+        <location filename="../managers/notetreemanager.cpp" line="665"/>
         <source>Copy absolute path of note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="623"/>
+        <location filename="../managers/notetreemanager.cpp" line="666"/>
         <source>Copy note filename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="627"/>
+        <location filename="../managers/notetreemanager.cpp" line="671"/>
         <source>Show note git versions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="635"/>
+        <location filename="../managers/notetreemanager.cpp" line="680"/>
         <source>Unmark as favorite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="637"/>
+        <location filename="../managers/notetreemanager.cpp" line="686"/>
         <source>Mark as favorite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="654"/>
+        <location filename="../managers/notetreemanager.cpp" line="707"/>
         <source>Select &amp;all notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="723"/>
+        <location filename="../managers/notetreemanager.cpp" line="776"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="734"/>
+        <location filename="../managers/notetreemanager.cpp" line="787"/>
         <source>Note renaming not enabled!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="735"/>
+        <location filename="../managers/notetreemanager.cpp" line="788"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="740"/>
+        <location filename="../managers/notetreemanager.cpp" line="793"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../managers/notetreemanager.cpp" line="741"/>
+        <location filename="../managers/notetreemanager.cpp" line="794"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9872,22 +10435,22 @@ Do you want to delete those files as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="24"/>
+        <location filename="../dialogs/passworddialog.ui" line="27"/>
         <source>Enter your password:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="34"/>
+        <location filename="../dialogs/passworddialog.ui" line="40"/>
         <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="44"/>
+        <location filename="../dialogs/passworddialog.ui" line="50"/>
         <source>Re-enter password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="54"/>
+        <location filename="../dialogs/passworddialog.ui" line="60"/>
         <source>Passwords don&apos;t match!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9951,6 +10514,14 @@ Do you want to delete those files as well?</source>
         <location filename="../widgets/settings/plasmaactivitiessettingswidget.cpp" line="191"/>
         <location filename="../widgets/settings/plasmaactivitiessettingswidget.cpp" line="199"/>
         <source>Do not change</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PreviewDetails</name>
+    <message>
+        <location filename="../utils/previewdetails.cpp" line="204"/>
+        <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -10597,36 +11168,36 @@ Click &apos;Cancel&apos; to discard your changes and keep the external version.<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1427"/>
+        <location filename="../utils/gui.cpp" line="1469"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1434"/>
+        <location filename="../utils/gui.cpp" line="1476"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../utils/gui.cpp" line="165"/>
-        <location filename="../utils/gui.cpp" line="1467"/>
-        <location filename="../utils/gui.cpp" line="1557"/>
+        <location filename="../utils/gui.cpp" line="1509"/>
+        <location filename="../utils/gui.cpp" line="1599"/>
         <source>Dark mode detected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1468"/>
+        <location filename="../utils/gui.cpp" line="1510"/>
         <source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1480"/>
+        <location filename="../utils/gui.cpp" line="1522"/>
         <source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../utils/gui.cpp" line="171"/>
-        <location filename="../utils/gui.cpp" line="1479"/>
-        <location filename="../utils/gui.cpp" line="1570"/>
+        <location filename="../utils/gui.cpp" line="1521"/>
+        <location filename="../utils/gui.cpp" line="1612"/>
         <source>Light mode detected</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10655,32 +11226,32 @@ Updating the interface takes a short while.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1387"/>
+        <location filename="../utils/gui.cpp" line="1429"/>
         <source>Double-click to unpin note from tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1388"/>
+        <location filename="../utils/gui.cpp" line="1430"/>
         <source>Double-click to pin note to tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1558"/>
+        <location filename="../utils/gui.cpp" line="1600"/>
         <source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1571"/>
+        <location filename="../utils/gui.cpp" line="1613"/>
         <source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1713"/>
+        <location filename="../utils/gui.cpp" line="1755"/>
         <source>Panel disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="1714"/>
+        <location filename="../utils/gui.cpp" line="1756"/>
         <source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10758,13 +11329,13 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="379"/>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="504"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="531"/>
         <source>File name changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="532"/>
         <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -10772,7 +11343,7 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="380"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="505"/>
         <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -10780,23 +11351,18 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/joplinimportdialog.cpp" line="36"/>
-        <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/cloudservice.cpp" line="2493"/>
-        <location filename="../services/cloudservice.cpp" line="2507"/>
+        <location filename="../services/cloudservice.cpp" line="2615"/>
+        <location filename="../services/cloudservice.cpp" line="2629"/>
         <source>Login flow failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="2494"/>
+        <location filename="../services/cloudservice.cpp" line="2616"/>
         <source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server&apos;s admin page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/cloudservice.cpp" line="2508"/>
+        <location filename="../services/cloudservice.cpp" line="2630"/>
         <source>Could not parse login url!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10848,12 +11414,12 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8748"/>
+        <location filename="../mainwindow.cpp" line="8810"/>
         <source>Nextcloud Deck support disabled!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8749"/>
+        <location filename="../mainwindow.cpp" line="8811"/>
         <source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10966,215 +11532,215 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1397"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1412"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1434"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1408"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1423"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1445"/>
         <source>An url was opened at the current cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1729"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1738"/>
         <source>No equation was found in front of the cursor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1750"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="1759"/>
         <source>Result for equation: %1 = %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2867"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2876"/>
         <source>&amp;Link selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2867"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2876"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2874"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2883"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2877"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2886"/>
         <source>Insert block &amp;quote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2883"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2892"/>
         <source>Insert &amp;footnote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2888"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2897"/>
         <source>List operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2899"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2908"/>
         <source>Markdown operations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2914"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2923"/>
         <source>Copy code block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2941"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2950"/>
         <source>Markdown LSP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2942"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2951"/>
         <source>Format document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2947"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2956"/>
         <source>Format selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2957"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2966"/>
         <source>Add table column left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2962"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2971"/>
         <source>Add table column right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2967"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2976"/>
         <source>Add table row above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2972"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2981"/>
         <source>Add table row below</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2977"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2986"/>
         <source>Edit table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2989"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2998"/>
         <source>Print</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="2996"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3005"/>
         <source>Print selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3008"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3017"/>
         <source>Print selected text (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3024"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3033"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3034"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3043"/>
         <source>Export selected text as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3046"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3055"/>
         <source>Export selected text as PDF (preview)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3066"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3075"/>
         <source>Select</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3080"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3089"/>
         <source>Custom actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3181"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3190"/>
         <source>No suggestions for %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3200"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3209"/>
         <source>Ignore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3202"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3211"/>
         <source>Add to Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3117"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3164"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3212"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3126"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3173"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3221"/>
         <source>Spelling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3293"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3302"/>
         <source>Ignore this rule globally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3294"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3303"/>
         <source>Ignore rule %1 globally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3328"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3337"/>
         <source>LanguageTool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3341"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3437"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3350"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3446"/>
         <source>No suggestions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3354"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3363"/>
         <source>More info...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3359"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3449"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3368"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3458"/>
         <source>Ignore this rule</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3369"/>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3458"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3378"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3467"/>
         <source>Ignore word &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3425"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="3434"/>
         <source>Harper</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="4072"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="4081"/>
         <source>Markdown LSP server connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="4166"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="4175"/>
         <source>Filter completions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11271,6 +11837,16 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         <source>Match case sensitive</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.cpp" line="114"/>
+        <source>Current match / number of matches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.cpp" line="705"/>
+        <source>No matches</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QTextEditSearchWidget</name>
@@ -11290,64 +11866,82 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="81"/>
         <source>Find in text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="97"/>
         <source>Search forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="103"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="114"/>
         <source>Search backward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="131"/>
         <source>Replace with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="138"/>
         <source>Replace:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="167"/>
         <source>Plain text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="172"/>
         <source>Whole words</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="177"/>
         <source>Regular expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="198"/>
         <source>Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="208"/>
         <source>Replace All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="221"/>
         <source>Mode:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
+        <location filename="../widgets/qtexteditsearchwidget.ui" line="231"/>
         <source>Match case sensitive</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/qtexteditsearchwidget.cpp" line="365"/>
+        <source>No matches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/qtexteditsearchwidget.cpp" line="367"/>
+        <source>%1 of %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../widgets/qtexteditsearchwidget.cpp" line="369"/>
+        <source>%n match(es)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -11410,33 +12004,33 @@ Are the folder and the file writable?</source>
     </message>
     <message>
         <location filename="../dialogs/scriptrepositorydialog.ui" line="347"/>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="361"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="408"/>
         <source>Installs the script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/scriptrepositorydialog.ui" line="350"/>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="360"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="407"/>
         <source>Install</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.ui" line="503"/>
+        <location filename="../dialogs/scriptrepositorydialog.ui" line="513"/>
         <source>Updates all scripts that have updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.ui" line="506"/>
+        <location filename="../dialogs/scriptrepositorydialog.ui" line="516"/>
         <source>Update all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.ui" line="520"/>
+        <location filename="../dialogs/scriptrepositorydialog.ui" line="530"/>
         <source>Automatically install available updates for scripts installed from the script repository during the startup update check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.ui" line="523"/>
+        <location filename="../dialogs/scriptrepositorydialog.ui" line="533"/>
         <source>Automatically update scripts</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11461,7 +12055,7 @@ Are the folder and the file writable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.ui" line="495"/>
+        <location filename="../dialogs/scriptrepositorydialog.ui" line="498"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11476,114 +12070,161 @@ Are the folder and the file writable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="161"/>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="608"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="133"/>
+        <source>The script repository couldn&apos;t be loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="135"/>
+        <source>%n script(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="137"/>
+        <source>%1 of %n script(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="141"/>
+        <source>The script repository couldn&apos;t be loaded, please check your internet connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="143"/>
+        <source>No script matches your search.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="177"/>
+        <source>This script isn&apos;t supported on your platform</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="178"/>
+        <source>This script needs a newer version of QOwnNotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="185"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="628"/>
+        <source>This script is already installed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="207"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="666"/>
         <source>Script updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="162"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="208"/>
         <source>All scripts are up-to-date.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
         <source>Authors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="336"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="383"/>
         <source>Supported platforms</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="336"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="383"/>
         <source>Supported platform</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="339"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="386"/>
         <source>Open repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="349"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
         <source>Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="350"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="397"/>
         <source>Updates the script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="352"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
         <source>Reinstall</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="353"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="400"/>
         <source>Reinstalls the script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="402"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="449"/>
         <source>Open changelog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="424"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="471"/>
         <source>Changes from version %1 to %2:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="487"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="534"/>
         <source>Platform not supported!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="488"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="535"/>
         <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="502"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="549"/>
         <source>Update app</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="503"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="550"/>
         <source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="576"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="634"/>
         <source>Install successful</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="577"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="635"/>
         <source>The script was successfully installed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="584"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="642"/>
         <source>Download failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="585"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="643"/>
         <source>The script could not be downloaded!</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="609"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="667"/>
         <source>%n script update(s) were installed.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -11826,8 +12467,21 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
-        <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="96"/>
+        <source>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="100"/>
+        <source>No bookmarks were found on the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="115"/>
+        <source>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -12037,95 +12691,100 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="741"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="755"/>
         <source>Shortcut already assigned</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="582"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="649"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="596"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="663"/>
         <source>Undefined shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="585"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="652"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="599"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="666"/>
         <source>Assign a new shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="585"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="653"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="599"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="667"/>
         <source>Reset to default shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="628"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="642"/>
         <source>Clear shortcut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="742"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="756"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1486"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1500"/>
         <source>Reset toolbars and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1487"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1501"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="297"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="311"/>
         <source>enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="130"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="108"/>
+        <source>No settings match your search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="144"/>
         <source>KDE Plasma activities</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="297"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="311"/>
         <source>disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="300"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="314"/>
         <source>Portable mode is currently:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="302"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="316"/>
         <source>In portable mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="303"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="317"/>
         <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="306"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="320"/>
         <source>the settings will be stored in an ini file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="307"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="321"/>
         <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="317"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="331"/>
         <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="323"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="337"/>
         <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12148,17 +12807,22 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/sharedialog.ui" line="53"/>
+        <location filename="../dialogs/sharedialog.ui" line="46"/>
+        <source>Waiting for the link from the server…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/sharedialog.ui" line="56"/>
         <source>Share note on Nextcloud / ownCloud</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/sharedialog.ui" line="60"/>
+        <location filename="../dialogs/sharedialog.ui" line="63"/>
         <source>Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/sharedialog.ui" line="86"/>
+        <location filename="../dialogs/sharedialog.ui" line="96"/>
         <source>Allow note editing</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12168,7 +12832,22 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/sharedialog.cpp" line="69"/>
+        <location filename="../dialogs/sharedialog.cpp" line="27"/>
+        <source>Copy link to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/sharedialog.cpp" line="32"/>
+        <source>The link was copied to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/sharedialog.cpp" line="39"/>
+        <source>Open link in the browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/sharedialog.cpp" line="103"/>
         <source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12331,12 +13010,12 @@ Do you want to install it anyway?</source>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="334"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="347"/>
         <source>Delete selected attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="337"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="350"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12346,97 +13025,126 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="78"/>
         <source>Used in notes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="278"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="291"/>
         <source>Find attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="369"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="379"/>
         <source>Only show attachments that are not used in notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="372"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="382"/>
         <source>Only show orphaned attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="403"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="416"/>
         <source>Only show attachments that are used in the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="406"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="419"/>
         <source>Only show from current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="288"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="301"/>
         <source>Add selected attachments to the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="291"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="304"/>
         <source>Add to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="348"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="361"/>
         <source>Open &amp;attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="309"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
         <source>Open the attachments folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
         <source>Open &amp;folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="323"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="336"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="115"/>
         <source>File size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="194"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
         <source>File type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="220"/>
         <source>File path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="103"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="118"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="198"/>
         <source>Last modified at %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="178"/>
+        <source>No orphaned attachments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="179"/>
+        <source>No attachments in the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="180"/>
+        <source>No attachments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="181"/>
+        <source>No attachment selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="208"/>
+        <source>Used in %n note(s):</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="218"/>
         <source>Path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="217"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="257"/>
         <source>Delete selected files</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="218"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="258"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -12444,57 +13152,73 @@ Do you want to install it anyway?</source>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="321"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="365"/>
         <source>&amp;Open attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="322"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="366"/>
         <source>&amp;Rename attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="323"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="367"/>
         <source>&amp;Delete attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="324"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="368"/>
         <source>&amp;Add attachments to current note</source>
         <translation type="unfinished"></translation>
     </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="415"/>
+        <source>%n attachment(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+        <source>%1 of %n attachment(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="411"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="490"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="491"/>
         <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="504"/>
         <source>File exists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="505"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="515"/>
         <source>File renaming failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="516"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="493"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="572"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12512,32 +13236,32 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="127"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="137"/>
         <source>Add selected images to the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="141"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="151"/>
         <source>Open the media folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="144"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="154"/>
         <source>Open &amp;folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
         <source>Open image externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="168"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="178"/>
         <source>Open image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="130"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
         <source>Add to current note</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12557,105 +13281,165 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="186"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="196"/>
         <source>Only show images that are used in the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="189"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="199"/>
         <source>Only show from current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="244"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="254"/>
         <source>Used in notes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="155"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
         <source>Only show images that are not used in notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="158"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="168"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="98"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="114"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="205"/>
         <source>Last modified at %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="168"/>
-        <source>Path: %1</source>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="169"/>
+        <source>No orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="207"/>
-        <source>Delete selected files</source>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="171"/>
+        <source>No images in the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="172"/>
+        <source>No images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="173"/>
+        <source>No image selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="199"/>
+        <source>%1 × %2 pixels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="201"/>
+        <source>Image can&apos;t be shown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="209"/>
+        <source>Not used in any note</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="208"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="220"/>
+        <source>Used in %n note(s):</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="339"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="230"/>
+        <source>Path: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="269"/>
+        <source>Delete selected files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="270"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="356"/>
+        <source>%n image(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="367"/>
+        <source>%1 of %n image(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="464"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="340"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="465"/>
         <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="352"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="477"/>
         <source>File exists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="353"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="478"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="363"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="488"/>
         <source>File renaming failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="364"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="489"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="434"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="559"/>
         <source>&amp;Open image externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="435"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="560"/>
         <source>&amp;Rename image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="561"/>
         <source>&amp;Delete images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="562"/>
         <source>&amp;Add images to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="469"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="594"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12791,18 +13575,28 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="185"/>
+        <location filename="../dialogs/tabledialog.cpp" line="27"/>
+        <source>&amp;Insert table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tabledialog.cpp" line="218"/>
         <source>CSV files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="185"/>
+        <location filename="../dialogs/tabledialog.cpp" line="218"/>
         <source>All files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="190"/>
+        <location filename="../dialogs/tabledialog.cpp" line="223"/>
         <source>Select CSV file to import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tabledialog.cpp" line="285"/>
+        <source>The clipboard doesn&apos;t contain any text</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12815,12 +13609,17 @@ Do you want to install it anyway?</source>
     </message>
     <message>
         <location filename="../dialogs/tagadddialog.ui" line="30"/>
-        <source>Add new tag</source>
+        <source>Tag name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tagadddialog.ui" line="47"/>
+        <location filename="../dialogs/tagadddialog.ui" line="50"/>
         <source>New tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tagadddialog.cpp" line="12"/>
+        <source>&amp;Add tag</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -13036,12 +13835,17 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/textdiffdialog.ui" line="72"/>
+        <location filename="../dialogs/textdiffdialog.ui" line="55"/>
+        <source>Text with a red background will be removed, text with a green background will be added.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/textdiffdialog.ui" line="82"/>
         <source>Don&apos;t show dialog again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/textdiffdialog.ui" line="79"/>
+        <location filename="../dialogs/textdiffdialog.ui" line="92"/>
         <source>Accept change?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13054,170 +13858,283 @@ Do you want to install it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
-        <location filename="../dialogs/tododialog.ui" line="295"/>
+        <location filename="../dialogs/tododialog.ui" line="215"/>
+        <source>Select a todo item from the list, or type a summary into the search field and press Enter to create a new todo item.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="239"/>
+        <source>Summary:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="262"/>
+        <source>Priority:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="299"/>
+        <location filename="../dialogs/tododialog.ui" line="302"/>
         <source>Priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="323"/>
-        <source>Reminder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.ui" line="123"/>
-        <location filename="../dialogs/tododialog.ui" line="264"/>
+        <location filename="../dialogs/tododialog.ui" line="80"/>
+        <location filename="../dialogs/tododialog.ui" line="252"/>
         <source>Summary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="206"/>
+        <location filename="../dialogs/tododialog.ui" line="353"/>
+        <source>Reminder:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="378"/>
+        <source>Set a reminder for the todo item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="411"/>
+        <source>Tags:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="474"/>
+        <source>Description:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="487"/>
+        <source>Add a description using Markdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="525"/>
+        <source>Insert a link to the todo item into the current note or import it as a note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="539"/>
+        <source>Remove the current todo item (Ctrl+R)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="566"/>
+        <source>Save the current todo item (Ctrl+S)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="569"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="237"/>
+        <location filename="../dialogs/tododialog.ui" line="528"/>
         <source>Note…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="57"/>
+        <location filename="../dialogs/tododialog.ui" line="47"/>
+        <source>Select your todo list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="125"/>
         <source>This doesn&apos;t work for sub-items, because they may be hidden by the parent item!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="60"/>
+        <location filename="../dialogs/tododialog.ui" line="128"/>
         <source>Show only items due today</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="127"/>
+        <location filename="../dialogs/tododialog.cpp" line="146"/>
         <source>Save and insert into note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="223"/>
+        <location filename="../dialogs/tododialog.ui" line="542"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="82"/>
+        <location filename="../dialogs/tododialog.ui" line="118"/>
         <source>Show completed items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="89"/>
+        <location filename="../dialogs/tododialog.ui" line="155"/>
         <source>Reload the todo list from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="92"/>
+        <location filename="../dialogs/tododialog.ui" line="158"/>
         <source>Reload…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="136"/>
+        <location filename="../dialogs/tododialog.ui" line="54"/>
         <source>Search or create todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="371"/>
-        <source>Tags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.ui" line="393"/>
+        <location filename="../dialogs/tododialog.ui" line="448"/>
         <source>Add new tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="128"/>
+        <location filename="../dialogs/tododialog.ui" line="85"/>
         <source>Due date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="106"/>
-        <source>select your todo list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.ui" line="203"/>
-        <source>Save the current todo item</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.cpp" line="131"/>
+        <location filename="../dialogs/tododialog.cpp" line="150"/>
         <source>Save the current todo item and insert a link to it into the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="139"/>
+        <location filename="../dialogs/tododialog.cpp" line="158"/>
         <source>Import the current todo item as new note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="135"/>
+        <location filename="../dialogs/tododialog.cpp" line="154"/>
         <source>Import as note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="220"/>
-        <source>Remove the current todo item</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.ui" line="47"/>
+        <location filename="../dialogs/tododialog.ui" line="93"/>
         <source>Todo list items are being loaded from the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="149"/>
+        <location filename="../dialogs/tododialog.cpp" line="74"/>
+        <location filename="../dialogs/tododialog.cpp" line="597"/>
+        <source>Task could not be saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="75"/>
+        <location filename="../dialogs/tododialog.cpp" line="598"/>
+        <source>Could not load the task from the server. Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="168"/>
         <source>Reload from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="152"/>
+        <location filename="../dialogs/tododialog.cpp" line="171"/>
         <source>Reload tasks from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="155"/>
+        <location filename="../dialogs/tododialog.cpp" line="174"/>
         <source>Clear cache and reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="159"/>
+        <location filename="../dialogs/tododialog.cpp" line="178"/>
         <source>Clear calendar cache and reload tasks from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="613"/>
+        <location filename="../dialogs/tododialog.cpp" line="363"/>
+        <source>The due date is in the past</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="366"/>
+        <source>The todo item is due today</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="558"/>
+        <source>Not set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="564"/>
+        <source>Low</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="567"/>
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="573"/>
+        <source>High</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="578"/>
+        <source>Priority: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="691"/>
         <source>Remove todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="614"/>
+        <location filename="../dialogs/tododialog.cpp" line="692"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message numerus="yes">
+        <location filename="../dialogs/tododialog.cpp" line="798"/>
+        <source>%n todo item(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/tododialog.cpp" line="800"/>
+        <source>%1 of %n todo item(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="911"/>
+        <location filename="../dialogs/tododialog.cpp" line="812"/>
+        <source>Edit completed todo item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="813"/>
+        <source>Edit todo item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="815"/>
+        <source>No todo item selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="1017"/>
         <source>Create sub-task</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="917"/>
+        <location filename="../dialogs/tododialog.cpp" line="1023"/>
         <source>Create new sub-task</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="917"/>
+        <location filename="../dialogs/tododialog.cpp" line="1023"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="918"/>
+        <location filename="../dialogs/tododialog.cpp" line="1024"/>
         <source>New sub-task</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13519,61 +14436,102 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/trashdialog.ui" line="55"/>
-        <source>Find note name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/trashdialog.cpp" line="29"/>
-        <source>&amp;Restore selected note on server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/trashdialog.cpp" line="42"/>
-        <source>&amp;Download selected note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/trashdialog.cpp" line="31"/>
-        <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
+        <source>Find note name or text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/trashdialog.cpp" line="44"/>
+        <source>&amp;Restore selected note on server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="58"/>
+        <source>&amp;Download selected note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="46"/>
+        <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="39"/>
+        <source>Select a trashed note to see its text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="60"/>
         <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="55"/>
+        <location filename="../dialogs/trashdialog.cpp" line="72"/>
         <source>&amp;Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="56"/>
+        <location filename="../dialogs/trashdialog.cpp" line="73"/>
         <source>Delete selected note on server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="63"/>
+        <location filename="../dialogs/trashdialog.cpp" line="81"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
+    <message numerus="yes">
+        <location filename="../dialogs/trashdialog.cpp" line="200"/>
+        <source>%n trashed note(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/trashdialog.cpp" line="201"/>
+        <source>%1 of %n trashed note(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="171"/>
+        <location filename="../dialogs/trashdialog.cpp" line="214"/>
+        <source>Trashed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="216"/>
+        <source>No trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="217"/>
+        <source>No trashed note matches the search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="218"/>
+        <source>No trashed note selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/trashdialog.cpp" line="253"/>
         <source>Delete note on server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="172"/>
+        <location filename="../dialogs/trashdialog.cpp" line="254"/>
         <source>Delete selected trashed note on server?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="190"/>
+        <location filename="../dialogs/trashdialog.cpp" line="274"/>
         <source>Error while deleting note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="191"/>
+        <location filename="../dialogs/trashdialog.cpp" line="275"/>
         <source>Deleting trashed note failed with status code: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13591,201 +14549,231 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="76"/>
+        <location filename="../dialogs/updatedialog.ui" line="83"/>
         <source>Do you want to download the new version?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="83"/>
+        <location filename="../dialogs/updatedialog.ui" line="90"/>
         <source>QOwnNotes will be downloaded in your default browser.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="90"/>
+        <location filename="../dialogs/updatedialog.ui" line="100"/>
         <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="100"/>
+        <location filename="../dialogs/updatedialog.ui" line="110"/>
         <source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="113"/>
+        <location filename="../dialogs/updatedialog.ui" line="123"/>
         <source>%p% downloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="76"/>
+        <location filename="../dialogs/updatedialog.cpp" line="84"/>
         <source>&amp;Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="73"/>
+        <location filename="../dialogs/updatedialog.cpp" line="80"/>
         <source>Just download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="89"/>
-        <source>&amp;Download latest</source>
+        <location filename="../dialogs/updatedialog.cpp" line="68"/>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.cpp" line="71"/>
+        <source>You are currently using version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.cpp" line="82"/>
+        <source>Download the new version without installing it</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.cpp" line="86"/>
+        <source>Download and install the new version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="98"/>
+        <source>&amp;Download latest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.cpp" line="99"/>
+        <source>Open the download of the new version in your browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.cpp" line="108"/>
         <source>&amp;Skip version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="106"/>
+        <location filename="../dialogs/updatedialog.cpp" line="109"/>
+        <source>Don&apos;t show this dialog again for this version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.cpp" line="117"/>
         <source>&amp;Disable dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="107"/>
+        <location filename="../dialogs/updatedialog.cpp" line="118"/>
         <source>Don&apos;t show this dialog automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="115"/>
+        <location filename="../dialogs/updatedialog.cpp" line="126"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="292"/>
+        <location filename="../dialogs/updatedialog.cpp" line="303"/>
         <source>Download error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="293"/>
+        <location filename="../dialogs/updatedialog.cpp" line="304"/>
         <source>Error while downloading:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="295"/>
+        <location filename="../dialogs/updatedialog.cpp" line="306"/>
         <source>network error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="317"/>
-        <location filename="../dialogs/updatedialog.cpp" line="336"/>
-        <location filename="../dialogs/updatedialog.cpp" line="431"/>
-        <location filename="../dialogs/updatedialog.cpp" line="513"/>
-        <location filename="../dialogs/updatedialog.cpp" line="525"/>
+        <location filename="../dialogs/updatedialog.cpp" line="328"/>
+        <location filename="../dialogs/updatedialog.cpp" line="347"/>
+        <location filename="../dialogs/updatedialog.cpp" line="442"/>
+        <location filename="../dialogs/updatedialog.cpp" line="524"/>
+        <location filename="../dialogs/updatedialog.cpp" line="536"/>
         <source>File error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="318"/>
-        <location filename="../dialogs/updatedialog.cpp" line="432"/>
+        <location filename="../dialogs/updatedialog.cpp" line="329"/>
+        <location filename="../dialogs/updatedialog.cpp" line="443"/>
         <source>Could not open temporary file:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="337"/>
+        <location filename="../dialogs/updatedialog.cpp" line="348"/>
         <source>Could not store downloaded file:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="388"/>
+        <location filename="../dialogs/updatedialog.cpp" line="399"/>
         <source>Do you want to update and restart QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="402"/>
-        <location filename="../dialogs/updatedialog.cpp" line="575"/>
-        <location filename="../dialogs/updatedialog.cpp" line="583"/>
-        <location filename="../dialogs/updatedialog.cpp" line="590"/>
-        <location filename="../dialogs/updatedialog.cpp" line="598"/>
-        <location filename="../dialogs/updatedialog.cpp" line="607"/>
-        <location filename="../dialogs/updatedialog.cpp" line="615"/>
+        <location filename="../dialogs/updatedialog.cpp" line="413"/>
+        <location filename="../dialogs/updatedialog.cpp" line="586"/>
+        <location filename="../dialogs/updatedialog.cpp" line="594"/>
+        <location filename="../dialogs/updatedialog.cpp" line="601"/>
+        <location filename="../dialogs/updatedialog.cpp" line="609"/>
+        <location filename="../dialogs/updatedialog.cpp" line="618"/>
+        <location filename="../dialogs/updatedialog.cpp" line="626"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="403"/>
+        <location filename="../dialogs/updatedialog.cpp" line="414"/>
         <source>Could not find updater file:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="487"/>
-        <location filename="../dialogs/updatedialog.cpp" line="501"/>
-        <location filename="../dialogs/updatedialog.cpp" line="540"/>
+        <location filename="../dialogs/updatedialog.cpp" line="498"/>
+        <location filename="../dialogs/updatedialog.cpp" line="512"/>
+        <location filename="../dialogs/updatedialog.cpp" line="551"/>
         <source>Permission error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="502"/>
+        <location filename="../dialogs/updatedialog.cpp" line="513"/>
         <source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="514"/>
+        <location filename="../dialogs/updatedialog.cpp" line="525"/>
         <source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="549"/>
+        <location filename="../dialogs/updatedialog.cpp" line="560"/>
         <source>Restart application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="550"/>
+        <location filename="../dialogs/updatedialog.cpp" line="561"/>
         <source>You now can restart the application to complete the update process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="576"/>
+        <location filename="../dialogs/updatedialog.cpp" line="587"/>
         <source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="584"/>
+        <location filename="../dialogs/updatedialog.cpp" line="595"/>
         <source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="591"/>
-        <location filename="../dialogs/updatedialog.cpp" line="599"/>
+        <location filename="../dialogs/updatedialog.cpp" line="602"/>
+        <location filename="../dialogs/updatedialog.cpp" line="610"/>
         <source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="608"/>
+        <location filename="../dialogs/updatedialog.cpp" line="619"/>
         <source>Couldn&apos;t find updater script: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="616"/>
+        <location filename="../dialogs/updatedialog.cpp" line="627"/>
         <source>Couldn&apos;t find unzip executable: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="387"/>
-        <location filename="../dialogs/updatedialog.cpp" line="620"/>
+        <location filename="../dialogs/updatedialog.cpp" line="398"/>
+        <location filename="../dialogs/updatedialog.cpp" line="631"/>
         <source>Proceed with update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="488"/>
+        <location filename="../dialogs/updatedialog.cpp" line="499"/>
         <source>Your QOwnNotes executable &apos;%1&apos; is not writable! It must be writable by the current user in order to be updated.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="526"/>
+        <location filename="../dialogs/updatedialog.cpp" line="537"/>
         <source>Your old QOwnNotes executable &apos;%1&apos; could not be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="541"/>
+        <location filename="../dialogs/updatedialog.cpp" line="552"/>
         <source>The app file &apos;%1&apos; could not be made executable! You need to make it executable yourself.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="621"/>
+        <location filename="../dialogs/updatedialog.cpp" line="632"/>
         <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13846,24 +14834,80 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.ui" line="65"/>
+        <location filename="../dialogs/versiondialog.ui" line="80"/>
+        <source>Find text in versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.ui" line="157"/>
         <source>Diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.ui" line="101"/>
+        <location filename="../dialogs/versiondialog.ui" line="193"/>
         <source>Note text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.cpp" line="30"/>
+        <location filename="../dialogs/versiondialog.cpp" line="34"/>
+        <source>Select a version to see its changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.cpp" line="35"/>
+        <source>Select a version to see its note text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.cpp" line="40"/>
         <source>&amp;Restore selected version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.cpp" line="37"/>
+        <location filename="../dialogs/versiondialog.cpp" line="44"/>
+        <source>Replace the text of the current note with the selected version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.cpp" line="50"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.cpp" line="203"/>
+        <source>Version from %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.cpp" line="205"/>
+        <source>No versions loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.cpp" line="207"/>
+        <source>No version matches the search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/versiondialog.cpp" line="209"/>
+        <source>No version selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/versiondialog.cpp" line="232"/>
+        <source>%n version(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/versiondialog.cpp" line="243"/>
+        <source>%1 of %n version(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -14260,6 +15304,7 @@ This cannot be undone!</source>
     <name>WebSocketTokenDialog</name>
     <message>
         <location filename="../dialogs/websockettokendialog.ui" line="20"/>
+        <location filename="../dialogs/websockettokendialog.ui" line="72"/>
         <source>Security token</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14269,13 +15314,18 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/websockettokendialog.ui" line="65"/>
+        <location filename="../dialogs/websockettokendialog.ui" line="79"/>
         <source>Generate new token</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/websockettokendialog.ui" line="79"/>
+        <location filename="../dialogs/websockettokendialog.ui" line="93"/>
         <source>Copy token</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/websockettokendialog.cpp" line="58"/>
+        <source>The token was copied to the clipboard.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -14313,88 +15363,109 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <location filename="../dialogs/welcomedialog.cpp" line="196"/>
+        <location filename="../dialogs/welcomedialog.ui" line="175"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="53"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="236"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="191"/>
+        <location filename="../dialogs/welcomedialog.ui" line="201"/>
         <source>Create note folder if not existing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="225"/>
+        <location filename="../dialogs/welcomedialog.ui" line="235"/>
         <source>Note folder path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="232"/>
+        <location filename="../dialogs/welcomedialog.ui" line="242"/>
         <source>Select folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="319"/>
+        <location filename="../dialogs/welcomedialog.ui" line="329"/>
         <source>If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="342"/>
+        <location filename="../dialogs/welcomedialog.ui" line="352"/>
         <source>Open cloud settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="349"/>
+        <location filename="../dialogs/welcomedialog.ui" line="359"/>
         <source>In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="384"/>
+        <location filename="../dialogs/welcomedialog.ui" line="394"/>
         <source>Open network settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="184"/>
+        <location filename="../dialogs/welcomedialog.ui" line="194"/>
         <source>Please select where you want to store your notes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="246"/>
+        <location filename="../dialogs/welcomedialog.ui" line="256"/>
         <source>Show subfolders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="285"/>
+        <location filename="../dialogs/welcomedialog.ui" line="295"/>
         <source>Layout preset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="391"/>
+        <location filename="../dialogs/welcomedialog.ui" line="401"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="106"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="56"/>
+        <source>Layout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.cpp" line="59"/>
+        <source>Nextcloud / ownCloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.cpp" line="62"/>
+        <source>Metrics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.cpp" line="68"/>
+        <source>Step %1 of %2: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.cpp" line="145"/>
         <source>Cannot create note path! You have to create the note folder manually!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="113"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="152"/>
         <source>Cannot create note path!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="118"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="157"/>
         <source>This note path doesn&apos;t exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="186"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="226"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="197"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="237"/>
         <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation type="unfinished"></translation>
     </message>
