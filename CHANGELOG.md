@@ -185,6 +185,13 @@
   in random order, and the linking notes are shown in bold to stand out from their links
 - The match count in the note editor search now uses a color from your color scheme,
   shows "No matches" if nothing was found and explains itself in a tooltip
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v26.10.10](https://github.com/qownnotes/qownnotes-android/releases/tag/v26.10.10)
+  - Search the text of trashed notes in the **Remote trash** dialog, with match counts,
+    highlighted excerpts and a preview that lets you step between matches
+  - The filter menu can limit the search to note names
+  - Releases now use year, month and a monthly release counter like QOwnNotes desktop;
+    existing installations can update normally
 
 ## 26.10.15
 
