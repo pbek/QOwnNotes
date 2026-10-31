@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 26.10.16
+## 26.11.0
 
 - Dialogs that load data now open right away and show a loading overlay with a spinner,
   a progress bar, the elapsed time and a **Cancel** button
