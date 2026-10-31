@@ -9,9 +9,6 @@
 # https://github.com/pbek/QOwnNotes/releases/download/v23.7.0/qownnotes-23.7.0.tar.xz
 #
 
-# uncomment this if you want to force a version
-#QOWNNOTES_VERSION=23.7.0
-
 #BRANCH=main
 BRANCH=release
 
@@ -19,6 +16,14 @@ PROJECT_PATH="/tmp/QOwnNotes-github-$$"
 
 # exit on error
 set -e
+
+ScriptDir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+ExpectedVersion=$(sed 's/[^0-9,.]//g' "$ScriptDir/../../src/version.h")
+if [[ -n ${QOWNNOTES_VERSION:-} && $QOWNNOTES_VERSION != "$ExpectedVersion" ]]; then
+  echo "Refusing version override: expected local version $ExpectedVersion, got $QOWNNOTES_VERSION." >&2
+  exit 1
+fi
+QOWNNOTES_VERSION=$ExpectedVersion
 
 echo "Check if we have a GitHub token (login if not)..."
 # Insecure storage is needed for the GitHub token to be in a file we can mount into the docker container
@@ -42,16 +47,11 @@ echo "Project path: $PROJECT_PATH"
 git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH --recursive
 cd QOwnNotes || exit 1
 
+# Fail before packaging or replacing any assets if the release is not ready.
+bash "$ScriptDir/check-source-release.sh" "$ExpectedVersion"
+
 # build binary translation files
 /usr/lib/qt6/bin/lrelease src/QOwnNotes.pro
-
-if [ -z "$QOWNNOTES_VERSION" ]; then
-  # get version from version.h
-  QOWNNOTES_VERSION=$(cat src/version.h | sed "s/[^0-9,.]//g")
-else
-  # set new version if we want to override it
-  echo "#define VERSION \"$QOWNNOTES_VERSION\"" >src/version.h
-fi
 
 # set the release string
 echo '#define RELEASE "GitHub"' >src/release.h
@@ -109,7 +109,7 @@ echo "Uploading files to GitHub..."
 timeout=$((5 * 60))
 interval=5
 start_time=$(date +%s)
-while ! gh release upload --clobber "v$QOWNNOTES_VERSION" "${archiveFile}"*; do
+while ! gh release upload --repo pbek/QOwnNotes --clobber "v$QOWNNOTES_VERSION" "${archiveFile}"*; do
   now=$(date +%s)
   elapsed=$((now - start_time))
   if [ $elapsed -ge $timeout ]; then

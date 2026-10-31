@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.11.1
+
+- Added a release deployment safeguard that checks the local and remote versions,
+  published GitHub release, and release tag commit before uploading source archives
+
 ## 26.11.0
 
 - Dialogs that load data now open right away and show a loading overlay with a spinner,
