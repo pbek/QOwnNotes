@@ -414,7 +414,7 @@ void StoredImagesDialog::resizeEvent(QResizeEvent *event) {
 }
 
 /**
- * Insert the image into the current note on double click on file list
+ * Opens the image externally on double click on the file list
  *
  * @param item
  * @param column
@@ -422,7 +422,7 @@ void StoredImagesDialog::resizeEvent(QResizeEvent *event) {
 void StoredImagesDialog::on_fileTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column) {
     Q_UNUSED(item)
     Q_UNUSED(column)
-    on_insertButton_clicked();
+    on_openFileButton_clicked();
 }
 
 void StoredImagesDialog::openCurrentNote() {

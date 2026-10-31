@@ -454,7 +454,7 @@ void StoredAttachmentsDialog::on_fileTreeWidget_itemDoubleClicked(QTreeWidgetIte
                                                                   int column) {
     Q_UNUSED(item)
     Q_UNUSED(column)
-    on_insertButton_clicked();
+    on_openFileButton_clicked();
 }
 
 void StoredAttachmentsDialog::openCurrentNote() {

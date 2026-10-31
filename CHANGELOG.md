@@ -4,6 +4,8 @@
 
 - Fixed the stored attachments and stored images dialogs allowing links to be inserted
   into the current note in read-only mode
+- Double-clicking a file in the stored attachments and stored images dialogs now opens
+  it externally instead of inserting a link into the current note
 
 ## 26.11.1
 
