@@ -49,6 +49,7 @@ void StoredImagesDialog::refreshMediaFiles() {
         ui->fileTreeWidget->clear();
         loadCurrentFileDetails();
         updateFileCountLabel();
+        updateActionButtons();
         return;
     }
 
@@ -325,6 +326,10 @@ void StoredImagesDialog::on_insertButton_clicked() {
     }
 
     QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
+    if (textEdit == nullptr || textEdit->isReadOnly()) {
+        return;
+    }
+
     Note note = mainWindow->getCurrentNote();
 
     // insert all selected images
@@ -373,9 +378,13 @@ void StoredImagesDialog::updateFileCountLabel() {
 void StoredImagesDialog::updateActionButtons() {
     const bool hasSelection = !ui->fileTreeWidget->selectedItems().isEmpty();
     const bool hasCurrentItem = ui->fileTreeWidget->currentItem() != nullptr;
+    MainWindow *mainWindow = MainWindow::instance();
+    QOwnNotesMarkdownTextEdit *textEdit =
+        mainWindow == nullptr ? nullptr : mainWindow->activeNoteTextEdit();
+    const bool allowEditing = textEdit != nullptr && !textEdit->isReadOnly();
 
     ui->deleteButton->setEnabled(hasSelection);
-    ui->insertButton->setEnabled(hasSelection);
+    ui->insertButton->setEnabled(hasSelection && allowEditing);
     ui->openFileButton->setEnabled(hasCurrentItem);
     ui->openFolderButton->setEnabled(hasCurrentItem);
 }
@@ -432,6 +441,7 @@ void StoredImagesDialog::openCurrentNote() {
 
     mainWindow->setCurrentNoteFromNoteId(item->data(0, Qt::UserRole).toInt());
     mainWindow->openCurrentNoteInTab();
+    updateActionButtons();
 }
 
 /**
@@ -544,6 +554,8 @@ void StoredImagesDialog::refreshAndJumpToFileName(const QString &fileName) {
 }
 
 void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(const QPoint &pos) {
+    updateActionButtons();
+
     // don't open the most of the context menu if no tags are selected
     const bool hasSelected = ui->fileTreeWidget->selectedItems().count() > 0;
 
@@ -560,6 +572,7 @@ void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(const QPoi
         renameAction = menu.addAction(tr("&Rename image"));
         removeAction = menu.addAction(tr("&Delete images"));
         addAction = menu.addAction(tr("&Add images to current note"));
+        addAction->setEnabled(ui->insertButton->isEnabled());
     }
 
     QAction *selectedItem = menu.exec(globalPos);

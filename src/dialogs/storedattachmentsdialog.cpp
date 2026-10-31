@@ -312,6 +312,10 @@ void StoredAttachmentsDialog::on_insertButton_clicked() {
     }
 
     QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
+    if (textEdit == nullptr || textEdit->isReadOnly()) {
+        return;
+    }
+
     Note note = mainWindow->getCurrentNote();
 
     // insert all selected attachments
@@ -350,6 +354,8 @@ void StoredAttachmentsDialog::on_openFolderButton_clicked() {
 }
 
 void StoredAttachmentsDialog::on_fileTreeWidget_customContextMenuRequested(const QPoint &pos) {
+    updateActionButtons();
+
     // don't open the most of the context menu if no tags are selected
     const bool hasSelected = ui->fileTreeWidget->selectedItems().count() > 0;
 
@@ -366,6 +372,7 @@ void StoredAttachmentsDialog::on_fileTreeWidget_customContextMenuRequested(const
         renameAction = menu.addAction(tr("&Rename attachment"));
         removeAction = menu.addAction(tr("&Delete attachments"));
         addAction = menu.addAction(tr("&Add attachments to current note"));
+        addAction->setEnabled(ui->insertButton->isEnabled());
     }
 
     QAction *selectedItem = menu.exec(globalPos);
@@ -432,9 +439,13 @@ void StoredAttachmentsDialog::updateFileCountLabel() {
 void StoredAttachmentsDialog::updateActionButtons() {
     const bool hasSelection = !ui->fileTreeWidget->selectedItems().isEmpty();
     const bool hasCurrentItem = ui->fileTreeWidget->currentItem() != nullptr;
+    MainWindow *mainWindow = MainWindow::instance();
+    QOwnNotesMarkdownTextEdit *textEdit =
+        mainWindow == nullptr ? nullptr : mainWindow->activeNoteTextEdit();
+    const bool allowEditing = textEdit != nullptr && !textEdit->isReadOnly();
 
     ui->deleteButton->setEnabled(hasSelection);
-    ui->insertButton->setEnabled(hasSelection);
+    ui->insertButton->setEnabled(hasSelection && allowEditing);
     ui->openFileButton->setEnabled(hasCurrentItem);
     ui->openFolderButton->setEnabled(hasCurrentItem);
 }
@@ -462,6 +473,7 @@ void StoredAttachmentsDialog::openCurrentNote() {
 
     mainWindow->setCurrentNoteFromNoteId(item->data(0, Qt::UserRole).toInt());
     mainWindow->openCurrentNoteInTab();
+    updateActionButtons();
 }
 
 void StoredAttachmentsDialog::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,

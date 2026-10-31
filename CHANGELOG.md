@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.11.2
+
+- Fixed the stored attachments and stored images dialogs allowing links to be inserted
+  into the current note in read-only mode
+
 ## 26.11.1
 
 - Added a release deployment safeguard that checks the local and remote versions,
