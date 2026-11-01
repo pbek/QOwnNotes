@@ -2,6 +2,9 @@
 
 ## 26.11.2
 
+- Added an **Enable font ligatures** option in the editor font settings for regular text
+  and code (requires Qt 6.7 or newer and a ligature-capable font; restart required)
+  (for [#3830](https://github.com/pbek/QOwnNotes/issues/3830))
 - Added built-in [OpenRouter](https://openrouter.ai/) AI support, listed first in the
   AI settings with encrypted API-key storage and a connection test
   (for [#3829](https://github.com/pbek/QOwnNotes/issues/3829))

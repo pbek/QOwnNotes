@@ -6,7 +6,9 @@
 #include <QtTest>
 
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+#include "services/settingsservice.h"
 #include "utils/gui.h"
+#include "utils/schema.h"
 
 namespace {
 QTextCharFormat formatAt(const QTextBlock &block, int position) {
@@ -24,6 +26,45 @@ QTextCharFormat formatAt(const QTextBlock &block, int position) {
     return {};
 }
 }    // namespace
+
+void TestQMarkdownTextEdit::testEditorFontLigatures() {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    SettingsService settings;
+    const auto key = QStringLiteral("Editor/enableFontLigatures");
+    const bool hadValue = settings.contains(key);
+    const auto oldValue = settings.value(key);
+    auto *schema = Utils::Schema::schemaSettings;
+
+    settings.remove(key);
+    const QFont defaultTextFont = schema->getEditorTextFont();
+    const QFont defaultCodeFont = schema->getEditorFixedFont();
+    settings.setValue(key, true);
+    const QFont textFont = schema->getEditorTextFont();
+    const QFont codeFont = schema->getEditorFixedFont();
+    settings.setValue(key, false);
+    const QFont restoredTextFont = schema->getEditorTextFont();
+    const QFont restoredCodeFont = schema->getEditorFixedFont();
+
+    if (hadValue) {
+        settings.setValue(key, oldValue);
+    } else {
+        settings.remove(key);
+    }
+
+    for (const QFont &font : {textFont, codeFont}) {
+        QCOMPARE(font.featureValue("liga"), quint32(1));
+        QCOMPARE(font.featureValue("clig"), quint32(1));
+        QCOMPARE(font.featureValue("calt"), quint32(1));
+        QVERIFY(!(font.styleStrategy() & QFont::PreferNoShaping));
+    }
+    QCOMPARE(restoredTextFont, defaultTextFont);
+    QCOMPARE(restoredCodeFont, defaultCodeFont);
+    QCOMPARE(textFont.family(), defaultTextFont.family());
+    QCOMPARE(codeFont.family(), defaultCodeFont.family());
+#else
+    QSKIP("Explicit font ligature control requires Qt 6.7 or newer.");
+#endif
+}
 
 void TestQMarkdownTextEdit::testUpFromStartOfSecondLineMovesToFirstLine() {
     QMarkdownTextEdit editor;

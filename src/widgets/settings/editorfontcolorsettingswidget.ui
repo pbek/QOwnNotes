@@ -113,7 +113,17 @@
         </property>
        </widget>
       </item>
-     </layout>
+       <item row="2" column="0" colspan="4">
+        <widget class="QCheckBox" name="enableFontLigaturesCheckBox">
+         <property name="toolTip">
+          <string>Enable standard and contextual ligatures in editor text and code. Requires a font with ligature support, such as Fira Code. When unchecked, the font's default behavior is used. Restart required.</string>
+         </property>
+         <property name="text">
+          <string>Enable font ligatures</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
     </widget>
    </item>
    <item>

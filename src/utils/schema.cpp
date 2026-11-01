@@ -28,6 +28,23 @@
 
 Utils::Schema::Settings* Utils::Schema::schemaSettings = nullptr;
 
+namespace {
+void applyEditorLigatures(QFont& font) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    if (SettingsService().value(QStringLiteral("Editor/enableFontLigatures"), false).toBool()) {
+        // Contextual alternates are used for programming ligatures by fonts like Fira Code.
+        font.setStyleStrategy(
+            static_cast<QFont::StyleStrategy>(font.styleStrategy() & ~QFont::PreferNoShaping));
+        font.setFeature("liga", 1);
+        font.setFeature("clig", 1);
+        font.setFeature("calt", 1);
+    }
+#else
+    Q_UNUSED(font)
+#endif
+}
+}    // namespace
+
 /** The default schema table is initialized here, precisely once, as loading
  * a settings object from a resource is expensive, unlike most other uses of
  * QSettings. Only call this once, when setting Utils::Schema::schemaSettings */
@@ -398,6 +415,7 @@ QFont Utils::Schema::Settings::getEditorTextFont() const {
         settings.setValue(QStringLiteral("MainWindow/noteTextEdit.font"), fontString);
     }
 
+    applyEditorLigatures(font);
     return font;
 }
 
@@ -427,6 +445,7 @@ QFont Utils::Schema::Settings::getEditorFixedFont() const {
         settings.setValue(QStringLiteral("MainWindow/noteTextEdit.code.font"), font.toString());
     }
 
+    applyEditorLigatures(font);
     return font;
 }
 

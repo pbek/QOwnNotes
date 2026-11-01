@@ -28,6 +28,14 @@ EditorFontColorSettingsWidget::EditorFontColorSettingsWidget(QWidget *parent)
     : QWidget(parent), ui(new Ui::EditorFontColorSettingsWidget) {
     ui->setupUi(this);
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
+    ui->enableFontLigaturesCheckBox->setEnabled(false);
+    ui->enableFontLigaturesCheckBox->setToolTip(
+        tr("Font ligature control requires Qt 6.7 or newer."));
+#endif
+    connect(ui->enableFontLigaturesCheckBox, &QCheckBox::clicked, this,
+            [this]() { emit needRestart(); });
+
     // Connect schema change signal to apply dark mode settings
     connect(ui->editorFontColorWidget, &FontColorWidget::schemaChanged, this,
             []() { Utils::Gui::applyDarkModeSettings(); });
@@ -45,9 +53,17 @@ void EditorFontColorSettingsWidget::readSettings() {
     noteTextEditCodeFont.fromString(
         settings.value(QStringLiteral("MainWindow/noteTextEdit.code.font")).toString());
     setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
+    ui->enableFontLigaturesCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/enableFontLigatures"), false).toBool());
 }
 
-void EditorFontColorSettingsWidget::storeSettings() { storeFontSettings(); }
+void EditorFontColorSettingsWidget::storeSettings() {
+    storeFontSettings();
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    SettingsService().setValue(QStringLiteral("Editor/enableFontLigatures"),
+                               ui->enableFontLigaturesCheckBox->isChecked());
+#endif
+}
 
 void EditorFontColorSettingsWidget::setWikiLinkItemsVisible(bool visible) {
     ui->editorFontColorWidget->setWikiLinkItemsVisible(visible);
