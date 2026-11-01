@@ -17,7 +17,9 @@
 #include <QDebug>
 #include <QEvent>
 #include <QKeyEvent>
+#include <QRegularExpression>
 #include <QScrollBar>
+#include <QTextBlock>
 #include <QTextBoundaryFinder>
 
 #include "ui_qtexteditsearchwidget.h"
@@ -254,8 +256,46 @@ bool QTextEditSearchWidget::doReplace(bool forAll) {
 
     int searchMode = ui->modeComboBox->currentIndex();
     if (searchMode == RegularExpressionMode) {
-        QString text = c.selectedText();
-        text.replace(QRegularExpression(ui->searchLineEdit->text()), ui->replaceLineEdit->text());
+        const QRegularExpression expression(ui->searchLineEdit->text(),
+                                            ui->matchCaseSensitiveButton->isChecked()
+                                                ? QRegularExpression::NoPatternOption
+                                                : QRegularExpression::CaseInsensitiveOption);
+        // Match in the same block as QTextDocument::find(), preserving lookaround context
+        // and block anchors. Qt treats non-breaking spaces as ordinary spaces when searching.
+        const QTextBlock block = c.document()->findBlock(c.selectionStart());
+        QString blockText = block.text();
+        blockText.replace(QChar::Nbsp, QLatin1Char(' '));
+        const int offset = c.selectionStart() - block.position();
+        const QRegularExpressionMatch match = expression.match(blockText, offset);
+        if (!match.hasMatch() || match.capturedStart() != offset ||
+            match.capturedLength() != c.selectionEnd() - c.selectionStart()) {
+            return false;
+        }
+
+        // Expand QString::replace()'s one- or two-digit capture references without
+        // re-matching the selection or interpreting backslashes in captured text.
+        const QString replacement = ui->replaceLineEdit->text();
+        QString text;
+        for (int i = 0; i < replacement.size(); ++i) {
+            if (replacement.at(i) == QLatin1Char('\\') && i + 1 < replacement.size()) {
+                int group = replacement.at(i + 1).digitValue();
+                if (group > 0 && group <= expression.captureCount()) {
+                    ++i;
+                    if (i + 1 < replacement.size()) {
+                        const int digit = replacement.at(i + 1).digitValue();
+                        if (digit >= 0 && group * 10 + digit <= expression.captureCount()) {
+                            group = group * 10 + digit;
+                            ++i;
+                        }
+                    }
+                    // Copy the original characters, including any non-breaking spaces.
+                    text +=
+                        block.text().mid(match.capturedStart(group), match.capturedLength(group));
+                    continue;
+                }
+            }
+            text += replacement.at(i);
+        }
         c.insertText(text);
     } else {
         c.insertText(ui->replaceLineEdit->text());

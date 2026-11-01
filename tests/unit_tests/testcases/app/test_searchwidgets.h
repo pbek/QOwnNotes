@@ -13,6 +13,11 @@ class TestSearchWidgets : public QObject {
     void testSuccessfulSearchWraps();
     void testFailedSelectionOnlySearchPreservesPosition();
     void testCloudTrashTextSearch();
+    void testRegexReplacement_data();
+    void testRegexReplacement();
+    void testRegexReplacementRejectsStaleSelection();
+    void testSelectionOnlyRegexReplacement();
+    void testPlainAndWholeWordReplacement();
 };
 
 #endif    // TESTSEARCHWIDGETS_H

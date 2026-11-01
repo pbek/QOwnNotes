@@ -2,6 +2,9 @@
 
 ## 26.11.2
 
+- Fixed regular expression replacements losing surrounding text context, so lookarounds
+  and word-boundary checks work correctly, while preserving capture references and case sensitivity
+  (for [#3831](https://github.com/pbek/QOwnNotes/issues/3831))
 - Added an **Enable font ligatures** option in the editor font settings for regular text
   and code (requires Qt 6.7 or newer and a ligature-capable font; restart required)
   (for [#3830](https://github.com/pbek/QOwnNotes/issues/3830))
