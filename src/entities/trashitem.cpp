@@ -200,6 +200,12 @@ bool TrashItem::restoreFile() {
  * @return
  */
 QString TrashItem::restorationFilePath() {
+    // The trash database is stored in the (possibly synced) note folder, so
+    // the file name must not be able to point outside the note folder
+    if (!Utils::Misc::isSafeFileName(fileName)) {
+        return QString();
+    }
+
     auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData);
     QString folderPath = noteSubFolder.fullPath();
     QString filePath = folderPath + QDir::separator() + fileName;

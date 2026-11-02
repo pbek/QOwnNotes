@@ -220,6 +220,25 @@ void TestNotes::testNoteFileWritesStayInsideNoteFolder() {
     QVERIFY(parentSubFolder.remove());
 }
 
+namespace {
+class UnsafeTrashItem : public TrashItem {
+   public:
+    void setUnsafeFileName(const QString &name) { fileName = name; }
+};
+}    // namespace
+
+void TestNotes::testTrashRestoreRejectsUnsafeFileName() {
+    UnsafeTrashItem trashItem;
+    trashItem.setUnsafeFileName(QStringLiteral("../escape.md"));
+    QVERIFY(trashItem.restorationFilePath().isEmpty());
+
+    trashItem.setUnsafeFileName(QStringLiteral("..\\escape.md"));
+    QVERIFY(trashItem.restorationFilePath().isEmpty());
+
+    trashItem.setUnsafeFileName(uniqueTestName(QStringLiteral("restore")) + QStringLiteral(".md"));
+    QVERIFY(!trashItem.restorationFilePath().isEmpty());
+}
+
 void TestNotes::testJoplinImportRejectsUnsafePaths() {
     JoplinImportDialog dialog;
 
