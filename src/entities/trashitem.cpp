@@ -209,6 +209,13 @@ QString TrashItem::restorationFilePath() {
     auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData);
     QString folderPath = noteSubFolder.fullPath();
     QString filePath = folderPath + QDir::separator() + fileName;
+    if (noteSubFolder.isFetched() &&
+        !Utils::Misc::isSafeRelativePath(noteSubFolder.relativePath() + QChar('/') + fileName)) {
+        return QString();
+    }
+    if (!Utils::Misc::isPathInDirectory(filePath, Note::getFullFilePathForFile(QString()))) {
+        return QString();
+    }
 
     QFile file(filePath);
     // prepend the current timestamp if the file already exists
