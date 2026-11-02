@@ -20,6 +20,8 @@
     at their original, unsafe paths
   - Media and attachment transfers reject symlink escapes while preserving links within
     their folders
+  - Image filename extensions alone are not trusted when exporting HTML; extensionless
+    images and long-header SVGs remain supported
 
 ## 26.11.2
 

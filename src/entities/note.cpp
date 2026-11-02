@@ -16,6 +16,7 @@
 #include <QFileInfo>
 #include <QFutureWatcher>
 #include <QHash>
+#include <QImageReader>
 #include <QMessageBox>
 #include <QMimeDatabase>
 #include <QQueue>
@@ -28,6 +29,7 @@
 #include <QTextBoundaryFinder>
 #include <QThread>
 #include <QUrl>
+#include <QXmlStreamReader>
 #include <QtConcurrent/QtConcurrentRun>
 #include <algorithm>
 #include <utility>
@@ -4900,17 +4902,37 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
             }
 
             QMimeDatabase db;
-            const QMimeType type = db.mimeTypeForFile(file.fileName());
+            const QMimeType contentType =
+                db.mimeTypeForFile(file.fileName(), QMimeDatabase::MatchContent);
+            QImageReader reader(file.fileName());
+            bool recognizedImage =
+                contentType.name().startsWith(QLatin1String("image/")) || reader.canRead();
+            bool recognizedSvg = false;
+            if (!recognizedImage) {
+                // Recognize long-header SVGs even when no SVG image plugin is installed.
+                QXmlStreamReader xml(&file);
+                recognizedSvg = xml.readNextStartElement() && xml.name() == QLatin1String("svg") &&
+                                xml.namespaceUri() == QLatin1String("http://www.w3.org/2000/svg");
+                recognizedImage = recognizedSvg;
+                file.seek(0);
+            }
 
             // Notes can reference any local file as an image, so only embed images
             // to prevent exports from leaking other files like keys or configs
-            if (!type.name().startsWith(QLatin1String("image/"))) {
+            if (!recognizedImage) {
                 qWarning() << __func__ << " - Not embedding non-image file:" << fileName;
 
                 continue;
             }
 
             const QByteArray ba = file.readAll();
+            // Content detection handles extensionless images; the decoder also
+            // recognizes SVGs whose long XML headers exceed MIME sniffing limits.
+            const QMimeType type = recognizedSvg
+                                       ? db.mimeTypeForName(QStringLiteral("image/svg+xml"))
+                                       : (contentType.name().startsWith(QLatin1String("image/"))
+                                              ? contentType
+                                              : db.mimeTypeForFile(file.fileName()));
 
             result.replace(QRegularExpression(QStringLiteral("<img(.+?)src=\"") +
                                               QRegularExpression::escape(fileUrl) + QChar('"')),
