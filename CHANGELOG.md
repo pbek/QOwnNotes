@@ -5,6 +5,15 @@
 - Fixed unsafe media and attachment paths being followed when copying, moving, or
   exporting notes (thank you, r3vpwnx)
   (for [GHSA-fmqx-8x8h-gf76](https://github.com/pbek/QOwnNotes/security/advisories/GHSA-fmqx-8x8h-gf76))
+- Hardened file and folder names from notes, imports, the local trash and remote data, so they
+  can no longer lead to files outside their folders being read, written or deleted
+  (for [#3836](https://github.com/pbek/QOwnNotes/issues/3836))
+  - The **Files** navigation panel ignores media and attachment links that aren't plain file names
+  - Note files, including notes created from wiki links or server data, are never stored outside
+    the note folder
+  - The Joplin import cleans up folder names and resource file extensions
+  - Trashed notes, and scripts from the script repository, are only used with plain file names
+  - Exporting a note as HTML with embedded images only embeds files that are real images
 
 ## 26.11.2
 
