@@ -264,7 +264,7 @@ void TestNotes::testHtmlExportEmbedsOnlyImages() {
     QVERIFY(temporaryDirectory.isValid());
 
     const QByteArray secretContent = QByteArrayLiteral("TOP-SECRET-PRIVATE-KEY-CONTENT");
-    const QString secretPath = temporaryDirectory.filePath(QStringLiteral("secret.png"));
+    const QString secretPath = temporaryDirectory.filePath(QStringLiteral("id_rsa"));
     QFile secretFile(secretPath);
     QVERIFY(secretFile.open(QIODevice::WriteOnly));
     QCOMPARE(secretFile.write(secretContent), qint64(secretContent.size()));
@@ -275,14 +275,24 @@ void TestNotes::testHtmlExportEmbedsOnlyImages() {
     image.fill(Qt::red);
     QVERIFY(image.save(imagePath, "PNG"));
 
+    // SVG images with a long header must still be embedded
+    const QString svgPath = temporaryDirectory.filePath(QStringLiteral("image.svg"));
+    QFile svgFile(svgPath);
+    QVERIFY(svgFile.open(QIODevice::WriteOnly));
+    svgFile.write(QByteArrayLiteral("<?xml version=\"1.0\"?>\n<!--") + QByteArray(600, 'x') +
+                  QByteArrayLiteral("-->\n<svg xmlns=\"http://www.w3.org/2000/svg\"/>\n"));
+    svgFile.close();
+
     Note note;
-    note.setNoteText(QStringLiteral("# Export\n\n![secret](%1)\n\n![image](%2)\n")
+    note.setNoteText(QStringLiteral("# Export\n\n![secret](%1)\n\n![image](%2)\n\n![svg](%3)\n")
                          .arg(QUrl::fromLocalFile(secretPath).toString(),
-                              QUrl::fromLocalFile(imagePath).toString()));
+                              QUrl::fromLocalFile(imagePath).toString(),
+                              QUrl::fromLocalFile(svgPath).toString()));
     const QString html = note.toMarkdownHtml(notesPath, 980, true, true, true);
 
     QVERIFY(!html.contains(QString::fromLatin1(secretContent.toBase64())));
     QVERIFY(html.contains(QStringLiteral("data:image/png;base64,")));
+    QVERIFY(html.contains(QStringLiteral("data:image/svg+xml;base64,")));
 }
 
 void TestNotes::testJoplinImportRejectsUnsafePaths() {

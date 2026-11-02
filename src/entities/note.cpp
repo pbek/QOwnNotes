@@ -4887,10 +4887,10 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath, int maxI
             }
 
             QMimeDatabase db;
-            const QMimeType type = db.mimeTypeForFile(file.fileName(), QMimeDatabase::MatchContent);
+            const QMimeType type = db.mimeTypeForFile(file.fileName());
 
-            // Notes can reference any local file as an image, so only embed real
-            // images to prevent exports from leaking other files like keys or configs
+            // Notes can reference any local file as an image, so only embed images
+            // to prevent exports from leaking other files like keys or configs
             if (!type.name().startsWith(QLatin1String("image/"))) {
                 qWarning() << __func__ << " - Not embedding non-image file:" << fileName;
 
