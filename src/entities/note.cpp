@@ -2631,6 +2631,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
+    const bool oldNoteFilePathIsSafe = Utils::Misc::isSafeRelativePath(relativeNoteFilePath());
     TrashItem trashItem = TrashItem::prepare(this);
 
     if (allowDifferentFileName()) {
@@ -2644,6 +2645,15 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     const QString newName = _name;
     bool noteFileWasRenamed = false;
+
+    // Note and subfolder names can come from synced, imported or linked data,
+    // so never read, rename or write note files outside the note folder
+    if (!Utils::Misc::isSafeRelativePath(relativeNoteFilePath()) ||
+        (oldName != newName && !oldNoteFilePathIsSafe)) {
+        qWarning() << __func__ << " - Refusing to store note outside of the note folder:"
+                   << relativeNoteFilePath();
+        return false;
+    }
 
     // rename the current note file if the file name changed
     if (oldName != newName) {

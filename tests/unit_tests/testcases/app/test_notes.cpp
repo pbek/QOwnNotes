@@ -198,6 +198,28 @@ void TestNotes::testResourceCopyContainment() {
     QVERIFY(destinationFolder.remove());
 }
 
+void TestNotes::testNoteFileWritesStayInsideNoteFolder() {
+    NoteSubFolder parentSubFolder;
+    parentSubFolder.setName(QStringLiteral(".."));
+    parentSubFolder.setParentId(0);
+    QVERIFY(parentSubFolder.store());
+
+    const QString name = uniqueTestName(QStringLiteral("EscapingNote"));
+    Note note;
+    note.setName(name);
+    note.setNoteText(QStringLiteral("# ") + name + QStringLiteral("\n"));
+    note.setNoteSubFolderId(parentSubFolder.getId());
+    QVERIFY(note.store());
+
+    const QString outsidePath =
+        QDir(notesPath).filePath(QStringLiteral("../") + name + QStringLiteral(".md"));
+    QVERIFY(!note.storeNoteTextFileToDisk());
+    QVERIFY(!QFileInfo::exists(outsidePath));
+
+    QVERIFY(note.remove(false));
+    QVERIFY(parentSubFolder.remove());
+}
+
 void TestNotes::testLocalTrashTextSearch() {
     DatabaseService::createNoteFolderConnection();
     DatabaseService::setupNoteFolderTables();
