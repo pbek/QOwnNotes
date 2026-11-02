@@ -9,6 +9,7 @@
 #include "mainwindow.h"
 #include "services/nextclouddeckservice.h"
 #include "utils/gui.h"
+#include "utils/misc.h"
 #include "widgets/navigationwidget.h"
 #include "widgets/notesubfoldertree.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
@@ -162,6 +163,18 @@ void UrlHandler::handleWikiLinkUrl(const QString &urlString, bool openInNewTab) 
 
     const UrlWikiLinkParts parts = parseUrlWikiLinkParts(target);
     if (parts.noteName.isEmpty()) {
+        return;
+    }
+
+    // Wiki links come from note text, so never create notes or subfolders
+    // outside the note folder
+    const QString relativeTargetPath = parts.subfolderPath.isEmpty()
+                                           ? parts.noteName
+                                           : parts.subfolderPath + QChar('/') + parts.noteName;
+    if (!Utils::Misc::isSafeRelativePath(relativeTargetPath) ||
+        relativeTargetPath.split(QChar('/')).contains(QStringLiteral("."))) {
+        qWarning() << __func__ << " - Refusing to create note outside of the note folder:"
+                   << relativeTargetPath;
         return;
     }
 
