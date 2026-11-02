@@ -480,6 +480,9 @@ QString Script::scriptRepositoryPath(bool removeRecursively) const {
     }
 
     QString path = globalScriptRepositoryPath() + QStringLiteral("/") + identifier;
+    if (!Utils::Misc::isPathInDirectory(path, globalScriptRepositoryPath())) {
+        return QString();
+    }
     QDir dir(path);
 
     // remove the old files in the script path

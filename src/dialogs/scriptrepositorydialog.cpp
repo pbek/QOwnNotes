@@ -588,6 +588,11 @@ bool ScriptRepositoryDialog::installScript(const ScriptInfoJson &infoJson, bool 
     }
 
     QString scriptPath = scriptRepositoryPath + "/" + scriptName;
+    if (!Utils::Misc::isPathInDirectory(scriptPath, scriptRepositoryPath)) {
+        ui->installButton->setEnabled(true);
+        ui->updateAllButton->setEnabled(true);
+        return false;
+    }
     script.setScriptPath(scriptPath);
     bool filesWereDownloaded = false;
 
@@ -605,10 +610,16 @@ bool ScriptRepositoryDialog::installScript(const ScriptInfoJson &infoJson, bool 
     if (filesWereDownloaded) {
         ScriptInfoJson scriptInfoJson = script.getScriptInfoJson();
         foreach (QString resourceFileName, scriptInfoJson.resources) {
+            const QString resourcePath = scriptRepositoryPath + "/" + resourceFileName;
+            if (!Utils::Misc::isSafeFileName(resourceFileName) ||
+                !Utils::Misc::isPathInDirectory(resourcePath, scriptRepositoryPath)) {
+                filesWereDownloaded = false;
+                break;
+            }
             QUrl resourceUrl = script.remoteFileUrl(resourceFileName);
             qDebug() << "Downloading: " << resourceUrl;
 
-            auto *file = new QFile(scriptRepositoryPath + "/" + resourceFileName);
+            auto *file = new QFile(resourcePath);
 
             if (!Utils::Misc::downloadUrlToFile(resourceUrl, file)) {
                 filesWereDownloaded = false;
