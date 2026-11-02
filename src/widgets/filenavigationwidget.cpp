@@ -286,9 +286,9 @@ QVector<FileNavigationWidget::FileLinkNode> FileNavigationWidget::parseText(
             const QString fileName = QUrl::fromPercentEncoding(match.captured(1).toUtf8());
             const int matchPosition = match.capturedStart(0);
 
-            // Links in note text are untrusted, so only accept plain file names that
-            // can't point outside the media or attachments folder
-            if (matchPosition < 0 || !Utils::Misc::isSafeFileName(fileName)) {
+            // Links in note text are untrusted, so only accept paths that can't
+            // point outside the media or attachments folder
+            if (matchPosition < 0 || !Utils::Misc::isSafeRelativePath(fileName)) {
                 continue;
             }
 
