@@ -528,6 +528,20 @@ bool ScriptRepositoryDialog::installScript(const ScriptInfoJson &infoJson, bool 
     QString name = infoJson.name;
     QString scriptName = infoJson.script;
 
+    // The repository metadata is remote data, so only allow plain file names
+    // that can't point outside of the script repository path
+    bool hasSafeFileNames =
+        Utils::Misc::isSafeFileName(identifier) && Utils::Misc::isSafeFileName(scriptName);
+    for (const QString &resourceFileName : infoJson.resources) {
+        hasSafeFileNames = hasSafeFileNames && Utils::Misc::isSafeFileName(resourceFileName);
+    }
+
+    if (!hasSafeFileNames) {
+        qWarning() << __func__
+                   << " - Refusing to install script with unsafe file names:" << identifier;
+        return false;
+    }
+
     // check if platform is supported
     if (!infoJson.platformSupported) {
         if (!showMessages ||

@@ -113,3 +113,38 @@ void TestScript::testSnapRepositoryPathUsesCurrentRevision() {
                              QStringLiteral("/current/.local/share/PBE/QOwnNotesTests/scripts/"
                                             "example-script/example.qml"));
 }
+
+void TestScript::testRepositoryPathsRejectUnsafeNames() {
+    QTemporaryDir temporaryDir;
+    QVERIFY(temporaryDir.isValid());
+    const QByteArray oldXdgDataHome = qgetenv("XDG_DATA_HOME");
+    qputenv("XDG_DATA_HOME", temporaryDir.filePath(QStringLiteral("data")).toUtf8());
+
+    // Unsafe identifiers from the remote repository must never resolve to a
+    // path that could be recursively removed or written to
+    Script unsafeIdentifierScript;
+    unsafeIdentifierScript.setIdentifier(QStringLiteral("../.."));
+    unsafeIdentifierScript.setScriptPath(QStringLiteral("/stored/script.qml"));
+    const QString unsafeIdentifierRepositoryPath =
+        unsafeIdentifierScript.scriptRepositoryPath(true);
+    const QString unsafeIdentifierScriptPath = unsafeIdentifierScript.getScriptPath();
+
+    // Unsafe script names fall back to the file name of the stored script path
+    Script unsafeScriptNameScript;
+    unsafeScriptNameScript.setIdentifier(QStringLiteral("example-script"));
+    unsafeScriptNameScript.setInfoJson(QStringLiteral(R"({"script":"../../evil.qml"})"));
+    unsafeScriptNameScript.setScriptPath(QStringLiteral("/stored/example.qml"));
+    const QString repositoryPath = unsafeScriptNameScript.scriptRepositoryPath();
+    const QString unsafeScriptNamePath = unsafeScriptNameScript.getScriptPath();
+
+    if (oldXdgDataHome.isNull()) {
+        qunsetenv("XDG_DATA_HOME");
+    } else {
+        qputenv("XDG_DATA_HOME", oldXdgDataHome);
+    }
+
+    QVERIFY(unsafeIdentifierRepositoryPath.isEmpty());
+    QCOMPARE(unsafeIdentifierScriptPath, QStringLiteral("/stored/script.qml"));
+    QVERIFY(!repositoryPath.isEmpty());
+    QCOMPARE(unsafeScriptNamePath, repositoryPath + QStringLiteral("/example.qml"));
+}

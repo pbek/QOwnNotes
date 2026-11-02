@@ -58,12 +58,13 @@ QString Script::getScriptPath() const {
         QString scriptName = getInfoJsonObject().value(QStringLiteral("script")).toString();
 
         // Older database entries may not contain complete repository metadata.
-        if (scriptName.isEmpty()) {
+        if (!Utils::Misc::isSafeFileName(scriptName)) {
             scriptName = QFileInfo(scriptPath).fileName();
         }
 
-        if (!scriptName.isEmpty()) {
-            return scriptRepositoryPath() + QStringLiteral("/") + scriptName;
+        const QString repositoryPath = scriptRepositoryPath();
+        if (!repositoryPath.isEmpty() && Utils::Misc::isSafeFileName(scriptName)) {
+            return repositoryPath + QStringLiteral("/") + scriptName;
         }
     }
 
@@ -472,7 +473,9 @@ QString Script::globalScriptRepositoryPath() {
  * @return
  */
 QString Script::scriptRepositoryPath(bool removeRecursively) const {
-    if (identifier.isEmpty()) {
+    // The identifier comes from the remote script repository, so it must not be
+    // able to point outside the script repository path
+    if (!Utils::Misc::isSafeFileName(identifier)) {
         return QString();
     }
 

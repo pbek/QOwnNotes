@@ -13,6 +13,7 @@ class TestScript : public QObject {
     void testChangelogHtmlForVersionRange();
     void testRepositoryUrlsUseMainBranch();
     void testSnapRepositoryPathUsesCurrentRevision();
+    void testRepositoryPathsRejectUnsafeNames();
 };
 
 #endif    // TESTSCRIPT_H
