@@ -6,6 +6,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QFont>
+#include <QImage>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QLineEdit>
@@ -237,6 +238,32 @@ void TestNotes::testTrashRestoreRejectsUnsafeFileName() {
 
     trashItem.setUnsafeFileName(uniqueTestName(QStringLiteral("restore")) + QStringLiteral(".md"));
     QVERIFY(!trashItem.restorationFilePath().isEmpty());
+}
+
+void TestNotes::testHtmlExportEmbedsOnlyImages() {
+    QTemporaryDir temporaryDirectory;
+    QVERIFY(temporaryDirectory.isValid());
+
+    const QByteArray secretContent = QByteArrayLiteral("TOP-SECRET-PRIVATE-KEY-CONTENT");
+    const QString secretPath = temporaryDirectory.filePath(QStringLiteral("secret.png"));
+    QFile secretFile(secretPath);
+    QVERIFY(secretFile.open(QIODevice::WriteOnly));
+    QCOMPARE(secretFile.write(secretContent), qint64(secretContent.size()));
+    secretFile.close();
+
+    const QString imagePath = temporaryDirectory.filePath(QStringLiteral("image.png"));
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.fill(Qt::red);
+    QVERIFY(image.save(imagePath, "PNG"));
+
+    Note note;
+    note.setNoteText(QStringLiteral("# Export\n\n![secret](%1)\n\n![image](%2)\n")
+                         .arg(QUrl::fromLocalFile(secretPath).toString(),
+                              QUrl::fromLocalFile(imagePath).toString()));
+    const QString html = note.toMarkdownHtml(notesPath, 980, true, true, true);
+
+    QVERIFY(!html.contains(QString::fromLatin1(secretContent.toBase64())));
+    QVERIFY(html.contains(QStringLiteral("data:image/png;base64,")));
 }
 
 void TestNotes::testJoplinImportRejectsUnsafePaths() {

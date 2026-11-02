@@ -37,6 +37,7 @@ class TestNotes : public QObject {
     void testResourceCopyContainment();
     void testNoteFileWritesStayInsideNoteFolder();
     void testTrashRestoreRejectsUnsafeFileName();
+    void testHtmlExportEmbedsOnlyImages();
     void testJoplinImportRejectsUnsafePaths();
     void testNoteEncryption();
     void testNoteDecryption();
