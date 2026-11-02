@@ -11,7 +11,8 @@
   - The **Files** navigation panel ignores media and attachment links that aren't plain file names
   - Note files, including notes created from wiki links or server data, are never stored outside
     the note folder
-  - The Joplin import cleans up folder names and resource file extensions
+  - The Joplin import skips folder names and resource file extensions that point outside
+    their folders
   - Trashed notes, and scripts from the script repository, are only used with plain file names
   - Exporting a note as HTML with embedded images only embeds files that are real images
 
