@@ -3161,6 +3161,35 @@ bool Utils::Misc::isSafeRelativePath(const QString &relativePath) {
 }
 
 /**
+ * Checks containment after resolving symlinks, including the existing ancestor
+ * of a path that has not been created yet. The root directory itself may be a symlink.
+ */
+bool Utils::Misc::isPathInDirectory(const QString &path, const QString &directory) {
+    const QString root = QFileInfo(directory).canonicalFilePath();
+    if (path.isEmpty() || root.isEmpty() || !QFileInfo(root).isDir() ||
+        !isSafeRelativePath(QDir(directory).relativeFilePath(QFileInfo(path).absoluteFilePath()))) {
+        return false;
+    }
+
+    QString candidate = QFileInfo(path).absoluteFilePath();
+    while (true) {
+        const QFileInfo info(candidate);
+        if (info.exists() || info.isSymLink()) {
+            const QString resolved = info.canonicalFilePath();
+            if (resolved.isEmpty()) {
+                return false;
+            }
+            return isSafeRelativePath(QDir(root).relativeFilePath(resolved));
+        }
+        const QString parent = info.absolutePath();
+        if (parent == candidate) {
+            return false;
+        }
+        candidate = parent;
+    }
+}
+
+/**
  * Checks if a filename exists like for findAvailableFileName
  */
 bool Utils::Misc::fileNameExists(const QString &fileName, const QString &directoryPath) {

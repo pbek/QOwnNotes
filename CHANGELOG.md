@@ -15,6 +15,7 @@
     their folders
   - Trashed notes, and scripts from the script repository, are only used with plain file names
   - Exporting a note as HTML with embedded images only embeds files that are real images
+  - Path-containment checks resolve symlinks while preserving symlinked root directories
 
 ## 26.11.2
 

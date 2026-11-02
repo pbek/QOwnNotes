@@ -1,5 +1,6 @@
 #include "test_utilsmisc.h"
 
+#include <QDir>
 #include <QFile>
 #include <QTemporaryDir>
 #include <QTest>
@@ -803,4 +804,32 @@ void TestUtilsMisc::testIsSafeRelativePath() {
     QFETCH(QString, path);
     QFETCH(bool, expected);
     QCOMPARE(isSafeRelativePath(path), expected);
+}
+
+void TestUtilsMisc::testPathContainment() {
+    QTemporaryDir temporary;
+    QVERIFY(temporary.isValid());
+    const QString root = temporary.filePath(QStringLiteral("root"));
+    const QString outside = temporary.filePath(QStringLiteral("outside"));
+    QVERIFY(QDir().mkpath(root));
+    QVERIFY(QDir().mkpath(outside));
+    QVERIFY(isPathInDirectory(QDir(root).filePath(QStringLiteral("sub/new.md")), root));
+    QVERIFY(!isPathInDirectory(QDir(outside).filePath(QStringLiteral("new.md")), root));
+    QVERIFY(!isPathInDirectory(QDir(root).filePath(QStringLiteral("../outside/new.md")), root));
+#ifdef Q_OS_UNIX
+    const QString link = QDir(root).filePath(QStringLiteral("link"));
+    QVERIFY(QFile::link(outside, link));
+    QVERIFY(!isPathInDirectory(QDir(link).filePath(QStringLiteral("new.md")), root));
+    const QString insideDirectory = QDir(root).filePath(QStringLiteral("sub"));
+    QVERIFY(QDir().mkpath(insideDirectory));
+    const QString insideLink = QDir(root).filePath(QStringLiteral("inside-link"));
+    QVERIFY(QFile::link(insideDirectory, insideLink));
+    QVERIFY(isPathInDirectory(QDir(insideLink).filePath(QStringLiteral("new.md")), root));
+    const QString rootLink = temporary.filePath(QStringLiteral("root-link"));
+    QVERIFY(QFile::link(root, rootLink));
+    QVERIFY(isPathInDirectory(QDir(rootLink).filePath(QStringLiteral("sub/new.md")), rootLink));
+    const QString brokenLink = QDir(root).filePath(QStringLiteral("broken-link"));
+    QVERIFY(QFile::link(temporary.filePath(QStringLiteral("missing")), brokenLink));
+    QVERIFY(!isPathInDirectory(brokenLink, root));
+#endif
 }

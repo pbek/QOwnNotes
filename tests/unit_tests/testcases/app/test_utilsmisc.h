@@ -48,6 +48,7 @@ class TestUtilsMisc : public QObject {
     void testIsSafeFileName();
     void testIsSafeRelativePath_data();
     void testIsSafeRelativePath();
+    void testPathContainment();
 };
 
 #endif    // TESTUTILSMISC_H

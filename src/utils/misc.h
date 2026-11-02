@@ -163,6 +163,7 @@ bool fileNameExists(const QString &fileName, const QString &directoryPath);
 QString fileNameForPath(const QString &filePath);
 bool isSafeFileName(const QString &fileName);
 bool isSafeRelativePath(const QString &relativePath);
+bool isPathInDirectory(const QString &path, const QString &directory);
 QString rstrip(const QString &str);
 bool isPreviewUseEditorStyles();
 QString previewFontString();
