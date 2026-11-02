@@ -26,6 +26,7 @@
 struct TerminalCmd;
 class QDataStream;
 class QPrinter;
+class QTextDocument;
 class QJSValue;
 
 /*  Miscellaneous functions that can be useful */
@@ -117,6 +118,8 @@ QDataStream &dataStreamWrite(QDataStream &os, const QPrinter &printer);
 QDataStream &dataStreamRead(QDataStream &is, QPrinter &printer);
 void storePrinterSettings(QPrinter *printer, const QString &settingsKey);
 void loadPrinterSettings(QPrinter *printer, const QString &settingsKey);
+// The caller owns the returned document; the printer must outlive it.
+QTextDocument *createDocumentForPDFExport(const QTextDocument *document, QPrinter *printer);
 bool isNoteEditingAllowed();
 bool isReadOnlyModeEnabled();
 bool areMenuIconsHidden();

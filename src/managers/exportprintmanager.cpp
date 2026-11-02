@@ -85,10 +85,15 @@ void ExportPrintManager::printTextDocument(QTextDocument *textDocument,
 bool ExportPrintManager::preparePDFPageSetup(QPrinter *printer) {
 #ifdef Q_OS_LINUX
     Utils::Misc::loadPrinterSettings(printer, QStringLiteral("Printer/NotePDFExport"));
+#endif
+
+    // Use the PDF paint engine before selecting margins or saving the page setup.
+    printer->setOutputFormat(QPrinter::PdfFormat);
 
     // Ensure color mode is always set to Color for PDF export
     printer->setColorMode(QPrinter::Color);
 
+#ifdef Q_OS_LINUX
     // under Linux we use the QPageSetupDialog to change layout
     // settings of the PDF export
     QPageSetupDialog pageSetupDialog(printer, _mainWindow);
@@ -104,9 +109,6 @@ bool ExportPrintManager::preparePDFPageSetup(QPrinter *printer) {
 #else
     // under macOS and Windows the QPageSetupDialog dialog doesn't work,
     // we will use a workaround to select page sizes and the orientation
-
-    // Ensure color mode is always set to Color for PDF export
-    printer->setColorMode(QPrinter::Color);
 
     SettingsService settings;
 
@@ -219,7 +221,9 @@ void ExportPrintManager::exportNoteAsPDF(QTextDocument *doc,
     if (prepareExportNoteAsPDFPrinter(printer)) {
         QTextDocument *printDocument =
             useLightEditorSchemaForDarkSchema ? createLightEditorSchemaDocument(doc) : doc;
-        printDocument->print(printer);
+        std::unique_ptr<QTextDocument> pdfDocument(
+            Utils::Misc::createDocumentForPDFExport(printDocument, printer));
+        pdfDocument->print(printer);
 
         if (printDocument != doc) {
             delete printDocument;
@@ -281,7 +285,9 @@ void ExportPrintManager::exportSelectedNotesAsPDF() {
         printer.setOutputFileName(filePath);
         std::unique_ptr<QTextDocument> document(
             getDocumentForPreviewExport(note, note.canDecryptNoteText()));
-        document->print(&printer);
+        std::unique_ptr<QTextDocument> pdfDocument(
+            Utils::Misc::createDocumentForPDFExport(document.get(), &printer));
+        pdfDocument->print(&printer);
 
         if (printer.printerState() == QPrinter::Error || QFileInfo(filePath).size() <= 0) {
             QFile::remove(filePath);

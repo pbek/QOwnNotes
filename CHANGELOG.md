@@ -2,6 +2,9 @@
 
 ## 26.11.3
 
+- Fixed PDF exports adding extra margins beyond those selected in page setup,
+  for both single notes and selected notes
+  (for [#3837](https://github.com/pbek/QOwnNotes/issues/3837))
 - Fixed unsafe media and attachment paths being followed when copying, moving, or
   exporting notes (thank you, r3vpwnx)
   (for [GHSA-fmqx-8x8h-gf76](https://github.com/pbek/QOwnNotes/security/advisories/GHSA-fmqx-8x8h-gf76))

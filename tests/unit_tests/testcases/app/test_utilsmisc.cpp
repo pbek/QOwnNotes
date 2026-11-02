@@ -1,9 +1,16 @@
 #include "test_utilsmisc.h"
 
+#include <QAbstractTextDocumentLayout>
 #include <QDir>
 #include <QFile>
+#include <QPrinter>
 #include <QTemporaryDir>
 #include <QTest>
+#include <QTextBlock>
+#include <QTextDocument>
+#include <QTextFrame>
+#include <QTextLayout>
+#include <memory>
 
 #include "utils/listutils.h"
 #include "utils/misc.h"
@@ -11,6 +18,81 @@
 using namespace Utils::Misc;
 
 void TestUtilsMisc::initTestCase() {}
+
+void TestUtilsMisc::testDocumentForPDFExport_data() {
+    QTest::addColumn<int>("resolution");
+    QTest::addColumn<bool>("landscape");
+    QTest::addColumn<QMarginsF>("margins");
+    QTest::addColumn<bool>("html");
+
+    QTest::newRow("plain-10mm") << 96 << false << QMarginsF(10, 10, 10, 10) << false;
+    QTest::newRow("html-high-resolution") << 1200 << false << QMarginsF(10, 10, 10, 10) << true;
+    QTest::newRow("landscape-asymmetric") << 300 << true << QMarginsF(5, 12, 20, 8) << true;
+    QTest::newRow("zero-margins") << 1200 << false << QMarginsF() << false;
+}
+
+void TestUtilsMisc::testDocumentForPDFExport() {
+    QFETCH(int, resolution);
+    QFETCH(bool, landscape);
+    QFETCH(QMarginsF, margins);
+    QFETCH(bool, html);
+
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+    QPrinter printer(QPrinter::HighResolution);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setResolution(resolution);
+    printer.setPageSize(QPageSize(QPageSize::A4));
+    printer.setPageOrientation(landscape ? QPageLayout::Landscape : QPageLayout::Portrait);
+    printer.setPageMargins(margins, QPageLayout::Millimeter);
+    printer.setOutputFileName(directory.filePath(QStringLiteral("export.pdf")));
+    const QPageLayout originalPageLayout = printer.pageLayout();
+
+    QTextDocument source;
+    source.setDefaultFont(QFont(QStringLiteral("Sans Serif"), 12));
+    const QString text = QStringLiteral("Margin regression test\n").repeated(200);
+    if (html) {
+        source.setHtml(
+            QStringLiteral("<p>%1</p>")
+                .arg(text.toHtmlEscaped().replace(QLatin1Char('\n'), QStringLiteral("<br>"))));
+    } else {
+        source.setPlainText(text);
+    }
+    QTextLayout::FormatRange highlight;
+    highlight.start = 0;
+    highlight.length = 6;
+    highlight.format.setForeground(Qt::red);
+    source.firstBlock().layout()->setFormats({highlight});
+    const QSizeF originalPageSize = source.pageSize();
+    const qreal originalMargin = source.documentMargin();
+    const QString originalHtml = source.toHtml();
+
+    std::unique_ptr<QTextDocument> document(createDocumentForPDFExport(&source, &printer));
+    QCOMPARE(document->pageSize(), printer.pageRect(QPrinter::DevicePixel).size());
+    QCOMPARE(document->documentLayout()->paintDevice(), &printer);
+    const QTextFrameFormat rootFormat = document->rootFrame()->frameFormat();
+    QCOMPARE(rootFormat.leftMargin(), 0.0);
+    QCOMPARE(rootFormat.rightMargin(), 0.0);
+    QCOMPARE(rootFormat.topMargin(), 0.0);
+    QCOMPARE(rootFormat.bottomMargin(), 0.0);
+    QCOMPARE(document->defaultFont(), source.defaultFont());
+    QCOMPARE(document->toPlainText(), source.toPlainText());
+    const auto formats = document->firstBlock().layout()->formats();
+    QCOMPARE(formats.size(), 1);
+    QCOMPARE(formats.first().format.foreground().color(), QColor(Qt::red));
+    QVERIFY(document->pageCount() > 1);
+    QCOMPARE(document->documentLayout()->blockBoundingRect(document->firstBlock()).left(), 0.0);
+
+    document->print(&printer);
+    QFile pdf(printer.outputFileName());
+    QVERIFY(pdf.open(QIODevice::ReadOnly));
+    QVERIFY(pdf.read(5) == QByteArray("%PDF-"));
+    QVERIFY(printer.pageLayout() == originalPageLayout);
+    QCOMPARE(source.pageSize(), originalPageSize);
+    QCOMPARE(source.documentMargin(), originalMargin);
+    QCOMPARE(source.toHtml(), originalHtml);
+    QCOMPARE(source.documentLayout()->paintDevice(), nullptr);
+}
 
 void TestUtilsMisc::testRemoveIfStartsWith() {
     QString s = QStringLiteral("--*--testString");

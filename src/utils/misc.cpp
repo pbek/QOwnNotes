@@ -26,6 +26,7 @@
 #include <services/updateservice.h>
 #include <threads/scriptthread.h>
 
+#include <QAbstractTextDocumentLayout>
 #include <QApplication>
 #include <QCoreApplication>
 #include <QDataStream>
@@ -46,7 +47,10 @@
 #include <QRegularExpressionMatch>
 #include <QStringBuilder>
 #include <QTemporaryFile>
+#include <QTextBlock>
 #include <QTextDocument>
+#include <QTextFrame>
+#include <QTextLayout>
 #include <QTime>
 #include <QTimer>
 #include <QUrl>
@@ -1751,6 +1755,28 @@ void Utils::Misc::loadPrinterSettings(QPrinter *printer, const QString &settings
     printSetup = QByteArray::fromHex(printSetup);
     QDataStream is(&printSetup, QIODevice::ReadOnly);
     dataStreamRead(is, *printer);
+}
+
+QTextDocument *Utils::Misc::createDocumentForPDFExport(const QTextDocument *document,
+                                                       QPrinter *printer) {
+    auto *printDocument = document->clone();
+
+    // Cloning does not retain syntax highlighter formats stored in block layouts.
+    for (QTextBlock source = document->firstBlock(), target = printDocument->firstBlock();
+         source.isValid() && target.isValid(); source = source.next(), target = target.next()) {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+        target.layout()->setFormats(source.layout()->formats());
+#else
+        target.layout()->setAdditionalFormats(source.layout()->additionalFormats());
+#endif
+    }
+
+    // Paginate at printer resolution to prevent QTextDocument::print() from adding
+    // its own 20 mm margins. The printer already supplies the selected page margins.
+    printDocument->documentLayout()->setPaintDevice(printer);
+    printDocument->setDocumentMargin(0);
+    printDocument->setPageSize(printer->pageRect(QPrinter::DevicePixel).size());
+    return printDocument;
 }
 
 /**

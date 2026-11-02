@@ -49,6 +49,8 @@ class TestUtilsMisc : public QObject {
     void testIsSafeRelativePath_data();
     void testIsSafeRelativePath();
     void testPathContainment();
+    void testDocumentForPDFExport_data();
+    void testDocumentForPDFExport();
 };
 
 #endif    // TESTUTILSMISC_H
