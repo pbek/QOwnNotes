@@ -29,6 +29,13 @@
   - Local trash restoration rejects symlink destinations outside the note folder
   - Script installation and updates reject symlink escapes from the script repository
   - Creating notes from wiki links rejects subfolder symlinks that escape the note folder
+- The [26.11.0 release](https://github.com/qownnotes/qownnotes-nextcloud/releases/tag/v26.11.0) of
+  [QOwnNotes for Nextcloud](https://github.com/qownnotes/qownnotes-nextcloud) adds bookmark management
+  - A **Bookmarks** dialog lists bookmarks from notes tagged `bookmarks` or named `Bookmarks`,
+    compatible with QOwnNotes Desktop's Web Companion bookmarks and QOwnNotes Android bookmarks
+  - Search and filter bookmarks by tags, open, edit or delete them, with changes saved to all
+    bookmark notes containing them; editing includes a Markdown preview
+  - Fixed notes failing to load with status code 423 when the note folder doesn't exist yet
 
 ## 26.11.2
 
