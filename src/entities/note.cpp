@@ -2618,7 +2618,9 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
-    const bool oldNoteFilePathIsSafe = Utils::Misc::isSafeRelativePath(relativeNoteFilePath());
+    const QString noteRoot = getFullFilePathForFile(QString());
+    const bool oldNoteFilePathIsSafe = Utils::Misc::isSafeRelativePath(relativeNoteFilePath()) &&
+                                       Utils::Misc::isPathInDirectory(oldNoteFilePath, noteRoot);
     TrashItem trashItem = TrashItem::prepare(this);
 
     if (allowDifferentFileName()) {
@@ -2636,7 +2638,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     // Note and subfolder names can come from synced, imported or linked data,
     // so never read, rename or write note files outside the note folder
     if (!Utils::Misc::isSafeRelativePath(relativeNoteFilePath()) ||
-        (oldName != newName && !oldNoteFilePathIsSafe)) {
+        !Utils::Misc::isPathInDirectory(fullNoteFilePath(), noteRoot)) {
         qWarning() << __func__ << " - Refusing to store note outside of the note folder:"
                    << relativeNoteFilePath();
         return false;
@@ -2647,7 +2649,9 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
         QFile oldFile(oldNoteFilePath);
 
         // rename the note file
-        if (oldFile.exists()) {
+        // A new headline may have started as a path before filename cleanup.
+        // Save its cleaned name, but never inspect or rename that unsafe old path.
+        if (oldNoteFilePathIsSafe && oldFile.exists()) {
             noteFileWasRenamed = oldFile.rename(fullNoteFilePath());
             qDebug() << __func__ << " - 'noteFileWasRenamed': " << noteFileWasRenamed;
 
@@ -2791,7 +2795,8 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     // assign the tags to the new name if the name has changed
     if (oldName != newName) {
-        if (!noteFileWasRenamed && TrashItem::isLocalTrashEnabled()) {
+        if (oldNoteFilePathIsSafe && !noteFileWasRenamed && QFileInfo::exists(oldNoteFilePath) &&
+            TrashItem::isLocalTrashEnabled()) {
             qDebug() << __func__ << " - 'trashItem': " << trashItem;
 
             // trash the old note
@@ -2912,7 +2917,7 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     // if note was stored but the note file wasn't renamed do some more checks
     // whether we need to remove the old note file
-    if (noteStored && !noteFileWasRenamed) {
+    if (noteStored && !noteFileWasRenamed && oldNoteFilePathIsSafe) {
         QFile oldFile(oldNoteFilePath);
         const QFileInfo oldFileInfo(oldFile);
         const QFile newFile(fullNoteFilePath());
@@ -3196,6 +3201,11 @@ void Note::generateFileNameFromName() { _fileName = generateNoteFileNameFromName
  */
 bool Note::canWriteToNoteFile() {
     const QString path = fullNoteFilePath();
+    // Filename cleanup calls this probe before the main save guard.
+    if (!Utils::Misc::isSafeRelativePath(relativeNoteFilePath()) ||
+        !Utils::Misc::isPathInDirectory(path, getFullFilePathForFile(QString()))) {
+        return false;
+    }
     // Capture existence *before* opening -- opening below can itself create
     // the file, which would make a post-open check always see it as
     // "already there".

@@ -228,10 +228,86 @@ void TestNotes::testNoteFileWritesStayInsideNoteFolder() {
     const QString outsidePath =
         QDir(notesPath).filePath(QStringLiteral("../") + name + QStringLiteral(".md"));
     QVERIFY(!note.storeNoteTextFileToDisk());
+    QVERIFY(!note.canWriteToNoteFile());
     QVERIFY(!QFileInfo::exists(outsidePath));
 
     QVERIFY(note.remove(false));
     QVERIFY(parentSubFolder.remove());
+#ifdef Q_OS_UNIX
+    QTemporaryDir temporary;
+    QVERIFY(temporary.isValid());
+    const QString protectedPath = temporary.filePath(QStringLiteral("protected.md"));
+    QFile protectedFile(protectedPath);
+    QVERIFY(protectedFile.open(QIODevice::WriteOnly));
+    QCOMPARE(protectedFile.write("unchanged"), qint64(9));
+    protectedFile.close();
+    Note linkedNote;
+    linkedNote.setName(uniqueTestName(QStringLiteral("LinkedNote")));
+    linkedNote.setNoteText(Note::createNoteHeader(linkedNote.getName()));
+    QVERIFY(linkedNote.store());
+    const QString link = linkedNote.fullNoteFilePath();
+    QVERIFY(QFile::link(protectedPath, link));
+    QVERIFY(!linkedNote.canWriteToNoteFile());
+    QVERIFY(!linkedNote.storeNoteTextFileToDisk());
+    QVERIFY(QFile::remove(link));
+    QVERIFY(linkedNote.remove(false));
+    QVERIFY(protectedFile.open(QIODevice::ReadOnly));
+    QCOMPARE(protectedFile.readAll(), QByteArray("unchanged"));
+#endif
+}
+
+void TestNotes::testNewNoteTitleCleanup_data() {
+    QTest::addColumn<QString>("titlePrefix");
+    QTest::newRow("leading-slash") << QStringLiteral("/usr/bin ");
+    QTest::newRow("parent-reference-in-title") << QStringLiteral("../ ");
+    QTest::newRow("colon-in-title") << QStringLiteral("10:30 ");
+}
+
+void TestNotes::testNewNoteTitleCleanup() {
+    QFETCH(QString, titlePrefix);
+    DatabaseService::createNoteFolderConnection();
+    DatabaseService::setupNoteFolderTables();
+    NoteFolder folder = NoteFolder::currentNoteFolder();
+    const QString key = QStringLiteral("allowDifferentNoteFileName");
+    const QVariant previous = folder.settingsValue(key);
+    folder.setSettingsValue(key, false);
+
+    const QString title = titlePrefix + uniqueTestName(QStringLiteral("TitleCleanup"));
+    Note note;
+    note.setName(title);
+    note.setNoteText(Note::createNoteHeader(title));
+    const bool stored = note.store();
+    const QString oldPath = note.fullNoteFilePath();
+    const bool hasOutsideFile = titlePrefix.startsWith(QStringLiteral("../"));
+    const QByteArray outsideContent("outside note must not change");
+    if (hasOutsideFile) {
+        QFile outside(oldPath);
+        QVERIFY(outside.open(QIODevice::WriteOnly));
+        QCOMPARE(outside.write(outsideContent), qint64(outsideContent.size()));
+    }
+    const bool saved = stored && note.storeNoteTextFileToDisk();
+    const QString path = note.fullNoteFilePath();
+    folder.setSettingsValue(key, previous);
+
+    // Cleanup must permit a new headline without renaming an unsafe old path.
+    const bool exists = QFileInfo::exists(path);
+    if (exists) {
+        QFile::remove(path);
+    }
+    if (stored) {
+        note.remove(false);
+    }
+    if (hasOutsideFile) {
+        QFile outside(oldPath);
+        QVERIFY(outside.open(QIODevice::ReadOnly));
+        const QByteArray content = outside.readAll();
+        outside.close();
+        QVERIFY(outside.remove());
+        QCOMPARE(content, outsideContent);
+    }
+    QVERIFY(stored);
+    QVERIFY(saved);
+    QVERIFY(exists);
 }
 
 namespace {
