@@ -171,8 +171,7 @@ void UrlHandler::handleWikiLinkUrl(const QString &urlString, bool openInNewTab) 
     const QString relativeTargetPath = parts.subfolderPath.isEmpty()
                                            ? parts.noteName
                                            : parts.subfolderPath + QChar('/') + parts.noteName;
-    if (!Utils::Misc::isSafeRelativePath(relativeTargetPath) ||
-        relativeTargetPath.split(QChar('/')).contains(QStringLiteral("."))) {
+    if (!Utils::Misc::isSafeRelativePath(relativeTargetPath)) {
         qWarning() << __func__ << " - Refusing to create note outside of the note folder:"
                    << relativeTargetPath;
         return;
