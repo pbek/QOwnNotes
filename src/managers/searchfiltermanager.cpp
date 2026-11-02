@@ -560,9 +560,7 @@ void SearchFilterManager::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryLis
         const QString noteSubFolderPath = noteSubFolder.fullPath();
 
         note = Note();
-        // The name can come from remote data (like server trash or todo items) and
-        // is used for the file name, so remove path separators
-        note.setName(Note::cleanupFileName(text));
+        note.setName(text);
         note.setNoteText(noteText);
         note.setNoteSubFolderId(noteSubFolder.getId());
         note.store();
