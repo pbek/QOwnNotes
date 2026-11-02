@@ -742,3 +742,50 @@ void TestUtilsMisc::testFindAvailableFileNameOverrideSuffix() {
     QCOMPARE(findAvailableFileName(QStringLiteral("image"), dir.path(), QStringLiteral("png")),
              QStringLiteral("image-1.png"));
 }
+
+void TestUtilsMisc::testIsSafeFileName_data() {
+    QTest::addColumn<QString>("fileName");
+    QTest::addColumn<bool>("expected");
+    QTest::newRow("plain") << QStringLiteral("image.png") << true;
+    QTest::newRow("spaces-and-unicode") << QString::fromUtf8("café image.png") << true;
+    QTest::newRow("double-dots-in-name") << QStringLiteral("image..png") << true;
+    QTest::newRow("hidden-file") << QStringLiteral(".hidden") << true;
+    QTest::newRow("empty") << QString() << false;
+    QTest::newRow("dot") << QStringLiteral(".") << false;
+    QTest::newRow("dot-dot") << QStringLiteral("..") << false;
+    QTest::newRow("parent") << QStringLiteral("../secret") << false;
+    QTest::newRow("subfolder") << QStringLiteral("sub/image.png") << false;
+    QTest::newRow("absolute") << QStringLiteral("/etc/passwd") << false;
+    QTest::newRow("backslash") << QStringLiteral("..\\secret") << false;
+    QTest::newRow("drive") << QStringLiteral("C:secret") << false;
+    QTest::newRow("stream") << QStringLiteral("image.png:stream") << false;
+    QTest::newRow("nul") << QStringLiteral("image") + QChar(QChar::Null) + QStringLiteral(".png")
+                         << false;
+}
+
+void TestUtilsMisc::testIsSafeFileName() {
+    QFETCH(QString, fileName);
+    QFETCH(bool, expected);
+    QCOMPARE(isSafeFileName(fileName), expected);
+}
+
+void TestUtilsMisc::testIsSafeRelativePath_data() {
+    QTest::addColumn<QString>("path");
+    QTest::addColumn<bool>("expected");
+    QTest::newRow("file") << QStringLiteral("note.md") << true;
+    QTest::newRow("subfolder") << QStringLiteral("sub/folder/note.md") << true;
+    QTest::newRow("dots-in-names") << QStringLiteral("..sub/...md") << true;
+    QTest::newRow("empty") << QString() << false;
+    QTest::newRow("parent") << QStringLiteral("../note.md") << false;
+    QTest::newRow("nested-parent") << QStringLiteral("sub/../../note.md") << false;
+    QTest::newRow("only-parent") << QStringLiteral("..") << false;
+    QTest::newRow("backslash-parent") << QStringLiteral("sub\\..\\..\\note.md") << false;
+    QTest::newRow("absolute") << QStringLiteral("/tmp/note.md") << false;
+    QTest::newRow("backslash-absolute") << QStringLiteral("\\\\server\\share\\note.md") << false;
+}
+
+void TestUtilsMisc::testIsSafeRelativePath() {
+    QFETCH(QString, path);
+    QFETCH(bool, expected);
+    QCOMPARE(isSafeRelativePath(path), expected);
+}

@@ -161,6 +161,8 @@ QString findAvailableFileName(const QString &filePath, const QString &directoryP
                               const QString &overrideSuffix = "");
 bool fileNameExists(const QString &fileName, const QString &directoryPath);
 QString fileNameForPath(const QString &filePath);
+bool isSafeFileName(const QString &fileName);
+bool isSafeRelativePath(const QString &relativePath);
 QString rstrip(const QString &str);
 bool isPreviewUseEditorStyles();
 QString previewFontString();

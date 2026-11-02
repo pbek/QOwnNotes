@@ -3101,6 +3101,58 @@ QString Utils::Misc::fileNameForPath(const QString &filePath) {
 }
 
 /**
+ * Returns true if fileName is a single, plain file name that can't escape
+ * the directory it is appended to
+ *
+ * Windows separators and drive / stream syntax are rejected on every platform,
+ * because untrusted names may come from synced or imported data
+ */
+bool Utils::Misc::isSafeFileName(const QString &fileName) {
+    return !fileName.isEmpty() && fileName != QLatin1String(".") &&
+           fileName != QLatin1String("..") && !fileName.contains(QChar('/')) &&
+           !fileName.contains(QChar('\\')) && !fileName.contains(QChar(':')) &&
+           !fileName.contains(QChar::Null);
+}
+
+/**
+ * Returns true if relativePath is a relative path that stays inside the
+ * directory it is appended to (no absolute path and no ".." segment)
+ */
+bool Utils::Misc::isSafeRelativePath(const QString &relativePath) {
+    QString path = relativePath;
+    path.replace(QChar('\\'), QChar('/'));
+
+    if (path.isEmpty() || path.startsWith(QChar('/')) || QDir::isAbsolutePath(path) ||
+        path.contains(QChar::Null)) {
+        return false;
+    }
+
+#ifdef Q_OS_WIN
+    // Drive-relative paths like "C:file" aren't detected by QDir::isAbsolutePath
+    if (path.contains(QChar(':'))) {
+        return false;
+    }
+#endif
+
+    const auto segments = path.split(QChar('/'));
+    for (const QString &segment : segments) {
+        if (segment == QLatin1String("..")) {
+            return false;
+        }
+
+#ifdef Q_OS_WIN
+        // Windows strips trailing dots and spaces, so "... " could act like ".."
+        static const QRegularExpression dotsAndSpaces(QStringLiteral(R"(^[. ]{2,}$)"));
+        if (dotsAndSpaces.match(segment).hasMatch()) {
+            return false;
+        }
+#endif
+    }
+
+    return true;
+}
+
+/**
  * Checks if a filename exists like for findAvailableFileName
  */
 bool Utils::Misc::fileNameExists(const QString &fileName, const QString &directoryPath) {

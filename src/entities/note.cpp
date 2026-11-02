@@ -63,18 +63,9 @@ Note::Note()
       _hasDirtyData{false} {}
 
 namespace {
-bool isSafeResourceFileName(const QString &fileName) {
-    // Resources are flat file names, not paths. Check after percent decoding and
-    // reject Windows separators and drive/stream syntax on every platform.
-    return !fileName.isEmpty() && fileName != QLatin1String(".") &&
-           fileName != QLatin1String("..") && !fileName.contains(QChar('/')) &&
-           !fileName.contains(QChar('\\')) && !fileName.contains(QChar(':')) &&
-           !fileName.contains(QChar::Null);
-}
-
 void copyNoteResource(const QString &sourceDirectory, const QString &destinationDirectory,
                       const QString &destinationRoot, const QString &fileName) {
-    if (!isSafeResourceFileName(fileName)) {
+    if (!Utils::Misc::isSafeFileName(fileName)) {
         return;
     }
 
@@ -1413,7 +1404,7 @@ QStringList Note::getMediaFileList() const {
         // We want to decode the file name parsed from the note, because it can be encoded
         // For example the image dialog will automatically encode the file name
         const QString decodedFileName = QUrl::fromPercentEncoding(fileName.toUtf8());
-        if (isSafeResourceFileName(decodedFileName)) {
+        if (Utils::Misc::isSafeFileName(decodedFileName)) {
             fileList << decodedFileName;
         }
     }
@@ -1473,7 +1464,7 @@ QStringList Note::getAttachmentsFileList() const {
         // We want to decode the file name parsed from the note, because it can be encoded
         // For example the attachment dialog will automatically encode the file name
         const QString decodedFileName = QUrl::fromPercentEncoding(fileName.toUtf8());
-        if (isSafeResourceFileName(decodedFileName)) {
+        if (Utils::Misc::isSafeFileName(decodedFileName)) {
             fileList << decodedFileName;
         }
     }

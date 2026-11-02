@@ -44,6 +44,10 @@ class TestUtilsMisc : public QObject {
     void testDetectFileFormatJavaScript();
     void testDetectFileFormatEdgeCases();
     void testFindAvailableFileNameOverrideSuffix();
+    void testIsSafeFileName_data();
+    void testIsSafeFileName();
+    void testIsSafeRelativePath_data();
+    void testIsSafeRelativePath();
 };
 
 #endif    // TESTUTILSMISC_H
