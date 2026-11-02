@@ -220,6 +220,50 @@ void TestNotes::testNoteFileWritesStayInsideNoteFolder() {
     QVERIFY(parentSubFolder.remove());
 }
 
+void TestNotes::testJoplinImportRejectsUnsafePaths() {
+    JoplinImportDialog dialog;
+
+    // A folder name that is only a parent reference can't be cleaned up
+    QCOMPARE(dialog
+                 .importFolder(QStringLiteral("dot-dot-id"),
+                               QStringLiteral("..\n\nid: dot-dot-id\ntype_: 2\n"))
+                 .getId(),
+             0);
+
+    // Path separators are removed, so folders can't be created outside the note folder
+    const QString escapeName = uniqueTestName(QStringLiteral("joplin-escape"));
+    NoteSubFolder cleanedSubFolder = dialog.importFolder(
+        QStringLiteral("escape-id"),
+        QStringLiteral("../") + escapeName + QStringLiteral("\n\nid: escape-id\ntype_: 2\n"));
+    QVERIFY(cleanedSubFolder.getId() > 0);
+    QCOMPARE(cleanedSubFolder.getName(), QStringLiteral("..") + escapeName);
+    QVERIFY(!QFileInfo::exists(QDir(notesPath).filePath(QStringLiteral("../") + escapeName)));
+    QVERIFY(QDir(cleanedSubFolder.fullPath()).removeRecursively());
+    QVERIFY(cleanedSubFolder.remove());
+
+    // Resource file extensions must not be able to point outside the export
+    QTemporaryDir exportDirectory;
+    QVERIFY(exportDirectory.isValid());
+    const QString resourceId = QStringLiteral("abc123");
+    QVERIFY(QDir().mkpath(exportDirectory.filePath(QStringLiteral("resources/abc123."))));
+    QFile secretFile(exportDirectory.filePath(QStringLiteral("secret.txt")));
+    QVERIFY(secretFile.open(QIODevice::WriteOnly));
+    secretFile.close();
+    QFile *unsafeResource = JoplinImportDialog::findResourceFile(
+        exportDirectory.path(), resourceId, QStringLiteral("file_extension: /../../secret.txt\n"));
+    QVERIFY(unsafeResource == nullptr);
+    delete unsafeResource;
+
+    QFile safeResourceFile(exportDirectory.filePath(QStringLiteral("resources/def456.png")));
+    QVERIFY(safeResourceFile.open(QIODevice::WriteOnly));
+    safeResourceFile.close();
+    QFile *safeResource = JoplinImportDialog::findResourceFile(
+        exportDirectory.path(), QStringLiteral("def456"), QStringLiteral("file_extension: png\n"));
+    QVERIFY(safeResource != nullptr);
+    QCOMPARE(QFileInfo(safeResource->fileName()).fileName(), QStringLiteral("def456.png"));
+    delete safeResource;
+}
+
 void TestNotes::testLocalTrashTextSearch() {
     DatabaseService::createNoteFolderConnection();
     DatabaseService::setupNoteFolderTables();

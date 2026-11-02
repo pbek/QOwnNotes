@@ -18,6 +18,7 @@
 #include "services/settingsservice.h"
 #include "ui_joplinimportdialog.h"
 #include "utils/gui.h"
+#include "utils/misc.h"
 
 JoplinImportDialog::JoplinImportDialog(QWidget* parent)
     : MasterDialog(parent), ui(new Ui::JoplinImportDialog) {
@@ -297,9 +298,11 @@ NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString&
 
     auto textLines = text.split(QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 
-    auto folderName = textLines.at(0).trimmed();
+    // The folder name comes from the imported data, so it must not be able to
+    // create folders or notes outside the note folder
+    auto folderName = Note::cleanupFileName(textLines.at(0)).trimmed();
 
-    if (folderName.isEmpty()) {
+    if (!Utils::Misc::isSafeFileName(folderName)) {
         return {};
     }
 
@@ -643,7 +646,8 @@ QFile* JoplinImportDialog::findResourceFile(const QString& dirPath, const QStrin
         fileExtension = fileInfo.suffix();
     }
 
-    if (!fileExtension.isEmpty()) {
+    // The extension comes from the imported data, so it must not contain a path
+    if (Utils::Misc::isSafeFileName(fileExtension)) {
         auto* mediaFile = new QFile(dirPath + "/resources/" + id + "." + fileExtension);
 
         if (mediaFile->exists()) {
