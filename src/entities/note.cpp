@@ -71,8 +71,11 @@ void copyNoteResource(const QString &sourceDirectory, const QString &destination
     }
 
     QFile resourceFile(sourceDirectory + QDir::separator() + fileName);
-    if (resourceFile.exists()) {
-        resourceFile.copy(destinationDirectory + QDir::separator() + fileName);
+    const QString destination = destinationDirectory + QDir::separator() + fileName;
+    if (resourceFile.exists() &&
+        Utils::Misc::isPathInDirectory(resourceFile.fileName(), sourceDirectory) &&
+        Utils::Misc::isPathInDirectory(destination, destinationDirectory)) {
+        resourceFile.copy(destination);
     }
 }
 

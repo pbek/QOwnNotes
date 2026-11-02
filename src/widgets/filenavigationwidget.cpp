@@ -288,7 +288,10 @@ QVector<FileNavigationWidget::FileLinkNode> FileNavigationWidget::parseText(
 
             // Links in note text are untrusted, so only accept paths that can't
             // point outside the media or attachments folder
-            if (matchPosition < 0 || !Utils::Misc::isSafeRelativePath(fileName)) {
+            if (matchPosition < 0 || !Utils::Misc::isSafeRelativePath(fileName) ||
+                (QFileInfo(pattern.basePath).exists() &&
+                 !Utils::Misc::isPathInDirectory(QDir(pattern.basePath).filePath(fileName),
+                                                 pattern.basePath))) {
                 continue;
             }
 

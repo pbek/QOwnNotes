@@ -8,7 +8,7 @@
 - Hardened file and folder names from notes, imports, the local trash and remote data, so they
   can no longer lead to files outside their folders being read, written or deleted
   (for [#3836](https://github.com/pbek/QOwnNotes/issues/3836))
-  - The **Files** navigation panel ignores media and attachment links that aren't plain file names
+  - The **Files** navigation panel ignores media and attachment links that escape their folders
   - Note files, including notes created from wiki links or server data, are never stored outside
     the note folder
   - The Joplin import skips folder names and resource file extensions that point outside
@@ -18,6 +18,8 @@
   - Path-containment checks resolve symlinks while preserving symlinked root directories
   - Filename cleanup preserves new titles containing path punctuation without touching files
     at their original, unsafe paths
+  - Media and attachment transfers reject symlink escapes while preserving links within
+    their folders
 
 ## 26.11.2
 

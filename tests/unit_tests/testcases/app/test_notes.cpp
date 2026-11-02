@@ -156,10 +156,17 @@ void TestNotes::testResourceCopyContainment() {
     QCOMPARE(safe.write("safe"), qint64(4));
     safe.close();
 
+    const QString outsideLinkName = uniqueTestName(QStringLiteral("outside-resource"));
+    const QString insideLinkName = uniqueTestName(QStringLiteral("inside-resource"));
+#ifdef Q_OS_UNIX
+    QVERIFY(QFile::link(secretPath, QDir(resourceDirectory).filePath(outsideLinkName)));
+    QVERIFY(QFile::link(safePath, QDir(resourceDirectory).filePath(insideLinkName)));
+#endif
     const QString format = media ? QStringLiteral("![image](media/%1)\n")
                                  : QStringLiteral("[attachment](attachments/%1)\n");
     const QString text = format.arg(QString::fromLatin1(QUrl::toPercentEncoding(safeName))) +
-                         format.arg(QStringLiteral("..%2F") + secretName);
+                         format.arg(QStringLiteral("..%2F") + secretName) +
+                         format.arg(outsideLinkName) + format.arg(insideLinkName);
     Note note = createTestNote(uniqueTestName(QStringLiteral("ResourceContainment")), 0, text);
     const auto copyOrExport = [&]() {
         if (!exportNote) {
@@ -193,6 +200,11 @@ void TestNotes::testResourceCopyContainment() {
     QVERIFY(!QFileInfo::exists(temporaryDirectory.filePath(secretName)));
 
 #ifdef Q_OS_UNIX
+    QVERIFY(!QFileInfo::exists(QDir(outputDirectory).filePath(outsideLinkName)));
+    QFile copiedLink(QDir(outputDirectory).filePath(insideLinkName));
+    QVERIFY(copiedLink.open(QIODevice::ReadOnly));
+    QCOMPARE(copiedLink.readAll(), QByteArray("safe"));
+    copiedLink.close();
     if (!exportNote) {
         // Destination media or attachments folders that are symlinks must keep working
         QVERIFY(QDir(outputDirectory).removeRecursively());
@@ -203,6 +215,8 @@ void TestNotes::testResourceCopyContainment() {
         QVERIFY(QFileInfo::exists(QDir(linkedDirectory).filePath(safeName)));
         QVERIFY(QFile::remove(outputDirectory));
     }
+    QVERIFY(QFile::remove(QDir(resourceDirectory).filePath(outsideLinkName)));
+    QVERIFY(QFile::remove(QDir(resourceDirectory).filePath(insideLinkName)));
 #endif
     // Delete directly instead of trashing, so later tests keep an empty trash.
     QVERIFY(QFile::remove(note.fullNoteFilePath()));
