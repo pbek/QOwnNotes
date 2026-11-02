@@ -22,6 +22,7 @@
     their folders
   - Image filename extensions alone are not trusted when exporting HTML; extensionless
     images and long-header SVGs remain supported
+  - Joplin imports reject folder and resource symlinks that escape the import or note folder
 
 ## 26.11.2
 

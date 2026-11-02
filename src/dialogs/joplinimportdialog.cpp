@@ -309,6 +309,9 @@ NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString&
     QDir dir;
     QString path = parentSubFolder.fullPath();
     path += "/" + folderName;
+    if (!Utils::Misc::isPathInDirectory(path, Note::getFullFilePathForFile(QString()))) {
+        return {};
+    }
 
     // create the folder on the disk
     if (!dir.mkpath(path)) {
@@ -650,7 +653,7 @@ QFile* JoplinImportDialog::findResourceFile(const QString& dirPath, const QStrin
     if (Utils::Misc::isSafeFileName(fileExtension)) {
         auto* mediaFile = new QFile(dirPath + "/resources/" + id + "." + fileExtension);
 
-        if (mediaFile->exists()) {
+        if (mediaFile->exists() && Utils::Misc::isPathInDirectory(mediaFile->fileName(), dirPath)) {
             return mediaFile;
         }
 
@@ -664,8 +667,11 @@ QFile* JoplinImportDialog::findResourceFile(const QString& dirPath, const QStrin
     QDir resourceDir(dirPath + "/resources");
     const QStringList matches = resourceDir.entryList(QStringList() << id + "*", QDir::Files);
 
-    if (!matches.isEmpty()) {
-        return new QFile(resourceDir.filePath(matches.first()));
+    for (const QString& match : matches) {
+        const QString path = resourceDir.filePath(match);
+        if (Utils::Misc::isPathInDirectory(path, dirPath)) {
+            return new QFile(path);
+        }
     }
 
     return nullptr;
