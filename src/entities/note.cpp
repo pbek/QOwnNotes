@@ -63,6 +63,38 @@ Note::Note()
       _hasDirtyData{false} {}
 
 namespace {
+bool isSafeResourceFileName(const QString &fileName) {
+    // Resources are flat file names, not paths. Check after percent decoding and
+    // reject Windows separators and drive/stream syntax on every platform.
+    return !fileName.isEmpty() && fileName != QLatin1String(".") &&
+           fileName != QLatin1String("..") && !fileName.contains(QChar('/')) &&
+           !fileName.contains(QChar('\\')) && !fileName.contains(QChar(':')) &&
+           !fileName.contains(QChar::Null);
+}
+
+void copyNoteResource(const QString &sourceDirectory, const QString &destinationDirectory,
+                      const QString &destinationRoot, const QString &fileName) {
+    if (!isSafeResourceFileName(fileName)) {
+        return;
+    }
+
+    const QFileInfo source(QDir(sourceDirectory).filePath(fileName));
+    const QString sourceRoot = QFileInfo(sourceDirectory).canonicalFilePath();
+    const QString targetRoot = QFileInfo(destinationRoot).canonicalFilePath();
+    const QString targetDirectory = QFileInfo(destinationDirectory).canonicalFilePath();
+    // Also prevent existing symlinks from taking resource reads or writes outside
+    // their intended directories. QFile::copy keeps its no-overwrite behavior.
+    if (sourceRoot.isEmpty() || targetRoot.isEmpty() || targetDirectory.isEmpty() ||
+        !source.isFile() || QFileInfo(source.canonicalFilePath()).absolutePath() != sourceRoot ||
+        (targetDirectory != targetRoot &&
+         !targetDirectory.startsWith(targetRoot.endsWith(QChar('/')) ? targetRoot
+                                                                     : targetRoot + QChar('/')))) {
+        return;
+    }
+
+    QFile::copy(source.absoluteFilePath(), QDir(destinationDirectory).filePath(fileName));
+}
+
 struct WikiLinkParts {
     QString rawTarget;
     QString resolvedTarget;
@@ -1194,11 +1226,8 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
             }
 
             for (const QString &fileName : mediaFileList) {
-                QFile mediaFile(NoteFolder::currentMediaPath() + QDir::separator() + fileName);
-
-                if (mediaFile.exists()) {
-                    mediaFile.copy(mediaDir.path() + QDir::separator() + fileName);
-                }
+                copyNoteResource(NoteFolder::currentMediaPath(), mediaDir.path(), noteFolderPath,
+                                 fileName);
             }
         }
 
@@ -1214,12 +1243,8 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
             }
 
             for (const QString &fileName : attachmentFileList) {
-                QFile attachmentFile(NoteFolder::currentAttachmentsPath() + QDir::separator() +
-                                     fileName);
-
-                if (attachmentFile.exists()) {
-                    attachmentFile.copy(attachmentsDir.path() + QDir::separator() + fileName);
-                }
+                copyNoteResource(NoteFolder::currentAttachmentsPath(), attachmentsDir.path(),
+                                 noteFolderPath, fileName);
             }
         }
 
@@ -1284,11 +1309,8 @@ bool Note::exportToPath(const QString &destinationPath, bool withAttachedFiles) 
 
             // copy all images to the destination folder
             for (const QString &fileName : mediaFileList) {
-                QFile mediaFile(NoteFolder::currentMediaPath() + QDir::separator() + fileName);
-
-                if (mediaFile.exists()) {
-                    mediaFile.copy(absolutePath + QDir::separator() + fileName);
-                }
+                copyNoteResource(NoteFolder::currentMediaPath(), absolutePath, absolutePath,
+                                 fileName);
             }
 
             static const QRegularExpression re(QStringLiteral(R"((!\[.*?\])\(.*media/(.+?)\))"));
@@ -1314,12 +1336,8 @@ bool Note::exportToPath(const QString &destinationPath, bool withAttachedFiles) 
 
             // copy all attachment to the destination folder
             for (const QString &fileName : attachmentFileList) {
-                QFile attachmentFile(NoteFolder::currentAttachmentsPath() + QDir::separator() +
-                                     fileName);
-
-                if (attachmentFile.exists()) {
-                    attachmentFile.copy(absolutePath + QDir::separator() + fileName);
-                }
+                copyNoteResource(NoteFolder::currentAttachmentsPath(), absolutePath, absolutePath,
+                                 fileName);
             }
 
             static const QRegularExpression re(
@@ -1394,7 +1412,10 @@ QStringList Note::getMediaFileList() const {
         const QString fileName = match.captured(1);
         // We want to decode the file name parsed from the note, because it can be encoded
         // For example the image dialog will automatically encode the file name
-        fileList << QUrl::fromPercentEncoding(fileName.toUtf8());
+        const QString decodedFileName = QUrl::fromPercentEncoding(fileName.toUtf8());
+        if (isSafeResourceFileName(decodedFileName)) {
+            fileList << decodedFileName;
+        }
     }
 
     return fileList;
@@ -1451,7 +1472,10 @@ QStringList Note::getAttachmentsFileList() const {
 
         // We want to decode the file name parsed from the note, because it can be encoded
         // For example the attachment dialog will automatically encode the file name
-        fileList << QUrl::fromPercentEncoding(fileName.toUtf8());
+        const QString decodedFileName = QUrl::fromPercentEncoding(fileName.toUtf8());
+        if (isSafeResourceFileName(decodedFileName)) {
+            fileList << decodedFileName;
+        }
     }
 
     return fileList;

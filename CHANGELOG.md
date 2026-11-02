@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.11.3
+
+- Fixed unsafe media and attachment paths being followed when copying, moving, or
+  exporting notes (thank you, r3vpwnx)
+  (for [GHSA-fmqx-8x8h-gf76](https://github.com/pbek/QOwnNotes/security/advisories/GHSA-fmqx-8x8h-gf76))
+
 ## 26.11.2
 
 - Fixed regular expression replacements losing surrounding text context, so lookarounds

@@ -31,6 +31,10 @@ class TestNotes : public QObject {
     void initTestCase();
     void cleanupTestCase();
     void testNoteCreating();
+    void testResourceFileNames_data();
+    void testResourceFileNames();
+    void testResourceCopyContainment_data();
+    void testResourceCopyContainment();
     void testNoteEncryption();
     void testNoteDecryption();
     void testNoteDecryptionFail();
