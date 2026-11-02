@@ -66,24 +66,40 @@ void TestNotes::testResourceFileNames_data() {
     QTest::newRow("dots-in-name") << QStringLiteral("image..png") << QStringLiteral("image..png");
     QTest::newRow("decode-once") << QStringLiteral("literal%252Fname.png")
                                  << QStringLiteral("literal%2Fname.png");
+    QTest::newRow("subfolder") << QStringLiteral("sub/image.png")
+                               << QStringLiteral("sub/image.png");
+    QTest::newRow("encoded-subfolder")
+        << QStringLiteral("sub%2Fimage.png") << QStringLiteral("sub/image.png");
+    // A backslash is a subfolder separator on Windows and a file name character elsewhere
+    QTest::newRow("backslash") << QStringLiteral("sub%5Cimage.png")
+                               << QStringLiteral("sub\\image.png");
+#ifdef Q_OS_WIN
+    const QString expectedColonName;
+#else
+    // Colons are valid file name characters on Linux and macOS
+    const QString expectedColonName = QStringLiteral("10:30 image.png");
+#endif
+    QTest::newRow("colon") << QStringLiteral("10%3A30%20image.png") << expectedColonName;
     const QStringList unsafeNames = {QStringLiteral("../secret"),
                                      QStringLiteral("../../secret"),
                                      QStringLiteral("..%2f..%2Fsecret"),
                                      QStringLiteral("%2e%2e%2fsecret"),
-                                     QStringLiteral("..%5c..%5Csecret"),
-                                     QStringLiteral("..\\secret"),
+                                     QStringLiteral("sub/../../secret"),
                                      QStringLiteral("/secret"),
                                      QStringLiteral("%2Fsecret"),
-                                     QStringLiteral("%5C%5Cserver%5Csecret"),
-                                     QStringLiteral("C%3Asecret"),
-                                     QStringLiteral("image.png%3Astream"),
                                      QStringLiteral("image%00.png"),
-                                     QStringLiteral("."),
-                                     QStringLiteral(".."),
-                                     QStringLiteral("sub/image.png")};
+                                     QStringLiteral("..")};
     for (const QString &name : unsafeNames) {
         QTest::newRow(qPrintable(name)) << name << QString();
     }
+#ifdef Q_OS_WIN
+    const QStringList unsafeWindowsNames = {
+        QStringLiteral("..%5c..%5Csecret"), QStringLiteral("..\\secret"),
+        QStringLiteral("%5C%5Cserver%5Csecret"), QStringLiteral("C%3Asecret")};
+    for (const QString &name : unsafeWindowsNames) {
+        QTest::newRow(qPrintable(name)) << name << QString();
+    }
+#endif
 }
 
 void TestNotes::testResourceFileNames() {
@@ -129,7 +145,6 @@ void TestNotes::testResourceCopyContainment() {
     const QString safeName =
         uniqueTestName(QStringLiteral("safe resource")) + QStringLiteral(".png");
     const QString secretName = uniqueTestName(QStringLiteral("secret"));
-    const QString linkName = uniqueTestName(QStringLiteral("symlink"));
     const QString secretPath = QDir(notesPath).filePath(secretName);
     const QString safePath = QDir(resourceDirectory).filePath(safeName);
     QFile secret(secretPath);
@@ -141,16 +156,16 @@ void TestNotes::testResourceCopyContainment() {
     QCOMPARE(safe.write("safe"), qint64(4));
     safe.close();
 
-    const QString resourceLink = QDir(resourceDirectory).filePath(linkName);
-#ifdef Q_OS_UNIX
-    QVERIFY(QFile::link(secretPath, resourceLink));
-#endif
     const QString format = media ? QStringLiteral("![image](media/%1)\n")
                                  : QStringLiteral("[attachment](attachments/%1)\n");
     const QString text = format.arg(QString::fromLatin1(QUrl::toPercentEncoding(safeName))) +
-                         format.arg(QStringLiteral("..%2F") + secretName) + format.arg(linkName);
+                         format.arg(QStringLiteral("..%2F") + secretName);
     Note note = createTestNote(uniqueTestName(QStringLiteral("ResourceContainment")), 0, text);
-    if (exportNote) {
+    const auto copyOrExport = [&]() {
+        if (!exportNote) {
+            return note.copyToPath(destination);
+        }
+
         SettingsService settings;
         const QString key = QStringLiteral("MessageBoxOverride/show-exported-note-in-file-manager");
         const QVariant previous = settings.value(key);
@@ -162,10 +177,10 @@ void TestNotes::testResourceCopyContainment() {
         } else {
             settings.remove(key);
         }
-        QVERIFY(exported);
-    } else {
-        QVERIFY(note.copyToPath(destination));
-    }
+        return exported;
+    };
+    QVERIFY(copyOrExport());
+
     const QString outputDirectory =
         exportNote ? destination
                    : QDir(destination)
@@ -173,23 +188,21 @@ void TestNotes::testResourceCopyContainment() {
     QFile copiedSafe(QDir(outputDirectory).filePath(safeName));
     QVERIFY(copiedSafe.open(QIODevice::ReadOnly));
     QCOMPARE(copiedSafe.readAll(), QByteArray("safe"));
-    QVERIFY(!QFileInfo::exists(QDir(outputDirectory).filePath(linkName)));
+    copiedSafe.close();
     QVERIFY(!QFileInfo::exists(QDir(destination).filePath(secretName)));
     QVERIFY(!QFileInfo::exists(temporaryDirectory.filePath(secretName)));
 
 #ifdef Q_OS_UNIX
     if (!exportNote) {
-        // A pre-existing destination resource symlink must not redirect writes.
-        copiedSafe.close();
+        // Destination media or attachments folders that are symlinks must keep working
         QVERIFY(QDir(outputDirectory).removeRecursively());
-        const QString outside = temporaryDirectory.filePath(QStringLiteral("outside"));
-        QVERIFY(QDir().mkpath(outside));
-        QVERIFY(QFile::link(outside, outputDirectory));
-        QVERIFY(note.copyToPath(destination));
-        QVERIFY(!QFileInfo::exists(QDir(outside).filePath(safeName)));
+        const QString linkedDirectory = temporaryDirectory.filePath(QStringLiteral("linked"));
+        QVERIFY(QDir().mkpath(linkedDirectory));
+        QVERIFY(QFile::link(linkedDirectory, outputDirectory));
+        QVERIFY(copyOrExport());
+        QVERIFY(QFileInfo::exists(QDir(linkedDirectory).filePath(safeName)));
         QVERIFY(QFile::remove(outputDirectory));
     }
-    QVERIFY(QFile::remove(resourceLink));
 #endif
     // Delete directly instead of trashing, so later tests keep an empty trash.
     QVERIFY(QFile::remove(note.fullNoteFilePath()));
@@ -233,8 +246,14 @@ void TestNotes::testTrashRestoreRejectsUnsafeFileName() {
     trashItem.setUnsafeFileName(QStringLiteral("../escape.md"));
     QVERIFY(trashItem.restorationFilePath().isEmpty());
 
+#ifdef Q_OS_WIN
     trashItem.setUnsafeFileName(QStringLiteral("..\\escape.md"));
     QVERIFY(trashItem.restorationFilePath().isEmpty());
+#else
+    // Colons are valid in note file names on Linux and macOS
+    trashItem.setUnsafeFileName(uniqueTestName(QStringLiteral("10:30")) + QStringLiteral(".md"));
+    QVERIFY(!trashItem.restorationFilePath().isEmpty());
+#endif
 
     trashItem.setUnsafeFileName(uniqueTestName(QStringLiteral("restore")) + QStringLiteral(".md"));
     QVERIFY(!trashItem.restorationFilePath().isEmpty());

@@ -3104,14 +3104,21 @@ QString Utils::Misc::fileNameForPath(const QString &filePath) {
  * Returns true if fileName is a single, plain file name that can't escape
  * the directory it is appended to
  *
- * Windows separators and drive / stream syntax are rejected on every platform,
- * because untrusted names may come from synced or imported data
+ * Backslashes and colons are valid in file names on Linux and macOS, so they
+ * are only rejected on Windows, where they are path separators or drive syntax
  */
 bool Utils::Misc::isSafeFileName(const QString &fileName) {
-    return !fileName.isEmpty() && fileName != QLatin1String(".") &&
-           fileName != QLatin1String("..") && !fileName.contains(QChar('/')) &&
-           !fileName.contains(QChar('\\')) && !fileName.contains(QChar(':')) &&
-           !fileName.contains(QChar::Null);
+    if (fileName == QLatin1String(".") || fileName.contains(QChar('/'))) {
+        return false;
+    }
+
+#ifdef Q_OS_WIN
+    if (fileName.contains(QChar('\\'))) {
+        return false;
+    }
+#endif
+
+    return isSafeRelativePath(fileName);
 }
 
 /**
@@ -3120,19 +3127,20 @@ bool Utils::Misc::isSafeFileName(const QString &fileName) {
  */
 bool Utils::Misc::isSafeRelativePath(const QString &relativePath) {
     QString path = relativePath;
-    path.replace(QChar('\\'), QChar('/'));
-
-    if (path.isEmpty() || path.startsWith(QChar('/')) || QDir::isAbsolutePath(path) ||
-        path.contains(QChar::Null)) {
-        return false;
-    }
 
 #ifdef Q_OS_WIN
+    path.replace(QChar('\\'), QChar('/'));
+
     // Drive-relative paths like "C:file" aren't detected by QDir::isAbsolutePath
     if (path.contains(QChar(':'))) {
         return false;
     }
 #endif
+
+    if (path.isEmpty() || path.startsWith(QChar('/')) || QDir::isAbsolutePath(path) ||
+        path.contains(QChar::Null)) {
+        return false;
+    }
 
     const auto segments = path.split(QChar('/'));
     for (const QString &segment : segments) {

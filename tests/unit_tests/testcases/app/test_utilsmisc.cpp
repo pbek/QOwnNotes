@@ -756,9 +756,15 @@ void TestUtilsMisc::testIsSafeFileName_data() {
     QTest::newRow("parent") << QStringLiteral("../secret") << false;
     QTest::newRow("subfolder") << QStringLiteral("sub/image.png") << false;
     QTest::newRow("absolute") << QStringLiteral("/etc/passwd") << false;
-    QTest::newRow("backslash") << QStringLiteral("..\\secret") << false;
-    QTest::newRow("drive") << QStringLiteral("C:secret") << false;
-    QTest::newRow("stream") << QStringLiteral("image.png:stream") << false;
+#ifdef Q_OS_WIN
+    const bool isWindows = true;
+#else
+    const bool isWindows = false;
+#endif
+    // Backslashes and colons are only separators or drive syntax on Windows
+    QTest::newRow("backslash") << QStringLiteral("..\\secret") << !isWindows;
+    QTest::newRow("drive") << QStringLiteral("C:secret") << !isWindows;
+    QTest::newRow("colon") << QStringLiteral("10:30 meeting.pdf") << !isWindows;
     QTest::newRow("nul") << QStringLiteral("image") + QChar(QChar::Null) + QStringLiteral(".png")
                          << false;
 }
@@ -779,9 +785,18 @@ void TestUtilsMisc::testIsSafeRelativePath_data() {
     QTest::newRow("parent") << QStringLiteral("../note.md") << false;
     QTest::newRow("nested-parent") << QStringLiteral("sub/../../note.md") << false;
     QTest::newRow("only-parent") << QStringLiteral("..") << false;
-    QTest::newRow("backslash-parent") << QStringLiteral("sub\\..\\..\\note.md") << false;
+    QTest::newRow("current-folder") << QStringLiteral("./note.md") << true;
     QTest::newRow("absolute") << QStringLiteral("/tmp/note.md") << false;
-    QTest::newRow("backslash-absolute") << QStringLiteral("\\\\server\\share\\note.md") << false;
+#ifdef Q_OS_WIN
+    const bool isWindows = true;
+#else
+    const bool isWindows = false;
+#endif
+    // Backslashes are only path separators on Windows
+    QTest::newRow("backslash-parent") << QStringLiteral("sub\\..\\..\\note.md") << !isWindows;
+    QTest::newRow("backslash-absolute")
+        << QStringLiteral("\\\\server\\share\\note.md") << !isWindows;
+    QTest::newRow("colon") << QStringLiteral("sub/10:30.md") << !isWindows;
 }
 
 void TestUtilsMisc::testIsSafeRelativePath() {

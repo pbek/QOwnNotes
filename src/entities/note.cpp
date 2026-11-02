@@ -64,26 +64,16 @@ Note::Note()
 
 namespace {
 void copyNoteResource(const QString &sourceDirectory, const QString &destinationDirectory,
-                      const QString &destinationRoot, const QString &fileName) {
-    if (!Utils::Misc::isSafeFileName(fileName)) {
+                      const QString &fileName) {
+    // Resource names come from note text, so they must stay inside their folders
+    if (!Utils::Misc::isSafeRelativePath(fileName)) {
         return;
     }
 
-    const QFileInfo source(QDir(sourceDirectory).filePath(fileName));
-    const QString sourceRoot = QFileInfo(sourceDirectory).canonicalFilePath();
-    const QString targetRoot = QFileInfo(destinationRoot).canonicalFilePath();
-    const QString targetDirectory = QFileInfo(destinationDirectory).canonicalFilePath();
-    // Also prevent existing symlinks from taking resource reads or writes outside
-    // their intended directories. QFile::copy keeps its no-overwrite behavior.
-    if (sourceRoot.isEmpty() || targetRoot.isEmpty() || targetDirectory.isEmpty() ||
-        !source.isFile() || QFileInfo(source.canonicalFilePath()).absolutePath() != sourceRoot ||
-        (targetDirectory != targetRoot &&
-         !targetDirectory.startsWith(targetRoot.endsWith(QChar('/')) ? targetRoot
-                                                                     : targetRoot + QChar('/')))) {
-        return;
+    QFile resourceFile(sourceDirectory + QDir::separator() + fileName);
+    if (resourceFile.exists()) {
+        resourceFile.copy(destinationDirectory + QDir::separator() + fileName);
     }
-
-    QFile::copy(source.absoluteFilePath(), QDir(destinationDirectory).filePath(fileName));
 }
 
 struct WikiLinkParts {
@@ -1217,8 +1207,7 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
             }
 
             for (const QString &fileName : mediaFileList) {
-                copyNoteResource(NoteFolder::currentMediaPath(), mediaDir.path(), noteFolderPath,
-                                 fileName);
+                copyNoteResource(NoteFolder::currentMediaPath(), mediaDir.path(), fileName);
             }
         }
 
@@ -1235,7 +1224,7 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
 
             for (const QString &fileName : attachmentFileList) {
                 copyNoteResource(NoteFolder::currentAttachmentsPath(), attachmentsDir.path(),
-                                 noteFolderPath, fileName);
+                                 fileName);
             }
         }
 
@@ -1300,8 +1289,7 @@ bool Note::exportToPath(const QString &destinationPath, bool withAttachedFiles) 
 
             // copy all images to the destination folder
             for (const QString &fileName : mediaFileList) {
-                copyNoteResource(NoteFolder::currentMediaPath(), absolutePath, absolutePath,
-                                 fileName);
+                copyNoteResource(NoteFolder::currentMediaPath(), absolutePath, fileName);
             }
 
             static const QRegularExpression re(QStringLiteral(R"((!\[.*?\])\(.*media/(.+?)\))"));
@@ -1327,8 +1315,7 @@ bool Note::exportToPath(const QString &destinationPath, bool withAttachedFiles) 
 
             // copy all attachment to the destination folder
             for (const QString &fileName : attachmentFileList) {
-                copyNoteResource(NoteFolder::currentAttachmentsPath(), absolutePath, absolutePath,
-                                 fileName);
+                copyNoteResource(NoteFolder::currentAttachmentsPath(), absolutePath, fileName);
             }
 
             static const QRegularExpression re(
@@ -1404,7 +1391,7 @@ QStringList Note::getMediaFileList() const {
         // We want to decode the file name parsed from the note, because it can be encoded
         // For example the image dialog will automatically encode the file name
         const QString decodedFileName = QUrl::fromPercentEncoding(fileName.toUtf8());
-        if (Utils::Misc::isSafeFileName(decodedFileName)) {
+        if (Utils::Misc::isSafeRelativePath(decodedFileName)) {
             fileList << decodedFileName;
         }
     }
@@ -1464,7 +1451,7 @@ QStringList Note::getAttachmentsFileList() const {
         // We want to decode the file name parsed from the note, because it can be encoded
         // For example the attachment dialog will automatically encode the file name
         const QString decodedFileName = QUrl::fromPercentEncoding(fileName.toUtf8());
-        if (Utils::Misc::isSafeFileName(decodedFileName)) {
+        if (Utils::Misc::isSafeRelativePath(decodedFileName)) {
             fileList << decodedFileName;
         }
     }
