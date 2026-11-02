@@ -288,23 +288,28 @@ void TestNotes::testHtmlExportEmbedsOnlyImages() {
 void TestNotes::testJoplinImportRejectsUnsafePaths() {
     JoplinImportDialog dialog;
 
-    // A folder name that is only a parent reference can't be cleaned up
-    QCOMPARE(dialog
-                 .importFolder(QStringLiteral("dot-dot-id"),
-                               QStringLiteral("..\n\nid: dot-dot-id\ntype_: 2\n"))
-                 .getId(),
-             0);
-
-    // Path separators are removed, so folders can't be created outside the note folder
+    // Folder names must not be able to create folders outside the note folder
     const QString escapeName = uniqueTestName(QStringLiteral("joplin-escape"));
-    NoteSubFolder cleanedSubFolder = dialog.importFolder(
-        QStringLiteral("escape-id"),
-        QStringLiteral("../") + escapeName + QStringLiteral("\n\nid: escape-id\ntype_: 2\n"));
-    QVERIFY(cleanedSubFolder.getId() > 0);
-    QCOMPARE(cleanedSubFolder.getName(), QStringLiteral("..") + escapeName);
+    const QStringList unsafeFolderNames = {QStringLiteral(".."), QStringLiteral("../") + escapeName,
+                                           QStringLiteral("sub/../../") + escapeName};
+    for (const QString &folderName : unsafeFolderNames) {
+        QCOMPARE(
+            dialog
+                .importFolder(folderName, folderName + QStringLiteral("\n\nid: unsafe\ntype_: 2\n"))
+                .getId(),
+            0);
+    }
     QVERIFY(!QFileInfo::exists(QDir(notesPath).filePath(QStringLiteral("../") + escapeName)));
-    QVERIFY(QDir(cleanedSubFolder.fullPath()).removeRecursively());
-    QVERIFY(cleanedSubFolder.remove());
+
+    // Regular folder names are imported unchanged
+    const QString folderName = uniqueTestName(QStringLiteral("Notes 2024 #1"));
+    NoteSubFolder subFolder = dialog.importFolder(
+        QStringLiteral("safe-id"), folderName + QStringLiteral("\n\nid: safe-id\ntype_: 2\n"));
+    QVERIFY(subFolder.getId() > 0);
+    QCOMPARE(subFolder.getName(), folderName);
+    QVERIFY(QDir(subFolder.fullPath()).exists());
+    QVERIFY(QDir(subFolder.fullPath()).removeRecursively());
+    QVERIFY(subFolder.remove());
 
     // Resource file extensions must not be able to point outside the export
     QTemporaryDir exportDirectory;

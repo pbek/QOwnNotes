@@ -298,11 +298,11 @@ NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString&
 
     auto textLines = text.split(QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 
+    auto folderName = textLines.at(0).trimmed();
+
     // The folder name comes from the imported data, so it must not be able to
     // create folders or notes outside the note folder
-    auto folderName = Note::cleanupFileName(textLines.at(0)).trimmed();
-
-    if (!Utils::Misc::isSafeFileName(folderName)) {
+    if (folderName.isEmpty() || !Utils::Misc::isSafeRelativePath(folderName)) {
         return {};
     }
 
