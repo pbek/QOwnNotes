@@ -190,6 +190,12 @@ void UrlHandler::handleWikiLinkUrl(const QString &urlString, bool openInNewTab) 
     }
 
     NoteSubFolder targetSubFolder = currentNote.getNoteSubFolder();
+    const QString targetDirectory = parts.subfolderPath.isEmpty()
+                                        ? targetSubFolder.fullPath()
+                                        : Note::getFullFilePathForFile(parts.subfolderPath);
+    if (!Utils::Misc::isPathInDirectory(targetDirectory, Note::getFullFilePathForFile(QString()))) {
+        return;
+    }
     if (!parts.subfolderPath.isEmpty()) {
         targetSubFolder = NoteSubFolder::fetchByPathData(parts.subfolderPath, QStringLiteral("/"));
 
