@@ -18,7 +18,9 @@
 #include <QPushButton>
 #include <QRegularExpression>
 #include <QTimer>
+#include <QToolButton>
 #include <QTreeWidget>
+#include <QWindow>
 
 #include "entities/notefolder.h"
 #include "mainwindow.h"
@@ -65,16 +67,28 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     afterSetupUI();
     ui->tabWidget->setCurrentIndex(page);
     on_tabWidget_currentChanged(page);
-    ui->downloadProgressBar->hide();
-    ui->downloadProgressBar->setFormat(tr("Fetching the title of the webpage…"));
+    ui->titleFetchWidget->hide();
+    Utils::Gui::setMutedTextColor(ui->titleFetchStatusLabel);
     Utils::Gui::setMutedTextColor(ui->noteCountLabel);
     Utils::Gui::setMutedTextColor(ui->noHeadingsLabel);
     ui->noHeadingsLabel->hide();
     ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&Insert link"));
     _markdownTextEdit = new QOwnNotesMarkdownTextEdit();
     _networkManager = new QNetworkAccessManager(this);
-    QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
-                     SLOT(slotReplyFinished(QNetworkReply *)));
+    _namePlaceholderText = ui->nameLineEdit->placeholderText();
+
+    // The title fetch is deferred, so the dialog can open immediately and typing in the URL
+    // field doesn't start a request for every keystroke
+    _titleFetchTimer = new QTimer(this);
+    _titleFetchTimer->setSingleShot(true);
+    connect(_titleFetchTimer, &QTimer::timeout, this, &LinkDialog::runPendingTitleFetch);
+
+    _titleFetchStatusHideTimer = new QTimer(this);
+    _titleFetchStatusHideTimer->setSingleShot(true);
+    connect(_titleFetchStatusHideTimer, &QTimer::timeout, ui->titleFetchWidget, &QWidget::hide);
+
+    connect(ui->cancelTitleFetchButton, &QToolButton::clicked, this, &LinkDialog::cancelTitleFetch);
+    connect(this, &QDialog::finished, this, &LinkDialog::cancelTitleFetch);
 
     // Show the wiki-link checkbox only when wiki-link support is enabled
     ui->wikiLinkCheckBox->setVisible(Note::isWikiLinkSupportEnabled());
@@ -170,6 +184,7 @@ LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
 }
 
 LinkDialog::~LinkDialog() {
+    abortTitleReply();
     delete ui;
     delete _markdownTextEdit;
 }
@@ -429,43 +444,60 @@ QString LinkDialog::getTitleFromHtml(const QString &html) {
  * Shows the download progress
  */
 void LinkDialog::downloadProgress(qint64 bytesReceived, qint64 bytesTotal) {
-    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal / 1000));
-    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived / 1000));
+    // Many servers don't send a content length, keep the busy indicator in that case
+    if (bytesTotal <= 0) {
+        ui->downloadProgressBar->setRange(0, 0);
+        ui->downloadProgressBar->setToolTip(Utils::Misc::toHumanReadableByteSize(bytesReceived));
+        return;
+    }
+
+    ui->downloadProgressBar->setRange(0, static_cast<int>(bytesTotal / 1024));
+    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived / 1024));
     ui->downloadProgressBar->setToolTip(Utils::Misc::toHumanReadableByteSize(bytesReceived) +
-                                        " / " + Utils::Misc::toHumanReadableByteSize(bytesTotal));
+                                        QStringLiteral(" / ") +
+                                        Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }
 
 /**
- *
- *
- * @param reply
+ * Collects the downloaded data and stops the download as soon as the title is known,
+ * so we don't have to wait for big webpages to be downloaded completely
  */
+void LinkDialog::slotReplyReadyRead() {
+    auto *reply = qobject_cast<QNetworkReply *>(sender());
+    if (reply == nullptr || reply != _titleReply) {
+        return;
+    }
+
+    _titleReplyData += reply->readAll();
+
+    if (!_titleReplyData.toLower().contains("</title>")) {
+        return;
+    }
+
+    const QString title = getTitleFromHtml(QString::fromUtf8(_titleReplyData));
+    abortTitleReply();
+    finishTitleFetch(title);
+}
+
 void LinkDialog::slotReplyFinished(QNetworkReply *reply) {
-    if (reply == nullptr) {
+    // Ignore replies of requests that were already superseded or cancelled
+    if (reply == nullptr || reply != _titleReply) {
         return;
     }
 
-    reply->deleteLater();
-    ui->downloadProgressBar->hide();
+    _titleReplyData += reply->readAll();
+    const QNetworkReply::NetworkError error = reply->error();
+    const QString errorString = reply->errorString();
+    abortTitleReply();
 
-    qDebug() << "Reply from " << reply->url().path();
-    QByteArray data = reply->readAll();
-    qDebug() << __func__ << " - 'data.size': " << data.size();
-
-    if (reply->error() != QNetworkReply::NoError &&
-        reply->error() != QNetworkReply::OperationCanceledError) {
-        qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
-
+    if (error != QNetworkReply::NoError) {
+        qWarning() << QStringLiteral("Network error: %1").arg(errorString);
+        finishTitleFetch(QString(), tr("Could not fetch the title: %1").arg(errorString));
         return;
     }
 
-    if (getLinkName().isEmpty()) {
-        const QString title = getTitleFromHtml(data);
-
-        if (!title.isEmpty()) {
-            setLinkName(title);
-        }
-    }
+    const QString title = getTitleFromHtml(QString::fromUtf8(_titleReplyData));
+    finishTitleFetch(title, title.isEmpty() ? tr("The webpage has no title") : QString());
 }
 
 /**
@@ -570,15 +602,23 @@ void LinkDialog::addDirectoryUrl(bool relative) {
 
 void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
     updateOkButton();
-    auto url = QUrl(arg1);
+    const QUrl url(arg1.trimmed());
 
-    if (!url.isValid()) {
-        return;
+    // Try to get the title of the webpage if no link name was set
+    if (url.isValid() && url.scheme().startsWith(QStringLiteral("http")) && !url.host().isEmpty() &&
+        ui->nameLineEdit->text().isEmpty()) {
+        // Fetch right after the dialog was shown for prefilled URLs, but wait for the user
+        // to stop typing otherwise
+        scheduleTitleFetch(url, isVisible() ? 500 : 0);
+    } else {
+        cancelTitleFetch();
     }
+}
 
-    // try to get the title of the webpage if no link name was set
-    if (url.scheme().startsWith(QStringLiteral("http")) && ui->nameLineEdit->text().isEmpty()) {
-        startTitleFetchRequest(url);
+void LinkDialog::on_nameLineEdit_textEdited(const QString &text) {
+    // The user is entering a name themselves, so the fetched title isn't needed anymore
+    if (!text.isEmpty()) {
+        cancelTitleFetch();
     }
 }
 
@@ -662,16 +702,115 @@ void LinkDialog::on_tabWidget_currentChanged(int index) {
     updateOkButton();
 }
 
-void LinkDialog::startTitleFetchRequest(const QUrl &url) {
-    const QString title =
-        ScriptingService::instance()->callFetchUrlTitleHook(url.toString(QUrl::FullyEncoded));
+void LinkDialog::scheduleTitleFetch(const QUrl &url, int delayMs) {
+    abortTitleReply();
+    _pendingTitleUrl = url;
+    _titleFetchTimer->start(delayMs);
+}
 
-    if (!title.isEmpty()) {
-        setLinkName(title);
+void LinkDialog::runPendingTitleFetch() {
+    if (_pendingTitleUrl.isEmpty()) {
         return;
     }
 
+    // Wait until the dialog is really on screen, so the user never waits for a hidden dialog
+    const QWindow *window = windowHandle();
+    if (!isVisible() || window == nullptr || !window->isExposed()) {
+        _titleFetchTimer->start(20);
+        return;
+    }
+
+    const QUrl url = _pendingTitleUrl;
+    _pendingTitleUrl.clear();
+    startTitleFetchRequest(url);
+}
+
+/**
+ * Shows the title fetch progress below the URL
+ */
+void LinkDialog::setTitleFetchInProgress(const QUrl &url) {
+    _titleFetchStatusHideTimer->stop();
+    ui->downloadProgressBar->setRange(0, 0);
+    ui->downloadProgressBar->setToolTip(QString());
     ui->downloadProgressBar->show();
+    ui->titleFetchStatusLabel->setText(tr("Fetching the title from %1…").arg(url.host()));
+    ui->titleFetchStatusLabel->setToolTip(url.toString());
+    ui->cancelTitleFetchButton->show();
+    ui->titleFetchWidget->show();
+    ui->nameLineEdit->setPlaceholderText(tr("Fetching the title of the webpage…"));
+}
+
+/**
+ * Ends the title fetch progress, sets the title and shows an error for a few seconds if
+ * there was one
+ */
+void LinkDialog::finishTitleFetch(const QString &title, const QString &errorText) {
+    ui->nameLineEdit->setPlaceholderText(_namePlaceholderText);
+
+    if (!title.isEmpty() && getLinkName().isEmpty()) {
+        setLinkName(title);
+    }
+
+    if (errorText.isEmpty()) {
+        ui->titleFetchWidget->hide();
+        return;
+    }
+
+    ui->downloadProgressBar->hide();
+    ui->cancelTitleFetchButton->hide();
+    ui->titleFetchStatusLabel->setText(errorText);
+    ui->titleFetchStatusLabel->setToolTip(errorText);
+    ui->titleFetchWidget->show();
+    _titleFetchStatusHideTimer->start(5000);
+}
+
+void LinkDialog::abortTitleReply() {
+    if (_titleReply.isNull()) {
+        _titleReplyData.clear();
+        return;
+    }
+
+    QNetworkReply *reply = _titleReply;
+    _titleReply = nullptr;
+    disconnect(reply, nullptr, this, nullptr);
+    reply->abort();
+    reply->deleteLater();
+}
+
+void LinkDialog::cancelTitleFetch() {
+    const bool wasFetching = _titleFetchTimer->isActive() || !_titleReply.isNull();
+    _titleFetchTimer->stop();
+    _pendingTitleUrl.clear();
+    abortTitleReply();
+    _titleReplyData.clear();
+
+    if (wasFetching) {
+        finishTitleFetch(QString());
+    }
+}
+
+void LinkDialog::startTitleFetchRequest(const QUrl &url) {
+    abortTitleReply();
+    _titleReplyData.clear();
+    setTitleFetchInProgress(url);
+
+    // Scripts are called synchronously, so paint the progress before calling them
+    repaint();
+
+    const QString title =
+        ScriptingService::instance()->callFetchUrlTitleHook(url.toString(QUrl::FullyEncoded));
+
+    // The user might have changed the URL or typed a name in the meantime
+    if (QUrl(ui->urlEdit->text().trimmed()) != url || !getLinkName().isEmpty()) {
+        finishTitleFetch(QString());
+        return;
+    }
+
+    if (!title.isEmpty()) {
+        finishTitleFetch(title);
+        return;
+    }
+
     QNetworkRequest networkRequest(url);
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
@@ -683,15 +822,23 @@ void LinkDialog::startTitleFetchRequest(const QUrl &url) {
 #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#else
+    networkRequest.setTransferTimeout(15000);
 #endif
 
     QNetworkReply *reply = _networkManager->get(networkRequest);
+    _titleReply = reply;
 
-    connect(reply, SIGNAL(downloadProgress(qint64, qint64)), this,
-            SLOT(downloadProgress(qint64, qint64)));
+    connect(reply, &QNetworkReply::readyRead, this, &LinkDialog::slotReplyReadyRead);
+    connect(reply, &QNetworkReply::finished, this, [this, reply]() { slotReplyFinished(reply); });
+    connect(reply, &QNetworkReply::downloadProgress, this, &LinkDialog::downloadProgress);
 }
 
 void LinkDialog::on_refreshButton_clicked() {
     ui->nameLineEdit->clear();
-    on_urlEdit_textChanged(ui->urlEdit->text());
+    const QUrl url(ui->urlEdit->text().trimmed());
+
+    if (url.isValid() && url.scheme().startsWith(QStringLiteral("http"))) {
+        scheduleTitleFetch(url, 0);
+    }
 }

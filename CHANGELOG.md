@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 26.11.4
+
+- The link dialog now opens immediately when a URL is in the clipboard or selected,
+  and fetches the title of the webpage in the background
+  - A slim progress bar shows which website the title is fetched from, and the fetch can be cancelled
+  - The download stops as soon as the title is found, so big webpages are much faster
+  - Typing a URL no longer starts a request for every keystroke, and typing a link name
+    stops the title fetch
+  - Errors, like timeouts after 15 seconds, are shown briefly below the URL
+
 ## 26.11.3
 
 - Fixed PDF exports adding extra margins beyond those selected in page setup,

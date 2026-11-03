@@ -1,7 +1,10 @@
 #pragma once
 
 #include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QPointer>
 #include <QTreeWidgetItem>
+#include <QUrl>
 
 #include "masterdialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
@@ -11,6 +14,7 @@ class LinkDialog;
 }
 
 class Note;
+class QTimer;
 
 class LinkDialog : public MasterDialog {
     Q_OBJECT
@@ -41,7 +45,11 @@ class LinkDialog : public MasterDialog {
     void addFileUrl(bool relative = false);
     void addDirectoryUrl(bool relative = false);
     void slotReplyFinished(QNetworkReply *reply);
+    void slotReplyReadyRead();
     void downloadProgress(qint64 bytesReceived, qint64 bytesTotal);
+    void runPendingTitleFetch();
+    void cancelTitleFetch();
+    void on_nameLineEdit_textEdited(const QString &text);
 
     void on_headingSearchLineEdit_textChanged(const QString &arg1);
 
@@ -60,10 +68,20 @@ class LinkDialog : public MasterDialog {
     QString selectedNoteText;
     QNetworkAccessManager *_networkManager;
     QOwnNotesMarkdownTextEdit *_markdownTextEdit;
+    QTimer *_titleFetchTimer;
+    QTimer *_titleFetchStatusHideTimer;
+    QPointer<QNetworkReply> _titleReply;
+    QByteArray _titleReplyData;
+    QUrl _pendingTitleUrl;
+    QString _namePlaceholderText;
     void setupFileUrlMenu();
     void loadNoteHeadings() const;
     void doAccept();
+    void scheduleTitleFetch(const QUrl &url, int delayMs);
     void startTitleFetchRequest(const QUrl &url);
+    void abortTitleReply();
+    void setTitleFetchInProgress(const QUrl &url);
+    void finishTitleFetch(const QString &title, const QString &errorText = QString());
     void updateNoteCountLabel();
     void updateOkButton();
 };
