@@ -760,6 +760,13 @@ void TagChipsWidget::updatePopupList() {
 
     if (_popup) {
         _popup->adjustSize();
+
+        // adjustSize() calculates the height for the size hint width instead of the fixed width
+        // of the popup, so word-wrapped labels like the hint text would be cut off
+        QLayout *popupLayout = _popup->layout();
+        if (popupLayout != nullptr && popupLayout->hasHeightForWidth()) {
+            _popup->resize(_popup->width(), popupLayout->totalHeightForWidth(_popup->width()));
+        }
     }
 }
 
