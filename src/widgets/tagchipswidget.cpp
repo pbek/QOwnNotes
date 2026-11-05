@@ -39,6 +39,27 @@ QColor withAlpha(QColor color, qreal alpha) {
     return color;
 }
 
+/**
+ * Paints the background and the border of a chip or of the add button as one shape
+ *
+ * Style sheet borders with a border radius are painted as separate sides and corners
+ * that overlap, which shows brighter dots in translucent border colors.
+ */
+void paintChipShape(QWidget *widget, const QColor &background, const QColor &border, int radius,
+                    bool dashed = false) {
+    QPainter painter(widget);
+    painter.setRenderHint(QPainter::Antialiasing);
+
+    // Keep the 1px border inside the widget and sharp
+    const QRectF rect = QRectF(widget->rect()).adjusted(0.5, 0.5, -0.5, -0.5);
+    const qreal cornerRadius = qMin<qreal>(radius, rect.height() / 2);
+    QPen pen(border, 1);
+    pen.setStyle(dashed ? Qt::DashLine : Qt::SolidLine);
+    painter.setPen(pen);
+    painter.setBrush(background);
+    painter.drawRoundedRect(rect, cornerRadius, cornerRadius);
+}
+
 QFont smallerFont(const QFont &font) {
     QFont result = font;
 
@@ -69,6 +90,7 @@ TagChipsWidget::TagChipsWidget(QWidget *parent) : QWidget(parent) {
         QIcon::fromTheme(QStringLiteral("list-add"),
                          QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/list-add.svg"))));
     _addButton->setAutoRaise(true);
+    _addButton->installEventFilter(this);
     connect(_addButton, &QToolButton::clicked, this, &TagChipsWidget::showPopup);
 
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -359,11 +381,14 @@ void TagChipsWidget::updateAddButton() {
     _addButton->setText(isEmpty ? tr("Add tag") : QString());
     _addButton->setToolButtonStyle(isEmpty ? Qt::ToolButtonTextBesideIcon : Qt::ToolButtonIconOnly);
 
-    // The button is styled like a chip, with the same border width in every state, so it
-    // doesn't move when a style sheet (like the dark mode one) only adds a border on hover
+    // The button is styled like a chip, its background and border are painted in the event
+    // filter. The style sheet keeps a transparent border with the same width in every state,
+    // so the button doesn't move when a style sheet (like the dark mode one) adds a border
+    // on hover. The button with text is square, the icon-only button is round.
     const int height = rowHeight();
     const QColor text = palette().color(QPalette::WindowText);
     _addButton->setFixedHeight(height);
+    _addButton->setProperty("chipRadius", isEmpty ? 0 : height / 2);
     if (isEmpty) {
         _addButton->setMinimumWidth(0);
         _addButton->setMaximumWidth(QWIDGETSIZE_MAX);
@@ -371,18 +396,10 @@ void TagChipsWidget::updateAddButton() {
         _addButton->setFixedWidth(height);
     }
     _addButton->setStyleSheet(
-        QStringLiteral("QToolButton#addTagButton { color: %1; background-color: transparent;"
-                       " border: 1px solid %2; border-radius: %3px; margin: 0px;"
-                       " padding: 0px %4px; }"
-                       "QToolButton#addTagButton:hover { background-color: %5;"
-                       " border: 1px solid %6; }"
-                       "QToolButton#addTagButton:pressed { background-color: %7;"
-                       " border: 1px solid %6; }"
-                       "QToolButton#addTagButton:focus { border: 1px solid %6; }"
-                       "QToolButton#addTagButton:disabled { color: %8; }")
-            .arg(text.name(), cssColor(withAlpha(text, 0.35)), QString::number(height / 2),
-                 QString::number(isEmpty ? height / 2 - 2 : 0), cssColor(withAlpha(text, 0.08)),
-                 cssColor(withAlpha(text, 0.45)), cssColor(withAlpha(text, 0.16)),
+        QStringLiteral("QToolButton#addTagButton { color: %1; background: transparent;"
+                       " border: 1px solid transparent; margin: 0px; padding: 0px %2px; }"
+                       "QToolButton#addTagButton:disabled { color: %3; }")
+            .arg(text.name(), QString::number(isEmpty ? height / 2 - 2 : 0),
                  palette().color(QPalette::Disabled, QPalette::WindowText).name()));
 
     const QKeySequence shortcut = _addButton->shortcut();
@@ -453,20 +470,23 @@ QWidget *TagChipsWidget::createChip(const Item &item) {
     chip->setObjectName(QStringLiteral("tagChip"));
     chip->setProperty("tagId", item.id);
     chip->setFixedHeight(height);
+    // The background and the border are painted in the event filter, see paintChipShape()
+    chip->setProperty("chipBackground", background);
+    chip->setProperty("chipBorder", border);
+    chip->setProperty("chipDashed", isPartial);
+    chip->installEventFilter(this);
     chip->setStyleSheet(
-        QStringLiteral("QFrame#tagChip { background-color: %1; border: 1px %7 %2;"
-                       " border-radius: %3px; padding: 0px; }"
-                       "QFrame#tagChip QLabel { color: %4; background: transparent; border: none;"
+        QStringLiteral("QFrame#tagChip { background: transparent; border: 1px solid transparent;"
                        " padding: 0px; }"
-                       "QFrame#tagChip QToolButton { color: %4; background: transparent;"
-                       " border: none; border-radius: %5px; margin: 0px; padding: 0px;"
+                       "QFrame#tagChip QLabel { color: %1; background: transparent; border: none;"
+                       " padding: 0px; }"
+                       "QFrame#tagChip QToolButton { color: %1; background: transparent;"
+                       " border: none; border-radius: %2px; margin: 0px; padding: 0px;"
                        " font-weight: bold; }"
-                       "QFrame#tagChip QToolButton:hover { background-color: %6; }")
-            .arg(cssColor(background), cssColor(border), QString::number(height / 2),
-                 foreground.name(), QString::number((height - 6) / 2),
+                       "QFrame#tagChip QToolButton:hover { background-color: %3; }")
+            .arg(foreground.name(), QString::number((height - 6) / 2),
                  isDarkChip ? QStringLiteral("rgba(255, 255, 255, 60)")
-                            : QStringLiteral("rgba(0, 0, 0, 40)"),
-                 isPartial ? QStringLiteral("dashed") : QStringLiteral("solid")));
+                            : QStringLiteral("rgba(0, 0, 0, 40)")));
 
     QStringList toolTipLines;
     toolTipLines.append(item.path());
@@ -488,7 +508,6 @@ QWidget *TagChipsWidget::createChip(const Item &item) {
 
     if (_chipsClickable) {
         chip->setCursor(Qt::PointingHandCursor);
-        chip->installEventFilter(this);
         textLabel->installEventFilter(this);
     }
 
@@ -845,6 +864,28 @@ void TagChipsWidget::requestTagCreation() {
 }
 
 bool TagChipsWidget::eventFilter(QObject *obj, QEvent *event) {
+    // Paint the shape of the chips and the add button before they paint their content
+    if (event->type() == QEvent::Paint) {
+        if (obj == _addButton) {
+            const QColor text = palette().color(QPalette::WindowText);
+            const bool isActive =
+                _addButton->isEnabled() && (_addButton->underMouse() || _addButton->hasFocus());
+            const QColor background = _addButton->isDown() ? withAlpha(text, 0.16)
+                                      : _addButton->underMouse() && _addButton->isEnabled()
+                                          ? withAlpha(text, 0.08)
+                                          : QColor(Qt::transparent);
+            paintChipShape(_addButton, background,
+                           withAlpha(text, isActive || _addButton->isDown() ? 0.45 : 0.35),
+                           _addButton->property("chipRadius").toInt());
+        } else {
+            auto *widget = qobject_cast<QWidget *>(obj);
+            if (widget != nullptr && widget->property("chipBorder").isValid()) {
+                paintChipShape(widget, widget->property("chipBackground").value<QColor>(),
+                               widget->property("chipBorder").value<QColor>(), widget->height() / 2,
+                               widget->property("chipDashed").toBool());
+            }
+        }
+    }
     // Return the focus to the tags after the popup was closed
     if (obj == _popup && event->type() == QEvent::Hide && isVisible() && isEnabled()) {
         _addButton->setFocus();

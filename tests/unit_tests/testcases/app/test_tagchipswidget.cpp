@@ -206,7 +206,7 @@ void TestTagChipsWidget::testPartialSelection() {
         }
     }
     QVERIFY(partialChip);
-    QVERIFY(partialChip->styleSheet().contains(QStringLiteral("dashed")));
+    QVERIFY(partialChip->property("chipDashed").toBool());
     QVERIFY(partialChip->toolTip().contains(QStringLiteral("Only on some notes")));
 
     widget.showPopup();
