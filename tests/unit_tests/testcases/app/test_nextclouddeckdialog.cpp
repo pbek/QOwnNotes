@@ -14,7 +14,8 @@
 #include <QtTest>
 
 #include "dialogs/nextclouddeckdialog.h"
-#include "widgets/nextclouddecklabelswidget.h"
+#include "widgets/nextclouddecklabeldelegate.h"
+#include "widgets/tagchipswidget.h"
 
 namespace {
 QTreeWidget *populatePicker(NextcloudDeckDialog &dialog) {
@@ -171,106 +172,35 @@ void TestNextcloudDeckDialog::testNewCardButtons() {
     QVERIFY(!createAndInsert->isEnabled());
 }
 
-namespace {
-QList<NextcloudDeckService::Label> testLabels() {
-    return {{3, QStringLiteral("Later"), QStringLiteral("F1DB50")},
-            {1, QStringLiteral("Finished"), QStringLiteral("31CC7C")},
-            {2, QStringLiteral("Action needed"), QStringLiteral("FF7A66")}};
-}
+void TestNextcloudDeckDialog::testLabelsEditor() {
+    NextcloudDeckDialog dialog;
+    auto *widget = dialog.findChild<TagChipsWidget *>(QStringLiteral("labelsWidget"));
+    QVERIFY(widget);
+    QCOMPARE(widget->findChild<QToolButton *>(QStringLiteral("addTagButton"))->shortcut(),
+             QKeySequence(QStringLiteral("Ctrl+T")));
 
-QStringList chipTitles(const NextcloudDeckLabelsWidget &widget) {
-    QStringList titles;
-    for (auto *chip : widget.findChildren<QFrame *>(QStringLiteral("deckLabelChip"))) {
-        titles.append(chip->findChild<QLabel *>()->text());
+    // Deck labels are converted to colored tag chips
+    const auto item = NextcloudDeckLabelDelegate::labelToItem(
+        {5, QStringLiteral("Finished"), QStringLiteral("31CC7C")});
+    QCOMPARE(item.id, 5);
+    QCOMPARE(item.name, QStringLiteral("Finished"));
+    QCOMPARE(item.color, QColor(0x31, 0xCC, 0x7C));
+    QCOMPARE(NextcloudDeckLabelDelegate::labelColor(QStringLiteral("invalid")),
+             QColor(0x99, 0x99, 0x99));
+
+    // New tags are offered with the Deck colors
+    widget->setItems({item});
+    widget->show();
+    widget->showPopup();
+    auto *popup = widget->findChild<QFrame *>(QStringLiteral("tagChipsPopup"));
+    popup->findChild<QLineEdit *>(QStringLiteral("tagSearchEdit"))->setText(QStringLiteral("New"));
+    QStringList colors;
+    for (const auto *button : popup->findChildren<QToolButton *>()) {
+        if (button->property("tagColor").isValid()) {
+            colors.append(button->property("tagColor").toString());
+        }
     }
-    titles.sort();
-    return titles;
-}
-}    // namespace
-
-void TestNextcloudDeckDialog::testLabelsWidget() {
-    NextcloudDeckLabelsWidget widget;
-    QSignalSpy changed(&widget, &NextcloudDeckLabelsWidget::selectedLabelsChanged);
-    widget.setAvailableLabels(testLabels());
-
-    // Tags are offered alphabetically
-    QCOMPARE(widget.availableLabels().first().title, QStringLiteral("Action needed"));
-
-    widget.setSelectedLabelIds({3, 1, 42});
-    QCOMPARE(changed.count(), 1);
-    // Unknown tags are ignored and the selection follows the available order
-    QCOMPARE(widget.selectedLabelIds(), QList<int>({3, 1}));
-    QCOMPARE(widget.selectedLabels().first().title, QStringLiteral("Finished"));
-    QVERIFY(widget.hasSameSelection({1, 3}));
-    QVERIFY(!widget.hasSameSelection({1}));
-    QCOMPARE(chipTitles(widget),
-             QStringList({QStringLiteral("Finished"), QStringLiteral("Later")}));
-
-    // Removing a tag via its chip
-    widget.show();
-    auto *chip = widget.findChildren<QFrame *>(QStringLiteral("deckLabelChip")).first();
-    const int removedId = chip->property("labelId").toInt();
-    chip->findChild<QToolButton *>(QStringLiteral("removeLabelButton"))->click();
-    QCOMPARE(changed.count(), 2);
-    QVERIFY(!widget.selectedLabelIds().contains(removedId));
-    QTRY_COMPARE(widget.findChildren<QFrame *>(QStringLiteral("deckLabelChip")).count(), 1);
-
-    // Tags that aren't available in the board anymore are dropped from the selection
-    widget.setSelectedLabelIds({1, 3});
-    widget.setAvailableLabels({{1, QStringLiteral("Finished"), QStringLiteral("31CC7C")}});
-    QCOMPARE(widget.selectedLabelIds(), QList<int>({1}));
-
-    // Readable text colors on light and dark tags
-    QCOMPARE(NextcloudDeckLabelsWidget::textColorForBackground(QColor(0xF1, 0xDB, 0x50)),
-             QColor(0x22, 0x22, 0x22));
-    QCOMPARE(NextcloudDeckLabelsWidget::textColorForBackground(QColor(0x3A, 0x3B, 0x3D)),
-             QColor(Qt::white));
-}
-
-void TestNextcloudDeckDialog::testLabelPopup() {
-    NextcloudDeckLabelsWidget widget;
-    widget.setAvailableLabels(testLabels());
-    widget.show();
-    QSignalSpy create(&widget, &NextcloudDeckLabelsWidget::createLabelRequested);
-
-    widget.showLabelPopup();
-    QVERIFY(widget.isLabelPopupVisible());
-    auto *popup = widget.findChild<QFrame *>(QStringLiteral("deckLabelPopup"));
-    auto *search = popup->findChild<QLineEdit *>(QStringLiteral("labelSearchEdit"));
-    auto *list = popup->findChild<QListWidget *>(QStringLiteral("labelListWidget"));
-    QCOMPARE(list->count(), 3);
-
-    // An exact match toggles the tag instead of creating a new one
-    search->setText(QStringLiteral("later"));
-    QTest::keyClick(search, Qt::Key_Return);
-    QCOMPARE(widget.selectedLabelIds(), QList<int>({3}));
-    QVERIFY(search->text().isEmpty());
-    QCOMPARE(list->item(2)->checkState(), Qt::Checked);
-
-    // Space toggles the current tag of the list
-    list->setCurrentRow(2);
-    QTest::keyClick(list, Qt::Key_Space);
-    QVERIFY(widget.selectedLabelIds().isEmpty());
-
-    // Partial matches can be created as new tags
-    search->setText(QStringLiteral("Fin"));
-    QCOMPARE(list->count(), 2);
-    QCOMPARE(list->item(1)->data(Qt::UserRole).toInt(), -1);
-    list->setCurrentRow(1);
-    QTest::keyClick(search, Qt::Key_Return);
-    QCOMPARE(create.count(), 1);
-    QCOMPARE(create.first().at(0).toString(), QStringLiteral("Fin"));
-    // The first unused default color is suggested
-    QCOMPARE(create.first().at(1).toString(), QStringLiteral("317CCC"));
-
-    // A created tag is selected and the search is reset
-    widget.addAvailableLabel({7, QStringLiteral("Fin"), QStringLiteral("317CCC")});
-    QCOMPARE(widget.selectedLabelIds(), QList<int>({7}));
-    QVERIFY(search->text().isEmpty());
-    QCOMPARE(list->count(), 4);
-
-    QTest::keyClick(search, Qt::Key_Escape);
-    QTRY_VERIFY(!widget.isLabelPopupVisible());
+    QCOMPARE(colors, NextcloudDeckService::defaultLabelColors());
 }
 
 void TestNextcloudDeckDialog::testSearchCardsByTag() {

@@ -228,7 +228,7 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="NextcloudDeckLabelsWidget" name="labelsWidget" native="true"/>
+       <widget class="TagChipsWidget" name="labelsWidget" native="true"/>
       </item>
       <item row="6" column="0" colspan="2">
        <widget class="QLabel" name="descriptionLabel">
@@ -519,9 +519,9 @@
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
   </customwidget>
   <customwidget>
-   <class>NextcloudDeckLabelsWidget</class>
+   <class>TagChipsWidget</class>
    <extends>QWidget</extends>
-   <header location="global">widgets/nextclouddecklabelswidget.h</header>
+   <header location="global">widgets/tagchipswidget.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

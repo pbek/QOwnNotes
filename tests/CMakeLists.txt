@@ -138,6 +138,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_searchwidgets.h
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.cpp
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.h
+    ${QON_TESTS_DIR}/testcases/app/test_tagchipswidget.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_tagchipswidget.h
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.cpp
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.h
     ${QON_TESTS_DIR}/testcases/app/test_touchscrolling.cpp
@@ -270,8 +272,10 @@ set(APP_SOURCE_FILES
     widgets/lineedit.h
     widgets/loadingoverlaywidget.cpp
     widgets/loadingoverlaywidget.h
-    widgets/nextclouddecklabelswidget.cpp
-    widgets/nextclouddecklabelswidget.h
+    widgets/nextclouddecklabeldelegate.cpp
+    widgets/nextclouddecklabeldelegate.h
+    widgets/tagchipswidget.cpp
+    widgets/tagchipswidget.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
     widgets/notepreviewwidget.cpp

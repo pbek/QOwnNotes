@@ -575,8 +575,10 @@ set(SOURCE_FILES
     widgets/navigationwidget.h
     widgets/loadingoverlaywidget.cpp
     widgets/loadingoverlaywidget.h
-    widgets/nextclouddecklabelswidget.cpp
-    widgets/nextclouddecklabelswidget.h
+    widgets/nextclouddecklabeldelegate.cpp
+    widgets/nextclouddecklabeldelegate.h
+    widgets/tagchipswidget.cpp
+    widgets/tagchipswidget.h
     widgets/filenavigationwidget.cpp
     widgets/filenavigationwidget.h
     widgets/backlinkwidget.cpp

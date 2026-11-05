@@ -773,21 +773,13 @@ NextcloudDeckService::Card NextcloudDeckService::cardFromJson(const QJsonObject&
 
     const qint64 createdAtTimestamp = object[QStringLiteral("createdAt")].toVariant().toLongLong();
     if (createdAtTimestamp > 0) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-        card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
-#else
         card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
-#endif
     }
 
     const qint64 lastModifiedTimestamp =
         object[QStringLiteral("lastModified")].toVariant().toLongLong();
     if (lastModifiedTimestamp > 0) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-        card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
-#else
         card.lastModified = QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
-#endif
     }
 
     return card;
@@ -862,11 +854,7 @@ bool NextcloudDeckService::sendJsonRequest(const QByteArray& verb, const QUrl& u
     request.setHeader(QNetworkRequest::UserAgentHeader, Utils::Misc::friendlyUserAgentString());
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     request.setRawHeader("OCS-APIRequest", "true");
-#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
-    request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
-#else
     request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
-#endif
     addAuthHeader(request);
 
     qDebug() << __func__ << " - " << verb << " " << url << " " << body;

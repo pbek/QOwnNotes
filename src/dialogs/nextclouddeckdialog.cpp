@@ -28,7 +28,8 @@
 #undef QOwnNotesMarkdownTextEdit
 #endif
 #include "utils/gui.h"
-#include "widgets/nextclouddecklabelswidget.h"
+#include "widgets/nextclouddecklabeldelegate.h"
+#include "widgets/tagchipswidget.h"
 
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog), _mode(mode) {
@@ -103,7 +104,13 @@ void NextcloudDeckDialog::setupUi() {
 
     // Line up the tags label with the first row of tag chips
     ui->labelsLabel->setMinimumHeight(ui->labelsWidget->rowHeight());
-    connect(ui->labelsWidget, &NextcloudDeckLabelsWidget::createLabelRequested, this,
+    ui->labelsWidget->setNewTagColors(NextcloudDeckService::defaultLabelColors());
+    ui->labelsWidget->setAddButtonShortcut(QKeySequence(QStringLiteral("Ctrl+T")));
+    ui->labelsWidget->setAddButtonToolTip(tr("Add or remove tags of the card, or create new tags"));
+    ui->labelsWidget->setPopupHintText(
+        tr("New tags are created right away, the tags of the card are stored when the card "
+           "is saved."));
+    connect(ui->labelsWidget, &TagChipsWidget::createTagRequested, this,
             &NextcloudDeckDialog::createLabel);
 
     ui->newItemEdit->installEventFilter(this);
@@ -272,7 +279,7 @@ void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
     const QList<int> currentLabelIds = cardIdToUpdate > 0 ? _currentCard.labelIds() : QList<int>();
     if (!ui->labelsWidget->hasSameSelection(currentLabelIds)) {
         nextcloudDeckService.setCardLabels(cardId, currentLabelIds,
-                                           ui->labelsWidget->selectedLabelIds());
+                                           ui->labelsWidget->selectedIds());
     }
 
     if (insertLinkAndClose) {
@@ -891,7 +898,7 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->deleteCardButton->setEnabled(false);
     _currentCard = NextcloudDeckService::Card();
     updateAvailableLabels();
-    ui->labelsWidget->setSelectedLabelIds({});
+    ui->labelsWidget->setSelectedIds({});
     ui->moveCardButton->setEnabled(false);
     updateEditState();
 }
@@ -935,7 +942,7 @@ void NextcloudDeckDialog::jumpToCard(int id) {
         ui->titleLineEdit->setText(_currentCard.title);
         ui->descriptionTextEdit->setPlainText(_currentCard.description);
         updateAvailableLabels();
-        ui->labelsWidget->setSelectedLabelIds(_currentCard.labelIds());
+        ui->labelsWidget->setSelectedIds(_currentCard.labelIds());
 
         // Set the due date
         if (_currentCard.duedate.isValid()) {
@@ -1017,7 +1024,7 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     const bool keepDescription = description != _currentCard.description;
     const bool keepDueDate = dueDateEnabled != _currentCard.duedate.isValid() ||
                              (dueDateEnabled && dueDateTime != _currentCard.duedate);
-    const QList<int> labelIds = ui->labelsWidget->selectedLabelIds();
+    const QList<int> labelIds = ui->labelsWidget->selectedIds();
     const bool keepLabels = !ui->labelsWidget->hasSameSelection(_currentCard.labelIds());
 
     resetEditFrameControls();
@@ -1032,7 +1039,7 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
 
     // Tags of another board are dropped, because they don't exist in the selected board
     if (keepLabels) {
-        ui->labelsWidget->setSelectedLabelIds(labelIds);
+        ui->labelsWidget->setSelectedIds(labelIds);
     }
 
     ui->descriptionTextEdit->setFocus();
@@ -1330,7 +1337,8 @@ int NextcloudDeckDialog::editedCardBoardId() const {
 }
 
 void NextcloudDeckDialog::updateAvailableLabels() {
-    ui->labelsWidget->setAvailableLabels(_boardLabels.value(editedCardBoardId()));
+    ui->labelsWidget->setItems(
+        NextcloudDeckLabelDelegate::labelsToItems(_boardLabels.value(editedCardBoardId())));
 }
 
 /**
@@ -1355,5 +1363,5 @@ void NextcloudDeckDialog::createLabel(const QString &title, const QString &color
 
     MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("deck/label/created"));
     mergeBoardLabels(boardId, {label});
-    ui->labelsWidget->addAvailableLabel(label, true);
+    ui->labelsWidget->addItem(NextcloudDeckLabelDelegate::labelToItem(label), true);
 }

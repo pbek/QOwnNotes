@@ -220,7 +220,8 @@ SOURCES += main.cpp\
     dialogs/newnotedialog.cpp \
     widgets/navigationwidget.cpp \
     widgets/loadingoverlaywidget.cpp \
-    widgets/nextclouddecklabelswidget.cpp \
+    widgets/nextclouddecklabeldelegate.cpp \
+    widgets/tagchipswidget.cpp \
     widgets/filenavigationwidget.cpp \
     widgets/backlinkwidget.cpp \
     widgets/notepreviewwidget.cpp \
@@ -396,7 +397,8 @@ HEADERS  += mainwindow.h \
     dialogs/newnotedialog.h \
     widgets/navigationwidget.h \
     widgets/loadingoverlaywidget.h \
-    widgets/nextclouddecklabelswidget.h \
+    widgets/nextclouddecklabeldelegate.h \
+    widgets/tagchipswidget.h \
     widgets/filenavigationwidget.h \
     widgets/backlinkwidget.h \
     widgets/notepreviewwidget.h \
