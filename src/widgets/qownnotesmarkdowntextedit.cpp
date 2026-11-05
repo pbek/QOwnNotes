@@ -2809,17 +2809,13 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         textOptionFlags &= ~QTextOption::ShowTabsAndSpaces;
     }
 
-    const bool showLineEndingMarkers =
-        settings.value(QStringLiteral("Editor/showLineEndingMarkers"), false).toBool();
-    if (showLineEndingMarkers) {
-        textOptionFlags |= QTextOption::ShowLineAndParagraphSeparators |
-                           QTextOption::AddSpaceForLineAndParagraphSeparators;
-    } else {
-        textOptionFlags &= ~(QTextOption::ShowLineAndParagraphSeparators |
-                             QTextOption::AddSpaceForLineAndParagraphSeparators);
-    }
     textOption.setFlags(textOptionFlags);
     document()->setDefaultTextOption(textOption);
+
+    // Line ending markers use the same color as the whitespace markers
+    setLineEndingMarkers(
+        settings.value(QStringLiteral("Editor/showLineEndingMarkers"), false).toBool(),
+        Utils::Schema::schemaSettings->getForegroundColor(MarkdownHighlighter::Whitespace));
 
     // Hide formatting syntax on non-cursor blocks (Typora-like)
     const bool hideFormattingSyntax =

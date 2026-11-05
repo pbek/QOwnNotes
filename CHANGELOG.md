@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.11.5
+
+- Line ending markers (¶) in the note editor now use the **Whitespace marker** color of the
+  editor color scheme, like the markers for spaces and tabs
+  (for [#3840](https://github.com/pbek/QOwnNotes/issues/3840))
+
 ## 26.11.4
 
 - The link dialog now opens immediately when a URL is in the clipboard or selected,
