@@ -1,5 +1,25 @@
 # Release builds and libgit2
 
+## Supported Qt versions
+
+Current sources require **Qt 5.13+ or Qt 6.0+**. Both `src/QOwnNotes.pro` and
+`src/CMakeLists.txt` reject older Qt 5 versions during configuration. Qt 5.13.2
+is the oldest retained GitHub CI build; the legacy macOS release uses Qt 5.15.2.
+
+- The Qt 5 Nix recipes use Qt 5.15 from Nixpkgs (including the pinned 5.15.3
+  variant) and inherit the qmake/CMake version checks.
+- The retained Qt 5 Debian and OBS RPM definitions declare a minimum of 5.13.
+  Distributions providing older Qt cannot build current sources with these recipes.
+- The maintained AUR, Gentoo, Slackware, OBS CMake, Launchpad, Snap, and normal
+  GitHub release recipes use Qt 6. Docker development images either provide
+  Qt 5.15/Qt 6 or install the Qt version selected by the workflow. The standalone
+  `github/aqt/Dockerfile` defaults to Qt 5.13.2.
+- `flatpak/org.qownnotes.QOwnNotes.json` pins a historical source release and
+  KDE runtime 5.10. It is a legacy example, not a build recipe for current sources;
+  its pinned source and runtime are intentionally unchanged.
+
+## libgit2
+
 The maintained CMake/Qt6 recipes enable libgit2 so **Show note git versions**
 provides the built-in version list, diff, text preview, and restore action.
 

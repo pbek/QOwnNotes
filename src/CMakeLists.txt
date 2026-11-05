@@ -47,6 +47,11 @@ else()
   set(QT_VERSION_MAJOR 5)
 endif()
 
+# Reject unsupported Qt 5 versions before configuring bundled libraries.
+if(NOT QON_QT6_BUILD)
+  find_package(Qt5 5.13 REQUIRED COMPONENTS Core)
+endif()
+
 # put the QOwnNotes.exe in build directory
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
@@ -230,12 +235,6 @@ endif()
 set(LIBSECRET_SUPPORT
     ${LIBSECRET_FOUND}
     CACHE BOOL "" FORCE)
-if(NOT QON_QT6_BUILD)
-  find_package(
-    Qt5
-    COMPONENTS Core
-    REQUIRED)
-endif()
 add_subdirectory(libraries/qtkeychain EXCLUDE_FROM_ALL)
 if(QT_VERSION_MAJOR EQUAL 5 AND Qt5Core_VERSION VERSION_LESS 5.15.0)
   # qtkeychain references QDataStream::Qt_5_15, which is unavailable in legacy

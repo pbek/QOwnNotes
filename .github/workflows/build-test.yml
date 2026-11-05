@@ -50,7 +50,6 @@ jobs:
         # aqt Qt versions: https://ddalcino.github.io/aqt-list-server/
         qt-version:
           [
-            "5.9.9",
             "5.13.2",
             "5.14.2",
             "5.15.2",
@@ -65,12 +64,6 @@ jobs:
           ]
         experimental: [false]
         exclude:
-          # Failing SSL Tests
-          - os: ubuntu-latest
-            qt-version: "5.9.9"
-          # Build tools not found
-          - os: windows-2025
-            qt-version: "5.9.9"
           # Build tools not found
           - os: windows-2025
             qt-version: "5.13.2"
@@ -115,14 +108,6 @@ jobs:
         #
 
       # https://github.com/jurplel/install-qt-action
-      - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.9.9' )
-        name: Install Qt 5.9 on Windows
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: ${{ matrix.qt-version }}
-          arch: win32_mingw53
-          cache: true
-          aqtversion: "==0.9.4"
       - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.13.2' ) || ( matrix.qt-version == '5.14.2' ) )
         name: Install Qt on Windows
         uses: jurplel/install-qt-action@v4

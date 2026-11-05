@@ -4,6 +4,10 @@
 #
 #-------------------------------------------------
 
+!versionAtLeast(QT_VERSION, 5.13.0) {
+    error("QOwnNotes requires Qt 5.13 or newer")
+}
+
 QT       += core gui widgets sql svg network xml printsupport qml websockets concurrent
 
 # quick is enabled for more scripting options

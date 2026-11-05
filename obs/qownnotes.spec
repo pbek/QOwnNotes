@@ -8,12 +8,12 @@
 %global lrelease_qt5 /usr/bin/lrelease-qt5
 Name:           qownnotes
 BuildRequires:  gcc-c++ fdupes
-BuildRequires:  pkgconfig(Qt5Svg)
-BuildRequires:  pkgconfig(Qt5Qml)
-BuildRequires:  pkgconfig(Qt5Core)
-BuildRequires:  pkgconfig(Qt5Concurrent)
-BuildRequires:  pkgconfig(Qt5WebSockets)
-BuildRequires:  pkgconfig(Qt5X11Extras)
+BuildRequires:  pkgconfig(Qt5Svg) >= 5.13
+BuildRequires:  pkgconfig(Qt5Qml) >= 5.13
+BuildRequires:  pkgconfig(Qt5Core) >= 5.13
+BuildRequires:  pkgconfig(Qt5Concurrent) >= 5.13
+BuildRequires:  pkgconfig(Qt5WebSockets) >= 5.13
+BuildRequires:  pkgconfig(Qt5X11Extras) >= 5.13
 BuildRequires:  pkgconfig(libsecret-1)
 
 # This is for all Fedora CentOS 7

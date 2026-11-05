@@ -4,6 +4,9 @@
 
 You can also build QOwnNotes yourself from the source code.
 
+Current sources require **Qt 5.13 or newer**, or **Qt 6.0 or newer**. Qt 5.13.2
+is the oldest version covered by the build CI; qmake and CMake reject older Qt 5 versions.
+
 Checkout the code of the last release directly from the git repository:
 
 ```bash

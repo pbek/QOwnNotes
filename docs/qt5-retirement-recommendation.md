@@ -11,6 +11,10 @@ Stop publishing Qt 5 through the Bitwarden-driven release process. Retain the Qt
 together with Qt 5 source compatibility and CI coverage. The legacy Qt 5-named
 Snap jobs are retired starting with 26.10.15.
 
+As of 2026-11-05, the minimum supported Qt 5 version is 5.13, matching the
+oldest retained CI build (5.13.2). The Qt 5.9 CI job is retired, and qmake and
+CMake reject older Qt 5 versions. The retained macOS release uses Qt 5.15.2.
+
 Do not create a long-lived Qt 5 maintenance branch unless a maintainer commits
 to supporting it. Keep the final external Qt 5 packages available for users of
 operating systems that cannot run the Qt 6 builds.

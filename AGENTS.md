@@ -211,7 +211,7 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 - **Always use `just nix-build` to build the project** - Don't try to run qmake/make directly unless specifically requested
 - **The project uses Qt/C++** - Be mindful of Qt's signal/slot mechanism, QObject lifecycle, and Qt-specific patterns
 - **Submodules are used** - Libraries in `src/libraries/` are git submodules
-- **Multiple Qt versions supported** - Code must work with both Qt 5.7+ and Qt6 (use Preprocessor Directives like `#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)` to handle differences)
+- **Multiple Qt versions supported** - Code must work with both Qt 5.13+ and Qt6 (use preprocessor directives like `#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)` to handle differences)
 - **Cross-platform** - Code must work on Linux, macOS, and Windows
 - **Two build systems available** - Primary is qmake (`.pro` files), but CMake (`CMakeLists.txt`) is also supported
 - **Build projects** - The primary build project files are `src/QOwnNotes.pro` and `src/CMakeLists.txt`
@@ -226,7 +226,7 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 
 ## Minimum Requirements
 
-- Qt 5.5+ or Qt 6.0+
+- Qt 5.13+ or Qt 6.0+
 - GCC 4.8+
 - Desktop operating system supporting Qt
 

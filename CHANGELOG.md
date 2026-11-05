@@ -2,6 +2,10 @@
 
 ## 26.11.5
 
+- Raised the minimum supported Qt 5 version to **5.13**, matching the oldest retained CI
+  build, and removed the Qt 5.9 build job
+  (related to [#3752](https://github.com/pbek/QOwnNotes/issues/3752))
+  - qmake and CMake now reject older Qt 5 versions during configuration
 - Added Ubuntu 27.04 **Tenacious T-Rex** to the Qt6 Launchpad build script
 - Line ending markers (¶) in the note editor now use the **Whitespace marker** color of the
   editor color scheme, like the markers for spaces and tabs

@@ -203,7 +203,7 @@ Translations are managed via Crowdin: https://crowdin.com/project/qownnotes
 
 ## Minimum Requirements
 
-- Qt 5.5+ or Qt 6.0+
+- Qt 5.13+ or Qt 6.0+
 - GCC 4.8+
 - Desktop operating system supporting Qt
 
