@@ -101,6 +101,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
+#include <QScopedValueRollback>
 #include <QScreen>
 #include <QScrollBar>
 #include <QSet>
@@ -2717,6 +2718,7 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
     //    qDebug() << __func__ << " - 'html': " << html;
 
     this->noteDiffDialog = new NoteDiffDialog(this, html);
+    const QScopedValueRollback<bool> reviewingExternalChanges(_noteDiffDialogExecuting, true);
     this->noteDiffDialog->exec();
 
     int result = this->noteDiffDialog->resultActionRole();

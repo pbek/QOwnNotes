@@ -3510,7 +3510,7 @@ QUrl Note::fullNoteFileUrl() const {
  * @return amount of notes that were saved
  */
 int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged, bool *noteWasRenamed,
-                                bool *currentNoteTextChanged) {
+                                bool *currentNoteTextChanged, bool skipCurrentNote) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     ScriptingService *scriptingService = ScriptingService::instance();
@@ -3524,6 +3524,9 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged, boo
     int count = 0;
     for (int r = 0; query.next(); r++) {
         Note note = noteFromQuery(query);
+        if (skipCurrentNote && note.getId() == currentNote.getId()) {
+            continue;
+        }
         if (currentNote.getHasDirtyData() && (note.getId() == currentNote.getId())) {
             note = currentNote;
         }

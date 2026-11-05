@@ -12,6 +12,7 @@
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QPlainTextEdit>
+#include <QScopeGuard>
 #include <QSet>
 #include <QSqlQuery>
 #include <QString>
@@ -533,6 +534,76 @@ Note TestNotes::createTestNote(const QString &name, int noteSubFolderId,
     }
 
     return note;
+}
+
+void TestNotes::testDeferredCurrentNoteSave_data() {
+    QTest::addColumn<bool>("checksumChecks");
+    QTest::newRow("checksum-disabled") << false;
+    QTest::newRow("checksum-enabled") << true;
+}
+
+void TestNotes::testDeferredCurrentNoteSave() {
+    QFETCH(bool, checksumChecks);
+    SettingsService settings;
+    const QVariant previousChecksumSetting =
+        settings.value(QStringLiteral("enableNoteChecksumChecks"));
+    const auto restoreSetting = qScopeGuard([&]() {
+        if (previousChecksumSetting.isValid()) {
+            settings.setValue(QStringLiteral("enableNoteChecksumChecks"), previousChecksumSetting);
+        } else {
+            settings.remove(QStringLiteral("enableNoteChecksumChecks"));
+        }
+    });
+    settings.setValue(QStringLiteral("enableNoteChecksumChecks"), checksumChecks);
+
+    Note current = createTestNote(uniqueTestName(QStringLiteral("Deferred current")));
+    Note other = createTestNote(uniqueTestName(QStringLiteral("Deferred background")));
+    const QString externalText = current.getNoteText() + QStringLiteral("External update\n");
+    const QString pendingText = current.getNoteText() + QStringLiteral("Pending local edit\n");
+    const QString otherText = other.getNoteText() + QStringLiteral("Background edit\n");
+
+    // Isolate this flush from dirty rows left by other tests, then restore those rows.
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QVERIFY(db.transaction());
+    const auto rollback = qScopeGuard([&]() { db.rollback(); });
+    QSqlQuery query(db);
+    QVERIFY(query.exec(QStringLiteral("UPDATE note SET has_dirty_data = 0")));
+    QVERIFY(current.storeNewText(pendingText));
+    QVERIFY(other.storeNewText(otherText));
+
+    QFile currentFile(current.fullNoteFilePath());
+    QVERIFY(currentFile.open(QIODevice::WriteOnly | QIODevice::Truncate));
+    QCOMPARE(currentFile.write(externalText.toUtf8()), externalText.toUtf8().size());
+    currentFile.close();
+
+    bool currentChanged = false;
+    bool renamed = false;
+    bool currentTextChanged = false;
+    const int count =
+        Note::storeDirtyNotesToDisk(current, &currentChanged, &renamed, &currentTextChanged, true);
+    QVERIFY(currentFile.open(QIODevice::ReadOnly));
+    QCOMPARE(currentFile.readAll(), externalText.toUtf8());
+    currentFile.close();
+    QCOMPARE(Note::fetch(current.getId()).getNoteText(), pendingText);
+    QVERIFY(Note::fetch(current.getId()).getHasDirtyData());
+    QFile otherFile(other.fullNoteFilePath());
+    QVERIFY(otherFile.open(QIODevice::ReadOnly));
+    QCOMPARE(otherFile.readAll(), otherText.toUtf8());
+    QCOMPARE(count, 1);
+    QVERIFY(!currentChanged);
+    QVERIFY(!renamed);
+    QVERIFY(!currentTextChanged);
+
+    // Reload is followed by a normal editor change and the next automatic flush.
+    QVERIFY(current.updateNoteTextFromDisk());
+    const QString afterReload = current.getNoteText() + QStringLiteral("After reload\n");
+    QVERIFY(current.storeNewText(afterReload));
+    QCOMPARE(Note::storeDirtyNotesToDisk(current, &currentChanged, &renamed, &currentTextChanged),
+             1);
+    QVERIFY(currentFile.open(QIODevice::ReadOnly));
+    QCOMPARE(currentFile.readAll(), afterReload.toUtf8());
+    QVERIFY(currentChanged);
+    QVERIFY(!current.getHasDirtyData());
 }
 
 void TestNotes::initTestCase() {

@@ -36,7 +36,7 @@ class NoteDiffDialog : public MasterDialog {
 
    private:
     Ui::NoteDiffDialog *ui;
-    int actionRole;
+    int actionRole = Unset;
     QButtonGroup *_notificationButtonGroup;
     QCheckBox *_notificationNoneCheckBox;
 };

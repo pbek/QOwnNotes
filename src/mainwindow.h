@@ -959,7 +959,8 @@ class MainWindow : public QMainWindow {
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
     QString _currentNoteTextHash;
-    NoteDiffDialog *noteDiffDialog;
+    NoteDiffDialog *noteDiffDialog = nullptr;
+    bool _noteDiffDialogExecuting = false;
     UpdateService *updateService;
     bool showSystemTray;
     QSystemTrayIcon *trayIcon = nullptr;
