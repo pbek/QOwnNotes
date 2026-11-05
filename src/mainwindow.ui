@@ -750,66 +750,14 @@
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
-              <widget class="QToolButton" name="selectedTagsToolButton">
-               <property name="focusPolicy">
-                <enum>Qt::FocusPolicy::NoFocus</enum>
-               </property>
+              <widget class="QLabel" name="noteTagSelectionLabel">
                <property name="text">
-                <string notr="true">2</string>
-               </property>
-               <property name="icon">
-                <iconset theme="text-x-generic" resource="breeze-qownnotes.qrc">
-                 <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
-               </property>
-               <property name="toolButtonStyle">
-                <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+                <string notr="true"/>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="noteTagButtonFrame">
-               <property name="frameShape">
-                <enum>QFrame::Shape::NoFrame</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Shadow::Plain</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_2">
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="newNoteTagButton">
-               <property name="toolTip">
-                <string>Add a tag to the current note</string>
-               </property>
-               <property name="text">
-                <string>Add tag</string>
-               </property>
-               <property name="icon">
-                <iconset theme="tag" resource="breeze-qownnotes.qrc">
-                 <normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</iconset>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="newNoteTagLineEdit">
-               <property name="placeholderText">
-                <string>New tag</string>
-               </property>
-              </widget>
+              <widget class="TagChipsWidget" name="noteTagChipsWidget" native="true"/>
              </item>
             </layout>
            </widget>
@@ -3353,6 +3301,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
+   <class>TagChipsWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/tagchipswidget.h</header>
+  </customwidget>
+  <customwidget>
    <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QPlainTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
@@ -3411,8 +3364,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <tabstop>noteOperationsButton</tabstop>
   <tabstop>noteTextEdit</tabstop>
   <tabstop>encryptedNoteTextEdit</tabstop>
-  <tabstop>newNoteTagButton</tabstop>
-  <tabstop>newNoteTagLineEdit</tabstop>
   <tabstop>scriptingScrollArea</tabstop>
   <tabstop>noteTextView</tabstop>
  </tabstops>

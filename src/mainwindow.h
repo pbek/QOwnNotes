@@ -530,14 +530,6 @@ class MainWindow : public QMainWindow {
 
     void on_tagLineEdit_textChanged(const QString &arg1);
 
-    void on_newNoteTagButton_clicked();
-
-    void on_newNoteTagLineEdit_returnPressed();
-
-    void on_newNoteTagLineEdit_editingFinished();
-
-    void removeNoteTagClicked();
-
     void on_action_new_tag_triggered();
 
     void on_action_Reload_note_folder_triggered();

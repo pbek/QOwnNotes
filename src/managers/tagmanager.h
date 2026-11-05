@@ -45,7 +45,10 @@ class TagManager : public QObject {
     void removeTagFromSelectedNotes(const Tag &tag);
     void removeSelectedTags();
     void linkTagNameToCurrentNote(const QString &tagName, bool linkToSelectedNotes = false);
-    void removeNoteTagClicked();
+    void linkTagToCurrentNote(const Tag &tag, bool linkToSelectedNotes = false);
+    void removeTagIdFromCurrentNote(int tagId);
+    void showNoteTagPopup();
+    void updateNoteTagChips(bool allTags = false);
     void handleNoteTreeTagColoringForNote(const Note &note);
     void handleScriptingNoteTagging(Note note, const Tag &tag, bool doRemove,
                                     bool triggerPostMethods = true);
@@ -67,9 +70,6 @@ class TagManager : public QObject {
    public slots:
     void on_tagLineEdit_returnPressed();
     void on_tagLineEdit_textChanged(const QString &arg1);
-    void on_newNoteTagButton_clicked();
-    void on_newNoteTagLineEdit_returnPressed();
-    void on_newNoteTagLineEdit_editingFinished();
     void on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
     void on_tagTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void on_tagTreeWidget_customContextMenuRequested(const QPoint pos);
@@ -80,6 +80,7 @@ class TagManager : public QObject {
     void on_action_new_tag_triggered();
 
    private:
+    void initNoteTagChips();
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
 };

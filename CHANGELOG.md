@@ -19,6 +19,15 @@
   - Tags can be added via the **Add tag** button or <kbd>Ctrl + T</kbd>, which opens a searchable
     tag list of the board
   - New tags can be created right from the tag list, with a choice of the Deck tag colors
+- The **Note tags** panel got a new look
+  (for [#3841](https://github.com/pbek/QOwnNotes/issues/3841))
+  - Tags are shown as rounded chips in their tag color, and can be removed via their ✕ button
+  - Clicking a tag shows all notes with that tag in the **Tags** panel
+  - Tags wrap onto more lines instead of needing a horizontal scrollbar
+  - **Add tag** opens a searchable list of all tags, nested tags are shown with their parent tags,
+    tags can be toggled and new tags can be created right from the list
+  - With multiple notes selected, tags that are only on some of the notes are shown faded
+    with a dashed border, and adding them in the tag list adds them to all selected notes
 
 ## 26.11.4
 

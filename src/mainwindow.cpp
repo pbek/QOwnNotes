@@ -460,8 +460,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     ui->noteTreeWidget->installEventFilter(this);
 
     ui->tagTreeWidget->installEventFilter(this);
-    ui->newNoteTagLineEdit->installEventFilter(this);
-    ui->selectedTagsToolButton->installEventFilter(this);
     ui->noteEditTabWidget->tabBar()->installEventFilter(this);
 
     // init the saved searches completer
@@ -1610,37 +1608,38 @@ void MainWindow::initShowHidden() {
 }
 
 /**
- * Initializes the tag button scroll area
+ * Initializes the scroll area of the note tag chips
  *
- * If there are more tags assigned to a note than the width of the edit
- * pane allows there now will be used a scrollbar to scroll through the
- * tags, so that the width of the edit pane can still be small
+ * The chips wrap onto more lines, if there are more tags than fit into the panel,
+ * a vertical scrollbar is shown, so the panel can still be small
  */
 void MainWindow::initTagButtonScrollArea() {
     _noteTagButtonScrollArea = new QScrollArea(this);
+    _noteTagButtonScrollArea->setObjectName(QStringLiteral("noteTagScrollArea"));
     _noteTagButtonScrollArea->setWidgetResizable(true);
+    _noteTagButtonScrollArea->setFrameShape(QFrame::NoFrame);
+    _noteTagButtonScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     _noteTagButtonScrollArea->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Ignored);
-    _noteTagButtonScrollArea->setAlignment(Qt::AlignLeft);
-    _noteTagButtonScrollArea->setWidget(ui->noteTagButtonFrame);
-
-    ui->noteTagButtonFrame->layout()->setContentsMargins(0, 0, 0, 0);
+    _noteTagButtonScrollArea->setMinimumHeight(ui->noteTagChipsWidget->rowHeight() + 8);
+    _noteTagButtonScrollArea->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     _noteTagButtonScrollArea->setContentsMargins(0, 0, 0, 0);
+    _noteTagButtonScrollArea->viewport()->setAutoFillBackground(false);
 
-#ifdef Q_OS_MAC
-    // we need to set a minimum height under macOS or else the scroll area
-    // will be far to high
-    _noteTagButtonScrollArea->setMinimumHeight(36);
-#endif
-#ifdef Q_OS_WIN32
-    // we need to set a minimum height under Windows or else the scroll area
-    // will be far to high
-    _noteTagButtonScrollArea->setMinimumHeight(40);
-#endif
+    // Wrap the chips widget with margins, so the chips don't stick to the panel borders
+    auto *container = new QWidget(_noteTagButtonScrollArea);
+    container->setAutoFillBackground(false);
+    auto *layout = new QVBoxLayout(container);
+    layout->setContentsMargins(0, 4, 0, 4);
+    layout->addWidget(ui->noteTagChipsWidget);
+    layout->addStretch();
+    _noteTagButtonScrollArea->setWidget(container);
 
     ui->noteTagFrame->layout()->addWidget(_noteTagButtonScrollArea);
-    ui->noteTagFrame->layout()->addWidget(ui->newNoteTagButton);
-    ui->noteTagFrame->layout()->addWidget(ui->newNoteTagLineEdit);
-    ui->selectedTagsToolButton->setVisible(false);
+
+    // Line up the label of the selected notes with the first row of tag chips
+    ui->noteTagSelectionLabel->setContentsMargins(0, 4, 0, 4);
+    ui->noteTagSelectionLabel->setMinimumHeight(ui->noteTagChipsWidget->rowHeight() + 8);
+    ui->noteTagFrame->layout()->setAlignment(ui->noteTagSelectionLabel, Qt::AlignTop);
 }
 
 /**
@@ -4069,21 +4068,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 _searchLineEditFromCompleter = true;
                 return QMainWindow::eventFilter(obj, event);
             }
-        } else if ((obj == ui->newNoteTagLineEdit) ||
-                   ((ui->newNoteTagLineEdit->completer() != nullptr) &&
-                    (obj == ui->newNoteTagLineEdit->completer()->popup()))) {
-            // if tab is pressed while adding a tag the tag that starts with
-            // the current text will be added
-            if (keyEvent->key() == Qt::Key_Tab) {
-                // fetch the tag that is starting with the current text
-                Tag tag = Tag::fetchByName(ui->newNoteTagLineEdit->text(), true);
-                if (tag.isFetched()) {
-                    linkTagNameToCurrentNote(tag.getName(), true);
-                    on_newNoteTagLineEdit_editingFinished();
-                }
-
-                return QMainWindow::eventFilter(obj, event);
-            }
         } else if (obj == ui->searchLineEdit) {
             bool downSelectNote = false;
 
@@ -4181,9 +4165,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             // move forward in the note history
             on_action_Forward_in_note_history_triggered();
         }
-    } else if (event->type() == QEvent::MouseButtonPress && obj == ui->selectedTagsToolButton) {
-        // we don't want to make the button clickable
-        return true;
     } else if (obj == ui->noteEditTabWidget->tabBar() &&
                event->type() == QEvent::MouseButtonPress) {
         auto *mouseEvent = static_cast<QMouseEvent *>(event);
@@ -6606,19 +6587,6 @@ void MainWindow::setupNoteSubFolders() {
 }
 
 /**
- * Hides the note tag add button and shows the text edit
- */
-void MainWindow::on_newNoteTagButton_clicked() { _tagManager->on_newNoteTagButton_clicked(); }
-
-/**
- * Links a note to the tag entered after pressing return
- * in the note tag line edit
- */
-void MainWindow::on_newNoteTagLineEdit_returnPressed() {
-    _tagManager->on_newNoteTagLineEdit_returnPressed();
-}
-
-/**
  * Links a tag to the current note (or all selected notes)
  *
  * @param tagName
@@ -6702,13 +6670,6 @@ void MainWindow::handleScriptingNotesTagRemoving(const Tag &tag, bool forBulkOpe
 }
 
 /**
- * Hides the note tag line edit after editing
- */
-void MainWindow::on_newNoteTagLineEdit_editingFinished() {
-    _tagManager->on_newNoteTagLineEdit_editingFinished();
-}
-
-/**
  * Reloads the note tag buttons for the current note (or the selected notes)
  */
 void MainWindow::reloadCurrentNoteTags() { _tagManager->reloadCurrentNoteTags(); }
@@ -6719,11 +6680,6 @@ void MainWindow::reloadCurrentNoteTags() { _tagManager->reloadCurrentNoteTags();
 void MainWindow::highlightCurrentNoteTagsInTagTree() {
     _tagManager->highlightCurrentNoteTagsInTagTree();
 }
-
-/**
- * Removes a note tag link
- */
-void MainWindow::removeNoteTagClicked() { _tagManager->removeNoteTagClicked(); }
 
 int MainWindow::getSelectedNotesCount() const { return _noteTreeManager->getSelectedNotesCount(); }
 

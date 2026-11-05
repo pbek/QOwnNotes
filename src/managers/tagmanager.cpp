@@ -27,18 +27,54 @@
 #include <widgets/notesubfoldertree.h>
 
 #include <QColorDialog>
-#include <QCompleter>
 #include <QDockWidget>
+#include <QHash>
 #include <QMenu>
-#include <QPushButton>
-#include <QSpacerItem>
+#include <QScrollArea>
+#include <QTimer>
+#include <QToolButton>
 #include <QTreeWidgetItem>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "widgets/tagchipswidget.h"
 
 TagManager::TagManager(MainWindow *mainWindow, Ui::MainWindow *ui, QObject *parent)
-    : QObject(parent), _mainWindow(mainWindow), _ui(ui) {}
+    : QObject(parent), _mainWindow(mainWindow), _ui(ui) {
+    initNoteTagChips();
+}
+
+/**
+ * Sets up the tag chips of the note tags panel
+ */
+void TagManager::initNoteTagChips() {
+    TagChipsWidget *chips = _ui->noteTagChipsWidget;
+    chips->setChipsClickable(true);
+    chips->setChipToolTipTemplates(tr("Click to show all notes tagged with \"%1\""),
+                                   tr("Remove tag \"%1\""));
+    chips->setPartialSelectionToolTip(tr("Only some of the selected notes have this tag"));
+    Utils::Gui::setMutedTextColor(_ui->noteTagSelectionLabel);
+    _ui->noteTagSelectionLabel->setVisible(false);
+
+    connect(chips, &TagChipsWidget::tagToggled, this, [this](int tagId, bool selected) {
+        if (selected) {
+            linkTagToCurrentNote(Tag::fetch(tagId), true);
+        } else {
+            removeTagIdFromCurrentNote(tagId);
+        }
+    });
+    connect(chips, &TagChipsWidget::createTagRequested, this,
+            [this](const QString &name, const QString &color) {
+                Q_UNUSED(color)
+                linkTagNameToCurrentNote(name, true);
+            });
+    connect(chips, &TagChipsWidget::tagClicked, this, [this](int tagId) {
+        _mainWindow->_taggingDockWidget->setVisible(true);
+        jumpToTag(tagId);
+    });
+    // All tags are only loaded when the popup is opened
+    connect(chips, &TagChipsWidget::popupAboutToShow, this, [this]() { updateNoteTagChips(true); });
+}
 
 /**
  * Reloads the tag tree
@@ -345,13 +381,9 @@ void TagManager::on_tagLineEdit_textChanged(const QString &arg1) {
  * Shows or hides everything for the note tags
  */
 void TagManager::setupTags() {
-    _ui->newNoteTagLineEdit->setVisible(false);
-    _ui->newNoteTagButton->setVisible(true);
-
 #ifdef Q_OS_MAC
     // try to compensate for the different button top margins in macOS
     _ui->noteTagFrame->layout()->setContentsMargins(0, 0, 0, 0);
-    _ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
 #else
     // we want the tag frame as small as possible
     _ui->noteTagFrame->layout()->setContentsMargins(8, 0, 8, 0);
@@ -364,14 +396,10 @@ void TagManager::setupTags() {
 }
 
 /**
- * Hides the note tag add button and shows the text edit
+ * Opens the tag popup of the note tags panel to add, remove or create tags
  */
-void TagManager::on_newNoteTagButton_clicked() {
+void TagManager::showNoteTagPopup() {
     _mainWindow->_noteTagDockWidget->setVisible(true);
-    _ui->newNoteTagLineEdit->setVisible(true);
-    _ui->newNoteTagLineEdit->setFocus();
-    _ui->newNoteTagLineEdit->selectAll();
-    _ui->newNoteTagButton->setVisible(false);
 
     SettingsService settings;
     // enable the tagging dock widget the first time tagging was used
@@ -380,21 +408,16 @@ void TagManager::on_newNoteTagButton_clicked() {
         settings.setValue(QStringLiteral("tagWasAddedToNote"), true);
     }
 
-    // add tag name auto-completion
-    const QStringList wordList = Tag::fetchAllNames();
-    auto *completer = new QCompleter(wordList, _mainWindow);
-    completer->setCaseSensitivity(Qt::CaseInsensitive);
-    _ui->newNoteTagLineEdit->setCompleter(completer);
-    completer->popup()->installEventFilter(_mainWindow);
-}
+    // Wait until the panel is laid out, so the popup is placed below the add button
+    QTimer::singleShot(0, this, [this]() {
+        auto *addButton =
+            _ui->noteTagChipsWidget->findChild<QToolButton *>(QStringLiteral("addTagButton"));
+        if (addButton != nullptr && _mainWindow->_noteTagButtonScrollArea != nullptr) {
+            _mainWindow->_noteTagButtonScrollArea->ensureWidgetVisible(addButton);
+        }
 
-/**
- * Links a note to the tag entered after pressing return
- * in the note tag line edit
- */
-void TagManager::on_newNoteTagLineEdit_returnPressed() {
-    const QString text = _ui->newNoteTagLineEdit->text();
-    linkTagNameToCurrentNote(text, true);
+        _ui->noteTagChipsWidget->showPopup();
+    });
 }
 
 /**
@@ -407,18 +430,28 @@ void TagManager::linkTagNameToCurrentNote(const QString &tagName, bool linkToSel
         return;
     }
 
-    // workaround when signal block doesn't work correctly
-    _mainWindow->directoryWatcherWorkaround(true, true);
-
     // create a new tag if it doesn't exist
     Tag tag = Tag::fetchByName(tagName);
     if (!tag.isFetched()) {
+        // workaround when signal block doesn't work correctly
+        _mainWindow->directoryWatcherWorkaround(true, true);
         const QSignalBlocker blocker(_mainWindow->noteDirectoryWatcher);
         Q_UNUSED(blocker)
 
         tag.setName(tagName);
         tag.store();
+        _mainWindow->directoryWatcherWorkaround(false, true);
     }
+
+    linkTagToCurrentNote(tag, linkToSelectedNotes);
+}
+
+/**
+ * Links a tag to the current note (or all selected notes)
+ */
+void TagManager::linkTagToCurrentNote(const Tag &tag, bool linkToSelectedNotes) {
+    // workaround when signal block doesn't work correctly
+    _mainWindow->directoryWatcherWorkaround(true, true);
 
     // link the current note to the tag
     if (tag.isFetched()) {
@@ -669,37 +702,20 @@ void TagManager::handleScriptingNotesTagRemoving(const Tag &tag, bool forBulkOpe
 }
 
 /**
- * Hides the note tag line edit after editing
- */
-void TagManager::on_newNoteTagLineEdit_editingFinished() {
-    _ui->newNoteTagLineEdit->setVisible(false);
-    _ui->newNoteTagButton->setVisible(true);
-}
-
-/**
  * Reloads the note tag buttons for the current note (or the selected notes)
  */
 void TagManager::reloadCurrentNoteTags() {
-    // remove all remove-tag buttons
-    QLayoutItem *child;
-    while ((child = _ui->noteTagButtonFrame->layout()->takeAt(0)) != nullptr) {
-        delete child->widget();
-        delete child;
-    }
-
     int selectedNotesCount = _mainWindow->getSelectedNotesCount();
     bool currentNoteOnly = selectedNotesCount <= 1;
-    _ui->selectedTagsToolButton->setVisible(!currentNoteOnly);
-    _ui->newNoteTagButton->setToolTip(currentNoteOnly ? tr("Add a tag to the current note")
-                                                      : tr("Add a tag to the selected notes"));
-    QVector<Tag> tagList;
+    _ui->noteTagSelectionLabel->setVisible(!currentNoteOnly);
+    _ui->noteTagChipsWidget->setAddButtonToolTip(
+        currentNoteOnly ? tr("Add or remove tags of the current note")
+                        : tr("Add or remove tags of the selected notes"));
 
     _ui->multiSelectActionFrame->setVisible(!currentNoteOnly);
     _ui->noteEditorFrame->setVisible(currentNoteOnly);
 
     if (currentNoteOnly) {
-        tagList = Tag::fetchAllOfNote(_mainWindow->currentNote);
-
         // only refresh the preview if we previously selected multiple notes
         // because we used it for showing note information
         if (_mainWindow->_lastNoteSelectionWasMultiple) {
@@ -708,7 +724,6 @@ void TagManager::reloadCurrentNoteTags() {
         }
     } else {
         const QVector<Note> notes = _mainWindow->selectedNotes();
-        tagList = Tag::fetchAllOfNotes(notes);
 
         // Count notes and folders separately
         const auto selectedItems = _ui->noteTreeWidget->selectedItems();
@@ -735,8 +750,8 @@ void TagManager::reloadCurrentNoteTags() {
             notesSelectedText = tr("%n notes selected", "", noteCount);
         }
 
-        _ui->selectedTagsToolButton->setText(QString::number(selectedNotesCount));
-        _ui->selectedTagsToolButton->setToolTip(notesSelectedText);
+        _ui->noteTagSelectionLabel->setText(tr("%n item(s):", "", selectedNotesCount));
+        _ui->noteTagSelectionLabel->setToolTip(notesSelectedText);
 
         _ui->notesSelectedLabel->setText(notesSelectedText);
 
@@ -751,32 +766,7 @@ void TagManager::reloadCurrentNoteTags() {
 
     _mainWindow->_lastNoteSelectionWasMultiple = !currentNoteOnly;
 
-    // add all new remove-tag buttons
-    for (const Tag &tag : Utils::asConst(tagList)) {
-        QPushButton *button =
-            new QPushButton(Utils::Misc::shorten(tag.getName(), 25), _ui->noteTagButtonFrame);
-        button->setIcon(QIcon::fromTheme(
-            QStringLiteral("tag-delete"),
-            QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/xml-attribute-delete.svg"))));
-        button->setToolTip(currentNoteOnly
-                               ? tr("Remove tag '%1' from the current note").arg(tag.getName())
-                               : tr("Remove tag '%1' from the selected notes").arg(tag.getName()));
-        button->setObjectName(QStringLiteral("removeNoteTag") + QString::number(tag.getId()));
-
-        QObject::connect(button, &QPushButton::clicked, this, &TagManager::removeNoteTagClicked);
-
-        _ui->noteTagButtonFrame->layout()->addWidget(button);
-    }
-
-    //    // find tags not in common of selected notes
-    //    if (selectedNotesCount > 1) {
-    //        QLabel *noteTagButtonFrame = new QLabel("+3 tags");
-    //        ui->noteTagButtonFrame->layout()->addWidget(noteTagButtonFrame);
-    //    }
-
-    // add a spacer to prevent the button items to take the full width
-    auto *spacer = new QSpacerItem(0, 20, QSizePolicy::MinimumExpanding, QSizePolicy::Ignored);
-    _ui->noteTagButtonFrame->layout()->addItem(spacer);
+    updateNoteTagChips(_ui->noteTagChipsWidget->isPopupVisible());
 
     highlightCurrentNoteTagsInTagTree();
 }
@@ -819,56 +809,52 @@ void TagManager::highlightCurrentNoteTagsInTagTree() {
 /**
  * Removes a note tag link
  */
-void TagManager::removeNoteTagClicked() {
-    QString objectName = sender()->objectName();
-    if (objectName.startsWith(QLatin1String("removeNoteTag"))) {
-        const int tagId = objectName.remove(QLatin1String("removeNoteTag")).toInt();
-        const Tag tag = Tag::fetch(tagId);
-        if (!tag.isFetched()) {
-            return;
-        }
-
-        // workaround when signal blocking doesn't work correctly
-        _mainWindow->directoryWatcherWorkaround(true, true);
-
-        const int selectedNotesCount = _mainWindow->getSelectedNotesCount();
-
-        if (selectedNotesCount <= 1) {
-            tag.removeLinkToNote(_mainWindow->currentNote);
-
-            // remove the tag from the note text if defined via scripting engine
-            handleScriptingNoteTagging(_mainWindow->currentNote, tag, true);
-        } else {
-            const auto selectedNotesList = _mainWindow->selectedNotes();
-            for (const Note &note : selectedNotesList) {
-                if (!tag.isLinkedToNote(note)) {
-                    continue;
-                }
-
-                tag.removeLinkToNote(note);
-
-                // remove the tag from the note text if defined via
-                // scripting engine
-                handleScriptingNoteTagging(note, tag, true);
-            }
-        }
-
-        reloadCurrentNoteTags();
-        reloadTagTree();
-        _mainWindow->filterNotesByTag();
-
-        // handle the coloring of the note in the note tree widget
-        handleNoteTreeTagColoringForNote(_mainWindow->currentNote);
-
-        // disable workaround
-        _mainWindow->directoryWatcherWorkaround(false, true);
+void TagManager::removeTagIdFromCurrentNote(int tagId) {
+    const Tag tag = Tag::fetch(tagId);
+    if (!tag.isFetched()) {
+        return;
     }
+
+    // workaround when signal blocking doesn't work correctly
+    _mainWindow->directoryWatcherWorkaround(true, true);
+
+    const int selectedNotesCount = _mainWindow->getSelectedNotesCount();
+
+    if (selectedNotesCount <= 1) {
+        tag.removeLinkToNote(_mainWindow->currentNote);
+
+        // remove the tag from the note text if defined via scripting engine
+        handleScriptingNoteTagging(_mainWindow->currentNote, tag, true);
+    } else {
+        const auto selectedNotesList = _mainWindow->selectedNotes();
+        for (const Note &note : selectedNotesList) {
+            if (!tag.isLinkedToNote(note)) {
+                continue;
+            }
+
+            tag.removeLinkToNote(note);
+
+            // remove the tag from the note text if defined via
+            // scripting engine
+            handleScriptingNoteTagging(note, tag, true);
+        }
+    }
+
+    reloadCurrentNoteTags();
+    reloadTagTree();
+    _mainWindow->filterNotesByTag();
+
+    // handle the coloring of the note in the note tree widget
+    handleNoteTreeTagColoringForNote(_mainWindow->currentNote);
+
+    // disable workaround
+    _mainWindow->directoryWatcherWorkaround(false, true);
 }
 
 /**
  * Allows the user to add a tag to the current note
  */
-void TagManager::on_action_new_tag_triggered() { on_newNoteTagButton_clicked(); }
+void TagManager::on_action_new_tag_triggered() { showNoteTagPopup(); }
 
 /**
  * Stores the tag after it was edited
@@ -1648,4 +1634,91 @@ void TagManager::resizeTagTreeWidgetColumnToContents() const {
     auto header = _ui->tagTreeWidget->header();
     header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
     header->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+}
+
+/**
+ * Shows the tags of the current note (or the selected notes) as chips in the note tags panel
+ *
+ * @param allTags if true, all tags are offered in the tag popup, otherwise only the tags of
+ *                the notes are loaded
+ */
+void TagManager::updateNoteTagChips(bool allTags) {
+    const bool currentNoteOnly = _mainWindow->getSelectedNotesCount() <= 1;
+    QVector<Note> notes;
+    QVector<Tag> noteTags;
+
+    if (currentNoteOnly) {
+        noteTags = Tag::fetchAllOfNote(_mainWindow->currentNote);
+    } else {
+        notes = _mainWindow->selectedNotes();
+        noteTags = Tag::fetchAllOfNotes(notes);
+    }
+
+    // The names of all tags are needed to show the parent tags of nested tags
+    const QVector<Tag> tags = Tag::fetchAll();
+    QHash<int, Tag> tagsById;
+    for (const Tag &tag : tags) {
+        tagsById.insert(tag.getId(), tag);
+    }
+
+    const auto toItem = [&tagsById](const Tag &tag) -> TagChipsWidget::Item {
+        TagChipsWidget::Item item;
+        item.id = tag.getId();
+        item.name = tag.getName();
+        item.color = tag.getColor();
+
+        // Walk up the parent tags, the visited ids prevent endless loops in broken trees
+        QList<int> visitedIds{item.id};
+        int parentId = tag.getParentId();
+        while (parentId > 0 && !visitedIds.contains(parentId) && tagsById.contains(parentId)) {
+            const Tag &parentTag = tagsById[parentId];
+            item.parentNames.prepend(parentTag.getName());
+            visitedIds.append(parentId);
+            parentId = parentTag.getParentId();
+        }
+
+        return item;
+    };
+
+    QList<TagChipsWidget::Item> items;
+    QList<int> selectedIds;
+    for (const Tag &tag : Utils::asConst(noteTags)) {
+        selectedIds.append(tag.getId());
+
+        if (!allTags) {
+            items.append(toItem(tag));
+        }
+    }
+
+    if (allTags) {
+        for (const Tag &tag : tags) {
+            items.append(toItem(tag));
+        }
+    }
+
+    // Tags that are only linked to some of the selected notes
+    QList<int> partiallySelectedIds;
+    if (!currentNoteOnly && !notes.isEmpty()) {
+        QHash<int, int> noteCountByTagId;
+        for (const Note &note : Utils::asConst(notes)) {
+            const QSet<int> tagIds = Tag::fetchAllIdsByNote(note);
+            for (const int tagId : tagIds) {
+                noteCountByTagId[tagId]++;
+            }
+        }
+
+        for (const int tagId : Utils::asConst(selectedIds)) {
+            if (noteCountByTagId.value(tagId) < notes.count()) {
+                partiallySelectedIds.append(tagId);
+            }
+        }
+    }
+
+    // The chips only report changes by the user
+    TagChipsWidget *chips = _ui->noteTagChipsWidget;
+    const QSignalBlocker blocker(chips);
+    Q_UNUSED(blocker)
+    chips->setItems(items);
+    chips->setSelectedIds(selectedIds);
+    chips->setPartiallySelectedIds(partiallySelectedIds);
 }
