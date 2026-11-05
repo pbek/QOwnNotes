@@ -714,8 +714,10 @@ void NextcloudDeckLabelDelegate::paint(QPainter *painter, const QStyleOptionView
     for (int i = 0; i < labels.count(); ++i) {
         const QVariantMap label = labels.at(i).toMap();
         const QString title = label.value(QStringLiteral("title")).toString();
-        const QColor background = NextcloudDeckLabelsWidget::labelColor(
-            {0, title, label.value(QStringLiteral("color")).toString()});
+        NextcloudDeckLabelsWidget::Label deckLabel;
+        deckLabel.title = title;
+        deckLabel.color = label.value(QStringLiteral("color")).toString();
+        const QColor background = NextcloudDeckLabelsWidget::labelColor(deckLabel);
         const int available = right - x;
         const int remaining = labels.count() - i;
         const QString moreText = QStringLiteral("+%1").arg(remaining);
