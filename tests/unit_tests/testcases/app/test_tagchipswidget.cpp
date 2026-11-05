@@ -250,3 +250,44 @@ void TestTagChipsWidget::testChipClick() {
     QCOMPARE(clicked.count(), 1);
     QVERIFY(widget.selectedIds().isEmpty());
 }
+
+void TestTagChipsWidget::testPopupFitsWrappedText() {
+    // Fonts of an application style sheet are only applied when the popup gets polished
+    const QString styleSheet = qApp->styleSheet();
+    qApp->setStyleSheet(QStringLiteral("QWidget { font-size: 18px; }"));
+    auto restoreStyleSheet = qScopeGuard([styleSheet]() { qApp->setStyleSheet(styleSheet); });
+
+    TagChipsWidget widget;
+    widget.setPopupHintText(
+        QStringLiteral("New tags are created right away, the tags of the card are stored when "
+                       "the card is saved."));
+    widget.show();
+
+    const auto verifyLabelsFit = [&widget]() {
+        auto *popup = widget.findChild<QFrame *>(QStringLiteral("tagChipsPopup"));
+        QVERIFY(popup != nullptr);
+        QCoreApplication::processEvents();
+
+        // Every visible word-wrapped label has to be high enough for its text and inside the popup
+        for (auto *label : popup->findChildren<QLabel *>()) {
+            if (!label->isVisible() || !label->wordWrap()) {
+                continue;
+            }
+
+            QVERIFY2(label->height() >= label->heightForWidth(label->width()),
+                     qPrintable(label->text()));
+            QVERIFY2(label->geometry().bottom() <= popup->contentsRect().bottom(),
+                     qPrintable(label->text()));
+        }
+    };
+
+    // Without tags, the empty label and the hint are both wrapped
+    widget.showPopup();
+    verifyLabelsFit();
+
+    widget.setItems(testItems());
+    verifyLabelsFit();
+
+    popupSearch(widget)->setText(QStringLiteral("No such tag"));
+    verifyLabelsFit();
+}

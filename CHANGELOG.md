@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.11.6
+
+- Fixed the text of the tag list of the **Nextcloud Deck** dialog and the **Note tags** panel
+  being cut off when the interface font size is overridden
+  (for [#3834](https://github.com/pbek/QOwnNotes/issues/3834))
+
 ## 26.11.5
 
 - Raised the minimum supported Qt 5 version to **5.13**, matching the oldest retained CI

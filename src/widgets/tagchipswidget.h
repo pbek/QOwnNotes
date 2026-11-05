@@ -103,6 +103,7 @@ class TagChipsWidget : public QWidget {
     void rebuildChips();
     QWidget *createChip(const Item &item);
     void updatePopupList();
+    void fitPopupSize();
     void toggleItem(int id);
     void removeItem(int id);
     void activatePopupItem(QListWidgetItem *item);

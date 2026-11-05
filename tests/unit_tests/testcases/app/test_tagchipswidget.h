@@ -12,4 +12,5 @@ class TestTagChipsWidget : public QObject {
     void testNestedAndUncoloredTags();
     void testPartialSelection();
     void testChipClick();
+    void testPopupFitsWrappedText();
 };

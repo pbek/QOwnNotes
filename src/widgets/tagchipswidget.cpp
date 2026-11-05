@@ -683,8 +683,8 @@ void TagChipsWidget::showPopup() {
 
     // Show the popup below the add button and keep it on the screen
     popup->setFixedWidth(qMax(280, fontMetrics().averageCharWidth() * 36));
+    popup->ensurePolished();
     updatePopupList();
-    popup->adjustSize();
     QPoint position = _addButton->mapToGlobal(QPoint(0, _addButton->height() + 2));
 
     QScreen *screen = QGuiApplication::screenAt(position);
@@ -777,15 +777,24 @@ void TagChipsWidget::updatePopupList() {
                                   : tr("No matching tags"));
     _popupColorFrame->setVisible(canCreate && !_newTagColors.isEmpty());
 
-    if (_popup) {
-        _popup->adjustSize();
+    fitPopupSize();
+}
 
-        // adjustSize() calculates the height for the size hint width instead of the fixed width
-        // of the popup, so word-wrapped labels like the hint text would be cut off
-        QLayout *popupLayout = _popup->layout();
-        if (popupLayout != nullptr && popupLayout->hasHeightForWidth()) {
-            _popup->resize(_popup->width(), popupLayout->totalHeightForWidth(_popup->width()));
-        }
+void TagChipsWidget::fitPopupSize() {
+    if (!_popup) {
+        return;
+    }
+
+    // Fonts of the application style sheet (like the interface font size) are only applied
+    // when the widgets are polished, which would otherwise happen after the size calculation
+    _popup->ensurePolished();
+    _popup->adjustSize();
+
+    // adjustSize() calculates the height for the size hint width instead of the fixed width
+    // of the popup, so word-wrapped labels like the hint text would be cut off
+    QLayout *popupLayout = _popup->layout();
+    if (popupLayout != nullptr && popupLayout->hasHeightForWidth()) {
+        _popup->resize(_popup->width(), popupLayout->totalHeightForWidth(_popup->width()));
     }
 }
 
