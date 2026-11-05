@@ -1627,7 +1627,14 @@ void MainWindow::initTagButtonScrollArea() {
 
     // Wrap the chips widget with margins, so the chips don't stick to the panel borders
     auto *container = new QWidget(_noteTagButtonScrollArea);
+    container->setObjectName(QStringLiteral("noteTagChipsContainer"));
     container->setAutoFillBackground(false);
+
+    // The dark mode style sheet paints plain widgets in the window color, which would show
+    // the background color of the note tag frame only as a dark margin around the chips
+    _noteTagButtonScrollArea->setStyleSheet(
+        QStringLiteral("QScrollArea#noteTagScrollArea { border: none; background: transparent; }"
+                       "QWidget#noteTagChipsContainer { background: transparent; }"));
     auto *layout = new QVBoxLayout(container);
     layout->setContentsMargins(0, 4, 0, 4);
     layout->addWidget(ui->noteTagChipsWidget);
