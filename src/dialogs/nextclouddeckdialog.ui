@@ -214,7 +214,23 @@
         </layout>
        </widget>
       </item>
-      <item row="5" column="0" colspan="2">
+      <item row="5" column="0" alignment="Qt::AlignTop">
+       <widget class="QLabel" name="labelsLabel">
+        <property name="toolTip">
+         <string>Tags of the card, they are shared with all cards of the board</string>
+        </property>
+        <property name="text">
+         <string>Tags:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="NextcloudDeckLabelsWidget" name="labelsWidget" native="true"/>
+      </item>
+      <item row="6" column="0" colspan="2">
        <widget class="QLabel" name="descriptionLabel">
         <property name="text">
          <string>Description:</string>
@@ -224,14 +240,14 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="0" colspan="2">
+      <item row="7" column="0" colspan="2">
        <widget class="QOwnNotesMarkdownTextEdit" name="descriptionTextEdit">
         <property name="placeholderText">
          <string>Add a description using Markdown</string>
         </property>
        </widget>
       </item>
-      <item row="7" column="0" colspan="2">
+      <item row="8" column="0" colspan="2">
        <widget class="QFrame" name="buttonFrame">
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -415,6 +431,11 @@
           <string>Due date</string>
          </property>
         </column>
+        <column>
+         <property name="text">
+          <string>Tags</string>
+         </property>
+        </column>
        </widget>
       </item>
       <item row="3" column="0">
@@ -496,6 +517,11 @@
    <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QPlainTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>NextcloudDeckLabelsWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/nextclouddecklabelswidget.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

@@ -1,6 +1,7 @@
 #include "test_nextclouddeckservice.h"
 
 #include <QApplication>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMessageBox>
@@ -148,4 +149,96 @@ void TestNextcloudDeckService::testInvalidMove() {
     QVERIFY(!service.moveCard(56, 90, 78));
     service.setBoardAndStackIds(12, 0);
     QVERIFY(!service.moveCard(56, 90, 78));
+}
+
+void TestNextcloudDeckService::testParseLabels() {
+    QCOMPARE(NextcloudDeckService::labelsFromJson(QJsonValue()).count(), 0);
+
+    const auto labels = NextcloudDeckService::labelsFromJson(
+        QJsonDocument::fromJson("[{\"id\":5,\"title\":\"Finished\",\"color\":\"31CC7C\"},"
+                                "{\"id\":\"6\",\"title\":\"Later\",\"color\":\"#F1DB50\"},"
+                                "{\"title\":\"Invalid\"}]")
+            .array());
+    QCOMPARE(labels.count(), 2);
+    QCOMPARE(labels.at(0).id, 5);
+    QCOMPARE(labels.at(0).title, QStringLiteral("Finished"));
+    QCOMPARE(labels.at(0).color, QStringLiteral("31CC7C"));
+    QCOMPARE(labels.at(1).id, 6);
+    QCOMPARE(labels.at(1).color, QStringLiteral("F1DB50"));
+}
+
+void TestNextcloudDeckService::testLabelRequests() {
+    QTcpServer server;
+    QVERIFY(server.listen(QHostAddress::LocalHost));
+    CloudConnection connection;
+    connection.setName(QStringLiteral("Deck label test"));
+    connection.setServerUrl(QStringLiteral("http://127.0.0.1:%1").arg(server.serverPort()));
+    connection.setUsername(QStringLiteral("deck-user"));
+    connection.setPassword(QStringLiteral("deck-password"));
+    QVERIFY(connection.store());
+
+    // Each connection gets a single response, the requests are recorded as "VERB path body"
+    QStringList requests;
+    QByteArray createResponse =
+        "{\"id\":9,\"title\":\"Urgent\",\"color\":\"FF7A66\",\"boardId\":12}";
+    connect(&server, &QTcpServer::newConnection, &server, [&]() {
+        auto *socket = server.nextPendingConnection();
+        auto *buffer = new QByteArray();
+        connect(socket, &QTcpSocket::disconnected, socket, [socket, buffer]() {
+            delete buffer;
+            socket->deleteLater();
+        });
+        connect(socket, &QTcpSocket::readyRead, &server, [&, socket, buffer]() {
+            *buffer += socket->readAll();
+            const int headerEnd = buffer->indexOf("\r\n\r\n");
+            if (headerEnd < 0) {
+                return;
+            }
+            int contentLength = 0;
+            for (const auto &line : buffer->left(headerEnd).split('\n')) {
+                if (line.toLower().startsWith("content-length:")) {
+                    contentLength = line.mid(line.indexOf(':') + 1).trimmed().toInt();
+                }
+            }
+            if (buffer->size() < headerEnd + 4 + contentLength) {
+                return;
+            }
+            const QList<QByteArray> requestLine = buffer->left(buffer->indexOf("\r\n")).split(' ');
+            requests.append(QString::fromUtf8(requestLine.value(0) + ' ' + requestLine.value(1) +
+                                              ' ' + buffer->mid(headerEnd + 4)));
+            const QByteArray body =
+                requestLine.value(0) == "POST" ? createResponse : QByteArray("{}");
+            socket->write("HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nContent-Length: " +
+                          QByteArray::number(body.size()) + "\r\nConnection: close\r\n\r\n" + body);
+            socket->disconnectFromHost();
+        });
+    });
+
+    NextcloudDeckService service(nullptr, connection.getId());
+    service.setBoardAndStackIds(12, 34);
+
+    const auto label = service.createLabel(QStringLiteral("  Urgent "), QStringLiteral("#ff7a66"));
+    QCOMPARE(label.id, 9);
+    QCOMPARE(label.title, QStringLiteral("Urgent"));
+    QCOMPARE(label.color, QStringLiteral("FF7A66"));
+    QCOMPARE(requests.count(), 1);
+    QCOMPARE(requests.at(0), QStringLiteral("POST /index.php/apps/deck/api/v1.1/boards/12/labels "
+                                            "{\"color\":\"FF7A66\",\"title\":\"Urgent\"}"));
+
+    // Only the differences between the current and the wanted labels are sent
+    requests.clear();
+    QVERIFY(service.setCardLabels(56, {1, 2}, {2, 3}));
+    QCOMPARE(requests,
+             QStringList({QStringLiteral("PUT /index.php/apps/deck/api/v1.1/boards/12/stacks/34/"
+                                         "cards/56/removeLabel {\"labelId\":1}"),
+                          QStringLiteral("PUT /index.php/apps/deck/api/v1.1/boards/12/stacks/34/"
+                                         "cards/56/assignLabel {\"labelId\":3}")}));
+
+    requests.clear();
+    QVERIFY(service.setCardLabels(56, {2}, {2}));
+    QVERIFY(requests.isEmpty());
+    QVERIFY(!service.assignLabel(0, 3));
+    QVERIFY(requests.isEmpty());
+
+    QVERIFY(connection.remove());
 }

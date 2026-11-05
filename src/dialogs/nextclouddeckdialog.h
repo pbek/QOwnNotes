@@ -122,6 +122,13 @@ class NextcloudDeckDialog : public MasterDialog {
     void moveCards(const QList<int> &cardIds);
     QHash<int, NextcloudDeckService::Card> _cards;
     NextcloudDeckService::Card _currentCard;
+    QHash<int, QList<NextcloudDeckService::Label>> _boardLabels;
+    void mergeBoardLabels(int boardId, const QList<NextcloudDeckService::Label> &labels);
+    void updateAvailableLabels();
+    int editedCardBoardId() const;
+    void createLabel(const QString &title, const QString &color);
+    bool hasUnsavedChanges() const;
+    void filterCardList(const QString &text);
 
     void openUrlInBrowserForItem(const QTreeWidgetItem *item);
     void addCardLinkToCurrentNote(const QTreeWidgetItem *item);

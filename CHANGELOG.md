@@ -6,6 +6,15 @@
 - Line ending markers (¶) in the note editor now use the **Whitespace marker** color of the
   editor color scheme, like the markers for spaces and tabs
   (for [#3840](https://github.com/pbek/QOwnNotes/issues/3840))
+- Added tag support to the **Nextcloud Deck** dialog
+  (for [#3834](https://github.com/pbek/QOwnNotes/issues/3834))
+  - Tags of the cards are shown as colored pills in the new **Tags** column of the card list,
+    and the search also finds cards by their tags
+  - The tags of a card are shown as colored chips in the card editor and can be removed
+    with a click
+  - Tags can be added via the **Add tag** button or <kbd>Ctrl + T</kbd>, which opens a searchable
+    tag list of the board
+  - New tags can be created right from the tag list, with a choice of the Deck tag colors
 
 ## 26.11.4
 

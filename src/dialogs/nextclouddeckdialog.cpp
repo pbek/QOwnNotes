@@ -7,6 +7,7 @@
 #include <QMenu>
 #include <QMessageBox>
 #include <QPushButton>
+#include <QRegularExpression>
 #include <QShortcut>
 #include <QSignalBlocker>
 #include <QTimeZone>
@@ -27,6 +28,7 @@
 #undef QOwnNotesMarkdownTextEdit
 #endif
 #include "utils/gui.h"
+#include "widgets/nextclouddecklabelswidget.h"
 
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog), _mode(mode) {
@@ -92,9 +94,17 @@ void NextcloudDeckDialog::setupUi() {
         refreshUi();
     }
 
+    // The tags column made the layout of the former two-column header incompatible
     Utils::Gui::initTreeWidgetHeaderOrderPersistence(
         ui->cardItemTreeWidget,
-        QStringLiteral("NextcloudDeckDialog/cardItemTreeWidgetHeaderOrder"));
+        QStringLiteral("NextcloudDeckDialog/cardItemTreeWidgetHeaderLayout"));
+    ui->cardItemTreeWidget->setItemDelegateForColumn(
+        2, new NextcloudDeckLabelDelegate(ui->cardItemTreeWidget));
+
+    // Line up the tags label with the first row of tag chips
+    ui->labelsLabel->setMinimumHeight(ui->labelsWidget->rowHeight());
+    connect(ui->labelsWidget, &NextcloudDeckLabelsWidget::createLabelRequested, this,
+            &NextcloudDeckDialog::createLabel);
 
     ui->newItemEdit->installEventFilter(this);
     ui->cardItemTreeWidget->installEventFilter(this);
@@ -258,6 +268,13 @@ void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
         return;
     }
 
+    // Tags can only be assigned to stored cards, so they are synced after storing the card
+    const QList<int> currentLabelIds = cardIdToUpdate > 0 ? _currentCard.labelIds() : QList<int>();
+    if (!ui->labelsWidget->hasSameSelection(currentLabelIds)) {
+        nextcloudDeckService.setCardLabels(cardId, currentLabelIds,
+                                           ui->labelsWidget->selectedLabelIds());
+    }
+
     if (insertLinkAndClose) {
         const auto linkText =
             QStringLiteral("[%1](%2)").arg(title, nextcloudDeckService.getCardLinkForId(cardId));
@@ -343,12 +360,7 @@ void NextcloudDeckDialog::moveCards(const QList<int> &cardIds) {
     }
 
     // Moving uses the saved server card, not pending changes in the editor.
-    if (cardIds.contains(_currentCard.id) &&
-        (ui->titleLineEdit->text() != _currentCard.title ||
-         ui->descriptionTextEdit->toPlainText() != _currentCard.description ||
-         ui->dueDateTimeCheckBox->isChecked() != _currentCard.duedate.isValid() ||
-         (ui->dueDateTimeCheckBox->isChecked() &&
-          ui->dueDateTimeEdit->dateTime() != _currentCard.duedate))) {
+    if (cardIds.contains(_currentCard.id) && hasUnsavedChanges()) {
         if (QMessageBox::question(this, tr("Move card(s)"),
                                   tr("The current card has unsaved changes. Discard them and move "
                                      "the saved card?"),
@@ -548,10 +560,13 @@ void NextcloudDeckDialog::loadBoardStackComboBox() {
         }
 
         ui->boardStackComboBox->clear();
+        _boardLabels.clear();
         int targetIndex = -1;
         int fallbackIndex = -1;
 
         for (const auto &board : boards) {
+            _boardLabels.insert(board.id, board.labels);
+
             QHash<int, QString>::const_iterator it;
 
             for (it = board.stacks.constBegin(); it != board.stacks.constEnd(); ++it) {
@@ -742,6 +757,21 @@ void NextcloudDeckDialog::reloadCardList() {
             item->setForeground(1, QBrush(mutedColor));
         }
 
+        // Show the tags in the third column, the text is used for sorting and searching
+        if (!card.labels.isEmpty()) {
+            QStringList labelTitles;
+            for (const auto &label : card.labels) {
+                labelTitles.append(label.title);
+            }
+
+            const QString labelText = labelTitles.join(QStringLiteral(", "));
+            item->setText(2, labelText);
+            item->setToolTip(2, tr("Tags: %1").arg(labelText));
+            item->setData(2, NextcloudDeckLabelDelegate::LabelsRole,
+                          NextcloudDeckLabelDelegate::labelsToVariant(card.labels));
+            mergeBoardLabels(card.boardId, card.labels);
+        }
+
         // Store the card ID as user data for later reference
         item->setData(0, Qt::UserRole, card.id);
 
@@ -860,6 +890,8 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->archiveCardButton->setEnabled(false);
     ui->deleteCardButton->setEnabled(false);
     _currentCard = NextcloudDeckService::Card();
+    updateAvailableLabels();
+    ui->labelsWidget->setSelectedLabelIds({});
     ui->moveCardButton->setEnabled(false);
     updateEditState();
 }
@@ -902,6 +934,8 @@ void NextcloudDeckDialog::jumpToCard(int id) {
 
         ui->titleLineEdit->setText(_currentCard.title);
         ui->descriptionTextEdit->setPlainText(_currentCard.description);
+        updateAvailableLabels();
+        ui->labelsWidget->setSelectedLabelIds(_currentCard.labelIds());
 
         // Set the due date
         if (_currentCard.duedate.isValid()) {
@@ -965,9 +999,7 @@ void NextcloudDeckDialog::setCardId(const int id, const int boardId) {
 }
 
 void NextcloudDeckDialog::on_newItemEdit_textChanged(const QString &arg1) {
-    Utils::Gui::searchForTextInTreeWidget(
-        ui->cardItemTreeWidget, arg1,
-        Utils::Gui::TreeWidgetSearchFlags(Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+    filterCardList(arg1);
     updateInsertLinksButton();
     updateCardCountLabel();
 }
@@ -985,6 +1017,8 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     const bool keepDescription = description != _currentCard.description;
     const bool keepDueDate = dueDateEnabled != _currentCard.duedate.isValid() ||
                              (dueDateEnabled && dueDateTime != _currentCard.duedate);
+    const QList<int> labelIds = ui->labelsWidget->selectedLabelIds();
+    const bool keepLabels = !ui->labelsWidget->hasSameSelection(_currentCard.labelIds());
 
     resetEditFrameControls();
     ui->editFrame->setEnabled(true);
@@ -994,6 +1028,11 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
 
     if (keepDescription) {
         ui->descriptionTextEdit->setPlainText(description);
+    }
+
+    // Tags of another board are dropped, because they don't exist in the selected board
+    if (keepLabels) {
+        ui->labelsWidget->setSelectedLabelIds(labelIds);
     }
 
     ui->descriptionTextEdit->setFocus();
@@ -1212,4 +1251,109 @@ void NextcloudDeckDialog::insertSelectedCardLinks() {
         Q_EMIT cardLinksSelected(links.join(QLatin1Char('\n')));
         accept();
     }
+}
+
+/**
+ * Returns true if the editor differs from the stored state of the current card
+ */
+bool NextcloudDeckDialog::hasUnsavedChanges() const {
+    return ui->titleLineEdit->text() != _currentCard.title ||
+           ui->descriptionTextEdit->toPlainText() != _currentCard.description ||
+           ui->dueDateTimeCheckBox->isChecked() != _currentCard.duedate.isValid() ||
+           (ui->dueDateTimeCheckBox->isChecked() &&
+            ui->dueDateTimeEdit->dateTime() != _currentCard.duedate) ||
+           !ui->labelsWidget->hasSameSelection(_currentCard.labelIds());
+}
+
+/**
+ * Shows only the cards whose title or tags contain every word of the search text
+ */
+void NextcloudDeckDialog::filterCardList(const QString &text) {
+    static const QRegularExpression whitespace(QStringLiteral("\\s+"));
+    QStringList words;
+    for (const auto &word : text.trimmed().split(whitespace)) {
+        if (!word.isEmpty()) {
+            words.append(word);
+        }
+    }
+
+    for (int i = 0; i < ui->cardItemTreeWidget->topLevelItemCount(); ++i) {
+        auto *item = ui->cardItemTreeWidget->topLevelItem(i);
+        const QString searchableText = item->text(0) + QLatin1Char('\n') + item->text(2);
+        bool show = true;
+
+        for (const auto &word : words) {
+            if (!searchableText.contains(word, Qt::CaseInsensitive)) {
+                show = false;
+                break;
+            }
+        }
+
+        item->setHidden(!show);
+    }
+}
+
+/**
+ * Adds labels to the known labels of a board, existing labels are updated
+ */
+void NextcloudDeckDialog::mergeBoardLabels(int boardId,
+                                           const QList<NextcloudDeckService::Label> &labels) {
+    if (boardId < 1) {
+        return;
+    }
+
+    auto &boardLabels = _boardLabels[boardId];
+
+    for (const auto &label : labels) {
+        bool found = false;
+
+        for (auto &boardLabel : boardLabels) {
+            if (boardLabel.id == label.id) {
+                boardLabel = label;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            boardLabels.append(label);
+        }
+    }
+}
+
+/**
+ * Returns the board of the card in the editor, tags are defined per board
+ */
+int NextcloudDeckDialog::editedCardBoardId() const {
+    return (_currentCard.id > 0 && _currentCard.boardId > 0) ? _currentCard.boardId
+                                                             : selectedBoardId();
+}
+
+void NextcloudDeckDialog::updateAvailableLabels() {
+    ui->labelsWidget->setAvailableLabels(_boardLabels.value(editedCardBoardId()));
+}
+
+/**
+ * Creates a new tag in the board of the edited card and selects it
+ *
+ * The tag is assigned to the card when the card is saved
+ */
+void NextcloudDeckDialog::createLabel(const QString &title, const QString &color) {
+    const int boardId = editedCardBoardId();
+
+    if (boardId < 1) {
+        return;
+    }
+
+    NextcloudDeckService nextcloudDeckService(this);
+    nextcloudDeckService.setBoardAndStackIds(boardId, selectedStackId());
+    const auto label = nextcloudDeckService.createLabel(title, color);
+
+    if (label.id < 1) {
+        return;
+    }
+
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("deck/label/created"));
+    mergeBoardLabels(boardId, {label});
+    ui->labelsWidget->addAvailableLabel(label, true);
 }

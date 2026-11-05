@@ -528,6 +528,7 @@ QList<NextcloudDeckService::Board> NextcloudDeckService::getBoards() {
                     }
 
                     board.stacks = stacks;
+                    board.labels = labelsFromJson(object[QStringLiteral("labels")]);
                     boards.append(board);
                 }
             }
@@ -620,45 +621,9 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
                         int currentBoardId = stackObject["boardId"].toInt();
 
                         for (auto cardValue : cardsArray) {
-                            QJsonObject object = cardValue.toObject();
-
-                            NextcloudDeckService::Card card;
-                            card.id = object["id"].toInt();
-                            card.stackId = currentStackId;
-                            card.boardId = currentBoardId > 0 ? currentBoardId : this->boardId;
-                            card.title = object["title"].toString();
-                            card.description = object["description"].toString();
-                            card.owner = object["owner"].toString();
-                            card.order = object["order"].toInt();
-                            card.type = object["type"].toString();
-                            card.archived = object["archived"].toBool();
-
-                            // Parse datetime fields from ISO 8601 strings
-                            QString duedateString = object["duedate"].toString();
-                            if (!duedateString.isEmpty() && duedateString != "null") {
-                                card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
-                            }
-
-                            qint64 createdAtTimestamp =
-                                object["createdAt"].toVariant().toLongLong();
-                            if (createdAtTimestamp > 0) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-                                card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
-#else
-                                card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
-#endif
-                            }
-
-                            qint64 lastModifiedTimestamp =
-                                object["lastModified"].toVariant().toLongLong();
-                            if (lastModifiedTimestamp > 0) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-                                card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
-#else
-                                card.lastModified =
-                                    QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
-#endif
-                            }
+                            const auto card =
+                                cardFromJson(cardValue.toObject(), currentStackId,
+                                             currentBoardId > 0 ? currentBoardId : this->boardId);
 
                             qDebug() << __func__ << " - found card: " << card;
                             cards[card.id] = card;
@@ -753,45 +718,11 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
                         QJsonArray archivedCardsArray = stackObject["cards"].toArray();
 
                         for (auto cardValue : archivedCardsArray) {
-                            QJsonObject object = cardValue.toObject();
-
-                            NextcloudDeckService::Card card;
-                            card.id = object["id"].toInt();
-                            card.stackId = archivedStackId > 0 ? archivedStackId : this->stackId;
-                            card.boardId = archivedBoardId > 0 ? archivedBoardId : this->boardId;
-                            card.title = object["title"].toString();
-                            card.description = object["description"].toString();
-                            card.owner = object["owner"].toString();
-                            card.order = object["order"].toInt();
-                            card.type = object["type"].toString();
+                            auto card =
+                                cardFromJson(cardValue.toObject(),
+                                             archivedStackId > 0 ? archivedStackId : this->stackId,
+                                             archivedBoardId > 0 ? archivedBoardId : this->boardId);
                             card.archived = true;    // These are archived cards
-
-                            // Parse datetime fields from ISO 8601 strings
-                            QString duedateString = object["duedate"].toString();
-                            if (!duedateString.isEmpty() && duedateString != "null") {
-                                card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
-                            }
-
-                            qint64 createdAtTimestamp =
-                                object["createdAt"].toVariant().toLongLong();
-                            if (createdAtTimestamp > 0) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-                                card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
-#else
-                                card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
-#endif
-                            }
-
-                            qint64 lastModifiedTimestamp =
-                                object["lastModified"].toVariant().toLongLong();
-                            if (lastModifiedTimestamp > 0) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
-                                card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
-#else
-                                card.lastModified =
-                                    QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
-#endif
-                            }
 
                             qDebug() << __func__ << " - found archived card: " << card;
                             cards[card.id] = card;
@@ -817,4 +748,280 @@ QHash<int, NextcloudDeckService::Card> NextcloudDeckService::getCards(bool inclu
     }
 
     return cards;
+}
+
+NextcloudDeckService::Card NextcloudDeckService::cardFromJson(const QJsonObject& object,
+                                                              int cardStackId,
+                                                              int cardBoardId) const {
+    NextcloudDeckService::Card card;
+    card.id = object[QStringLiteral("id")].toInt();
+    card.stackId = cardStackId;
+    card.boardId = cardBoardId;
+    card.title = object[QStringLiteral("title")].toString();
+    card.description = object[QStringLiteral("description")].toString();
+    card.owner = object[QStringLiteral("owner")].toString();
+    card.order = object[QStringLiteral("order")].toInt();
+    card.type = object[QStringLiteral("type")].toString();
+    card.archived = object[QStringLiteral("archived")].toBool();
+    card.labels = labelsFromJson(object[QStringLiteral("labels")]);
+
+    // Parse datetime fields from ISO 8601 strings
+    const QString duedateString = object[QStringLiteral("duedate")].toString();
+    if (!duedateString.isEmpty() && duedateString != QStringLiteral("null")) {
+        card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
+    }
+
+    const qint64 createdAtTimestamp = object[QStringLiteral("createdAt")].toVariant().toLongLong();
+    if (createdAtTimestamp > 0) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
+        card.createdAt = QDateTime::fromTime_t(createdAtTimestamp);
+#else
+        card.createdAt = QDateTime::fromSecsSinceEpoch(createdAtTimestamp);
+#endif
+    }
+
+    const qint64 lastModifiedTimestamp =
+        object[QStringLiteral("lastModified")].toVariant().toLongLong();
+    if (lastModifiedTimestamp > 0) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 8, 0)
+        card.lastModified = QDateTime::fromTime_t(lastModifiedTimestamp);
+#else
+        card.lastModified = QDateTime::fromSecsSinceEpoch(lastModifiedTimestamp);
+#endif
+    }
+
+    return card;
+}
+
+NextcloudDeckService::Label NextcloudDeckService::labelFromJson(const QJsonObject& object) {
+    Label label;
+    label.id = object[QStringLiteral("id")].toVariant().toInt();
+    label.title = object[QStringLiteral("title")].toString();
+    label.color = object[QStringLiteral("color")].toString().remove(QLatin1Char('#'));
+    return label;
+}
+
+QList<NextcloudDeckService::Label> NextcloudDeckService::labelsFromJson(const QJsonValue& value) {
+    QList<Label> labels;
+
+    // Deck returns null instead of an empty array for cards without labels
+    if (!value.isArray()) {
+        return labels;
+    }
+
+    const QJsonArray array = value.toArray();
+    for (const auto& labelValue : array) {
+        const Label label = labelFromJson(labelValue.toObject());
+
+        if (label.id > 0) {
+            labels.append(label);
+        }
+    }
+
+    return labels;
+}
+
+/**
+ * The colors the Deck web interface offers for labels
+ */
+QStringList NextcloudDeckService::defaultLabelColors() {
+    return {QStringLiteral("31CC7C"), QStringLiteral("317CCC"), QStringLiteral("FF7A66"),
+            QStringLiteral("F1DB50"), QStringLiteral("7C31CC"), QStringLiteral("CC317C"),
+            QStringLiteral("3A3B3D"), QStringLiteral("CACBCD")};
+}
+
+QUrl NextcloudDeckService::cardUrl(int cardId, const QString& action) const {
+    QString url = serverUrl + QStringLiteral("/index.php/apps/deck/api/v1.1/boards/") +
+                  QString::number(this->boardId) + QStringLiteral("/stacks/") +
+                  QString::number(this->stackId) + QStringLiteral("/cards/") +
+                  QString::number(cardId);
+
+    if (!action.isEmpty()) {
+        url += QLatin1Char('/') + action;
+    }
+
+    return QUrl(url);
+}
+
+/**
+ * Sends a JSON request to the Deck API and waits up to 10 seconds for the reply
+ *
+ * Returns true if the server answered with a success status code
+ */
+bool NextcloudDeckService::sendJsonRequest(const QByteArray& verb, const QUrl& url,
+                                           const QJsonObject& body, int* statusCode,
+                                           QByteArray* responseData, bool* timedOut) {
+    QNetworkAccessManager manager;
+    QEventLoop loop;
+    QTimer timer;
+    timer.setSingleShot(true);
+    QObject::connect(&timer, &QTimer::timeout, &loop, &QEventLoop::quit);
+    QObject::connect(&manager, &QNetworkAccessManager::finished, &loop, &QEventLoop::quit);
+
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::UserAgentHeader, Utils::Misc::friendlyUserAgentString());
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setRawHeader("OCS-APIRequest", "true");
+#if QT_VERSION < QT_VERSION_CHECK(5, 9, 0)
+    request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#else
+    request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);
+#endif
+    addAuthHeader(request);
+
+    qDebug() << __func__ << " - " << verb << " " << url << " " << body;
+
+    QNetworkReply* reply = manager.sendCustomRequest(
+        request, verb, QJsonDocument(body).toJson(QJsonDocument::Compact));
+    timer.start(10000);
+    loop.exec();
+
+    const bool isTimedOut = !timer.isActive();
+    timer.stop();
+    if (isTimedOut) {
+        reply->abort();
+    }
+
+    const int code = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    const QByteArray data = reply->readAll();
+    reply->deleteLater();
+
+    if (statusCode != nullptr) {
+        *statusCode = code;
+    }
+    if (responseData != nullptr) {
+        *responseData = data;
+    }
+    if (timedOut != nullptr) {
+        *timedOut = isTimedOut;
+    }
+
+    return !isTimedOut && code >= 200 && code < 300;
+}
+
+QString NextcloudDeckService::errorMessageForResponse(int statusCode,
+                                                      const QByteArray& responseData,
+                                                      bool timedOut) const {
+    if (timedOut) {
+        return tr("The request to your Nextcloud server timed out.");
+    }
+
+    // Deck reports the reason for a failed request in the "message" field
+    const QString serverMessage =
+        QJsonDocument::fromJson(responseData).object().value(QStringLiteral("message")).toString();
+
+    return tr("The request failed with status code %1 and message: %2")
+        .arg(QString::number(statusCode),
+             serverMessage.isEmpty() ? tr("unknown error") : serverMessage);
+}
+
+/**
+ * Creates a new label in the current board
+ *
+ * Returns a label with an id of 0 if the label couldn't be created
+ */
+NextcloudDeckService::Label NextcloudDeckService::createLabel(const QString& title,
+                                                              const QString& color) {
+    const QString trimmedTitle = title.trimmed();
+
+    if (this->boardId < 1 || trimmedTitle.isEmpty()) {
+        return Label();
+    }
+
+    const QUrl url(serverUrl + QStringLiteral("/index.php/apps/deck/api/v1.1/boards/") +
+                   QString::number(this->boardId) + QStringLiteral("/labels"));
+    QJsonObject body;
+    body[QStringLiteral("title")] = trimmedTitle;
+    body[QStringLiteral("color")] = QString(color).remove(QLatin1Char('#')).toUpper();
+
+    int statusCode = 0;
+    QByteArray data;
+    bool timedOut = false;
+
+    if (sendJsonRequest("POST", url, body, &statusCode, &data, &timedOut)) {
+        const Label label = labelFromJson(QJsonDocument::fromJson(data).object());
+
+        if (label.id > 0) {
+            return label;
+        }
+    }
+
+    Utils::Gui::warning(qobject_cast<QWidget*>(parent()), tr("Error while creating tag"),
+                        tr("The tag \"%1\" could not be created. %2")
+                            .arg(trimmedTitle, errorMessageForResponse(statusCode, data, timedOut)),
+                        QStringLiteral("nextcloud-deck-create-label-failed"));
+
+    return Label();
+}
+
+bool NextcloudDeckService::assignLabel(int cardId, int labelId) {
+    if (cardId < 1 || labelId < 1 || this->boardId < 1 || this->stackId < 1) {
+        return false;
+    }
+
+    QJsonObject body;
+    body[QStringLiteral("labelId")] = labelId;
+    int statusCode = 0;
+    QByteArray data;
+    bool timedOut = false;
+
+    if (sendJsonRequest("PUT", cardUrl(cardId, QStringLiteral("assignLabel")), body, &statusCode,
+                        &data, &timedOut)) {
+        return true;
+    }
+
+    Utils::Gui::warning(qobject_cast<QWidget*>(parent()), tr("Error while adding tag"),
+                        tr("The tag could not be added to the card. %1")
+                            .arg(errorMessageForResponse(statusCode, data, timedOut)),
+                        QStringLiteral("nextcloud-deck-assign-label-failed"));
+
+    return false;
+}
+
+bool NextcloudDeckService::removeLabel(int cardId, int labelId) {
+    if (cardId < 1 || labelId < 1 || this->boardId < 1 || this->stackId < 1) {
+        return false;
+    }
+
+    QJsonObject body;
+    body[QStringLiteral("labelId")] = labelId;
+    int statusCode = 0;
+    QByteArray data;
+    bool timedOut = false;
+
+    if (sendJsonRequest("PUT", cardUrl(cardId, QStringLiteral("removeLabel")), body, &statusCode,
+                        &data, &timedOut)) {
+        return true;
+    }
+
+    Utils::Gui::warning(qobject_cast<QWidget*>(parent()), tr("Error while removing tag"),
+                        tr("The tag could not be removed from the card. %1")
+                            .arg(errorMessageForResponse(statusCode, data, timedOut)),
+                        QStringLiteral("nextcloud-deck-remove-label-failed"));
+
+    return false;
+}
+
+/**
+ * Assigns and removes labels, so the card ends up with exactly the wanted labels
+ *
+ * Returns false if at least one of the requests failed
+ */
+bool NextcloudDeckService::setCardLabels(int cardId, const QList<int>& currentLabelIds,
+                                         const QList<int>& wantedLabelIds) {
+    bool success = true;
+
+    for (const int labelId : currentLabelIds) {
+        if (!wantedLabelIds.contains(labelId)) {
+            success = removeLabel(cardId, labelId) && success;
+        }
+    }
+
+    for (const int labelId : wantedLabelIds) {
+        if (!currentLabelIds.contains(labelId)) {
+            success = assignLabel(cardId, labelId) && success;
+        }
+    }
+
+    return success;
 }

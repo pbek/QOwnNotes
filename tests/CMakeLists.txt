@@ -200,6 +200,8 @@ set(APP_SOURCE_FILES
     helpers/clientproxy.cpp
     helpers/clientproxy.h
     helpers/codetohtmlconverter.cpp
+    helpers/flowlayout.cpp
+    helpers/flowlayout.h
     helpers/codetohtmlconverter.h
     helpers/htmlentities.cpp
     helpers/htmlentities.h
@@ -268,6 +270,8 @@ set(APP_SOURCE_FILES
     widgets/lineedit.h
     widgets/loadingoverlaywidget.cpp
     widgets/loadingoverlaywidget.h
+    widgets/nextclouddecklabelswidget.cpp
+    widgets/nextclouddecklabelswidget.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
     widgets/notepreviewwidget.cpp
