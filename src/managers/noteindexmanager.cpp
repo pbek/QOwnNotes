@@ -1130,9 +1130,18 @@ void NoteIndexManager::storeUpdatedNotesToDisk() {
     bool noteWasRenamed = false;
     bool currentNoteTextChanged = false;
 
+    // Without checksum checks, the modal dialog processes autosave timers that
+    // can overwrite external changes while the user is choosing.
+    // Leave this note dirty until the choice is made, but still save other notes.
+    // Qt5 can leave the dialog visible after its event loop exits during shutdown.
+    const bool skipCurrentNote =
+        _mainWindow->_noteDiffDialogExecuting && _mainWindow->isNoteDiffDialogOpen() &&
+        !SettingsService().value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
+
     // currentNote will be set by this method if the filename has changed
-    const int count = Note::storeDirtyNotesToDisk(_mainWindow->currentNote, &currentNoteChanged,
-                                                  &noteWasRenamed, &currentNoteTextChanged);
+    const int count =
+        Note::storeDirtyNotesToDisk(_mainWindow->currentNote, &currentNoteChanged, &noteWasRenamed,
+                                    &currentNoteTextChanged, skipCurrentNote);
 
     if (count > 0) {
         _mainWindow->_noteViewNeedsUpdate = true;

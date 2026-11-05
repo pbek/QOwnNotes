@@ -133,6 +133,9 @@ class TestNotes : public QObject {
     void testGetInsertMediaMarkdownReusesFileDespiteMimeExtensionMismatch();
     void testHandleImagesDoesNotOrphanRepeatedIdenticalImageTagInSameNote();
     void testHandleImagesTerminatesOnZeroByteResource();
+
+    void testDeferredCurrentNoteSave_data();
+    void testDeferredCurrentNoteSave();
 };
 
 #endif    // TESTNOTES_H

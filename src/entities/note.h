@@ -161,7 +161,8 @@ class Note {
 
     static int storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged = nullptr,
                                      bool *noteWasRenamed = nullptr,
-                                     bool *currentNoteTextChanged = nullptr);
+                                     bool *currentNoteTextChanged = nullptr,
+                                     bool skipCurrentNote = false);
 
     static bool hasDirtyNotes();
 
