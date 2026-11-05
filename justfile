@@ -13,6 +13,8 @@ transferDir := `if [ -d "$HOME/NextcloudPrivate/Transfer" ]; then echo "$HOME/Ne
 sourceBuildDir := "build-QOwnNotes"
 sourceBuildTestDir := "build-tests-QOwnNotes"
 nixBuildPackage := `if [ "$(uname)" = Linux ]; then echo qownnotes-qt6-kde; else echo qownnotes-qt6; fi`
+# Read current submodule files instead of reusing Nix's cached Git source snapshot.
+nixBuildFlake := "path:" + justfile_directory()
 
 # Aliases
 
@@ -57,12 +59,12 @@ translations-update-files:
 # Build the application for nix with KDE integration (Linux), or plain Qt6 (macOS)
 [group('nix')]
 nix-build:
-    nix build '.?submodules=1#{{ nixBuildPackage }}'
+    nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}'
 
 # Build the application for nix with QLITEHTML support
 [group('nix')]
 nix-build-qlitehtml:
-    nix build '.?submodules=1#qownnotes-qt6-qlitehtml'
+    nix build '{{ nixBuildFlake }}#qownnotes-qt6-qlitehtml'
 
 # Build the application for nix for aaarch64 (throws errors while building Qt6)
 [group('nix')]
@@ -77,48 +79,48 @@ nix-build-cmake-qt5:
 # Build the application with Qt5 for nix
 [group('nix')]
 nix-build-qt5:
-    nix build '.?submodules=1#qownnotes-qt5'
+    nix build '{{ nixBuildFlake }}#qownnotes-qt5'
 
 # Build the application with Qt 5.15.3 for nix
 [group('nix')]
 nix-build-qt5153:
-    nix build '.?submodules=1#qownnotes-qt5153'
+    nix build '{{ nixBuildFlake }}#qownnotes-qt5153'
 
 # Force a rebuild of the application with Qt5 for nix
 [group('nix')]
 nix-build-qt5-force:
-    nix build '.?submodules=1#qownnotes-qt5' --rebuild
+    nix build '{{ nixBuildFlake }}#qownnotes-qt5' --rebuild
 
 # Force a rebuild of the application with Qt 5.15.3 for nix
 [group('nix')]
 nix-build-qt5153-force:
-    nix build '.?submodules=1#qownnotes-qt5153' --rebuild
+    nix build '{{ nixBuildFlake }}#qownnotes-qt5153' --rebuild
 
 # Build the application with Qt 6.9 for nix
 [group('nix')]
 nix-build-qt69 args='':
-    nix build '.?submodules=1#qownnotes-qt69' {{ args }}
+    nix build '{{ nixBuildFlake }}#qownnotes-qt69' {{ args }}
 
 # Build the application with Qt6 for nix with a trace
 [group('nix')]
 nix-build-trace:
-    nix build '.?submodules=1#{{ nixBuildPackage }}' --show-trace
+    nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}' --show-trace
 
 # Force a rebuild of the application with Qt6 for nix
 [group('nix')]
 nix-build-force:
-    nix build '.?submodules=1#{{ nixBuildPackage }}' --rebuild
+    nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}' --rebuild
 
 # Do a full nix build and store its build directory as checkpoint for "just nix-build-incremental"
 [group('nix')]
 nix-build-checkpoint:
-    nix build '.?submodules=1#{{ nixBuildPackage }}-checkpoint' --out-link .nix-checkpoint
+    nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}-checkpoint' --out-link .nix-checkpoint
 
 # Build the application for nix, but only recompile the sources changed since the last checkpoint
 [group('nix')]
 nix-build-incremental:
     test -e .nix-checkpoint || just nix-build-checkpoint
-    QON_NIX_CHECKPOINT="$(readlink -f .nix-checkpoint)" nix build '.?submodules=1#{{ nixBuildPackage }}-incremental' --impure
+    QON_NIX_CHECKPOINT="$(readlink -f .nix-checkpoint)" nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}-incremental' --impure
 
 # Run the built application for nix
 [group('nix')]
@@ -140,7 +142,7 @@ screenshots-publish capture_dir="":
 # like the KDE Plasma platform theme, can be loaded
 [group('nix')]
 nix-build-system:
-    nix build '.?submodules=1#{{ nixBuildPackage }}' --override-input nixpkgs nixpkgs --no-write-lock-file
+    nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}' --override-input nixpkgs nixpkgs --no-write-lock-file
 
 # Build and run the application for nix with the nixpkgs of the running system
 [group('nix')]
@@ -159,9 +161,9 @@ nix-build-incremental-run:
     if [ ! -e "${checkpoint}" ]; then
         # Remove checkpoints of older system nixpkgs, so they can be garbage collected
         rm -f .nix-checkpoint-system-*
-        nix build '.?submodules=1#{{ nixBuildPackage }}-checkpoint' "${flakeArgs[@]}" --out-link "${checkpoint}"
+        nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}-checkpoint' "${flakeArgs[@]}" --out-link "${checkpoint}"
     fi
-    QON_NIX_CHECKPOINT="$(readlink -f "${checkpoint}")" nix build '.?submodules=1#{{ nixBuildPackage }}-incremental' "${flakeArgs[@]}" --impure
+    QON_NIX_CHECKPOINT="$(readlink -f "${checkpoint}")" nix build '{{ nixBuildFlake }}#{{ nixBuildPackage }}-incremental' "${flakeArgs[@]}" --impure
     just nix-run
 
 # Open the breeze icons folder
