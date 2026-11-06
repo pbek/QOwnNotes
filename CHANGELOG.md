@@ -5,6 +5,12 @@
 - Fixed the text of the tag list of the **Nextcloud Deck** dialog and the **Note tags** panel
   being cut off when the interface font size is overridden
   (for [#3834](https://github.com/pbek/QOwnNotes/issues/3834))
+- Fixed external changes of the current note getting overwritten by the automatic note saving
+  while the dialog about the external modification was still open, so that
+  **Reload from disk** loaded the overwritten text instead of the external changes
+  (for [#3838](https://github.com/pbek/QOwnNotes/issues/3838),
+  [#3842](https://github.com/pbek/QOwnNotes/pull/3842), thank you, @myukitty)
+  - This affects the default setup with note checksum checks turned off
 
 ## 26.11.5
 
