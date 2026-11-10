@@ -2,6 +2,8 @@
 
 set -e
 
+python3 ./scripts/test-fix-markdown-html.py
+
 echo "⚠️  Replacing corrupted translation files with English versions..."
 # Replace corrupted files with English versions instead of removing them
 # This allows the build to complete successfully while corrupted translations are being fixed

@@ -87,8 +87,27 @@ def fix_markdown_content(content):
     content = re.sub(r'</ol>', '', content)
     content = re.sub(r'<ol>', '', content)
 
-    # Fix 4: Remove standalone </div> tags
-    content = re.sub(r'^</div>$', '', content, flags=re.MULTILINE)
+    # Fix 4: Remove only orphaned standalone </div> tags, preserving valid layouts.
+    div_depth = 0
+
+    def remove_orphaned_div(match):
+        nonlocal div_depth
+        tag = match.group(0)
+        if tag.lower().startswith('</'):
+            if div_depth:
+                div_depth -= 1
+            else:
+                line_start = content.rfind('\n', 0, match.start()) + 1
+                line_end = content.find('\n', match.end())
+                if line_end == -1:
+                    line_end = len(content)
+                if content[line_start:line_end].strip().lower() == '</div>':
+                    return ''
+        elif not tag.rstrip().endswith('/>'):
+            div_depth += 1
+        return tag
+
+    content = re.sub(r'</?div\b[^>]*>', remove_orphaned_div, content, flags=re.IGNORECASE)
 
     # Fix 4b: Fix mixed HTML table tags in markdown tables
     # Remove closing HTML table tags that shouldn't be there
