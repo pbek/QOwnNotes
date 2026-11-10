@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+ <defs>
+  <style type="text/css" id="current-color-scheme">
+   .ColorScheme-Text { color:#f2f2f2; }
+  </style>
+ </defs>
+ <g class="ColorScheme-Text" style="fill:currentColor">
+  <circle cx="5" cy="7" r="1.5"/><circle cx="5" cy="12" r="1.5"/><circle cx="5" cy="17" r="1.5"/>
+  <rect x="9" y="6" width="11" height="2" rx="0.5"/><rect x="9" y="11" width="11" height="2" rx="0.5"/><rect x="9" y="16" width="11" height="2" rx="0.5"/>
+ </g>
+</svg>

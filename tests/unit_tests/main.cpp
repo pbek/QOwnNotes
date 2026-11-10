@@ -7,6 +7,7 @@
 #include "testcases/app/test_cryptoservice.h"
 #include "testcases/app/test_htmlentities.h"
 #include "testcases/app/test_languagetool.h"
+#include "testcases/app/test_markdownformattoolbar.h"
 #include "testcases/app/test_metricsservice.h"
 #include "testcases/app/test_navigationwidget.h"
 #include "testcases/app/test_network.h"
@@ -62,6 +63,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestNextcloudDeckService(), argc, argv) +
                          QTest::qExec(new TestNextcloudDeckDialog(), argc, argv) +
                          QTest::qExec(new TestTagChipsWidget(), argc, argv) +
+                         QTest::qExec(new TestMarkdownFormatToolbar(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
                          QTest::qExec(new TestSearchWidgets(), argc, argv) +
                          QTest::qExec(new TestTouchScrolling(), argc, argv) +

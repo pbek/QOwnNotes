@@ -22,10 +22,13 @@
 #include "services/cloudservice.h"
 #include "services/settingsservice.h"
 #include "ui_tododialog.h"
+#include "widgets/markdownformattoolbar.h"
 
 TodoDialog::TodoDialog(const QString &taskUid, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::TodoDialog) {
     ui->setupUi(this);
+    ui->descriptionLayout->insertWidget(
+        0, new MarkdownFormatToolbar(ui->descriptionEdit, ui->editFrame));
     afterSetupUI();
     setupUi();
 

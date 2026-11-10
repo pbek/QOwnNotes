@@ -140,6 +140,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.h
     ${QON_TESTS_DIR}/testcases/app/test_tagchipswidget.cpp
     ${QON_TESTS_DIR}/testcases/app/test_tagchipswidget.h
+    ${QON_TESTS_DIR}/testcases/app/test_markdownformattoolbar.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_markdownformattoolbar.h
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.cpp
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.h
     ${QON_TESTS_DIR}/testcases/app/test_touchscrolling.cpp
@@ -259,6 +261,10 @@ set(APP_SOURCE_FILES
     utils/git.cpp
     utils/git.h
     utils/listutils.cpp
+    utils/markdownformatting.cpp
+    utils/markdownformatting.h
+    widgets/markdownformattoolbar.cpp
+    widgets/markdownformattoolbar.h
     utils/listutils.h
     utils/misc.cpp
     utils/misc.h

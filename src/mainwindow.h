@@ -1355,7 +1355,6 @@ class MainWindow : public QMainWindow {
     bool insertTextAsAttachment(const QString &text);
     bool insertAttachment(QFile *file, const QString &title = QString(),
                           const QString &fileName = QString());
-    bool undoFormatting(const QString &formatter);
     void applyFormatter(const QString &formatter);
     void handleScriptingNoteTagging(Note note, const Tag &tag, bool doRemove,
                                     bool triggerPostMethods = true);

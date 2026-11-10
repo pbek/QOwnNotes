@@ -28,12 +28,15 @@
 #undef QOwnNotesMarkdownTextEdit
 #endif
 #include "utils/gui.h"
+#include "widgets/markdownformattoolbar.h"
 #include "widgets/nextclouddecklabeldelegate.h"
 #include "widgets/tagchipswidget.h"
 
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog), _mode(mode) {
     ui->setupUi(this);
+    ui->descriptionLayout->insertWidget(
+        0, new MarkdownFormatToolbar(ui->descriptionTextEdit, ui->editFrame));
     if (_mode == Mode::InsertLinks) {
         // Keep picker geometry separate from the full management dialog.
         setObjectName(QStringLiteral("NextcloudDeckLinkDialog"));

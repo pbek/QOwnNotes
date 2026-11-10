@@ -86,6 +86,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
      * Inserts an empty code block
      */
     void insertCodeBlock();
+    void applyFormatter(const QString &formatter);
     void insertWikiLink();
 
     /**

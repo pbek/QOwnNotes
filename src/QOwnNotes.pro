@@ -213,6 +213,7 @@ SOURCES += main.cpp\
     utils/gui.cpp \
     utils/cli.cpp \
     utils/listutils.cpp \
+    utils/markdownformatting.cpp \
     utils/schema.cpp \
     dialogs/welcomedialog.cpp \
     dialogs/issueassistantdialog.cpp \
@@ -222,6 +223,7 @@ SOURCES += main.cpp\
     widgets/loadingoverlaywidget.cpp \
     widgets/nextclouddecklabeldelegate.cpp \
     widgets/tagchipswidget.cpp \
+    widgets/markdownformattoolbar.cpp \
     widgets/filenavigationwidget.cpp \
     widgets/backlinkwidget.cpp \
     widgets/notepreviewwidget.cpp \
@@ -390,6 +392,7 @@ HEADERS  += mainwindow.h \
     utils/gui.h \
     utils/cli.h \
     utils/listutils.h \
+    utils/markdownformatting.h \
     utils/schema.h \
     dialogs/welcomedialog.h \
     dialogs/issueassistantdialog.h \
@@ -399,6 +402,7 @@ HEADERS  += mainwindow.h \
     widgets/loadingoverlaywidget.h \
     widgets/nextclouddecklabeldelegate.h \
     widgets/tagchipswidget.h \
+    widgets/markdownformattoolbar.h \
     widgets/filenavigationwidget.h \
     widgets/backlinkwidget.h \
     widgets/notepreviewwidget.h \

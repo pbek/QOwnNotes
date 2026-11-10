@@ -8,6 +8,7 @@ class TestNextcloudDeckDialog : public QObject {
 
    private Q_SLOTS:
     void testModes();
+    void testDescriptionToolbar();
     void testInsertLinks_data();
     void testInsertLinks();
     void testPickerDoesNotCreateOrDeleteCards();

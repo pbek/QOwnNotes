@@ -101,6 +101,10 @@
     <file alias="16x16/insert-table.svg">icons/breeze-qownnotes/16x16/insert-table.svg</file>
     <file alias="16x16/table.svg">icons/breeze-qownnotes/16x16/table.svg</file>
     <file alias="16x16/format-text-blockquote.svg">icons/breeze-qownnotes/16x16/format-text-blockquote.svg</file>
+    <file alias="16x16/format-list-unordered.svg">icons/breeze-qownnotes/16x16/format-list-unordered.svg</file>
+    <file alias="16x16/format-list-ordered.svg">icons/breeze-qownnotes/16x16/format-list-ordered.svg</file>
+    <file alias="16x16/format-list-checkbox.svg">icons/breeze-qownnotes/16x16/format-list-checkbox.svg</file>
+    <file alias="16x16/code-block.svg">icons/breeze-qownnotes/16x16/code-block.svg</file>
     <file alias="16x16/window.svg">icons/breeze-qownnotes/16x16/window.svg</file>
     <file alias="16x16/mail-attachment.svg">icons/breeze-qownnotes/16x16/mail-attachment.svg</file>
     <file alias="16x16/transform-crop.svg">icons/breeze-qownnotes/16x16/transform-crop.svg</file>

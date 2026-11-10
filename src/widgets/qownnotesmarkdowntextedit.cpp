@@ -2,6 +2,7 @@
 
 #include <utils/gui.h>
 #include <utils/listutils.h>
+#include <utils/markdownformatting.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
 
@@ -73,6 +74,7 @@
 #include "services/settingsservice.h"
 #include "utils/urlhandler.h"
 #include "version.h"
+#include "widgets/markdownformattoolbar.h"
 
 namespace {
 constexpr int kFoldIndicatorPadding = 2;
@@ -1324,41 +1326,15 @@ void QOwnNotesMarkdownTextEdit::selectEnclosedText() {
 }
 
 void QOwnNotesMarkdownTextEdit::insertCodeBlock() {
-    QTextCursor c = this->textCursor();
-    QString selectedText = c.selection().toPlainText();
+    Utils::MarkdownFormatting::insertCodeBlock(this);
+}
 
-    if (selectedText.isEmpty()) {
-        // insert multi-line code block if cursor is in an empty line
-        if (c.atBlockStart() && c.atBlockEnd()) {
-            c.insertText(QStringLiteral("```\n\n```"));
-            c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 3);
-        } else {
-            c.insertText(QStringLiteral("``"));
-        }
-
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
-        setTextCursor(c);
-    } else {
-        bool addNewline = false;
-
-        // if the selected text has multiple lines add a multi-line code block
-        if (selectedText.contains(QStringLiteral("\n"))) {
-            // add another newline if there is no newline at the end of the
-            // selected text
-            const QString endNewline =
-                selectedText.endsWith(QLatin1String("\n")) ? QString() : QStringLiteral("\n");
-
-            selectedText =
-                QStringLiteral("``\n") + selectedText + endNewline + QStringLiteral("``");
-            addNewline = true;
-        }
-
-        c.insertText(QStringLiteral("`") + selectedText + QStringLiteral("`"));
-
-        if (addNewline) {
-            c.insertText(QStringLiteral("\n"));
-        }
-    }
+void QOwnNotesMarkdownTextEdit::applyFormatter(const QString &formatter) {
+    Utils::MarkdownFormatting::applyFormatter(
+        this, formatter,
+        SettingsService()
+            .value(QStringLiteral("Editor/multilineInlineHighlighting"), true)
+            .toBool());
 }
 
 void QOwnNotesMarkdownTextEdit::insertAutoCompletedText(const QString text) {
@@ -1831,29 +1807,7 @@ void QOwnNotesMarkdownTextEdit::insertFootnote() {
 }
 
 QTextCursor QOwnNotesMarkdownTextEdit::fullLineSelectionCursor() const {
-    QTextCursor cursor = textCursor();
-    if (!cursor.hasSelection()) {
-        cursor.movePosition(QTextCursor::StartOfBlock);
-        cursor.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
-        return cursor;
-    }
-
-    const int selectionStart = cursor.selectionStart();
-    int selectionEnd = cursor.selectionEnd();
-
-    QTextCursor lineCursor(document());
-    lineCursor.setPosition(selectionStart);
-    lineCursor.movePosition(QTextCursor::StartOfBlock);
-
-    QTextCursor endCursor(document());
-    endCursor.setPosition(selectionEnd);
-    if (selectionEnd > selectionStart && endCursor.atBlockStart()) {
-        endCursor.movePosition(QTextCursor::PreviousCharacter);
-    }
-    endCursor.movePosition(QTextCursor::EndOfBlock);
-
-    lineCursor.setPosition(endCursor.position(), QTextCursor::KeepAnchor);
-    return lineCursor;
+    return Utils::MarkdownFormatting::fullLineSelectionCursor(this);
 }
 
 bool QOwnNotesMarkdownTextEdit::replaceFullLineSelection(const QString &text) {
@@ -2863,6 +2817,14 @@ void QOwnNotesMarkdownTextEdit::onContextMenu(QPoint pos) {
     if (spellCheckMenu) {
         // insert spell check at the top if available
         menu->insertMenu(menu->actions().constFirst(), spellCheckMenu);
+    }
+
+    // Description editors must not invoke actions that modify the current note.
+    if (!MarkdownFormatToolbar::formattingActions(this).isEmpty()) {
+        MarkdownFormatToolbar::addFormattingMenu(menu, this);
+        menu->exec(globalPos);
+        delete menu;
+        return;
     }
 
     const bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();

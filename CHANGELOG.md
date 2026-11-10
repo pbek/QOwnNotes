@@ -2,6 +2,15 @@
 
 ## 26.11.7
 
+- Added a **Markdown formatting toolbar** above the description editors in the **Tasks**
+  and **Nextcloud Deck** dialogs (for [#3816](https://github.com/pbek/QOwnNotes/issues/3816))
+  - Supports bold, italic, strike-out, inline code, code blocks, quotes, bullet, numbered and
+    checklists, and links, also available in the **Format** menu of the editor's context menu
+  - Inline formatting and quotes can be removed again with the same button, and the link prompt
+    suggests a selected or copied URL
+  - <kbd>Ctrl + B</kbd>, <kbd>Ctrl + I</kbd> and <kbd>Ctrl + L</kbd> format text or insert a link
+    in the focused description editor without changing the current note
+  - A help button opens the Markdown cheat sheet
 - Added **Manage Nextcloud Deck cards** and **Recent Deck cards** to the system tray menu
   (for [#3832](https://github.com/pbek/QOwnNotes/issues/3832))
   - The last 10 cards opened, saved or linked in QOwnNotes are remembered locally for each

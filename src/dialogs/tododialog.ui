@@ -479,14 +479,18 @@
          </widget>
         </item>
         <item row="4" column="0">
-         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
-          <property name="readOnly">
-           <bool>false</bool>
-          </property>
-          <property name="placeholderText">
-           <string>Add a description using Markdown</string>
-          </property>
-         </widget>
+         <layout class="QVBoxLayout" name="descriptionLayout">
+          <item>
+           <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
+            <property name="readOnly">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Add a description using Markdown</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item row="5" column="0">
          <widget class="QFrame" name="descriptionEditSearchFrame">

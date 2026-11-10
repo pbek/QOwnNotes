@@ -241,11 +241,15 @@
        </widget>
       </item>
       <item row="7" column="0" colspan="2">
-       <widget class="QOwnNotesMarkdownTextEdit" name="descriptionTextEdit">
-        <property name="placeholderText">
-         <string>Add a description using Markdown</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="descriptionLayout">
+        <item>
+         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionTextEdit">
+          <property name="placeholderText">
+           <string>Add a description using Markdown</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item row="8" column="0" colspan="2">
        <widget class="QFrame" name="buttonFrame">

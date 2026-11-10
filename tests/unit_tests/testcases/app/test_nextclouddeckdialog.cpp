@@ -1,10 +1,12 @@
 #include "test_nextclouddeckdialog.h"
 
+#include <QAction>
 #include <QComboBox>
 #include <QFrame>
 #include <QLabel>
 #include <QLineEdit>
 #include <QListWidget>
+#include <QPlainTextEdit>
 #include <QPushButton>
 #include <QSignalBlocker>
 #include <QSignalSpy>
@@ -14,6 +16,7 @@
 #include <QtTest>
 
 #include "dialogs/nextclouddeckdialog.h"
+#include "widgets/markdownformattoolbar.h"
 #include "widgets/nextclouddecklabeldelegate.h"
 #include "widgets/tagchipswidget.h"
 
@@ -68,6 +71,24 @@ void TestNextcloudDeckDialog::testModes() {
     QCOMPARE(
         picker.findChild<QTreeWidget *>(QStringLiteral("cardItemTreeWidget"))->contextMenuPolicy(),
         Qt::NoContextMenu);
+}
+
+void TestNextcloudDeckDialog::testDescriptionToolbar() {
+    NextcloudDeckDialog dialog;
+    auto *toolbar = dialog.findChild<MarkdownFormatToolbar *>();
+    auto *editor = dialog.findChild<QPlainTextEdit *>(QStringLiteral("descriptionTextEdit"));
+    QVERIFY(toolbar);
+    QVERIFY(editor);
+    auto *frame = dialog.findChild<QFrame *>(QStringLiteral("editFrame"));
+    frame->setEnabled(true);
+    editor->setPlainText(QStringLiteral("description"));
+    editor->selectAll();
+    auto *bold = toolbar->findChild<QAction *>(QStringLiteral("markdownFormat_bold"));
+    QVERIFY(bold);
+    bold->trigger();
+    QCOMPARE(editor->toPlainText(), QStringLiteral("**description**"));
+    frame->setEnabled(false);
+    QVERIFY(!bold->isEnabled());
 }
 
 void TestNextcloudDeckDialog::testInsertLinks_data() {

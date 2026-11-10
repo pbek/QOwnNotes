@@ -579,6 +579,8 @@ set(SOURCE_FILES
     widgets/nextclouddecklabeldelegate.h
     widgets/tagchipswidget.cpp
     widgets/tagchipswidget.h
+    widgets/markdownformattoolbar.cpp
+    widgets/markdownformattoolbar.h
     widgets/filenavigationwidget.cpp
     widgets/filenavigationwidget.h
     widgets/backlinkwidget.cpp
@@ -744,6 +746,8 @@ set(SOURCE_FILES
     utils/gui.h
     utils/listutils.cpp
     utils/listutils.h
+    utils/markdownformatting.cpp
+    utils/markdownformatting.h
     utils/schema.cpp
     utils/schema.h
     utils/urlhandler.h

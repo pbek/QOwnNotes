@@ -6367,80 +6367,12 @@ void MainWindow::on_actionShow_note_in_file_manager_triggered() {
 }
 
 /**
- * Attempts to undo the formatting on a selected string
- *
- * @param formatter
- * @return
- */
-bool MainWindow::undoFormatting(const QString &formatter) {
-    auto *textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    const QString selectedText = c.selectedText();
-    const int formatterLength = formatter.length();
-    const int selectionStart = c.selectionStart();
-    const int selectionEnd = c.selectionEnd();
-
-    c.setPosition(selectionStart - formatterLength);
-    c.setPosition(selectionEnd + formatterLength, QTextCursor::KeepAnchor);
-    const QString selectedTextWithFormatter = c.selectedText();
-
-    // if the formatter characters were found we remove them
-    if (selectedTextWithFormatter.startsWith(formatter) &&
-        selectedTextWithFormatter.endsWith(formatter)) {
-        c.insertText(selectedText);
-        return true;
-    }
-
-    return false;
-}
-
-/**
  * Applies a formatter to a selected string
  *
  * @param formatter
  */
 void MainWindow::applyFormatter(const QString &formatter) {
-    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = c.selectedText();
-
-    // Check if selected text ends with a line break (ParagraphSeparator = U+2029)
-    bool endsWithLineBreak = false;
-    if (!selectedText.isEmpty() && selectedText.endsWith(QChar::ParagraphSeparator)) {
-        endsWithLineBreak = true;
-        selectedText.chop(1);    // remove the trailing paragraph separator
-    }
-
-    // First try to undo an existing formatting
-    if (undoFormatting(formatter)) {
-        return;
-    }
-
-    if (selectedText.isEmpty()) {
-        c.insertText(formatter.repeated(2));
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, formatter.length());
-        textEdit->setTextCursor(c);
-    } else {
-        // Only allow formatting across multiple lines if the feature is enabled
-        QRegularExpression::PatternOptions patternOptions =
-            SettingsService()
-                    .value(QStringLiteral("Editor/multilineInlineHighlighting"), true)
-                    .toBool()
-                ? QRegularExpression::DotMatchesEverythingOption
-                : QRegularExpression::NoPatternOption;
-
-        QRegularExpressionMatch match =
-            QRegularExpression(QStringLiteral(R"(^(\s*)(.+?)(\s*)$)"), patternOptions)
-                .match(selectedText);
-        if (match.hasMatch()) {
-            QString formattedText =
-                match.captured(1) + formatter + match.captured(2) + formatter + match.captured(3);
-            if (endsWithLineBreak) {
-                formattedText += QChar::ParagraphSeparator;
-            }
-            c.insertText(formattedText);
-        }
-    }
+    activeNoteTextEdit()->applyFormatter(formatter);
 }
 
 /**
