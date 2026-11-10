@@ -1,5 +1,16 @@
 # QOwnNotes Changelog
 
+## 26.11.8
+
+- There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
+  [v1.3.4](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.3.4)
+  - Updated `rusqlite` and bundled SQLite to prevent memory disclosure from crafted database
+    or WAL files (RUSTSEC-2026-0459,
+    [CVE-2026-119375](https://github.com/advisories/GHSA-72w2-rjgg-q729))
+  - Updated Ratatui and `lru` to address RUSTSEC-2026-0002 and RUSTSEC-2026-0253,
+    removed the unmaintained `paste` dependency and replaced a yanked `clipboard-win` release
+  - Building from source now requires Rust 1.89 or newer, up from 1.88
+
 ## 26.11.7
 
 - Added a **Markdown formatting toolbar** above the description editors in the **Tasks**
