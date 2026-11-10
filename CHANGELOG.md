@@ -23,6 +23,20 @@
   - External links are hidden by default; enable this only for trusted note folders
   - Other path security checks remain enabled, and deleting a linked subfolder removes only
     the link, not its target
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v26.11.0](https://github.com/qownnotes/qownnotes-android/releases/tag/v26.11.0)
+  - Use a local folder without Nextcloud, with Markdown files compatible with QOwnNotes desktop
+    note folders, for example synchronized with Syncthing
+    (for [#47](https://github.com/qownnotes/qownnotes-android/issues/47))
+    - Choose **Use a local folder** on the setup screen or **Add local folder** in account management
+    - Supports offline editing, subfolders, images, attachments, audio notes, favorites,
+      `notes.sqlite` tags and a restorable trash; external changes become conflicts instead of
+      being overwritten
+  - Added **Refresh when opening the app**, enabled by default, to refresh the active account
+    when opening or returning to the app, with five minutes between attempts; manual refresh
+    remains immediate
+  - Fixed Nextcloud synchronization and account import failing after the Gson update by
+    updating Nextcloud Single Sign-On to 1.3.5
 
 ## 26.11.6
 
