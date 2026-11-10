@@ -138,6 +138,25 @@ graph TB
 - **Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/)
   or [ownCloud](https://owncloud.org/) sync client to your server
 
+### Symlinks to external notes and folders
+
+By default, notes and subfolders linked to locations outside the note folder are hidden.
+Links whose targets stay inside the note folder continue to work.
+
+To edit external Markdown files through symlinks, select the note folder in
+**Settings → Note folders** and enable **Allow external symlinks (unsafe)**.
+For linked directories, also enable **Use note subfolders**.
+The permission applies only to that note folder and takes effect after closing settings.
+
+::: warning
+Enable this only for trusted note folders. Editing or renaming a note inside a linked
+directory modifies the external files. Links received through syncing or shared repositories
+can point to sensitive files. Other path security checks remain enabled.
+:::
+
+Deleting a symlinked subfolder removes only the link, not the target directory.
+Broken links and recursive directory links are not shown.
+
 ## QOwnNotes browser extension
 
 You can manage your **browser bookmarks** with QOwnNotes or use it as a **web clipper**.

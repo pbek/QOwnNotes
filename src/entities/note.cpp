@@ -2623,16 +2623,17 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
 
     const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
-    const QString noteRoot = getFullFilePathForFile(QString());
     const bool oldNoteFilePathIsSafe = Utils::Misc::isSafeRelativePath(relativeNoteFilePath()) &&
-                                       Utils::Misc::isPathInDirectory(oldNoteFilePath, noteRoot);
+                                       NoteFolder::isCurrentNotePathAllowed(oldNoteFilePath);
     TrashItem trashItem = TrashItem::prepare(this);
 
-    if (allowDifferentFileName()) {
+    // Keep the user-created link name when the linked note's headline changes.
+    const bool preserveLinkName = QFileInfo(oldNoteFilePath).isSymLink();
+    if (!preserveLinkName && allowDifferentFileName()) {
         // check if a QML function wants to set another note file name and
         // modify it accordingly
         modifyNoteTextFileNameFromQMLHook();
-    } else {
+    } else if (!preserveLinkName) {
         // checks if filename has to be changed (and change it if needed)
         handleNoteTextFileName();
     }
@@ -2640,10 +2641,10 @@ bool Note::storeNoteTextFileToDisk(bool &currentNoteTextChanged,
     const QString newName = _name;
     bool noteFileWasRenamed = false;
 
-    // Note and subfolder names can come from synced, imported or linked data,
-    // so never read, rename or write note files outside the note folder
+    // Names can come from synced, imported or linked data. Require containment
+    // unless this note folder explicitly trusts external symlinks.
     if (!Utils::Misc::isSafeRelativePath(relativeNoteFilePath()) ||
-        !Utils::Misc::isPathInDirectory(fullNoteFilePath(), noteRoot)) {
+        !NoteFolder::isCurrentNotePathAllowed(fullNoteFilePath())) {
         qWarning() << __func__ << " - Refusing to store note outside of the note folder:"
                    << relativeNoteFilePath();
         return false;
@@ -3208,7 +3209,7 @@ bool Note::canWriteToNoteFile() {
     const QString path = fullNoteFilePath();
     // Filename cleanup calls this probe before the main save guard.
     if (!Utils::Misc::isSafeRelativePath(relativeNoteFilePath()) ||
-        !Utils::Misc::isPathInDirectory(path, getFullFilePathForFile(QString()))) {
+        !NoteFolder::isCurrentNotePathAllowed(path)) {
         return false;
     }
     // Capture existence *before* opening -- opening below can itself create
@@ -3325,21 +3326,9 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
         return path;
     }
 
-    // we need that for links to notes in subfolders in portable mode if
-    // note folder lies outside of the application directory
-    // Warning: This also resolves symbolic links! If a folder that lies outside
-    //          of the note folder is linked into it as subfolder
-    //          "canonicalFilePath" will show the original file path!
-#ifdef Q_OS_WIN32
-    // Let's stay with "canonicalFilePath" on Windows in case there is any issue
-    // in portable mode
-    const QString canonicalFilePath = fileInfo.canonicalFilePath();
-#else
-    // Don't resolve symbolic links
-    const QString canonicalFilePath = fileInfo.absoluteFilePath();
-#endif
-
-    return canonicalFilePath;
+    // Use an absolute path for portable mode, but preserve symlinks so the
+    // note-folder policy can check both the lexical path and its real target.
+    return fileInfo.absoluteFilePath();
 }
 
 QString Note::getFilePathRelativeToNote(const Note &note, const QString &connectionName,

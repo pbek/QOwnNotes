@@ -106,6 +106,10 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     //    qDebug() << __func__ << " - 'notePath': " << notePath;
 
     QDir notesDir(notePath);
+    const NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    if (!noteFolder.isNotePathAllowed(notePath)) {
+        return false;
+    }
 
     // only show certain files
     auto filters = Note::noteFileExtensionList(QStringLiteral("*."));
@@ -183,6 +187,9 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     const int maxNoteFileSize = Utils::Misc::getMaximumNoteFileSize();
     // create all notes from the files
     for (QString fileName : Utils::asConst(files)) {
+        if (!noteFolder.isNotePathAllowed(notesDir.filePath(fileName))) {
+            continue;
+        }
         if (progress.wasCanceled()) {
             break;
         }
@@ -255,6 +262,9 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         const QStringList folders = notesDir.entryList(QDir::Dirs | QDir::Hidden, QDir::Time);
 
         for (const QString &folder : folders) {
+            if (!noteFolder.isNotePathAllowed(notesDir.filePath(folder))) {
+                continue;
+            }
             if (NoteSubFolder::willFolderBeIgnored(folder)) {
                 continue;
             }
@@ -431,6 +441,11 @@ void NoteIndexManager::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild, 
  */
 void NoteIndexManager::loadNoteDirectoryList() {
     qDebug() << __func__;
+
+    if (_mainWindow->currentNote.isFetched() &&
+        !NoteFolder::isCurrentNotePathAllowed(_mainWindow->currentNote.fullNoteFilePath())) {
+        _mainWindow->unsetCurrentNote();
+    }
 
     // Clean up favorite notes list (remove entries for deleted notes)
     Note::cleanupFavoriteNotes();
@@ -697,6 +712,9 @@ void NoteIndexManager::notesWereModified(const QString &str) {
     }
 
     QFileInfo fi(str);
+    if (!NoteFolder::isCurrentNotePathAllowed(str)) {
+        return;
+    }
     Note note = Note::fetchByFileUrl(QUrl::fromLocalFile(str));
 
     qDebug() << __func__ << " - 'str': " << str;
@@ -1273,12 +1291,19 @@ bool NoteIndexManager::shouldIgnoreExternalNoteFolderChanges() const {
 }
 
 void NoteIndexManager::addDirectoryToDirectoryWatcher(const QString &path) {
+    const NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    if (!noteFolder.isNotePathAllowed(path)) {
+        return;
+    }
     QDir dir(path);
     QFileInfoList entries =
         dir.entryInfoList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden);
 
     for (const QFileInfo &entryInfo : entries) {
         QString entryPath = entryInfo.filePath();
+        if (!noteFolder.isNotePathAllowed(entryPath)) {
+            continue;
+        }
         noteDirectoryWatcherAddPath(entryPath);
 
         if (entryInfo.isDir()) {

@@ -46,6 +46,10 @@ class NoteFolder {
     void setUseGit(bool value);
     bool isAllSubfolders() const;
     void setAllSubfolders(bool value);
+    bool allowExternalSymlinks() const;
+    void setAllowExternalSymlinks(bool value);
+    bool isNotePathAllowed(const QString &path) const;
+    static bool isCurrentNotePathAllowed(const QString &path);
     QStringList excludedSubfolderPaths() const;
     void setExcludedSubfolderPaths(const QStringList &paths);
     bool isSubfolderPathExcluded(const QString &relativePath) const;

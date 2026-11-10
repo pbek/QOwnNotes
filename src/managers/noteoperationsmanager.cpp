@@ -850,6 +850,7 @@ void NoteOperationsManager::buildBulkNoteFolderSubFolderMenuTree(
 
     // show newest entry first
     QStringList directoryNames = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+    const NoteFolder noteFolder = NoteFolder::currentNoteFolder();
 
     if (isRoot) {
         const auto names = QStringList({"media", "trash", "attachments"});
@@ -860,10 +861,20 @@ void NoteOperationsManager::buildBulkNoteFolderSubFolderMenuTree(
 
     for (const QString &directoryName : Utils::asConst(directoryNames)) {
         const QString fullPath = parentNoteSubFolderPath + QLatin1Char('/') + directoryName;
+        if (!noteFolder.isNotePathAllowed(fullPath)) {
+            continue;
+        }
         QDir subDir(fullPath);
         const QStringList subDirectoryNames = subDir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        bool hasVisibleSubfolders = false;
+        for (const QString &name : subDirectoryNames) {
+            if (noteFolder.isNotePathAllowed(subDir.filePath(name))) {
+                hasVisibleSubfolders = true;
+                break;
+            }
+        }
 
-        if (subDirectoryNames.count() > 0) {
+        if (hasVisibleSubfolders) {
             // if there are sub folders build a new menu level
             QMenu *noteSubFolderMenu = parentMenu->addMenu(Utils::Gui::folderIcon(), directoryName);
             buildBulkNoteFolderSubFolderMenuTree(noteSubFolderMenu, doCopy, fullPath, false);

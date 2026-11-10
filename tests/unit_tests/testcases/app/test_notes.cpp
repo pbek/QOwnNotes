@@ -32,6 +32,7 @@
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 #include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
 #include "services/settingsservice.h"
+#include "utils/misc.h"
 #include "utils/urlhandler.h"
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
@@ -268,6 +269,122 @@ void TestNotes::testNoteFileWritesStayInsideNoteFolder() {
     QVERIFY(linkedNote.remove(false));
     QVERIFY(protectedFile.open(QIODevice::ReadOnly));
     QCOMPARE(protectedFile.readAll(), QByteArray("unchanged"));
+#endif
+}
+
+void TestNotes::testExternalSymlinkPolicy() {
+#ifndef Q_OS_UNIX
+    QSKIP("Creating native symlinks requires platform-specific privileges on Windows");
+#else
+    NoteFolder folder = NoteFolder::currentNoteFolder();
+    const bool previous = folder.allowExternalSymlinks();
+    const auto restore =
+        qScopeGuard([&folder, previous]() { folder.setAllowExternalSymlinks(previous); });
+    folder.setAllowExternalSymlinks(false);
+
+    QTemporaryDir external;
+    QVERIFY(external.isValid());
+    const QString target = external.filePath(QStringLiteral("target.md"));
+    QFile targetFile(target);
+    QVERIFY(targetFile.open(QIODevice::WriteOnly));
+    targetFile.write("original");
+    targetFile.close();
+
+    Note note;
+    note.setName(uniqueTestName(QStringLiteral("LinkedNote")));
+    note.setNoteText(QStringLiteral("# Different headline\nEdited content\n"));
+    QVERIFY(note.store());
+    const QString link = note.fullNoteFilePath();
+    QVERIFY(QFile::link(target, link));
+    const auto removeNote = qScopeGuard([&note, link]() {
+        QFile::remove(link);
+        note.remove(false);
+    });
+    QVERIFY(!folder.isNotePathAllowed(link));
+    QVERIFY(!note.canWriteToNoteFile());
+    QVERIFY(!note.storeNoteTextFileToDisk());
+
+    NoteSubFolder subfolder;
+    subfolder.setName(uniqueTestName(QStringLiteral("LinkedFolder")));
+    QVERIFY(subfolder.store());
+    const QString directoryLink = QDir(notesPath).filePath(subfolder.getName());
+    QVERIFY(QFile::link(external.path(), directoryLink));
+    const auto removeSubfolder = qScopeGuard([&subfolder, directoryLink]() {
+        QFile::remove(directoryLink);
+        subfolder.remove();
+    });
+    const QString child = QDir(directoryLink).filePath(QStringLiteral("target.md"));
+    QVERIFY(!folder.isNotePathAllowed(directoryLink));
+    QVERIFY(!folder.isNotePathAllowed(child));
+
+    // Internal links remain visible without the opt-in; cycles never do.
+    const QString internalLink =
+        QDir(notesPath).filePath(uniqueTestName(QStringLiteral("Internal")));
+    QVERIFY(QFile::link(noteFileName, internalLink));
+    const auto removeInternal = qScopeGuard([internalLink]() { QFile::remove(internalLink); });
+    QVERIFY(folder.isNotePathAllowed(internalLink));
+    QTemporaryDir internalDirectory(QDir(notesPath).filePath(QStringLiteral("internal-XXXXXX")));
+    QVERIFY(internalDirectory.isValid());
+    const QString internalDirectoryLink =
+        QDir(notesPath).filePath(uniqueTestName(QStringLiteral("InternalFolder")));
+    QVERIFY(QFile::link(internalDirectory.path(), internalDirectoryLink));
+    const auto removeInternalDirectoryLink =
+        qScopeGuard([internalDirectoryLink]() { QFile::remove(internalDirectoryLink); });
+    QVERIFY(folder.isNotePathAllowed(internalDirectoryLink));
+    const QString cycle = QDir(notesPath).filePath(uniqueTestName(QStringLiteral("Cycle")));
+    QVERIFY(QFile::link(notesPath, cycle));
+    const auto removeCycle = qScopeGuard([cycle]() { QFile::remove(cycle); });
+    QVERIFY(!folder.isNotePathAllowed(cycle));
+
+    folder.setAllowExternalSymlinks(true);
+    QVERIFY(folder.isNotePathAllowed(link));
+    QVERIFY(folder.isNotePathAllowed(directoryLink));
+    QVERIFY(folder.isNotePathAllowed(child));
+    QVERIFY(folder.isNotePathAllowed(internalDirectoryLink));
+    QVERIFY(!folder.isNotePathAllowed(cycle));
+    QVERIFY(!folder.isNotePathAllowed(target));
+    QVERIFY(!folder.isNotePathAllowed(QDir(notesPath).filePath(QStringLiteral("../escape.md"))));
+    QVERIFY(note.canWriteToNoteFile());
+    QVERIFY(note.storeNoteTextFileToDisk());
+    QCOMPARE(note.fullNoteFilePath(), link);
+    QVERIFY(QFileInfo(link).isSymLink());
+    QVERIFY(targetFile.open(QIODevice::ReadOnly));
+    QCOMPARE(targetFile.readAll(), note.getNoteText().toUtf8());
+    targetFile.close();
+
+    // New notes can be saved through a linked folder, but not untrusted wiki paths.
+    Note childNote;
+    childNote.setName(QStringLiteral("New child"));
+    childNote.setNoteSubFolderId(subfolder.getId());
+    childNote.setNoteText(Note::createNoteHeader(childNote.getName()));
+    QVERIFY(childNote.store());
+    QVERIFY(childNote.canWriteToNoteFile());
+    QVERIFY(childNote.storeNoteTextFileToDisk());
+    QVERIFY(QFileInfo::exists(external.filePath(childNote.getFileName())));
+    QVERIFY(childNote.remove(false));
+    QVERIFY(!Utils::Misc::isPathInDirectory(child, notesPath));
+
+    // A separate note folder never inherits this permission.
+    NoteFolder other;
+    other.setName(uniqueTestName(QStringLiteral("Other folder")));
+    other.setLocalPath(notesPath);
+    QVERIFY(other.store());
+    QVERIFY(!other.allowExternalSymlinks());
+    QVERIFY(!other.isNotePathAllowed(directoryLink));
+    QVERIFY(other.remove());
+
+    // Broken links are hidden in both modes.
+    QVERIFY(targetFile.remove());
+    QVERIFY(!folder.isNotePathAllowed(link));
+    folder.setAllowExternalSymlinks(false);
+    QVERIFY(!folder.isNotePathAllowed(link));
+    QVERIFY(!folder.isNotePathAllowed(directoryLink));
+    QVERIFY(!note.canWriteToNoteFile());
+
+    // Removing the linked subfolder must not delete any target contents.
+    QVERIFY(subfolder.removeFromFileSystem());
+    QVERIFY(!QFileInfo(directoryLink).isSymLink());
+    QVERIFY(QFileInfo::exists(external.filePath(childNote.getFileName())));
 #endif
 }
 

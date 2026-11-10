@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QDir>
 #include <QJsonObject>
+#include <QSet>
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -549,6 +550,58 @@ bool NoteFolder::isPathNoteFolder(const QString &path) {
 void NoteFolder::setSettingsValue(const QString &key, const QVariant &value) {
     SettingsService settings;
     settings.setValue(QStringLiteral("NoteFolder-%1/%2").arg(id).arg(key), value);
+}
+
+bool NoteFolder::allowExternalSymlinks() const {
+    return settingsValue(QStringLiteral("allowExternalSymlinks"), false).toBool();
+}
+
+void NoteFolder::setAllowExternalSymlinks(bool value) {
+    setSettingsValue(QStringLiteral("allowExternalSymlinks"), value);
+}
+
+/**
+ * Applies the note-only symlink policy. Other untrusted file operations must
+ * keep using the strict Utils::Misc::isPathInDirectory check.
+ */
+bool NoteFolder::isNotePathAllowed(const QString &path) const {
+    const QDir root(getLocalPath());
+    if (path.isEmpty() || getLocalPath().isEmpty() || !root.exists() ||
+        !Utils::Misc::isSafeRelativePath(
+            root.relativeFilePath(QFileInfo(path).absoluteFilePath()))) {
+        return false;
+    }
+    if (!allowExternalSymlinks() && !Utils::Misc::isPathInDirectory(path, root.absolutePath())) {
+        return false;
+    }
+
+    // Reject broken links and ancestor cycles, including cycles through external folders.
+    QSet<QString> ancestors;
+    QString candidate = QFileInfo(path).absoluteFilePath();
+    while (true) {
+        const QFileInfo info(candidate);
+        if (info.exists() || info.isSymLink()) {
+            const QString resolved = info.canonicalFilePath();
+            if (resolved.isEmpty() || (info.isDir() && ancestors.contains(resolved))) {
+                return false;
+            }
+            if (info.isDir()) {
+                ancestors.insert(resolved);
+            }
+        }
+        if (candidate == root.absolutePath()) {
+            return true;
+        }
+        const QString parent = info.absolutePath();
+        if (parent == candidate) {
+            return false;
+        }
+        candidate = parent;
+    }
+}
+
+bool NoteFolder::isCurrentNotePathAllowed(const QString &path) {
+    return currentNoteFolder().isNotePathAllowed(path);
 }
 
 QVariant NoteFolder::settingsValue(const QString &key, const QVariant &defaultValue) const {

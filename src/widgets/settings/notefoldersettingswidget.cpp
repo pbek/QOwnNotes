@@ -139,6 +139,11 @@ void NoteFolderSettingsWidget::on_noteFolderListWidget_currentItemChanged(
         ui->noteFolderNameLineEdit->setText(_selectedNoteFolder.getName());
         ui->noteFolderLocalPathLineEdit->setText(_selectedNoteFolder.getLocalPath());
         ui->noteFolderRemotePathLineEdit->setText(_selectedNoteFolder.getRemotePath());
+        {
+            const QSignalBlocker blocker(ui->allowExternalSymlinksCheckBox);
+            ui->allowExternalSymlinksCheckBox->setChecked(
+                _selectedNoteFolder.allowExternalSymlinks());
+        }
         ui->noteFolderShowSubfoldersCheckBox->setChecked(_selectedNoteFolder.isShowSubfolders());
         ui->noteFolderAllSubfoldersCheckBox->setChecked(_selectedNoteFolder.isAllSubfolders());
         ui->allowDifferentNoteFileNameCheckBox->setChecked(
@@ -535,6 +540,11 @@ void NoteFolderSettingsWidget::on_noteFolderAllSubfoldersCheckBox_toggled(bool c
     updateSubfolderVisibility();
 }
 
+void NoteFolderSettingsWidget::on_allowExternalSymlinksCheckBox_toggled(bool checked) {
+    _selectedNoteFolder.setAllowExternalSymlinks(checked);
+    updateSubfolderVisibility();
+}
+
 /**
  * Updates the visibility of the "All subfolders" checkbox and subfolder tree
  * based on the current "Use note subfolders" and "All subfolders" settings
@@ -593,6 +603,9 @@ void NoteFolderSettingsWidget::populateSubfolderTreeFromDir(QTreeWidgetItem *par
         dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden, QDir::Name);
 
     for (const QString &folder : folders) {
+        if (!_selectedNoteFolder.isNotePathAllowed(dir.filePath(folder))) {
+            continue;
+        }
         if (NoteSubFolder::willFolderBeIgnored(folder)) {
             continue;
         }

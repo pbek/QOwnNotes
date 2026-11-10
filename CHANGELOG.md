@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.11.7
+
+- Added an **Allow external symlinks (unsafe)** setting for each note folder to show and edit
+  notes and subfolders linked to locations outside the note folder
+  (for [#3836](https://github.com/pbek/QOwnNotes/issues/3836))
+  - External links are hidden by default; enable this only for trusted note folders
+  - Other path security checks remain enabled, and deleting a linked subfolder removes only
+    the link, not its target
+
 ## 26.11.6
 
 - Fixed the text of the tag list of the **Nextcloud Deck** dialog and the **Note tags** panel

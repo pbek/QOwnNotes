@@ -60,6 +60,7 @@ class NoteFolderSettingsWidget : public QWidget {
     void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
     void on_noteFolderAllSubfoldersCheckBox_toggled(bool checked);
     void on_allowDifferentNoteFileNameCheckBox_toggled(bool checked);
+    void on_allowExternalSymlinksCheckBox_toggled(bool checked);
     void on_noteFolderGitCommitCheckBox_toggled(bool checked);
     void on_noteFolderListWidget_itemChanged(QListWidgetItem *item);
     void onSubfolderTreeItemChanged(QTreeWidgetItem *item, int column);

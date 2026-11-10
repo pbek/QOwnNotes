@@ -151,6 +151,21 @@ bool NoteSubFolder::remove() {
 bool NoteSubFolder::removeFromFileSystem() const {
     QDir dir = this->dir();
 
+    if (!Utils::Misc::isSafeRelativePath(
+            QDir(NoteFolder::currentLocalPath()).relativeFilePath(dir.absolutePath()))) {
+        return false;
+    }
+    // Remove only the link, never recursively delete its external target.
+    if (QFileInfo(dir.absolutePath()).isSymLink()) {
+        if (!NoteFolder::isCurrentNotePathAllowed(QFileInfo(dir.absolutePath()).absolutePath())) {
+            return false;
+        }
+        return QFile::remove(dir.absolutePath());
+    }
+    if (!Utils::Misc::isPathInDirectory(dir.absolutePath(), NoteFolder::currentLocalPath())) {
+        return false;
+    }
+
     if (dir.exists()) {
         return dir.removeRecursively();
     }
