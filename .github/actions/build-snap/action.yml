@@ -53,10 +53,26 @@ runs:
         sudo groupadd --force --system lxd
         sudo usermod --append --groups lxd "$(id -un)"
 
+        # Snap Store downloads can fail with transient HTTP 502 responses.
+        retry_snap() {
+          local attempt
+          for attempt in 1 2 3; do
+            if sudo snap "$@"; then
+              return 0
+            fi
+            if [ "${attempt}" = 3 ]; then
+              echo "::error::snap $* failed after ${attempt} attempts"
+              return 1
+            fi
+            echo "snap $* failed on attempt ${attempt}; retrying in 30 seconds"
+            sleep 30
+          done
+        }
+
         if [ -x /snap/bin/lxd ]; then
-          sudo snap refresh lxd || true
+          retry_snap refresh lxd || true
         else
-          sudo snap install lxd
+          retry_snap install lxd
         fi
 
         sudo lxd init --auto
@@ -65,9 +81,9 @@ runs:
         sudo iptables -P FORWARD ACCEPT
 
         if [ -x /snap/bin/snapcraft ]; then
-          sudo snap refresh --channel "${SNAPCRAFT_CHANNEL}" --classic snapcraft
+          retry_snap refresh --channel "${SNAPCRAFT_CHANNEL}" --classic snapcraft
         else
-          sudo snap install --channel "${SNAPCRAFT_CHANNEL}" --classic snapcraft
+          retry_snap install --channel "${SNAPCRAFT_CHANNEL}" --classic snapcraft
         fi
 
     - name: Build Snap

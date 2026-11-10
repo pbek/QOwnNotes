@@ -114,10 +114,18 @@ fi
 echo "Create new disk image"
 #Create the disk image
 rm -f ./$APP.dmg
-if ! hdiutil create -srcfolder ./$TEMPDIR -ov -format UDBZ -fs HFS+ ./$APP.dmg; then
-  echo "Failed to create disk image"
-  exit 1
-fi
+# Hosted macOS runners can temporarily report "Resource busy" during image creation.
+attempt=1
+while ! hdiutil create -srcfolder ./$TEMPDIR -ov -format UDBZ -fs HFS+ ./$APP.dmg; do
+  if [ "$attempt" -ge 3 ]; then
+    echo "Failed to create disk image after $attempt attempts"
+    exit 1
+  fi
+  echo "Disk image creation failed on attempt $attempt; retrying in 10 seconds"
+  rm -f ./$APP.dmg
+  sleep 10
+  attempt=$((attempt + 1))
+done
 
 # delete the temporary directory
 if ! rm -Rf ./$TEMPDIR/*; then

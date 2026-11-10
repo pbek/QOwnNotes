@@ -457,6 +457,11 @@ jobs:
         with:
           submodules: recursive
 
+      - name: "🔎 Test packaging retry limits"
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        run: python3 build-systems/github/test-packaging-retries.py
+
       - name: "📂 Prepare snap source"
         run: ../build-systems/github/snap.qt6/prepare-source.sh
 
