@@ -76,6 +76,12 @@ class NextcloudDeckService : public QObject {
         }
     };
 
+    struct RecentCard {
+        int id;
+        int boardId;
+        QString title;
+    };
+
     explicit NextcloudDeckService(QObject* parent, int cloudConnectionId = -1);
     Label createLabel(const QString& title, const QString& color);
     bool assignLabel(int cardId, int labelId);
@@ -93,6 +99,9 @@ class NextcloudDeckService : public QObject {
     bool isEnabled();
     QList<Board> getBoards();
     QHash<int, Card> getCards(bool includeArchived = false);
+    QList<RecentCard> getRecentCards();
+    void rememberRecentCard(const Card& card);
+    void forgetRecentCard(int cardId);
     bool archiveCard(int cardId);
     bool deleteCard(int cardId);
     bool moveCard(int cardId, int targetBoardId, int targetStackId, int order = 0);
@@ -121,6 +130,7 @@ class NextcloudDeckService : public QObject {
                                     bool timedOut) const;
     QUrl cardUrl(int cardId, const QString& action = QString()) const;
     Card cardFromJson(const QJsonObject& object, int cardStackId, int cardBoardId) const;
+    void storeRecentCards(const QList<RecentCard>& cards);
 };
 
 #endif    // QOWNNOTES_NEXTCLOUDDECKSERVICE_H

@@ -5,6 +5,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMessageBox>
+#include <QSettings>
 #include <QTcpServer>
 #include <QTcpSocket>
 #include <QTimer>
@@ -13,6 +14,105 @@
 #include "entities/cloudconnection.h"
 #include "services/nextclouddeckservice.h"
 #include "services/settingsservice.h"
+
+void TestNextcloudDeckService::testRecentCards() {
+    CloudConnection connection;
+    connection.setName(QStringLiteral("Recent Deck cards test"));
+    connection.setServerUrl(QStringLiteral("http://127.0.0.1:1"));
+    QVERIFY(connection.store());
+    CloudConnection otherConnection;
+    otherConnection.setName(QStringLiteral("Other recent Deck cards test"));
+    QVERIFY(otherConnection.store());
+
+    // All history operations work offline, even with Deck disabled and no configured stack.
+    NextcloudDeckService service(nullptr, connection.getId());
+    NextcloudDeckService otherService(nullptr, otherConnection.getId());
+    QVERIFY(service.getRecentCards().isEmpty());
+    for (int id = 1; id <= 12; ++id) {
+        NextcloudDeckService::Card card{};
+        card.id = id;
+        card.boardId = 34;
+        card.title = QStringLiteral("Card %1").arg(id);
+        card.description = QStringLiteral("Private description must not be stored");
+        service.rememberRecentCard(card);
+    }
+    const auto cards = service.getRecentCards();
+    QCOMPARE(cards.size(), 10);
+    for (int i = 0; i < cards.size(); ++i) {
+        QCOMPARE(cards.at(i).id, 12 - i);
+    }
+
+    // Revisiting a card updates its title and board without creating a duplicate.
+    NextcloudDeckService::Card revisited{};
+    revisited.id = 5;
+    revisited.boardId = 90;
+    revisited.title = QStringLiteral("Renamed & moved card");
+    service.rememberRecentCard(revisited);
+    QCOMPARE(service.getRecentCards().size(), 10);
+    QCOMPARE(service.getRecentCards().first().id, 5);
+    QCOMPARE(service.getRecentCards().first().boardId, 90);
+    QCOMPARE(service.getRecentCards().first().title, revisited.title);
+
+    auto otherCard = revisited;
+    otherCard.title = QStringLiteral("Different account, same card ID");
+    otherService.rememberRecentCard(otherCard);
+    QCOMPARE(otherService.getRecentCards().size(), 1);
+    QCOMPARE(service.getRecentCards().first().title, revisited.title);
+
+    SettingsService().sync();
+    NextcloudDeckService reopened(nullptr, connection.getId());
+    QCOMPARE(reopened.getRecentCards().size(), 10);
+    QCOMPARE(reopened.getRecentCards().first().title, revisited.title);
+    // Read the disk settings directly instead of the SettingsService cache, as after a restart.
+    const auto stored = QSettings()
+                            .value(QStringLiteral("CloudConnection-%1/nextcloudDeckRecentCards")
+                                       .arg(connection.getId()))
+                            .toList();
+    QCOMPARE(stored.size(), 10);
+    QCOMPARE(stored.first().toMap().size(), 3);
+    QVERIFY(!stored.first().toMap().contains(QStringLiteral("description")));
+
+    service.forgetRecentCard(5);
+    QCOMPARE(service.getRecentCards().size(), 9);
+    QCOMPARE(service.getRecentCards().first().id, 12);
+    service.forgetRecentCard(999);
+    QCOMPARE(service.getRecentCards().size(), 9);
+    revisited.id = 12;
+    revisited.archived = true;
+    service.rememberRecentCard(revisited);
+    QCOMPARE(service.getRecentCards().size(), 8);
+    QCOMPARE(service.getRecentCards().first().id, 11);
+    QCOMPARE(otherService.getRecentCards().size(), 1);
+
+    QVERIFY(connection.remove());
+    QVERIFY(otherConnection.remove());
+    // Deleting a connection must also clear cached history before its ID can be reused.
+    QVERIFY(service.getRecentCards().isEmpty());
+    QVERIFY(otherService.getRecentCards().isEmpty());
+}
+
+void TestNextcloudDeckService::testInvalidRecentCards() {
+    CloudConnection connection;
+    connection.setName(QStringLiteral("Invalid recent Deck cards test"));
+    QVERIFY(connection.store());
+    NextcloudDeckService service(nullptr, connection.getId());
+    NextcloudDeckService::Card card{};
+    card.title = QStringLiteral("Unsaved card");
+    service.rememberRecentCard(card);
+    card.id = 1;
+    service.rememberRecentCard(card);
+    card.boardId = 2;
+    card.title.clear();
+    service.rememberRecentCard(card);
+    QVERIFY(service.getRecentCards().isEmpty());
+
+    NextcloudDeckService invalidConnection(nullptr, 0);
+    card.title = QStringLiteral("No cloud connection");
+    invalidConnection.rememberRecentCard(card);
+    QVERIFY(invalidConnection.getRecentCards().isEmpty());
+    invalidConnection.forgetRecentCard(card.id);
+    QVERIFY(connection.remove());
+}
 
 void TestNextcloudDeckService::testMoveCard_data() {
     QTest::addColumn<int>("statusCode");

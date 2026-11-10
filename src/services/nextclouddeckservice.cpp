@@ -46,6 +46,88 @@ bool NextcloudDeckService::isEnabled() {
     return CloudService::isCloudSupportEnabled() && this->cloudConnection.getNextcloudDeckEnabled();
 }
 
+/**
+ * Returns locally visited cards for this connection without requesting server data
+ */
+QList<NextcloudDeckService::RecentCard> NextcloudDeckService::getRecentCards() {
+    QList<RecentCard> cards;
+    if (!cloudConnection.isFetched()) {
+        return cards;
+    }
+
+    const auto entries =
+        cloudConnection.extraSetting(QStringLiteral("nextcloudDeckRecentCards"), QVariantList())
+            .toList();
+    for (const auto& entry : entries) {
+        const auto values = entry.toMap();
+        RecentCard card{values.value(QStringLiteral("id")).toInt(),
+                        values.value(QStringLiteral("boardId")).toInt(),
+                        values.value(QStringLiteral("title")).toString()};
+        if (card.id > 0 && card.boardId > 0 && !card.title.isEmpty()) {
+            cards.append(card);
+        }
+        if (cards.size() == 10) {
+            break;
+        }
+    }
+    return cards;
+}
+
+/**
+ * Stores only the identifiers and titles needed by the tray menu, newest first
+ */
+void NextcloudDeckService::storeRecentCards(const QList<RecentCard>& cards) {
+    if (!cloudConnection.isFetched()) {
+        return;
+    }
+
+    QVariantList entries;
+    for (const auto& card : cards) {
+        QVariantMap values;
+        values.insert(QStringLiteral("id"), card.id);
+        values.insert(QStringLiteral("boardId"), card.boardId);
+        values.insert(QStringLiteral("title"), card.title);
+        entries.append(values);
+    }
+    cloudConnection.setExtraSetting(QStringLiteral("nextcloudDeckRecentCards"), entries);
+}
+
+void NextcloudDeckService::rememberRecentCard(const Card& card) {
+    if (card.id < 1 || card.boardId < 1 || card.title.isEmpty()) {
+        return;
+    }
+    if (card.archived) {
+        forgetRecentCard(card.id);
+        return;
+    }
+
+    auto cards = getRecentCards();
+    for (int i = cards.size() - 1; i >= 0; --i) {
+        if (cards.at(i).id == card.id) {
+            cards.removeAt(i);
+        }
+    }
+    cards.prepend({card.id, card.boardId, card.title});
+    while (cards.size() > 10) {
+        cards.removeLast();
+    }
+    storeRecentCards(cards);
+}
+
+void NextcloudDeckService::forgetRecentCard(int cardId) {
+    auto cards = getRecentCards();
+    bool changed = false;
+    for (int i = cards.size() - 1; i >= 0; --i) {
+        if (cards.at(i).id == cardId) {
+            cards.removeAt(i);
+            changed = true;
+        }
+    }
+    if (changed) {
+        storeRecentCards(cards);
+    }
+}
+
 int NextcloudDeckService::storeCard(const QString& title, const QString& description,
                                     QDateTime* dueDateTime, int cardId, int cardStackId,
                                     int cardOrder, const QString& cardOwner) {

@@ -282,6 +282,12 @@ void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
                                            ui->labelsWidget->selectedIds());
     }
 
+    auto recentCard = _currentCard;
+    recentCard.id = cardId;
+    recentCard.boardId = cardIdToUpdate > 0 ? _currentCard.boardId : selectedBoardId();
+    recentCard.title = title;
+    nextcloudDeckService.rememberRecentCard(recentCard);
+
     if (insertLinkAndClose) {
         const auto linkText =
             QStringLiteral("[%1](%2)").arg(title, nextcloudDeckService.getCardLinkForId(cardId));
@@ -344,6 +350,7 @@ void NextcloudDeckDialog::deleteSelectedCards() {
         configureDeckServiceForCard(nextcloudDeckService, cardId);
 
         if (nextcloudDeckService.deleteCard(cardId)) {
+            nextcloudDeckService.forgetRecentCard(cardId);
             anyDeleted = true;
         }
     }
@@ -431,6 +438,10 @@ void NextcloudDeckDialog::moveCards(const QList<int> &cardIds) {
             return;
         }
         movedCardIds.append(cardId);
+        auto card = _cards.value(cardId);
+        card.boardId = targetBoardId;
+        card.stackId = targetStackId;
+        service.rememberRecentCard(card);
     }
 
     selectBoardStack(targetBoardId, targetStackId);
@@ -938,6 +949,7 @@ void NextcloudDeckDialog::updateDeckControlsEnabledState() {
 void NextcloudDeckDialog::jumpToCard(int id) {
     if (_cards.contains(id)) {
         _currentCard = _cards[id];
+        NextcloudDeckService(this).rememberRecentCard(_currentCard);
 
         ui->titleLineEdit->setText(_currentCard.title);
         ui->descriptionTextEdit->setPlainText(_currentCard.description);
@@ -1061,6 +1073,7 @@ void NextcloudDeckDialog::on_deleteCardButton_clicked() {
     bool isSuccess = nextcloudDeckService.deleteCard(_currentCard.id);
 
     if (isSuccess) {
+        nextcloudDeckService.forgetRecentCard(_currentCard.id);
         reloadCardList();
     }
 }
@@ -1076,6 +1089,7 @@ void NextcloudDeckDialog::on_archiveCardButton_clicked() {
     const bool isSuccess = nextcloudDeckService.archiveCard(_currentCard.id);
 
     if (isSuccess) {
+        nextcloudDeckService.forgetRecentCard(_currentCard.id);
         reloadCardList();
     }
 }
@@ -1250,6 +1264,9 @@ void NextcloudDeckDialog::insertSelectedCardLinks() {
             continue;
         }
         configureDeckServiceForCard(service, cardId);
+        if (_cards.contains(cardId)) {
+            service.rememberRecentCard(_cards.value(cardId));
+        }
         links.append(
             QStringLiteral("[%1](%2)").arg(item->text(0), service.getCardLinkForId(cardId)));
     }

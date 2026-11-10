@@ -194,7 +194,11 @@ bool CloudConnection::remove() {
 }
 
 void CloudConnection::removeExtraSettings() {
-    SettingsService().remove(extraSettingsSettingsKey());
+    // Remove the group from both disk settings and the cached child keys.
+    SettingsService settings;
+    settings.beginGroup(extraSettingsSettingsKey());
+    settings.remove(QString());
+    settings.endGroup();
 }
 
 QString CloudConnection::extraSettingsSettingsKey() const {

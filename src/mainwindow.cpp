@@ -8795,6 +8795,7 @@ void MainWindow::on_actionInsert_Nextcloud_Deck_card_triggered() {
     connect(&dialog, &NextcloudDeckDialog::cardLinksSelected, this,
             [this](const QString &links) { writeToNoteTextEdit(links); });
     dialog.exec();
+    generateSystemTrayContextMenu();
 }
 
 void MainWindow::openNextcloudDeckDialog(int cardId, int boardId) {
@@ -8820,6 +8821,7 @@ void MainWindow::openNextcloudDeckDialog(int cardId, int boardId) {
     }
 
     dialog->exec();
+    generateSystemTrayContextMenu();
 }
 
 void MainWindow::on_actionCopy_path_to_note_to_clipboard_triggered() {

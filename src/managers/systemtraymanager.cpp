@@ -17,6 +17,7 @@
 #include <entities/calendaritem.h>
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <services/nextclouddeckservice.h>
 #include <services/notificationservice.h>
 #include <services/settingsservice.h>
 #include <utils/gui.h>
@@ -233,6 +234,28 @@ void SystemTrayManager::generateSystemTrayContextMenu() {
 
             connect(action, &QAction::triggered, _mainWindow,
                     [this, task]() { _mainWindow->openTodoDialog(task.getUid()); });
+        }
+    }
+
+    NextcloudDeckService deckService(this);
+    if (deckService.isEnabledAndValid()) {
+        menu->addSeparator();
+        menu->addAction(_ui->actionManage_Nextcloud_Deck_cards);
+
+        const auto cards = deckService.getRecentCards();
+        if (!cards.isEmpty()) {
+            QMenu *cardMenu = menu->addMenu(tr("Recent Deck cards"));
+            cardMenu->setIcon(_ui->actionManage_Nextcloud_Deck_cards->icon());
+            for (const auto &card : cards) {
+                // Escape ampersands so card titles aren't interpreted as menu mnemonics.
+                QString title = card.title;
+                QAction *action =
+                    cardMenu->addAction(title.replace(QLatin1String("&"), QLatin1String("&&")));
+                action->setIcon(_ui->actionManage_Nextcloud_Deck_cards->icon());
+                connect(action, &QAction::triggered, _mainWindow, [this, card]() {
+                    _mainWindow->openNextcloudDeckDialog(card.id, card.boardId);
+                });
+            }
         }
     }
 

@@ -2,6 +2,12 @@
 
 ## 26.11.7
 
+- Added **Manage Nextcloud Deck cards** and **Recent Deck cards** to the system tray menu
+  (for [#3832](https://github.com/pbek/QOwnNotes/issues/3832))
+  - The last 10 cards opened, saved or linked in QOwnNotes are remembered locally for each
+    cloud connection, including across restarts, without API requests when opening the menu
+  - Cards can be opened directly without opening the main window; locally deleted or archived
+    cards are removed from the recent list
 - Added an **Allow external symlinks (unsafe)** setting for each note folder to show and edit
   notes and subfolders linked to locations outside the note folder
   (for [#3836](https://github.com/pbek/QOwnNotes/issues/3836))
