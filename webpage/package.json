@@ -34,7 +34,7 @@
     "@vuepress/plugin-seo": "next",
     "@vuepress/plugin-sitemap": "next",
     "@vuepress/theme-default": "next",
-    "glob": "^10.3.10",
+    "glob": "^14.0.4",
     "lodash-es": "^4.18.1",
     "markdown-it": "^14.3.3",
     "markdown-it-meta": "^0.0.1",
