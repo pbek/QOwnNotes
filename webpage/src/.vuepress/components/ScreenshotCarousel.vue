@@ -131,6 +131,13 @@
       <div class="sheet">Manage your Todo lists via CalDAV</div>
     </v-carousel-item>
     <v-carousel-item>
+      <img
+        src="/screenshots/screenshot-nextcloud-deck.png"
+        alt="Nextcloud Deck cards"
+      />
+      <div class="sheet">Manage your Nextcloud Deck cards</div>
+    </v-carousel-item>
+    <v-carousel-item>
       <img src="/screenshots/screenshot-trash.png" alt="screenshot-trash" />
       <div class="sheet">Manage trashed notes on your Nextcloud server</div>
     </v-carousel-item>

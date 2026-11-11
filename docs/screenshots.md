@@ -64,11 +64,10 @@ current Plasma desktop.
 
 ## Refreshing the website overview
 
-`just screenshots --overview` captures **all twenty-two scenes**
+`just screenshots --overview` captures **all twenty-three scenes**
 from the [overview carousel](https://www.qownnotes.org/getting-started/overview.html),
-plus a new **Nextcloud Deck dialog** scene, using website filenames in a new output
-directory. The Deck image can be reviewed before adding it to the carousel; capture
-and publishing do not change the carousel component.
+including the **Nextcloud Deck dialog**, using website filenames in a new output
+directory. Capture and publishing do not change the carousel component.
 
 | Scene                                        | Preset                | Website filename                          |
 | -------------------------------------------- | --------------------- | ----------------------------------------- |
@@ -117,8 +116,8 @@ The app's disk database (`QOwnNotes.sqlite`) is only created for scenes with dem
 scripts, note folders or cloud connections; the app adds all other tables on startup.
 
 The capture command does not modify website assets or remove any carousel entries.
-`overview-coverage.json` lists every screenshot referenced by the carousel plus
-the additional Deck scene and whether it is automated.
+`overview-coverage.json` lists every screenshot referenced by the carousel and
+whether it is automated.
 
 ### Replacing the carousel screenshots
 

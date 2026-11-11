@@ -159,7 +159,6 @@ WINDOW_WIDTHS = {"1col": 640}
 def overview_coverage():
     carousel = ROOT / "webpage/src/.vuepress/components/ScreenshotCarousel.vue"
     filenames = re.findall(r'src="/screenshots/([^"/]+\.png)"', carousel.read_text())
-    filenames = list(dict.fromkeys(filenames + list(OVERVIEW.values())))
     return {filename: ("automated" if filename in OVERVIEW.values() else
                        "needs dedicated fixture") for filename in filenames}
 

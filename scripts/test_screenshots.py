@@ -212,6 +212,15 @@ class ScreenshotTests(unittest.TestCase):
         self.assertEqual(len(coverage), 23)
         self.assertTrue(set(screenshots.OVERVIEW).issubset(screenshots.SCENARIOS))
 
+    def test_every_carousel_image_is_published_in_the_repository(self):
+        for name in screenshots.overview_coverage():
+            with self.subTest(filename=name):
+                image = screenshots.ROOT / "screenshots" / name
+                self.assertTrue(image.is_file(), image)
+                with image.open("rb") as file:
+                    self.assertEqual(file.read(len(screenshots.PNG_SIGNATURE)),
+                                     screenshots.PNG_SIGNATURE)
+
     def test_every_scenario_selects_an_existing_note(self):
         with tempfile.TemporaryDirectory() as directory:
             for scenario in screenshots.SCENARIOS:
