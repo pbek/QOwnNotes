@@ -2,7 +2,7 @@
 """Capture isolated QOwnNotes demo windows on the current KDE Plasma desktop."""
 
 import argparse
-from contextlib import closing
+from contextlib import closing, ExitStack
 from datetime import datetime
 import json
 import os
@@ -14,6 +14,8 @@ import subprocess
 import sys
 import tempfile
 import time
+
+from screenshot_server import CALENDAR, demo_server
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -31,6 +33,14 @@ SCENARIOS = {
     "diff": "full",
     "scripting": "full",
     "note-folders": "full",
+    "portable": "full",
+    "encrypted": "full",
+    "encrypted-unlocked": "full",
+    "export-print": "full",
+    "todo": "full",
+    "trash": "full",
+    "versioning": "full",
+    "nextcloud-deck": "full",
 }
 # Website filenames are explicit so captures can be reviewed before publishing.
 OVERVIEW = {
@@ -49,11 +59,22 @@ OVERVIEW = {
     "search-current-note": "screenshot-search-in-current-note.png",
     "note-folders": "screenshot-settings-note-folders.png",
     "diff": "screenshot-diff.png",
+    "portable": "screenshot-portable-mode.png",
+    "encrypted": "screenshot-encrypted-note.png",
+    "encrypted-unlocked": "screenshot-encrypted-note-decrypted.png",
+    "export-print": "screenshot-export-print.png",
+    "todo": "screenshot-todo.png",
+    "trash": "screenshot-trash.png",
+    "versioning": "screenshot-versioning.png",
+    "nextcloud-deck": "screenshot-nextcloud-deck.png",
 }
 STARTUP_ACTIONS = {
     "distraction-free": "actionToggle_distraction_free_mode",
     "scripting": "actionScript_settings",
     "note-folders": "actionSet_Cloud_Folder",
+    "todo": "actionShow_Todo_List",
+    "trash": "actionShow_trash",
+    "nextcloud-deck": "actionManage_Nextcloud_Deck_cards",
 }
 # Scenes that capture a dialog instead of the main window: the dialog's title and its
 # size in logical pixels at a 10 pt font, or None to keep the dialog's own size.
@@ -61,7 +82,14 @@ DIALOGS = {
     "scripting": ("Settings", None),
     "note-folders": ("Settings", None),
     "diff": ("modified externally", (960, 640)),
+    "export-print": ("PDF export preview", (1100, 800)),
+    "todo": ("Todo", (1200, 800)),
+    "trash": ("Trashed notes", (1100, 760)),
+    "versioning": ("Note versions", (1100, 760)),
+    "nextcloud-deck": ("Manage Nextcloud Deck Cards", (1280, 850)),
 }
+CLOUD_SCENES = {"todo", "trash", "versioning", "nextcloud-deck"}
+NATIVE_SCENES = CLOUD_SCENES | {"portable", "encrypted", "encrypted-unlocked", "export-print"}
 # A helper script selects the word in the current note, then triggers the search action,
 # which searches for the selected text.
 SEARCHES = {
@@ -72,6 +100,7 @@ SEARCHES = {
 SELECTED_NOTES = {
     "note-relations": "Connected ideas",
     "russian": "Немного места для идей",
+    "portable": "Portable notes",
 }
 DEFAULT_SELECTED_NOTE = "A little room for ideas"
 RUSSIAN_TAG_NAMES = {1: "Идеи", 2: "Проекты", 3: "Личное", 4: "Чтение", 5: "Рабочее место"}
@@ -130,6 +159,7 @@ WINDOW_WIDTHS = {"1col": 640}
 def overview_coverage():
     carousel = ROOT / "webpage/src/.vuepress/components/ScreenshotCarousel.vue"
     filenames = re.findall(r'src="/screenshots/([^"/]+\.png)"', carousel.read_text())
+    filenames = list(dict.fromkeys(filenames + list(OVERVIEW.values())))
     return {filename: ("automated" if filename in OVERVIEW.values() else
                        "needs dedicated fixture") for filename in filenames}
 
@@ -155,8 +185,7 @@ def publish(source, destinations=PUBLISH_DIRECTORIES):
             if file.read(len(PNG_SIGNATURE)) != PNG_SIGNATURE:
                 raise RuntimeError(f"Not a PNG image: {image}")
     for destination in destinations:
-        if not destination.is_dir():
-            raise RuntimeError(f"Screenshot directory not found: {destination}")
+        destination.mkdir(parents=True, exist_ok=True)
     print(f"Publishing from {source}", flush=True)
     for image in images:
         for destination in destinations:
@@ -244,7 +273,7 @@ def search_script(word, action):
         "}\n")
 
 
-def seed_app_database(data, session, scripts=(), note_folders=()):
+def seed_app_database(data, session, scripts=(), note_folders=(), cloud_url=None):
     """Create the app's disk database with demo scripts and note folders.
 
     Only the tables that are seeded are created, with their current columns. The app
@@ -275,6 +304,17 @@ def seed_app_database(data, session, scripts=(), note_folders=()):
                 "VALUES (?, ?, ?, ?, ?)",
                 [(index + 1, name, str(path), remote, index)
                  for index, (name, path, remote) in enumerate(note_folders)])
+            if cloud_url:
+                # An empty password needs neither a real credential nor a keychain entry.
+                # The read-only demo API accepts the dummy account without authentication.
+                db.executescript("""
+                    CREATE TABLE cloudConnection (
+                        id INTEGER PRIMARY KEY, name VARCHAR(255), server_url VARCHAR(255),
+                        username VARCHAR(255), password VARCHAR(255), priority INTEGER DEFAULT 0,
+                        qownnotesapi_enabled BOOLEAN DEFAULT 1, account_id VARCHAR(255));
+                """)
+                db.execute("INSERT INTO cloudConnection VALUES (1, ?, ?, 'demo', '', 0, 1, 'demo')",
+                           ("Nextcloud demo", cloud_url))
             db.commit()
 
 
@@ -495,14 +535,24 @@ def screenshot_window_state(scenario, preset, value, scale=1.0):
     return encode_state(data)
 
 
-def prepare_profile(base, preset):
+def prepare_profile(base, preset, cloud_url=None):
     scenario = preset
+    if cloud_url:
+        url_port(cloud_url)
     preset = SCENARIOS[scenario]
     config = base / "config"
     (config / "PBE").mkdir(parents=True)
     notes = base / "Demo notes"
     shutil.copytree(ROOT / ("scripts/screenshot-notes-ru" if scenario == "russian" else
                             "scripts/screenshot-notes"), notes)
+    if scenario == "portable":
+        (notes / "Portable notes.md").write_text(
+            "# Portable notes\n\n## Your notebook, wherever you go\n\n"
+            "This QOwnNotes window runs in **portable mode** from a disposable installation.\n\n"
+            "```text\nPortable QOwnNotes/\n  QOwnNotes\n  Data/\n    PBE/\n      QOwnNotes-Demo.ini\n```\n\n"
+            "Settings and application data stay beside the executable.\n\n"
+            "- [x] Keep your notes together\n- [x] Take your workspace with you\n"
+            "- [ ] Start your next small adventure\n")
     if scenario == "note-relations":
         for old, new in (("A little room for ideas", "Connected ideas"),
                          ("Project field notes", "Projects"),
@@ -544,6 +594,10 @@ def prepare_profile(base, preset):
         shutil.copyfile(ROOT / "scripts/screenshot-scripts/daily-journal.qml", script)
         scripts.append(("Daily journal", script))
     note_folders = []
+    if scenario in CLOUD_SCENES:
+        if not cloud_url:
+            raise RuntimeError(f"{scenario} requires a disposable demo server.")
+        note_folders.append(("Everyday notes", notes, "Notes/"))
     if scenario == "note-folders":
         note_folders.append(("Everyday notes", notes, "Notes"))
         for name, directory, note in EXTRA_NOTE_FOLDERS:
@@ -551,7 +605,7 @@ def prepare_profile(base, preset):
             (base / directory / f"{note}.md").write_text(f"# {note}\n")
             note_folders.append((name, base / directory, f"Notes/{name}"))
     if scripts or note_folders:
-        seed_app_database(base / "data", session, scripts, note_folders)
+        seed_app_database(base / "data", session, scripts, note_folders, cloud_url)
 
     # Copy only desktop appearance settings, never the user's application profile.
     desktop_config = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config"))
@@ -607,6 +661,15 @@ def prepare_profile(base, preset):
         settings += "notifyAllExternalModifications=true\n"
     if note_folders:
         settings += "currentNoteFolderId=1\n"
+    if scenario in CLOUD_SCENES:
+        settings += (
+            "\n[ownCloud]\nsupportEnabled=true\n"
+            "todoCalendarCloudConnectionId=1\n"
+            "todoCalendarEnabledList=Everyday\n"
+            f"todoCalendarEnabledUrlList={cloud_url}{CALENDAR}\n"
+            "\n[CloudConnection-1]\nnextcloudDeckEnabled=true\n"
+            "nextcloudDeckBoardId=1\nnextcloudDeckStackId=10\n"
+        )
     if scenario == "darkmode":
         settings += (
             "darkMode=true\n"
@@ -631,11 +694,12 @@ def prepare_profile(base, preset):
         "\n[networking]\n"
         "proxyType=3\n"
         "proxyHostName=127.0.0.1\n"
-        "proxyPort=9\n"
+        f"proxyPort={url_port(cloud_url) if cloud_url else 9}\n"
         "\n[appMetrics]\n"
         "notificationShown=true\n"
         "disableTracking=true\n"
         "disableAppHeartbeat=true\n"
+        "\n[security]\nkeychainMigrationNoticeAcknowledged=true\n"
     )
     for workspace, name, _, _ in workspaces:
         settings += f"\n[layout-{workspace}]\nname={name}\n"
@@ -645,6 +709,14 @@ def prepare_profile(base, preset):
 
     for app in ("QOwnNotes", "QOwnNotesDebug"):
         (config / "PBE" / f"{app}-{session}.conf").write_text(settings)
+        if scenario in CLOUD_SCENES:
+            # Legacy database migrations remove calendar selections and disable cloud
+            # support when there is no password. Keep the intentional demo values pinned.
+            (config / "PBE" / f"{app}-{session}.override.conf").write_text(
+                "[ownCloud]\nsupportEnabled=true\n"
+                "todoCalendarEnabledList=Everyday\n"
+                f"todoCalendarEnabledUrlList={cloud_url}{CALENDAR}\n")
+    (base / "screenshot-profile").write_text("Disposable screenshot profile\n")
     env = dict(os.environ)
     for key, directory in (("XDG_CONFIG_HOME", config),
                            ("XDG_DATA_HOME", base / "data"),
@@ -655,7 +727,60 @@ def prepare_profile(base, preset):
     original_data = os.environ.get("XDG_DATA_HOME", str(Path.home() / ".local/share"))
     env["XDG_DATA_DIRS"] = original_data + ":" + os.environ.get(
         "XDG_DATA_DIRS", "/usr/local/share:/usr/share")
+    # Do not let inherited screenshot controls affect an unrelated demo scene.
+    for key in ("QOWNNOTES_SCREENSHOT_SCENE", "QOWNNOTES_SCREENSHOT_ROOT"):
+        env.pop(key, None)
+    env["QOWNNOTES_SCREENSHOT_ROOT"] = str(base)
+    if scenario in NATIVE_SCENES:
+        env["QOWNNOTES_SCREENSHOT_SCENE"] = scenario
     return env, session
+
+
+def url_port(url):
+    from urllib.parse import urlsplit
+    parsed = urlsplit(url)
+    if parsed.scheme != "http" or parsed.hostname != "127.0.0.1" or not parsed.port:
+        raise RuntimeError("Screenshot fixtures must use a loopback HTTP server.")
+    return parsed.port
+
+
+def prepare_portable(base, binary, env, session):
+    """Copy a native executable, never launch --portable beside the real binary."""
+    installation = base / "Portable QOwnNotes"
+    installation.mkdir()
+    # Nix's wrapper embeds the original executable path. Copy its actual payload instead.
+    payload = binary.parent / f".{binary.name}-wrapped"
+    if payload.is_file():
+        # Binary wrappers embed their makeCWrapper recipe. Recover only appearance/import
+        # paths, never execute that recipe or inherit arbitrary wrapper environment changes.
+        prefixes = re.findall(
+            rb"--prefix '(QT_PLUGIN_PATH|XDG_DATA_DIRS|NIXPKGS_QT[56]_QML_IMPORT_PATH)' ':' '([^']+)'",
+            binary.read_bytes())
+        for key, value in prefixes:
+            key, value = key.decode(), value.decode()
+            if value.startswith("/nix/store/"):
+                env[key] = value + (":" + env[key] if env.get(key) else "")
+    else:
+        payload = binary
+    with payload.open("rb") as file:
+        header = file.read(12)
+        if header[:4] != b"\x7fELF" or header[8:11] in (b"AI\x01", b"AI\x02"):
+            raise RuntimeError("Portable screenshots require a native Linux ELF binary, not an AppImage or script.")
+    target = installation / "QOwnNotes"
+    shutil.copy2(payload, target)
+    target.chmod(0o755)
+    settings = installation / "Data/PBE"
+    settings.mkdir(parents=True)
+    shutil.move(str(base / "Demo notes"), str(installation / "Data/Demo notes"))
+    for app in ("QOwnNotes", "QOwnNotesDebug"):
+        profile = (base / f"config/PBE/{app}-{session}.conf").read_text()
+        # Portable mode always resolves notesPath relative to its Data directory.
+        profile = profile.replace(f"notesPath={base / 'Demo notes'}\n", "notesPath=Demo notes\n")
+        (settings / f"{app}-{session}.ini").write_text(profile)
+    # APPIMAGE changes the early portable settings path, even for a native executable.
+    env.pop("APPIMAGE", None)
+    env.pop("APPDIR", None)
+    return target
 
 
 def find_window(process, title, timeout):
@@ -678,9 +803,12 @@ def activate(window):
         raise RuntimeError("Could not activate the demo window; capture cancelled.")
 
 
-def capture(args, preset, output, base):
-    env, session = prepare_profile(base, preset)
-    command = [str(args.binary), "--session", session, "--allow-multiple-instances"]
+def capture(args, preset, output, base, cloud_url=None):
+    env, session = prepare_profile(base, preset, cloud_url)
+    binary = prepare_portable(base, args.binary, env, session) if preset == "portable" else args.binary
+    command = [str(binary), "--session", session, "--allow-multiple-instances"]
+    if preset == "portable":
+        command.append("--portable")
     if preset in STARTUP_ACTIONS:
         command += ["--action", STARTUP_ACTIONS[preset]]
     with (base / "app.log").open("w+") as log:
@@ -694,13 +822,22 @@ def capture(args, preset, output, base):
             if not window:
                 raise RuntimeError("The demo window did not appear.")
             time.sleep(args.settle)
+            if preset in NATIVE_SCENES:
+                deadline = time.monotonic() + 45
+                while not (base / "scene-ready").is_file() and time.monotonic() < deadline:
+                    if process.poll() is not None:
+                        break
+                    time.sleep(0.2)
+                if not (base / "scene-ready").is_file():
+                    raise RuntimeError(f"The {preset} fixture did not become ready; rebuild with `just nix-build`.")
             title = run("kdotool", "getwindowname", window)
             if (selected_note(preset) not in title or
                     run("kdotool", "getwindowpid", window) != str(process.pid)):
                 raise RuntimeError(f"Unexpected demo window: {title}")
             dialog_title, dialog_size = DIALOGS.get(preset, (None, None))
-            # A dialog opened on startup is modal, so the main window can't be activated.
-            if not (dialog_title and preset in STARTUP_ACTIONS):
+            # Startup/helper dialogs may be modal, so do not activate their main window.
+            # Only the diff scene needs an active, resized main window before opening its dialog.
+            if not dialog_title or preset == "diff":
                 run("kdotool", "windowstate", "--remove", "MAXIMIZED", window)
                 width = args.width
                 if preset in WINDOW_WIDTHS:
@@ -724,10 +861,12 @@ def capture(args, preset, output, base):
                 activate(window)
                 title = run("kdotool", "getwindowname", window)
             print(f"Capturing: {title}", flush=True)
+            # Let the client and compositor finish painting after activation and resizing.
+            time.sleep(args.settle)
             # Capture to a temporary file and verify focus before publishing it.
             image = base / "capture.png"
             subprocess.run(
-                ["spectacle", "--background", "--nonotify", "--activewindow",
+                ["spectacle", "--background", "--nonotify", "--activewindow", "--delay", "1000",
                  "--output", str(image)], check=True, timeout=45,
             )
             deadline = time.monotonic() + 15
@@ -777,7 +916,8 @@ def main():
                         help=f"Window height (default: {WINDOW_HEIGHT}, scaled with the "
                              "desktop font size)")
     parser.add_argument("--settle", type=float, default=4,
-                        help="Seconds to wait for startup and note indexing (default: 4)")
+                        help="Seconds to wait for startup/indexing and again for repainting "
+                             "before capture (default: 4)")
     args = parser.parse_args()
     if args.publish is not None:
         publish(args.publish or latest_overview_capture())
@@ -824,8 +964,15 @@ def main():
         for preset, output in zip(args.presets, targets):
             temporary_root = "/tmp/opencode" if Path("/tmp/opencode").is_dir() else None
             with tempfile.TemporaryDirectory(prefix="qownnotes-screenshot-",
-                                             dir=temporary_root) as directory:
-                capture(args, preset, output, Path(directory))
+                                              dir=temporary_root) as directory:
+                with ExitStack() as stack:
+                    cloud_url = None
+                    if preset in CLOUD_SCENES:
+                        note = (ROOT / "scripts/screenshot-notes" /
+                                f"{DEFAULT_SELECTED_NOTE}.md").read_text()
+                        server = stack.enter_context(demo_server(note))
+                        cloud_url = f"http://127.0.0.1:{server.server_port}"
+                    capture(args, preset, output, Path(directory), cloud_url)
         if args.overview:
             (args.output / "overview-coverage.json").write_text(
                 json.dumps(coverage, indent=2) + "\n")

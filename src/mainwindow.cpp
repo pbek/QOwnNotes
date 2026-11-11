@@ -151,6 +151,7 @@
 #include "services/metricsservice.h"
 #include "services/nextclouddeckservice.h"
 #include "services/openaiservice.h"
+#include "services/screenshotscenario.h"
 #include "services/settingsservice.h"
 #include "services/updateservice.h"
 #include "services/webappclientservice.h"
@@ -642,6 +643,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // Update the ignored click url regexps for the note text edits
     ui->encryptedNoteTextEdit->updateIgnoredClickUrlRegexps();
     ui->noteTextEdit->updateIgnoredClickUrlRegexps();
+    ScreenshotScenario::initialize(this);
 }
 
 void MainWindow::initTreeWidgets() {

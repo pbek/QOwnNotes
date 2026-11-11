@@ -7,7 +7,7 @@ and window decorations:
 just screenshots
 ```
 
-Requires Python 3, Spectacle, kdotool, and a running Plasma session. Build the
+Requires Python 3, Spectacle, kdotool, and a running Plasma 6 session. Build the
 application first with `just nix-build`; the command refuses to capture a binary
 whose version differs from `src/version.h` (override with `--any-version`). No virtual desktop or artificial theme
 is used. Keep the desktop unlocked and avoid typing or switching focus during capture.
@@ -35,15 +35,17 @@ just screenshots --overview
 
 Available presets: `minimal`, `full`, `preview-only`, `full-vertical`, `1col`,
 `subfolders`, `darkmode`, `note-relations`, `distraction-free`, `search-all-notes`,
-`search-current-note`, `other-workspace`, `russian`, `diff`, `scripting`, `note-folders`.
+`search-current-note`, `other-workspace`, `russian`, `diff`, `scripting`, `note-folders`,
+`portable`, `encrypted`, `encrypted-unlocked`, `export-print`, `todo`, `trash`,
+`versioning`, `nextcloud-deck`.
 By default, `minimal`, `full`, `preview-only`, `subfolders`, and `darkmode` are
 captured. The layouts come from the application's built-in layout presets, with
 a larger preview so the rendered Markdown is readable: 560 logical pixels wide
 in the `full`, `subfolders`, and `darkmode` screenshots and 400 pixels high above
 the editor in `full-vertical`. The note relations scene replaces the preview with
 a 640-pixel graph and linked demo notes. `preview-only` gets a 400-pixel-wide
-left column with 100 pixels of height for the note tag buttons; both grow with
-your Plasma font size (for example 520×140 with a 14 pt font), since larger fonts
+left column with 60 pixels of height for the note tag buttons; both grow with
+your Plasma font size (for example 560×84 with a 14 pt font), since larger fonts
 make the buttons larger. The app's first-run limit that caps the note tags panel
 at 40 pixels is skipped in every scene. `1col` is captured as a narrow window
 (at most 640 pixels wide). Edit `scripts/screenshot-notes/` to curate the other
@@ -62,27 +64,37 @@ current Plasma desktop.
 
 ## Refreshing the website overview
 
-`just screenshots --overview` captures the **fifteen currently automated scenes**
+`just screenshots --overview` captures **all twenty-two scenes**
 from the [overview carousel](https://www.qownnotes.org/getting-started/overview.html),
-using their existing website filenames in a new output directory:
+plus a new **Nextcloud Deck dialog** scene, using website filenames in a new output
+directory. The Deck image can be reviewed before adding it to the carousel; capture
+and publishing do not change the carousel component.
 
-| Scene                                        | Preset                | Website filename                        |
-| -------------------------------------------- | --------------------- | --------------------------------------- |
-| Colored tags, subfolders, editor and preview | `subfolders`          | `screenshot.png`                        |
-| Minimal layout                               | `minimal`             | `screenshot-minimal.png`                |
-| Preview above the editor, colored tags       | `full-vertical`       | `screenshot-vertical.png`               |
-| Linked notes and relations graph             | `note-relations`      | `screenshot-note-relations.png`         |
-| Narrow one-column layout                     | `1col`                | `screenshot-1col.png`                   |
-| Dark mode, colored tags and subfolders       | `darkmode`            | `screenshot-darkmode.png`               |
-| Distraction-free editing                     | `distraction-free`    | `screenshot-distraction-free-mode.png`  |
-| Current desktop icon theme                   | `full`                | `screenshot-freedesktop-theme.png`      |
-| Second workspace, selected in the toolbar    | `other-workspace`     | `screenshot-other-workspace.png`        |
-| Script settings of a demo script             | `scripting`           | `screenshot-qml.png`                    |
-| Russian user interface, notes and tags       | `russian`             | `screenshot-russian.png`                |
-| Search across all notes                      | `search-all-notes`    | `screenshot-search-in-all-notes.png`    |
-| Search in the current note                   | `search-current-note` | `screenshot-search-in-current-note.png` |
-| Several note folders in the settings         | `note-folders`        | `screenshot-settings-note-folders.png`  |
-| Diff dialog after an external note change    | `diff`                | `screenshot-diff.png`                   |
+| Scene                                        | Preset                | Website filename                          |
+| -------------------------------------------- | --------------------- | ----------------------------------------- |
+| Colored tags, subfolders, editor and preview | `subfolders`          | `screenshot.png`                          |
+| Minimal layout                               | `minimal`             | `screenshot-minimal.png`                  |
+| Preview above the editor, colored tags       | `full-vertical`       | `screenshot-vertical.png`                 |
+| Linked notes and relations graph             | `note-relations`      | `screenshot-note-relations.png`           |
+| Narrow one-column layout                     | `1col`                | `screenshot-1col.png`                     |
+| Dark mode, colored tags and subfolders       | `darkmode`            | `screenshot-darkmode.png`                 |
+| Distraction-free editing                     | `distraction-free`    | `screenshot-distraction-free-mode.png`    |
+| Current desktop icon theme                   | `full`                | `screenshot-freedesktop-theme.png`        |
+| Second workspace, selected in the toolbar    | `other-workspace`     | `screenshot-other-workspace.png`          |
+| Script settings of a demo script             | `scripting`           | `screenshot-qml.png`                      |
+| Russian user interface, notes and tags       | `russian`             | `screenshot-russian.png`                  |
+| Search across all notes                      | `search-all-notes`    | `screenshot-search-in-all-notes.png`      |
+| Search in the current note                   | `search-current-note` | `screenshot-search-in-current-note.png`   |
+| Several note folders in the settings         | `note-folders`        | `screenshot-settings-note-folders.png`    |
+| Diff dialog after an external note change    | `diff`                | `screenshot-diff.png`                     |
+| Temporary portable installation              | `portable`            | `screenshot-portable-mode.png`            |
+| Encrypted note, locked                       | `encrypted`           | `screenshot-encrypted-note.png`           |
+| Editing an encrypted note                    | `encrypted-unlocked`  | `screenshot-encrypted-note-decrypted.png` |
+| PDF export preview                           | `export-print`        | `screenshot-export-print.png`             |
+| CalDAV tasks                                 | `todo`                | `screenshot-todo.png`                     |
+| Nextcloud trash                              | `trash`               | `screenshot-trash.png`                    |
+| Nextcloud note versions                      | `versioning`          | `screenshot-versioning.png`               |
+| Nextcloud Deck cards with tags and Markdown  | `nextcloud-deck`      | `screenshot-nextcloud-deck.png`           |
 
 How the newer scenes are set up, all inside the temporary profile:
 
@@ -102,11 +114,11 @@ How the newer scenes are set up, all inside the temporary profile:
   with notifications for all external changes enabled, and captures the dialog.
 
 The app's disk database (`QOwnNotes.sqlite`) is only created for scenes with demo
-scripts or note folders; the app adds all other tables on startup.
+scripts, note folders or cloud connections; the app adds all other tables on startup.
 
 The capture command does not modify website assets or remove any carousel entries.
-`overview-coverage.json` lists every screenshot referenced by the carousel and
-whether it is automated or still needs a dedicated fixture.
+`overview-coverage.json` lists every screenshot referenced by the carousel plus
+the additional Deck scene and whether it is automated.
 
 ### Replacing the carousel screenshots
 
@@ -127,26 +139,56 @@ both `webpage/src/.vuepress/public/screenshots/` (website carousel) and
 images are checked to be PNG files before anything is replaced, and unchanged
 images are skipped. Review the result with `git diff --stat` and commit it.
 
-The remaining seven carousel scenes are **not yet automated**:
+### Portable, encryption, PDF and cloud fixtures
 
-- Portable mode: the current image is a Windows file listing; it needs a temporary
-  portable installation, not the real binary's adjacent settings directory.
-- Encryption (locked and unlocked): needs an encrypted demo note and password
-  dialog automation.
-- PDF export/print: needs print-preview dialog automation without invoking a real
-  printer or listing the user's printers.
-- CalDAV tasks, Nextcloud trash, and Nextcloud versioning: need disposable demo
-  servers and seeded remote data. Never use personal server credentials for these.
+```bash
+just screenshots --presets portable encrypted encrypted-unlocked export-print
+just screenshots --presets todo trash versioning nextcloud-deck
+```
+
+- `portable` copies a native Linux ELF executable into a temporary installation,
+  seeds its adjacent `Data/PBE/` settings and `Data/Demo notes/`, and runs it with `--portable`. For a Nix
+  wrapper, its native `.<binary-name>-wrapped` payload is copied instead, preserving
+  the wrapper's Qt plugin, QML import and desktop resource paths so icons still render. AppImages
+  and shell launchers are not supported for this scene. The real binary's adjacent
+  settings directory is never used. The scene shows the app with a portable-mode
+  demo note rather than reproducing the old Windows Explorer image.
+- `encrypted` and `encrypted-unlocked` invoke the real encryption action, fill
+  its password dialog with a disposable demo password, and show either ciphertext
+  or the decrypted editor. No personal password or encrypted note is used.
+- `export-print` renders the demo note in Qt's print-preview dialog using only the
+  PDF paint engine and a temporary output path. It does not open a native printer
+  selection dialog or send anything to a printer.
+- `todo`, `trash`, `versioning`, and `nextcloud-deck` start a read-only Python HTTP
+  fixture server bound to `127.0.0.1` on a dynamically assigned port. It serves
+  CalDAV VTODO data and Nextcloud API responses with three tasks, trashed notes,
+  versions or Deck cards. Deck cards include colored tags and Markdown descriptions.
+  The dialogs load these responses through the application's normal services;
+  the first item is selected to showcase its description or preview.
+- Cloud fixtures use a dummy `demo` account with an empty password, so no system
+  credentials are needed. In every marked screenshot profile the app keeps generated
+  service tokens in temporary settings instead of writing to the desktop keychain.
+  Cloud settings overrides preserve the demo calendar selections through legacy
+  database migrations. Their HTTP proxy points at the same local server,
+  which rejects external origins and HTTPS tunnels and never forwards requests.
+  Server writes are unsupported. The server is stopped when the scene exits.
+
+These scenes require a build containing `src/services/screenshotscenario.cpp`.
+The helper checks that both the settings and notes belong to the marked temporary
+profile before automating anything. Capture waits for the helper's readiness file
+instead of photographing a loading overlay; an older binary fails with a rebuild
+message even if its release version is identical.
 
 ## Isolation and testing
 
 Each capture uses temporary settings, data, cache, copies of the demo notes and
 scripts, and a generated SQLite database containing only demo tags and their note
-assignments, plus, where a scene needs them, demo scripts and note folders.
+assignments, plus, where a scene needs them, demo scripts, note folders and cloud connections.
 Only desktop appearance settings are copied from your configuration. Personal
 QOwnNotes settings, credentials, and notes are not copied or modified. Tracking
 and automatic update dialogs are disabled in the demo profile, and the demo app
-uses an unreachable local proxy, so it stays offline and never shows an update notice. Temporary profiles
+uses an unreachable local proxy (or the non-forwarding demo proxy for cloud scenes),
+so it cannot reach external servers. Temporary profiles
 are removed when the command exits.
 
 If the app does not match Plasma's theme, its Qt version may differ from the

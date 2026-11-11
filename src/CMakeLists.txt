@@ -501,6 +501,8 @@ set(SOURCE_FILES
     services/cloudservice.h
     services/nextclouddeckservice.cpp
     services/nextclouddeckservice.h
+    services/screenshotscenario.cpp
+    services/screenshotscenario.h
     services/updateservice.cpp
     services/updateservice.h
     services/metricsservice.cpp

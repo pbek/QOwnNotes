@@ -5,10 +5,13 @@
 #include <QByteArray>
 #include <QCoreApplication>
 #include <QDebug>
+#include <QDir>
 #include <QEventLoop>
 #include <QFile>
+#include <QFileInfo>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QSettings>
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -407,6 +410,14 @@ int CryptoService::keychainTimeout() {
  * If there is none, keychain writes are skipped and secrets are kept in the legacy storage.
  */
 bool CryptoService::isKeychainAvailable() {
+    // Demo tokens belong only to the disposable settings, never the desktop keychain.
+    const QString screenshotRoot = qEnvironmentVariable("QOWNNOTES_SCREENSHOT_ROOT");
+    const QString root = QDir(screenshotRoot).canonicalPath();
+    if (!screenshotRoot.isEmpty() && !root.isEmpty() &&
+        QFileInfo(QSettings().fileName()).canonicalFilePath().startsWith(root + QLatin1Char('/')) &&
+        QFile::exists(root + QStringLiteral("/screenshot-profile"))) {
+        return false;
+    }
     static int availability = -1;
 
     if (availability == -1) {

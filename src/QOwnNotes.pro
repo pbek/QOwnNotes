@@ -176,6 +176,7 @@ SOURCES += main.cpp\
     entities/commandsnippet.cpp \
     services/cloudservice.cpp \
     services/nextclouddeckservice.cpp \
+    services/screenshotscenario.cpp \
     services/updateservice.cpp \
     services/notificationservice.cpp \
     services/windowactivationservice.cpp \
@@ -353,6 +354,7 @@ HEADERS  += mainwindow.h \
     dialogs/versiondialog.h \
     services/cloudservice.h \
     services/nextclouddeckservice.h \
+    services/screenshotscenario.h \
     services/updateservice.h \
     services/notificationservice.h \
     services/windowactivationservice.h \

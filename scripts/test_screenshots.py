@@ -2,14 +2,20 @@
 
 import configparser
 from contextlib import closing
+import http.client
+import json
 import os
 from pathlib import Path
 import sqlite3
 import tempfile
 import unittest
+from urllib.error import HTTPError
+from urllib.request import Request, urlopen
+import xml.etree.ElementTree as ET
 from unittest.mock import patch
 
 import screenshots
+from screenshot_server import CALENDAR, demo_server
 
 
 def luminance(color):
@@ -27,7 +33,12 @@ def window_state(base, session):
 def dock_geometry(state, name):
     offset = state.index(screenshots.dock_name(name)) + len(screenshots.dock_name(name)) + 1
     return (int.from_bytes(state[offset:offset + 4], "big"),
-            int.from_bytes(state[offset + 4:offset + 8], "big"))
+             int.from_bytes(state[offset + 4:offset + 8], "big"))
+
+
+def prepare_scenario(base, scenario):
+    url = "http://127.0.0.1:12345" if scenario in screenshots.CLOUD_SCENES else None
+    return screenshots.prepare_profile(base, scenario, url)
 
 
 class ScreenshotTests(unittest.TestCase):
@@ -130,7 +141,7 @@ class ScreenshotTests(unittest.TestCase):
             for scenario in screenshots.SCENARIOS:
                 with self.subTest(scenario=scenario):
                     base = Path(directory) / scenario
-                    screenshots.prepare_profile(base, scenario)
+                    prepare_scenario(base, scenario)
                     notes = base / "Demo notes"
                     with closing(sqlite3.connect(notes / "notes.sqlite")) as db:
                         colors = db.execute("SELECT color, dark_color FROM tag").fetchall()
@@ -196,7 +207,9 @@ class ScreenshotTests(unittest.TestCase):
                          len(set(screenshots.OVERVIEW.values())))
         self.assertEqual(coverage["screenshot.png"], "automated")
         self.assertEqual(coverage["screenshot-darkmode.png"], "automated")
-        self.assertEqual(coverage["screenshot-versioning.png"], "needs dedicated fixture")
+        self.assertEqual(coverage["screenshot-versioning.png"], "automated")
+        self.assertTrue(all(status == "automated" for status in coverage.values()))
+        self.assertEqual(len(coverage), 23)
         self.assertTrue(set(screenshots.OVERVIEW).issubset(screenshots.SCENARIOS))
 
     def test_every_scenario_selects_an_existing_note(self):
@@ -204,7 +217,7 @@ class ScreenshotTests(unittest.TestCase):
             for scenario in screenshots.SCENARIOS:
                 with self.subTest(scenario=scenario):
                     base = Path(directory) / scenario
-                    screenshots.prepare_profile(base, scenario)
+                    prepare_scenario(base, scenario)
                     note = base / "Demo notes" / f"{screenshots.selected_note(scenario)}.md"
                     self.assertTrue(note.is_file())
                     # The newest note is selected on startup.
@@ -351,10 +364,104 @@ class ScreenshotTests(unittest.TestCase):
                 screenshots.publish(root / "capture", (root / "website",))
             self.assertEqual((root / "website/screenshot.png").read_bytes(), b"old")
 
-    def test_publish_directories_contain_the_carousel_images(self):
-        for destination in screenshots.PUBLISH_DIRECTORIES:
-            for name in screenshots.OVERVIEW.values():
-                self.assertTrue((destination / name).is_file(), destination / name)
+    def test_publish_creates_the_ignored_website_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            capture = root / "capture"
+            capture.mkdir()
+            (capture / "screenshot.png").write_bytes(screenshots.PNG_SIGNATURE + b"demo")
+            target = root / "website/public/screenshots"
+            screenshots.publish(capture, (target,))
+            self.assertTrue((target / "screenshot.png").is_file())
+
+    def test_cloud_profiles_use_only_the_disposable_loopback_api(self):
+        with tempfile.TemporaryDirectory() as directory:
+            for scenario in screenshots.CLOUD_SCENES:
+                with self.subTest(scenario=scenario):
+                    base = Path(directory) / scenario
+                    env, session = prepare_scenario(base, scenario)
+                    settings, _ = window_state(base, session)
+                    self.assertEqual(settings["networking"]["proxyPort"], "12345")
+                    self.assertTrue(settings.getboolean("ownCloud", "supportEnabled"))
+                    overrides = configparser.ConfigParser(interpolation=None)
+                    overrides.read(base / f"config/PBE/QOwnNotes-{session}.override.conf")
+                    self.assertTrue(overrides.getboolean("ownCloud", "supportEnabled"))
+                    self.assertEqual(overrides["ownCloud"]["todoCalendarEnabledList"], "Everyday")
+                    self.assertEqual(env["QOWNNOTES_SCREENSHOT_ROOT"], str(base))
+                    with self.app_database(base, session) as db:
+                        self.assertEqual(db.execute(
+                            "SELECT server_url, username, password FROM cloudConnection"
+                        ).fetchone(), ("http://127.0.0.1:12345", "demo", ""))
+            with self.assertRaises(RuntimeError):
+                screenshots.prepare_profile(Path(directory) / "external", "trash",
+                                            "https://example.com")
+
+    def test_demo_api_serves_real_protocol_fixtures_and_never_forwards(self):
+        with demo_server("# Ideas\n\nYour own space.\n") as server:
+            url = f"http://127.0.0.1:{server.server_port}"
+            for endpoint, key in (("note/versions", "versions"), ("note/trashed", "notes")):
+                with urlopen(url + "/index.php/apps/qownnotesapi/api/v1/" + endpoint) as response:
+                    self.assertEqual(len(json.load(response)[key]), 3)
+            with urlopen(url + "/index.php/apps/deck/api/v1.1/boards/1/stacks?details=true") as response:
+                cards = json.load(response)[0]["cards"]
+                self.assertEqual(len(cards), 3)
+                self.assertTrue(cards[0]["labels"])
+            with urlopen(Request(url + CALENDAR, method="REPORT")) as response:
+                xml = ET.fromstring(response.read())
+                self.assertEqual(len(xml.findall("{DAV:}response")), 3)
+            with urlopen(url + CALENDAR + "1.ics") as response:
+                self.assertIn(b"BEGIN:VTODO\r\n", response.read())
+            # A proxy request for another origin is rejected before routing.
+            connection = http.client.HTTPConnection("127.0.0.1", server.server_port)
+            try:
+                connection.request("GET", "http://example.com/index.php/apps/deck/api/v1.1/boards")
+                response = connection.getresponse()
+                self.assertEqual(response.status, 403)
+                response.read()
+                connection.request("CONNECT", "example.com:443")
+                response = connection.getresponse()
+                self.assertEqual(response.status, 403)
+                response.read()
+            finally:
+                connection.close()
+            with self.assertRaises(HTTPError) as error:
+                urlopen(Request(url + "/note/restore_trashed", method="POST"))
+            error.exception.close()
+
+    def test_portable_copies_the_payload_and_never_the_real_settings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            binary = root / "real/QOwnNotes"
+            binary.parent.mkdir()
+            binary.write_bytes(
+                b"wrapper\0--prefix 'QT_PLUGIN_PATH' ':' '/nix/store/demo-qtsvg/lib/qt-6/plugins'\n"
+                b"--prefix 'HOME' ':' '/nix/store/not-a-home'\n")
+            (binary.parent / ".QOwnNotes-wrapped").write_bytes(b"\x7fELFdemo")
+            base = root / "demo"
+            env, session = screenshots.prepare_profile(base, "portable")
+            env["APPIMAGE"] = str(binary)
+            target = screenshots.prepare_portable(base, binary, env, session)
+            self.assertEqual(target.read_bytes(), b"\x7fELFdemo")
+            self.assertTrue((target.parent / "Data/PBE/QOwnNotes-Demo.ini").is_file())
+            self.assertTrue((target.parent / "Data/Demo notes/Portable notes.md").is_file())
+            self.assertIn("notesPath=Demo notes\n",
+                          (target.parent / "Data/PBE/QOwnNotes-Demo.ini").read_text())
+            self.assertNotIn("APPIMAGE", env)
+            self.assertTrue(env["QT_PLUGIN_PATH"].startswith("/nix/store/demo-qtsvg/"))
+            self.assertNotEqual(env.get("HOME"), "/nix/store/not-a-home")
+            self.assertFalse((binary.parent / "Data").exists())
+
+    def test_portable_rejects_appimages_and_shell_launchers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for index, header in enumerate((b"#!/bin/sh\n", b"\x7fELF\0\0\0\0AI\x02\0")):
+                binary = root / f"launcher-{index}"
+                binary.write_bytes(header)
+                base = root / f"demo-{index}"
+                env, session = screenshots.prepare_profile(base, "portable")
+                with self.assertRaises(RuntimeError):
+                    screenshots.prepare_portable(base, binary, env, session)
+                self.assertFalse((root / "Data").exists())
 
     def test_only_preview_layouts_get_a_larger_preview(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -407,6 +514,8 @@ class ScreenshotTests(unittest.TestCase):
             self.assertEqual(env["XDG_CONFIG_HOME"], str(base / "config"))
             self.assertEqual(env["XDG_DATA_HOME"], str(base / "data"))
             self.assertEqual(env["XDG_CACHE_HOME"], str(base / "cache"))
+            self.assertEqual(env["QOWNNOTES_SCREENSHOT_ROOT"], str(base))
+            self.assertTrue((base / "screenshot-profile").is_file())
             self.assertTrue(env["XDG_DATA_DIRS"].startswith(str(root / "user-data")))
             settings = (base / f"config/PBE/QOwnNotes-{session}.conf").read_text()
             self.assertIn("disableTracking=true", settings)
