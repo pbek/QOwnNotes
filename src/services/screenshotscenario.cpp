@@ -42,6 +42,24 @@ void ScreenshotScenario::initialize(MainWindow *window) {
         }
     };
     QTimer::singleShot(2000, window, [window, scene, root, ready]() {
+        if (scene == QStringLiteral("layout-preview")) {
+            auto *timer = new QTimer(window);
+            timer->setInterval(200);
+            QObject::connect(timer, &QTimer::timeout, window, [window, root, timer, ready]() {
+                if (!QFile::exists(root + QStringLiteral("/scene-resized")) ||
+                    !window->getCurrentNote().exists()) {
+                    return;
+                }
+                // Refill the editor/preview after the preset's dock geometry has settled.
+                window->setCurrentNote(window->getCurrentNote());
+                window->update();
+                timer->stop();
+                timer->deleteLater();
+                QTimer::singleShot(1000, window, ready);
+            });
+            timer->start();
+            return;
+        }
         if (scene == QStringLiteral("document-overview")) {
             auto *edit = window->findChild<QPlainTextEdit *>(QStringLiteral("noteTextEdit"));
             if (!edit) {

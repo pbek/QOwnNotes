@@ -132,7 +132,7 @@ nix-run:
 screenshots *args:
     python3 ./scripts/screenshots.py {{ args }}
 
-# Replace the website carousel and repository screenshots with a reviewed overview capture
+# Publish reviewed carousel screenshots and built-in layout previews
 [group('screenshots')]
 screenshots-publish capture_dir="":
     python3 ./scripts/screenshots.py --publish {{ capture_dir }}

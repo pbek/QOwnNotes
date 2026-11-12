@@ -1,13 +1,19 @@
 # QOwnNotes Changelog
 
-## 26.11.8
+## 26.11.9
 
+- Refreshed all five **layout preset previews** in the welcome screen and layout preset dialog
+  - Transparent screenshot margins now show the dialog's background correctly in light and
+    dark mode instead of a mismatched light rectangle
 - The **Full** layout preset now enables the **Document overview** minimap between the
   note editor and preview, using its minimum width of 80 logical pixels
   - Updated the layout-selection description and preview image to show the new arrangement
   - Existing saved workspaces are unchanged; select the Full preset to use the new arrangement
 - Fixed the **Document overview** panel remaining visible when switching from Full to
   **Minimal** or an older saved workspace that does not include the panel
+
+## 26.11.8
+
 - There was a new release of [QOwnNotes TUI](https://github.com/qownnotes/qownnotes-tui),
   [v1.3.4](https://github.com/qownnotes/qownnotes-tui/releases/tag/v1.3.4)
   - Updated `rusqlite` and bundled SQLite to prevent memory disclosure from crafted database

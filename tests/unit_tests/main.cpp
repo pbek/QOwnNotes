@@ -7,6 +7,7 @@
 #include "testcases/app/test_cryptoservice.h"
 #include "testcases/app/test_htmlentities.h"
 #include "testcases/app/test_languagetool.h"
+#include "testcases/app/test_layoutpresetwidget.h"
 #include "testcases/app/test_markdownformattoolbar.h"
 #include "testcases/app/test_metricsservice.h"
 #include "testcases/app/test_navigationwidget.h"
@@ -54,6 +55,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestHTMLEntities(), argc, argv) +
                          QTest::qExec(new TestMetricsService(), argc, argv) +
                          QTest::qExec(new TestNavigationWidget(), argc, argv) +
+                         QTest::qExec(new TestLayoutPresetWidget(), argc, argv) +
                          QTest::qExec(new TestSettingsService(), argc, argv) +
                          QTest::qExec(new TestTodoSettingsWidget(), argc, argv) +
                          QTest::qExec(new TestCryptoService(), argc, argv) +

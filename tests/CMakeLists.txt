@@ -114,6 +114,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_htmlentities.h
     ${QON_TESTS_DIR}/testcases/app/test_languagetool.cpp
     ${QON_TESTS_DIR}/testcases/app/test_languagetool.h
+    ${QON_TESTS_DIR}/testcases/app/test_layoutpresetwidget.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_layoutpresetwidget.h
     ${QON_TESTS_DIR}/testcases/app/test_metricsservice.cpp
     ${QON_TESTS_DIR}/testcases/app/test_metricsservice.h
     ${QON_TESTS_DIR}/testcases/app/test_navigationwidget.cpp
@@ -273,6 +275,9 @@ set(APP_SOURCE_FILES
     utils/schema.cpp
     utils/schema.h
     widgets/logwidget.cpp
+    widgets/layoutpresetwidget.cpp
+    widgets/layoutpresetwidget.h
+    widgets/layoutpresetwidget.ui
     widgets/logwidget.h
     widgets/lineedit.cpp
     widgets/lineedit.h

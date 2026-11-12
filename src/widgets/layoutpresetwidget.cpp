@@ -12,6 +12,11 @@
 LayoutPresetWidget::LayoutPresetWidget(QWidget *parent)
     : QWidget(parent), ui(new Ui::LayoutPresetWidget) {
     ui->setupUi(this);
+    // Let transparent screenshot margins show the dialog's background, including its stylesheet.
+    ui->layoutPresetGraphicsView->setStyleSheet(QStringLiteral("background: transparent;"));
+    ui->layoutPresetGraphicsView->setBackgroundBrush(Qt::NoBrush);
+    ui->layoutPresetGraphicsView->viewport()->setAutoFillBackground(false);
+    ui->layoutPresetGraphicsView->setScene(new QGraphicsScene(ui->layoutPresetGraphicsView));
     _manualSettingsStoring = true;
     loadLayoutPresets();
 }
@@ -55,17 +60,12 @@ void LayoutPresetWidget::updateCurrentLayoutPreset() {
 
     ui->layoutPresetDescriptionLabel->setText(layoutPresetDescription);
 
-    auto scene = new QGraphicsScene();
-
-    // Adapt the preview background to the current palette.
-    QColor bg = ui->layoutPresetGraphicsView->palette().window().color();
-    ui->layoutPresetGraphicsView->setStyleSheet(QStringLiteral("background-color:") +
-                                                bg.name(QColor::HexArgb));
+    auto *scene = ui->layoutPresetGraphicsView->scene();
+    scene->clear();
 
     QString filePath(":/images/layouts/" + screenshot);
 
     scene->addPixmap(QPixmap(filePath));
-    ui->layoutPresetGraphicsView->setScene(scene);
     ui->layoutPresetGraphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
 
     // if (!_manualSettingsStoring) {

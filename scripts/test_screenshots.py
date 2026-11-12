@@ -551,6 +551,75 @@ class ScreenshotTests(unittest.TestCase):
             else:
                 self.assertNotIn(name, state)
 
+    def test_layout_previews_use_unmodified_builtin_presets(self):
+        with tempfile.TemporaryDirectory() as directory:
+            for preset in screenshots.PRESETS:
+                base = Path(directory) / preset
+                env, session = screenshots.prepare_profile(base, preset, layout_preview=True)
+                self.assertEqual(env["QOWNNOTES_SCREENSHOT_SCENE"], "layout-preview")
+                _, state = window_state(base, session)
+                self.assertEqual(state, screenshots.decode_state(
+                    screenshots.layout_settings(preset)["windowState"]))
+
+    def test_builtin_preview_images_have_transparent_margins(self):
+        import zlib
+        for preset in screenshots.PRESETS:
+            data = (screenshots.ROOT / f"src/images/layouts/{preset}.png").read_bytes()
+            self.assertEqual(data[24:26], b"\x08\x06", preset)
+            offset, compressed = 8, bytearray()
+            while offset < len(data):
+                length = int.from_bytes(data[offset:offset + 4], "big")
+                if data[offset + 4:offset + 8] == b"IDAT":
+                    compressed.extend(data[offset + 8:offset + 8 + length])
+                offset += length + 12
+            self.assertEqual(zlib.decompress(compressed)[4], 0, preset)
+
+    def test_overview_workflow_also_captures_all_layout_previews(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            binary = base / "QOwnNotes"
+            binary.touch()
+            output = base / "images"
+            calls = []
+            def capture(args, preset, target, profile, cloud_url=None):
+                calls.append((preset, target.relative_to(output).as_posix(), args.layout_previews))
+            with patch("sys.argv", ["screenshots.py", "--binary", str(binary), "--overview",
+                                    "--output", str(output), "--settle", "0"]), \
+                    patch.dict(os.environ, {"KDE_SESSION_VERSION": "6"}), \
+                    patch.object(screenshots.shutil, "which", return_value="/fake/tool"), \
+                    patch.object(screenshots, "systemd_environment", return_value={}), \
+                    patch.object(screenshots, "binary_version", return_value=screenshots.source_version()), \
+                    patch.object(screenshots, "run", return_value=""), \
+                    patch.object(screenshots, "capture", side_effect=capture):
+                screenshots.main()
+            self.assertEqual(len(calls), len(screenshots.OVERVIEW) + 5)
+            self.assertEqual(calls[-5:], [(preset, filename, True) for preset, filename in
+                                         screenshots.LAYOUT_PREVIEWS.items()])
+            self.assertTrue(all(not call[2] for call in calls[:-5]))
+
+    def test_layout_preview_publishing_preserves_transparent_png_bytes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            capture = root / "capture"
+            (capture / "layout-previews").mkdir(parents=True)
+            destination = root / "layouts"
+            # A real transparent 1x1 RGBA PNG, not a flattened RGB image.
+            import struct
+            import zlib
+            def chunk(name, data):
+                return (struct.pack(">I", len(data)) + name + data +
+                        struct.pack(">I", zlib.crc32(name + data)))
+            image = (screenshots.PNG_SIGNATURE +
+                     chunk(b"IHDR", struct.pack(">IIBBBBB", 1, 1, 8, 6, 0, 0, 0)) +
+                     chunk(b"IDAT", zlib.compress(b"\0\0\0\0\0")) + chunk(b"IEND", b""))
+            for preset, filename in screenshots.LAYOUT_PREVIEWS.items():
+                (capture / filename).write_bytes(image)
+            published = screenshots.publish(capture, (root / "website",), destination)
+            self.assertEqual(len(published), 5)
+            for preset in screenshots.PRESETS:
+                self.assertEqual((destination / f"{preset}.png").read_bytes(), image)
+            self.assertEqual(list((root / "website").glob("*.png")), [])
+
     def test_document_overview_has_a_long_note_and_guarded_automation(self):
         with tempfile.TemporaryDirectory() as directory:
             base = Path(directory)

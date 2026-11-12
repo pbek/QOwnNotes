@@ -20,6 +20,7 @@ from screenshot_server import CALENDAR, demo_server
 
 ROOT = Path(__file__).resolve().parent.parent
 PRESETS = ("minimal", "full", "preview-only", "full-vertical", "1col")
+LAYOUT_PREVIEWS = {preset: f"layout-previews/{preset}.png" for preset in PRESETS}
 SCENARIOS = {
     **{preset: preset for preset in PRESETS},
     "subfolders": "full",
@@ -178,21 +179,24 @@ def latest_overview_capture(base=ROOT / "build-screenshots"):
     return captures[-1]
 
 
-def publish(source, destinations=PUBLISH_DIRECTORIES):
-    """Copy reviewed overview images over the website and repository screenshots."""
+def publish(source, destinations=PUBLISH_DIRECTORIES, layout_destination=ROOT / "src/images/layouts"):
+    """Publish reviewed carousel images and built-in layout previews without flattening alpha."""
     source = source.absolute()
     if not source.is_dir():
         raise RuntimeError(f"Capture directory not found: {source}")
     images = [source / name for name in OVERVIEW.values() if (source / name).is_file()]
-    if not images:
-        raise RuntimeError(f"No overview images found in {source}.")
+    previews = [source / name for name in LAYOUT_PREVIEWS.values() if (source / name).is_file()]
+    if not images and not previews:
+        raise RuntimeError(f"No overview images or layout previews found in {source}.")
     # Validate everything first so a bad file never leaves a partial update behind.
-    for image in images:
+    for image in images + previews:
         with image.open("rb") as file:
             if file.read(len(PNG_SIGNATURE)) != PNG_SIGNATURE:
                 raise RuntimeError(f"Not a PNG image: {image}")
     for destination in destinations:
         destination.mkdir(parents=True, exist_ok=True)
+    if previews:
+        layout_destination.mkdir(parents=True, exist_ok=True)
     print(f"Publishing from {source}", flush=True)
     for image in images:
         for destination in destinations:
@@ -201,10 +205,16 @@ def publish(source, destinations=PUBLISH_DIRECTORIES):
                 continue
             shutil.copyfile(image, target)
             print(f"Replaced {target}")
+    for image in previews:
+        target = layout_destination / image.name
+        if target.is_file() and target.read_bytes() == image.read_bytes():
+            continue
+        shutil.copyfile(image, target)
+        print(f"Replaced {target}")
     skipped = sorted(set(OVERVIEW.values()) - {image.name for image in images})
     if skipped:
         print("Kept existing: " + ", ".join(skipped))
-    return images
+    return images + previews
 
 
 def selected_note(scenario):
@@ -558,7 +568,7 @@ def copy_demo_notes(source, target):
         path.chmod(path.stat().st_mode | 0o200)
 
 
-def prepare_profile(base, preset, cloud_url=None):
+def prepare_profile(base, preset, cloud_url=None, layout_preview=False):
     scenario = preset
     if cloud_url:
         url_port(cloud_url)
@@ -675,9 +685,13 @@ def prepare_profile(base, preset, cloud_url=None):
     layouts = {}
     for workspace, _, workspace_scenario, workspace_preset in workspaces:
         values = layout_settings(workspace_preset)
-        values["windowState"] = screenshot_window_state(
-            workspace_scenario, workspace_preset, values["windowState"],
-            font_scale(desktop_config))
+        if layout_preview:
+            # Preserve the exact preset bytes while normalizing legacy INI escape spelling.
+            values["windowState"] = encode_state(decode_state(values["windowState"]))
+        else:
+            values["windowState"] = screenshot_window_state(
+                workspace_scenario, workspace_preset, values["windowState"],
+                font_scale(desktop_config))
         layouts[workspace] = values
     layout = layouts[workspaces[0][0]]
     settings = (
@@ -781,7 +795,9 @@ def prepare_profile(base, preset, cloud_url=None):
     for key in ("QOWNNOTES_SCREENSHOT_SCENE", "QOWNNOTES_SCREENSHOT_ROOT"):
         env.pop(key, None)
     env["QOWNNOTES_SCREENSHOT_ROOT"] = str(base)
-    if scenario in NATIVE_SCENES:
+    if layout_preview:
+        env["QOWNNOTES_SCREENSHOT_SCENE"] = "layout-preview"
+    elif scenario in NATIVE_SCENES:
         env["QOWNNOTES_SCREENSHOT_SCENE"] = scenario
     return env, session
 
@@ -857,7 +873,8 @@ def activate(window):
 
 
 def capture(args, preset, output, base, cloud_url=None):
-    env, session = prepare_profile(base, preset, cloud_url)
+    env, session = prepare_profile(base, preset, cloud_url,
+                                   layout_preview=getattr(args, "layout_previews", False))
     binary = prepare_portable(base, args.binary, env, session) if preset == "portable" else args.binary
     command = [str(binary), "--session", session, "--allow-multiple-instances"]
     if preset == "portable":
@@ -897,6 +914,16 @@ def capture(args, preset, output, base, cloud_url=None):
                     width = min(width, round(WINDOW_WIDTHS[preset] * args.scale))
                 run("kdotool", "windowsize", window, str(width), str(args.height))
                 activate(window)
+                if getattr(args, "layout_previews", False):
+                    # Refill and repaint the note after restoring/resizing older dock states.
+                    (base / "scene-resized").touch()
+                    deadline = time.monotonic() + 45
+                    while not (base / "scene-ready").is_file() and time.monotonic() < deadline:
+                        if process.poll() is not None:
+                            break
+                        time.sleep(0.2)
+                    if not (base / "scene-ready").is_file():
+                        raise RuntimeError("Layout preview did not become ready; rebuild with `just nix-build`.")
             if preset == "diff":
                 # Change the note behind the app's back while it is active, so it asks
                 # about the change in a dialog instead of a desktop notification.
@@ -955,7 +982,9 @@ def main():
     selection.add_argument("--presets", nargs="+", choices=SCENARIOS,
                            default=None)
     selection.add_argument("--overview", action="store_true",
-                           help="Capture supported overview carousel scenes with website filenames")
+                           help="Capture carousel scenes and all five built-in layout previews")
+    selection.add_argument("--layout-previews", action="store_true",
+                           help="Capture all five unmodified built-in layout presets with transparent margins")
     selection.add_argument("--publish", type=Path, nargs="?", metavar="CAPTURE_DIR",
                            const=False,
                            help="Replace website and repository screenshots with reviewed "
@@ -975,7 +1004,7 @@ def main():
     if args.publish is not None:
         publish(args.publish or latest_overview_capture())
         return
-    args.presets = (list(OVERVIEW) if args.overview else args.presets or
+    args.presets = (list(PRESETS) if args.layout_previews else list(OVERVIEW) if args.overview else args.presets or
                     ["minimal", "full", "preview-only", "subfolders", "darkmode"])
     args.scale = font_scale(Path(os.environ.get("XDG_CONFIG_HOME",
                                                 Path.home() / ".config")))
@@ -999,11 +1028,16 @@ def main():
         parser.error(f"{args.binary} is version {actual or 'unknown'}, but the source is "
                      f"{expected}; rebuild with `just nix-build` or pass --any-version.")
     args.output = args.output.absolute()
-    targets = [args.output / (OVERVIEW[preset] if args.overview else
+    targets = [args.output / (LAYOUT_PREVIEWS[preset] if args.layout_previews else OVERVIEW[preset] if args.overview else
                              f"qownnotes-{preset}.png") for preset in args.presets]
     if any(path.exists() for path in targets):
         parser.error("Output images already exist; choose a new --output directory.")
     args.output.mkdir(parents=True, exist_ok=True)
+    if args.layout_previews or args.overview:
+        preview_directory = args.output / "layout-previews"
+        if preview_directory.exists() and any(preview_directory.iterdir()):
+            parser.error("Layout preview images already exist; choose a new --output directory.")
+        preview_directory.mkdir(exist_ok=True)
     if args.overview:
         coverage = overview_coverage()
         pending = sum(status != "automated" for status in coverage.values())
@@ -1030,6 +1064,13 @@ def main():
                         server = stack.enter_context(demo_server(note))
                         cloud_url = f"http://127.0.0.1:{server.server_port}"
                     capture(args, preset, output, Path(directory), cloud_url)
+        if args.overview:
+            args.layout_previews = True
+            for preset, name in LAYOUT_PREVIEWS.items():
+                temporary_root = "/tmp/opencode" if Path("/tmp/opencode").is_dir() else None
+                with tempfile.TemporaryDirectory(prefix="qownnotes-layout-preview-",
+                                                  dir=temporary_root) as directory:
+                    capture(args, preset, args.output / name, Path(directory))
         if args.overview:
             (args.output / "overview-coverage.json").write_text(
                 json.dumps(coverage, indent=2) + "\n")

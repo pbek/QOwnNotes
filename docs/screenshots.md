@@ -31,6 +31,7 @@ just screenshots --presets full preview-only --output /tmp/opencode/demo-shots
 just screenshots --binary /path/to/QOwnNotes --settle 8
 just screenshots --presets subfolders darkmode
 just screenshots --overview
+just screenshots --layout-previews
 ```
 
 Available presets: `minimal`, `full`, `preview-only`, `full-vertical`, `1col`,
@@ -71,6 +72,9 @@ current Plasma desktop.
 from the [overview carousel](https://www.qownnotes.org/getting-started/overview.html),
 including the **Nextcloud Deck dialog**, using website filenames in a new output
 directory. Capture and publishing do not change the carousel component.
+The overview capture also writes all five built-in layout previews into
+`layout-previews/`, using the actual presets rather than the carousel's adjusted
+panel sizes. Use `just screenshots --layout-previews` to capture only these images.
 
 | Scene                                        | Preset                | Website filename                          |
 | -------------------------------------------- | --------------------- | ----------------------------------------- |
@@ -146,6 +150,11 @@ both `webpage/src/.vuepress/public/screenshots/` (website carousel) and
 `screenshots/` (README and AppStream metadata), which are kept identical. All
 images are checked to be PNG files before anything is replaced, and unchanged
 images are skipped. Review the result with `git diff --stat` and commit it.
+Known images in `layout-previews/` are also copied into `src/images/layouts/`, for
+the welcome screen and layout preset dialog. PNG alpha is preserved byte-for-byte;
+no background color is added. To publish a previews-only capture, pass its directory
+explicitly to `just screenshots-publish`. Older overview captures without this
+subdirectory leave the built-in previews unchanged.
 
 ### Portable, encryption, PDF and cloud fixtures
 
@@ -198,7 +207,8 @@ just screenshots-vm
 This boots a disposable QEMU VM with Plasma 6 Wayland, stock Breeze Light,
 Noto Sans 10 pt, a 1920×1200 virtual screen at 1× scaling, and the application's
 KDE build from the same pinned nixpkgs. It runs the existing overview capture
-script inside the guest, then copies all carousel PNGs and `overview-coverage.json`
+script inside the guest, then copies all carousel PNGs, the five PNGs in
+`layout-previews/`, and `overview-coverage.json`
 into a new `build-screenshots/<timestamp>-vm/` directory. `vm-info.json` records
 the guest configuration. Review the images and publish with the usual recipe:
 

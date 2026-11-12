@@ -112,6 +112,7 @@ in
     import json
     import shlex
     import struct
+    import zlib
     from datetime import timedelta
     from pathlib import Path
 
@@ -157,6 +158,21 @@ in
     coverage = json.loads((output / "overview-coverage.json").read_text())
     expected = {name for name, status in coverage.items() if status == "automated"}
     assert {image.name for image in images} == expected, "Overview images do not match coverage"
+    previews = list((output / "layout-previews").glob("*.png"))
+    assert {image.stem for image in previews} == {"minimal", "full", "preview-only", "full-vertical", "1col"}
+    for image in previews:
+        data = image.read_bytes()
+        assert data[24:26] == b"\x08\x06", f"Layout preview must retain RGBA: {image}"
+        offset = 8
+        compressed = bytearray()
+        while offset < len(data):
+            length = int.from_bytes(data[offset:offset + 4], "big")
+            if data[offset + 4:offset + 8] == b"IDAT":
+                compressed.extend(data[offset + 8:offset + 8 + length])
+            offset += length + 12
+        # At the first pixel all PNG filter predictors are zero, so alpha is byte four.
+        assert zlib.decompress(compressed)[4] == 0, f"Opaque layout preview margin: {image}"
+    images += previews
     for image in images:
         data = image.read_bytes()
         assert data.startswith(b"\x89PNG\r\n\x1a\n"), image
