@@ -16,6 +16,24 @@
   - Updated Ratatui and `lru` to address RUSTSEC-2026-0002 and RUSTSEC-2026-0253,
     removed the unmaintained `paste` dependency and replaced a yanked `clipboard-win` release
   - Building from source now requires Rust 1.89 or newer, up from 1.88
+- There is an upcoming release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v26.11.1](https://github.com/qownnotes/qownnotes-android/releases/tag/v26.11.1)
+  - Tap images to view them full screen, zoom, pan and copy them without downloading them again
+    or passing private addresses to another app
+    (for [#46](https://github.com/qownnotes/qownnotes-android/issues/46))
+    - Annotate images with drawing tools and text, then insert, replace or copy the annotated image;
+      the original file is never overwritten
+  - Added **Take photo** to the editor toolbar and a **Reduce photo resolution** setting,
+    enabled by default, with configurable sizes; reduced photos omit location metadata
+    (for [#45](https://github.com/qownnotes/qownnotes-android/issues/45))
+    - Fixed sideways photos and synchronized photos larger than 5 MB appearing blank
+  - Long-press a task's checkbox to open block actions, including the new **Copy block** action
+    that preserves nested items and checkbox states; long-pressing task text now selects it
+    (for [#53](https://github.com/qownnotes/qownnotes-android/issues/53))
+    - Copying selected table content now includes cell text separated by tabs instead of blank lines
+  - Note-list selection now shows checkboxes and announces selection states to screen readers
+    (for [#41](https://github.com/qownnotes/qownnotes-android/issues/41))
+  - Fixed Deck card loading and error updates running outside the UI thread
 
 ## 26.11.7
 
