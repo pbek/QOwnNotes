@@ -58,6 +58,42 @@ class ScreenshotTests(unittest.TestCase):
                                 ("Noto Sans,9,-1,5", 1.0), ("Inter,12.5,-1,5", 1.25)):
                 (config / "kdeglobals").write_text(f"[General]\nfont={font}\n")
                 self.assertAlmostEqual(screenshots.font_scale(config), scale)
+
+    def test_unattended_desktop_needs_no_active_window_before_capture(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            binary = base / "QOwnNotes"
+            binary.touch()
+            arguments = ["screenshots.py", "--binary", str(binary), "--presets", "minimal",
+                         "--output", str(base / "images"), "--settle", "0"]
+            error = screenshots.subprocess.CalledProcessError(1, ["kdotool", "getactivewindow"])
+            with patch("sys.argv", arguments), \
+                    patch.dict(os.environ, {"KDE_SESSION_VERSION": "6"}), \
+                    patch.object(screenshots.shutil, "which", return_value="/fake/tool"), \
+                    patch.object(screenshots, "systemd_environment", return_value={}), \
+                    patch.object(screenshots, "binary_version", return_value=screenshots.source_version()), \
+                    patch.object(screenshots, "run", side_effect=error), \
+                    patch.object(screenshots, "capture") as capture:
+                screenshots.main()
+                capture.assert_called_once()
+
+    def test_read_only_demo_fixtures_get_writable_private_copies(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "source"
+            source.mkdir()
+            (source / "Ideas.md").write_text("# Ideas\n")
+            (source / "Ideas.md").chmod(0o444)
+            source.chmod(0o555)
+            try:
+                target = root / "demo"
+                screenshots.copy_demo_notes(source, target)
+                (target / "Projects").mkdir()
+                (target / "Ideas.md").write_text("# More ideas\n")
+                self.assertEqual((source / "Ideas.md").read_text(), "# Ideas\n")
+                self.assertEqual((source / "Ideas.md").stat().st_mode & 0o777, 0o444)
+            finally:
+                source.chmod(0o755)
     def test_window_state_round_trips_through_qt_escapes(self):
         for preset in screenshots.PRESETS:
             with self.subTest(preset=preset):

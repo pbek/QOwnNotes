@@ -137,6 +137,33 @@ screenshots *args:
 screenshots-publish capture_dir="":
     python3 ./scripts/screenshots.py --publish {{ capture_dir }}
 
+# Capture all overview scenes in an isolated Plasma VM, with fresh images on each run
+[group('screenshots')]
+screenshots-vm *args:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [[ ! -r /dev/kvm || ! -w /dev/kvm ]]; then
+        echo "Screenshot VMs require Linux with access to /dev/kvm." >&2
+        exit 1
+    fi
+    stamp=$(date +%Y%m%d-%H%M%S-%N)
+    result=$(QON_SCREENSHOT_RUN="$stamp" nix build '{{ nixBuildFlake }}#checks.x86_64-linux.screenshots' --impure --no-link --print-out-paths -L {{ args }})
+    output="build-screenshots/$stamp-vm"
+    mkdir -p build-screenshots
+    cp -R "$result/screenshots" "$output"
+    chmod -R u+w "$output"
+    echo "VM screenshots: $output"
+    echo "Capture log: $result/capture.log"
+
+# Open the screenshot VM driver for debugging without replacing the application's result link
+[group('screenshots')]
+screenshots-vm-interactive:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    driver=$(nix build '{{ nixBuildFlake }}#checks.x86_64-linux.screenshots.driverInteractive' --no-link --print-out-paths -L)
+    echo "Run start_all() to boot Plasma, or test_script() to capture the overview."
+    "$driver/bin/nixos-test-driver"
+
 # Build the application for nix with the nixpkgs of the running system instead of the
 # locked one, so the Qt version matches the desktop environment and its Qt plugins,
 # like the KDE Plasma platform theme, can be loaded

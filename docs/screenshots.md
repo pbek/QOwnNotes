@@ -178,6 +178,51 @@ profile before automating anything. Capture waits for the helper's readiness fil
 instead of photographing a loading overlay; an older binary fails with a rebuild
 message even if its release version is identical.
 
+## Capturing in an isolated NixOS VM
+
+On an x86_64 Linux host with Nix and read/write access to `/dev/kvm`:
+
+```bash
+just screenshots-vm
+```
+
+This boots a disposable QEMU VM with Plasma 6 Wayland, stock Breeze Light,
+Noto Sans 10 pt, a 1920×1200 virtual screen at 1× scaling, and the application's
+KDE build from the same pinned nixpkgs. It runs the existing overview capture
+script inside the guest, then copies all carousel PNGs and `overview-coverage.json`
+into a new `build-screenshots/<timestamp>-vm/` directory. `vm-info.json` records
+the guest configuration. Review the images and publish with the usual recipe:
+
+```bash
+just screenshots-publish build-screenshots/<timestamp>-vm
+```
+
+No host desktop, display session, GPU passthrough, personal configuration or server
+credentials are needed. KWin uses software OpenGL rendering with llvmpipe and legacy
+virtio modesetting (QPainter did not produce Spectacle images in testing). The guest has 4 virtual CPUs
+and 4 GiB RAM; its external network access is restricted, and cloud scenes use the
+same guest-local demo API. Unlike desktop capture, the images use the VM's fixed
+appearance rather than your host theme. The first build downloads the Plasma
+closure and may build QOwnNotes; later runs reuse those dependencies.
+With dependencies cached, the complete 23-scene run took about ten minutes in testing.
+
+The `just` recipe supplies a fresh run identifier so each invocation actually boots
+the VM and captures new images, instead of returning a cached test result. It does
+not overwrite the application's `result` link or publish any images automatically.
+The capture log path is printed after a successful run. To keep failed Nix build
+directories for diagnosis, use `just screenshots-vm --keep-failed`.
+
+For interactive debugging:
+
+```bash
+just screenshots-vm-interactive
+```
+
+At the Python driver prompt, `start_all()` boots the guest and `test_script()` runs
+the capture. The normal recipe is headless; the interactive driver opens a VM window.
+The VM definition lives in `tests/vm/screenshots.nix` and is exposed as
+`checks.x86_64-linux.screenshots` in `flake.nix`.
+
 ## Isolation and testing
 
 Each capture uses temporary settings, data, cache, copies of the demo notes and

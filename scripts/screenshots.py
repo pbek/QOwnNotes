@@ -534,6 +534,13 @@ def screenshot_window_state(scenario, preset, value, scale=1.0):
     return encode_state(data)
 
 
+def copy_demo_notes(source, target):
+    shutil.copytree(source, target)
+    # Nix store fixtures are read-only. Only the private copies need to be editable.
+    for path in (target, *target.rglob("*")):
+        path.chmod(path.stat().st_mode | 0o200)
+
+
 def prepare_profile(base, preset, cloud_url=None):
     scenario = preset
     if cloud_url:
@@ -542,8 +549,8 @@ def prepare_profile(base, preset, cloud_url=None):
     config = base / "config"
     (config / "PBE").mkdir(parents=True)
     notes = base / "Demo notes"
-    shutil.copytree(ROOT / ("scripts/screenshot-notes-ru" if scenario == "russian" else
-                            "scripts/screenshot-notes"), notes)
+    copy_demo_notes(ROOT / ("scripts/screenshot-notes-ru" if scenario == "russian" else
+                           "scripts/screenshot-notes"), notes)
     if scenario == "portable":
         (notes / "Portable notes.md").write_text(
             "# Portable notes\n\n## Your notebook, wherever you go\n\n"
@@ -955,7 +962,11 @@ def main():
         pending = sum(status != "automated" for status in coverage.values())
         print(f"Overview: capturing {len(OVERVIEW)} scenes; {pending} still need "
               "dedicated fixtures (see docs/screenshots.md).", flush=True)
-    active = run("kdotool", "getactivewindow")
+    try:
+        active = run("kdotool", "getactivewindow")
+    except subprocess.CalledProcessError:
+        # An unattended Plasma desktop can have no active window to restore.
+        active = ""
     print(f"Window size: {args.width}x{args.height} logical pixels "
           f"(desktop font scale {args.scale:g})", flush=True)
     print("Capturing demo windows. Please avoid switching focus until finished.", flush=True)

@@ -197,6 +197,13 @@
 
       checks.x86_64-linux = {
         qownnotes = (pkgsFor "x86_64-linux").testers.runNixOSTest ./tests/vm/qownnotes.nix;
+        screenshots = (pkgsFor "x86_64-linux").testers.runNixOSTest {
+          imports = [ ./tests/vm/screenshots.nix ];
+          _module.args = {
+            qownnotes = self.packages.x86_64-linux.qownnotes-qt6-kde;
+            captureRun = builtins.getEnv "QON_SCREENSHOT_RUN";
+          };
+        };
         qownnotes-kde = self.packages.x86_64-linux.qownnotes-qt6-kde.overrideAttrs (old: {
           cmakeFlags = old.cmakeFlags ++ [
             "-DDEV_MODE=ON"
