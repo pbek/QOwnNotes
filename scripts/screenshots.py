@@ -25,6 +25,8 @@ SCENARIOS = {
     "subfolders": "full",
     "darkmode": "full",
     "note-relations": "full",
+    "document-overview": "full",
+    "backlinks": "full",
     "distraction-free": "minimal",
     "search-all-notes": "full",
     "search-current-note": "full",
@@ -48,6 +50,8 @@ OVERVIEW = {
     "minimal": "screenshot-minimal.png",
     "full-vertical": "screenshot-vertical.png",
     "note-relations": "screenshot-note-relations.png",
+    "document-overview": "screenshot-document-overview.png",
+    "backlinks": "screenshot-backlinks.png",
     "1col": "screenshot-1col.png",
     "darkmode": "screenshot-darkmode.png",
     "distraction-free": "screenshot-distraction-free-mode.png",
@@ -89,7 +93,8 @@ DIALOGS = {
     "nextcloud-deck": ("Manage Nextcloud Deck Cards", (1280, 850)),
 }
 CLOUD_SCENES = {"todo", "trash", "versioning", "nextcloud-deck"}
-NATIVE_SCENES = CLOUD_SCENES | {"portable", "encrypted", "encrypted-unlocked", "export-print"}
+NATIVE_SCENES = CLOUD_SCENES | {"portable", "encrypted", "encrypted-unlocked", "export-print",
+                                "document-overview", "backlinks"}
 # A helper script selects the word in the current note, then triggers the search action,
 # which searches for the selected text.
 SEARCHES = {
@@ -99,6 +104,8 @@ SEARCHES = {
 # The note that is selected on startup and expected in the main window title.
 SELECTED_NOTES = {
     "note-relations": "Connected ideas",
+    "document-overview": "A notebook for small adventures",
+    "backlinks": "Connected ideas",
     "russian": "Немного места для идей",
     "portable": "Portable notes",
 }
@@ -146,6 +153,7 @@ WINDOW_WIDTH = 1440
 WINDOW_HEIGHT = 960
 # The preview pane, so rendered Markdown has room to breathe.
 PREVIEW_WIDTH = 560
+DOCUMENT_OVERVIEW_WIDTH = 80
 GRAPH_WIDTH = 640
 VERTICAL_PREVIEW_HEIGHT = 400
 # The preview-only layout stacks all panels, including the note tag buttons, on the left.
@@ -503,10 +511,19 @@ def font_scale(desktop_config):
 def screenshot_window_state(scenario, preset, value, scale=1.0):
     data = decode_state(value)
     if preset == "full":
-        # Widen the right-hand dock area (index 1) holding the preview, or the graph.
+        # Keep the minimap narrow beside the readable preview in the Full preset.
         # Change only the screenshot profile, not the application's built-in preset.
-        set_dock_area_width(data, 1, round(scale * (
-            GRAPH_WIDTH if scenario == "note-relations" else PREVIEW_WIDTH)))
+        graph = scenario == "note-relations"
+        preview_width = round(scale * (GRAPH_WIDTH if graph else PREVIEW_WIDTH))
+        # The minimap contains no UI text, so keep its minimum width even with larger fonts.
+        overview_width = DOCUMENT_OVERVIEW_WIDTH
+        overview = "documentOverviewDockWidget"
+        set_dock_geometry(data, overview, 0, overview_width)
+        set_dock_geometry(data, "notePreviewDockWidget", overview_width + 6, preview_width)
+        if graph:
+            # The graph scene already fills the right side; hide the minimap in this scene.
+            data[find_once(data, dock_name(overview), overview) + len(dock_name(overview))] = 0
+        set_dock_area_width(data, 1, preview_width + (0 if graph else overview_width + 6))
     if scenario == "note-relations":
         # Reuse the generously sized preview dock for the graph, hiding the preview.
         data = rename_dock(data, "notePreviewDockWidget", "noteGraphicsViewDockWidget")
@@ -559,7 +576,27 @@ def prepare_profile(base, preset, cloud_url=None):
             "Settings and application data stay beside the executable.\n\n"
             "- [x] Keep your notes together\n- [x] Take your workspace with you\n"
             "- [ ] Start your next small adventure\n")
-    if scenario == "note-relations":
+    if scenario == "document-overview":
+        (notes / f"{selected_note(scenario)}.md").write_text(
+            "# A notebook for small adventures\n\n"
+            "A place to collect ideas, follow a thread, and make room for what matters.\n\n" +
+            "\n".join(
+                f"## {heading}\n\n{paragraph}\n\n"
+                "- [x] Collect an idea worth keeping\n"
+                "- [ ] Explore a connection\n- [ ] Make something small\n\n"
+                "> Leave a little room for the unexpected.\n\n"
+                "### Field notes\n\n"
+                "Keep the details here and return to them when the next idea arrives.\n\n"
+                for heading, paragraph in (
+                    ("Make space", "Your notes. Your files. Your own space."),
+                    ("Follow your curiosity", "A good question is the beginning of an adventure."),
+                    ("Gather inspiration", "Collect thoughts from books, walks, and conversations."),
+                    ("Connect the dots", "Link a new idea to something you already know."),
+                    ("From inspiration to action", "Turn a good idea into a first draft."),
+                    ("A simple daily rhythm", "Reflect, make something, and leave room to grow."),
+                    ("Look back", "Small steps add up to something worth keeping."),
+                    ("The next adventure", "Everything starts with a note."))))
+    if scenario in ("note-relations", "backlinks"):
         for old, new in (("A little room for ideas", "Connected ideas"),
                          ("Project field notes", "Projects"),
                          ("Reading journal", "Reading"),
@@ -574,6 +611,13 @@ def prepare_profile(base, preset, cloud_url=None):
             "- [Weekends](Weekends.md)\n\n"
             "## From inspiration to action\n\n"
             "Collect a thought, explore a connection, make something new.\n")
+        if scenario == "backlinks":
+            for name, context in (("Projects", "Turn connected ideas into a first draft."),
+                                  ("Reading", "Keep a thread from your reading."),
+                                  ("Weekends", "Make room for a small adventure.")):
+                with (notes / f"{name}.md").open("a") as note:
+                    note.write(f"\n## Follow a thread\n\n{context}\n\n"
+                               "See [Connected ideas](Connected%20ideas.md#follow-a-thread).\n")
     if scenario in ("subfolders", "darkmode"):
         for filename, folder in (
                 ("Project field notes.md", "Projects/Small adventures"),
@@ -803,10 +847,13 @@ def find_window(process, title, timeout):
 
 
 def activate(window):
-    run("kdotool", "windowactivate", window)
-    time.sleep(1)
-    if run("kdotool", "getactivewindow") != window:
-        raise RuntimeError("Could not activate the demo window; capture cancelled.")
+    # KWin can delay activation while a modal dialog or resized window is being mapped.
+    for _ in range(5):
+        run("kdotool", "windowactivate", window)
+        time.sleep(1)
+        if run("kdotool", "getactivewindow") == window:
+            return
+    raise RuntimeError("Could not activate the demo window; capture cancelled.")
 
 
 def capture(args, preset, output, base, cloud_url=None):

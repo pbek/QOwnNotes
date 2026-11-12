@@ -191,7 +191,7 @@ QString LayoutPresetWidget::getLayoutPresetDescription(const QString &layoutPres
     } else if (layoutPresetIdentifier == QLatin1String("full")) {
         return tr("Most of the panels, like the note list on the left, the "
                   "tagging panels, the note edit panel in the center and the "
-                  "preview panel on the right are enabled by default.",
+                  "document overview and preview panels on the right are enabled by default.",
                   "Layout preset description") +
                centralWidgetAddText;
     } else if (layoutPresetIdentifier == QLatin1String("preview-only")) {

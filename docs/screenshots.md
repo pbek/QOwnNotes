@@ -37,13 +37,16 @@ Available presets: `minimal`, `full`, `preview-only`, `full-vertical`, `1col`,
 `subfolders`, `darkmode`, `note-relations`, `distraction-free`, `search-all-notes`,
 `search-current-note`, `other-workspace`, `russian`, `diff`, `scripting`, `note-folders`,
 `portable`, `encrypted`, `encrypted-unlocked`, `export-print`, `todo`, `trash`,
-`versioning`, `nextcloud-deck`.
+`versioning`, `nextcloud-deck`, `document-overview`, `backlinks`.
 By default, `minimal`, `full`, `preview-only`, `subfolders`, and `darkmode` are
 captured. The layouts come from the application's built-in layout presets, with
 a larger preview so the rendered Markdown is readable: 560 logical pixels wide
 in the `full`, `subfolders`, and `darkmode` screenshots and 400 pixels high above
 the editor in `full-vertical`. The note relations scene replaces the preview with
-a 640-pixel graph and linked demo notes. `preview-only` gets a 400-pixel-wide
+a 640-pixel graph and linked demo notes. Full also includes a narrow document
+overview minimap at its 80-pixel minimum between the editor and preview; it is hidden only for the graph
+scene. The built-in Full preset includes it for newly selected layouts, without
+changing existing saved workspaces. `preview-only` gets a 400-pixel-wide
 left column with 60 pixels of height for the note tag buttons; both grow with
 your Plasma font size (for example 560×84 with a 14 pt font), since larger fonts
 make the buttons larger. The app's first-run limit that caps the note tags panel
@@ -64,7 +67,7 @@ current Plasma desktop.
 
 ## Refreshing the website overview
 
-`just screenshots --overview` captures **all twenty-three scenes**
+`just screenshots --overview` captures **all twenty-five scenes**
 from the [overview carousel](https://www.qownnotes.org/getting-started/overview.html),
 including the **Nextcloud Deck dialog**, using website filenames in a new output
 directory. Capture and publishing do not change the carousel component.
@@ -75,6 +78,8 @@ directory. Capture and publishing do not change the carousel component.
 | Minimal layout                               | `minimal`             | `screenshot-minimal.png`                  |
 | Preview above the editor, colored tags       | `full-vertical`       | `screenshot-vertical.png`                 |
 | Linked notes and relations graph             | `note-relations`      | `screenshot-note-relations.png`           |
+| Long note and document overview minimap      | `document-overview`   | `screenshot-document-overview.png`        |
+| Incoming links in the Backlinks tab          | `backlinks`           | `screenshot-backlinks.png`                |
 | Narrow one-column layout                     | `1col`                | `screenshot-1col.png`                     |
 | Dark mode, colored tags and subfolders       | `darkmode`            | `screenshot-darkmode.png`                 |
 | Distraction-free editing                     | `distraction-free`    | `screenshot-distraction-free-mode.png`    |
@@ -97,6 +102,10 @@ directory. Capture and publishing do not change the carousel component.
 
 How the newer scenes are set up, all inside the temporary profile:
 
+- `document-overview` creates a long, structured note and scrolls into its middle
+  so the minimap highlights the visible portion. `backlinks` creates three notes
+  linking to a heading in the selected note, then selects the populated Backlinks
+  tab in Navigation. Both work in local and VM captures.
 - `other-workspace` has two workspaces, `Reading` (the preview-only layout, active)
   and `Writing`, so the workspace selector in the toolbar shows a non-default
   workspace.
@@ -204,7 +213,7 @@ and 4 GiB RAM; its external network access is restricted, and cloud scenes use t
 same guest-local demo API. Unlike desktop capture, the images use the VM's fixed
 appearance rather than your host theme. The first build downloads the Plasma
 closure and may build QOwnNotes; later runs reuse those dependencies.
-With dependencies cached, the complete 23-scene run took about ten minutes in testing.
+With dependencies cached, the original 23-scene run took about ten minutes in testing.
 
 The `just` recipe supplies a fresh run identifier so each invocation actually boots
 the VM and captures new images, instead of returning a cached test result. It does

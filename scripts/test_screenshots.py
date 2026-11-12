@@ -94,6 +94,16 @@ class ScreenshotTests(unittest.TestCase):
                 self.assertEqual((source / "Ideas.md").stat().st_mode & 0o777, 0o444)
             finally:
                 source.chmod(0o755)
+
+    def test_activation_waits_for_delayed_focus_and_still_rejects_other_windows(self):
+        with patch.object(screenshots.time, "sleep"), \
+                patch.object(screenshots, "run", side_effect=["", "other", "", "demo"]):
+            screenshots.activate("demo")
+        with patch.object(screenshots.time, "sleep"), \
+                patch.object(screenshots, "run", return_value="other"):
+            with self.assertRaisesRegex(RuntimeError, "capture cancelled"):
+                screenshots.activate("demo")
+
     def test_window_state_round_trips_through_qt_escapes(self):
         for preset in screenshots.PRESETS:
             with self.subTest(preset=preset):
@@ -230,8 +240,10 @@ class ScreenshotTests(unittest.TestCase):
                 self.assertIn(f"]({name}.md)", text)
                 self.assertTrue((base / f"Demo notes/{name}.md").is_file())
             _, state = window_state(base, session)
-            self.assertIn(b"\0\0\0\x01" + screenshots.GRAPH_WIDTH.to_bytes(4, "big") +
-                          b"\0\0\0\0\xfc", state)
+            self.assertEqual(dock_geometry(state, "noteGraphicsViewDockWidget")[1],
+                             screenshots.GRAPH_WIDTH)
+            overview = screenshots.dock_name("documentOverviewDockWidget")
+            self.assertEqual(state[state.index(overview) + len(overview)], 0)
             self.assertIn(screenshots.dock_name("noteGraphicsViewDockWidget"), state)
             self.assertEqual(state.count(screenshots.dock_name("notePreviewDockWidget")), 1)
             self.assertNotIn(screenshots.dock_name("logDockWidget"), state)
@@ -245,7 +257,7 @@ class ScreenshotTests(unittest.TestCase):
         self.assertEqual(coverage["screenshot-darkmode.png"], "automated")
         self.assertEqual(coverage["screenshot-versioning.png"], "automated")
         self.assertTrue(all(status == "automated" for status in coverage.values()))
-        self.assertEqual(len(coverage), 23)
+        self.assertEqual(len(coverage), 25)
         self.assertTrue(set(screenshots.OVERVIEW).issubset(screenshots.SCENARIOS))
 
     def test_every_carousel_image_is_published_in_the_repository(self):
@@ -520,13 +532,70 @@ class ScreenshotTests(unittest.TestCase):
                     # First-run dock limits would cap the note tags panel at 40 pixels.
                     self.assertTrue(settings.getboolean("General", "dockWasInitializedOnce"))
                     if preset == "full":
-                        self.assertIn(b"\0\0\0\x01" +
-                                      screenshots.PREVIEW_WIDTH.to_bytes(4, "big") +
-                                      b"\0\0\0\0\xfc", state)
+                        self.assertEqual(dock_geometry(state, "notePreviewDockWidget")[1],
+                                         screenshots.PREVIEW_WIDTH)
+                        self.assertEqual(dock_geometry(state, "documentOverviewDockWidget")[1],
+                                         screenshots.DOCUMENT_OVERVIEW_WIDTH)
                     elif preset in ("full-vertical", "preview-only"):
                         self.assertNotEqual(state, original)
                     else:
                         self.assertEqual(state, original)
+
+    def test_only_full_preset_includes_the_document_overview(self):
+        name = screenshots.dock_name("documentOverviewDockWidget")
+        for preset in screenshots.PRESETS:
+            state = screenshots.decode_state(screenshots.layout_settings(preset)["windowState"])
+            if preset == "full":
+                self.assertEqual(state[state.index(name) + len(name)], 1)
+                self.assertEqual(dock_geometry(state, "documentOverviewDockWidget")[1], 80)
+            else:
+                self.assertNotIn(name, state)
+
+    def test_document_overview_has_a_long_note_and_guarded_automation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            env, session = prepare_scenario(base, "document-overview")
+            text = (base / "Demo notes" / f"{screenshots.selected_note('document-overview')}.md").read_text()
+            self.assertGreater(len(text.splitlines()), 120)
+            self.assertIn("## From inspiration to action", text)
+            self.assertEqual(env["QOWNNOTES_SCREENSHOT_SCENE"], "document-overview")
+            _, state = window_state(base, session)
+            self.assertEqual(dock_geometry(state, "documentOverviewDockWidget")[1], 80)
+
+    def test_document_overview_keeps_minimum_width_with_larger_fonts(self):
+        value = screenshots.layout_settings("full")["windowState"]
+        for scale in (1.0, 1.4, 2.0):
+            state = screenshots.decode_state(
+                screenshots.screenshot_window_state("document-overview", "full", value, scale))
+            self.assertEqual(dock_geometry(state, "documentOverviewDockWidget")[1], 80)
+            self.assertEqual(dock_geometry(state, "notePreviewDockWidget")[1],
+                             round(screenshots.PREVIEW_WIDTH * scale))
+
+    def test_publishing_includes_both_new_carousel_screenshots(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            capture = root / "capture"
+            capture.mkdir()
+            destinations = (root / "website", root / "repository")
+            for scene in ("document-overview", "backlinks"):
+                name = screenshots.OVERVIEW[scene]
+                self.assertEqual(screenshots.overview_coverage()[name], "automated")
+                (capture / name).write_bytes(screenshots.PNG_SIGNATURE + scene.encode())
+            images = screenshots.publish(capture, destinations)
+            self.assertEqual(len(images), 2)
+            for image in images:
+                for destination in destinations:
+                    self.assertEqual((destination / image.name).read_bytes(), image.read_bytes())
+
+    def test_backlinks_have_three_incoming_heading_links(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            env, _ = prepare_scenario(base, "backlinks")
+            self.assertEqual(env["QOWNNOTES_SCREENSHOT_SCENE"], "backlinks")
+            for name in ("Projects", "Reading", "Weekends"):
+                text = (base / f"Demo notes/{name}.md").read_text()
+                self.assertIn("](Connected%20ideas.md#follow-a-thread)", text)
+            self.assertIn("## Follow a thread", (base / "Demo notes/Connected ideas.md").read_text())
 
     def test_all_presets_have_required_settings(self):
         for preset in screenshots.PRESETS:

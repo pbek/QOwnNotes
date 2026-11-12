@@ -7,9 +7,12 @@
 #include <QFileInfo>
 #include <QLineEdit>
 #include <QListWidget>
+#include <QPlainTextEdit>
 #include <QPrintPreviewDialog>
 #include <QPrinter>
+#include <QScrollBar>
 #include <QSettings>
+#include <QTabWidget>
 #include <QTextDocument>
 #include <QTimer>
 #include <QTreeWidget>
@@ -39,6 +42,39 @@ void ScreenshotScenario::initialize(MainWindow *window) {
         }
     };
     QTimer::singleShot(2000, window, [window, scene, root, ready]() {
+        if (scene == QStringLiteral("document-overview")) {
+            auto *edit = window->findChild<QPlainTextEdit *>(QStringLiteral("noteTextEdit"));
+            if (!edit) {
+                return;
+            }
+            // Show a viewport in the middle of the long note rather than at its beginning.
+            QTimer::singleShot(500, window, [edit, ready]() {
+                auto *scroll = edit->verticalScrollBar();
+                scroll->setValue(scroll->maximum() / 2);
+                QTimer::singleShot(500, edit, ready);
+            });
+            return;
+        }
+        if (scene == QStringLiteral("backlinks")) {
+            auto *timer = new QTimer(window);
+            timer->setInterval(200);
+            QObject::connect(timer, &QTimer::timeout, window, [window, timer, ready]() {
+                auto *tree = window->findChild<QTreeWidget *>(QStringLiteral("backlinkWidget"));
+                auto *tabs = window->findChild<QTabWidget *>(QStringLiteral("navigationTabWidget"));
+                auto *tab = window->findChild<QWidget *>(QStringLiteral("backlinkTab"));
+                if (!tree || !tabs || !tab || tree->topLevelItemCount() < 3 ||
+                    tabs->indexOf(tab) < 0) {
+                    return;
+                }
+                tabs->setCurrentWidget(tab);
+                tree->expandAll();
+                timer->stop();
+                timer->deleteLater();
+                ready();
+            });
+            timer->start();
+            return;
+        }
         if (scene == QStringLiteral("export-print")) {
             // Use only the PDF paint engine. No system printers or native print dialog.
             auto *printer = new QPrinter(QPrinter::HighResolution);

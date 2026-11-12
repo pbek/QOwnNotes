@@ -251,6 +251,9 @@ void LayoutManager::restoreCurrentLayout() {
         _mainWindow->setCentralWidgetIdentifier(centralWidget);
     }
 
+    // Older layouts do not mention the overview dock. Do not carry its visibility
+    // from a newer Full layout into Minimal or an existing saved workspace.
+    _mainWindow->setDockWidgetVisible(QStringLiteral("documentOverviewDockWidget"), false);
     _mainWindow->restoreState(
         settings.value(QStringLiteral("layout-") + uuid + QStringLiteral("/windowState"))
             .toByteArray());

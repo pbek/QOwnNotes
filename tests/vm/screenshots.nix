@@ -142,6 +142,8 @@ in
         machine.succeed(alice(command) + " > /home/alice/capture.log 2>&1", timeout=timedelta(seconds=900))
     except Exception:
         machine.screenshot("capture-failure")
+        # Retain completed scenes in the kept build directory when a later capture fails.
+        machine.copy_from_machine("/home/alice/screenshots")
         print(machine.succeed("journalctl -b _UID=1000 --no-pager | tail -n 100"))
         raise
     finally:

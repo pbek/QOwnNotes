@@ -33,6 +33,21 @@
     </v-carousel-item>
     <v-carousel-item>
       <img
+        src="/screenshots/screenshot-document-overview.png"
+        alt="Document overview minimap"
+      />
+      <div class="sheet">
+        Navigate long notes with the document overview minimap
+      </div>
+    </v-carousel-item>
+    <v-carousel-item>
+      <img src="/screenshots/screenshot-backlinks.png" alt="Backlinks panel" />
+      <div class="sheet">
+        Discover notes that link to the current note with Backlinks
+      </div>
+    </v-carousel-item>
+    <v-carousel-item>
+      <img
         src="/screenshots/screenshot-portable-mode.png"
         alt="Portable mode"
       />
