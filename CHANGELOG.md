@@ -21,6 +21,31 @@
   - Existing saved workspaces are unchanged; select the Full preset to use the new arrangement
 - Fixed the **Document overview** panel remaining visible when switching from Full to
   **Minimal** or an older saved workspace that does not include the panel
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v26.11.2](https://github.com/qownnotes/qownnotes-android/releases/tag/v26.11.2)
+  - Browse Nextcloud folders in **Note settings** and choose from existing note folders,
+    with note counts and an indication of whether QOwnNotes desktop uses them
+    (for [#54](https://github.com/qownnotes/qownnotes-android/issues/54))
+    - Account setup offers to switch folders when the current folder is empty or other folders
+      contain notes; nothing changes without your choice, and no files are moved
+  - Images are now saved as WebP and shrunk by default, with separate switches for camera photos,
+    chosen images and annotated copies in the renamed **Images** settings
+    - PNG graphics are converted losslessly, and originals are kept when conversion or scaling
+      would not make them smaller; chosen images up to 30 MB are supported while shrinking is enabled
+  - Shrink existing images from the full-screen viewer, compare file sizes and replace the image
+    in the note or insert a smaller copy; the original file stays in the media folder
+  - Swipe between a note's images in the full-screen viewer and inspect image details, including
+    format, resolution, file size and camera metadata, with **Show on map** for recorded locations
+  - Fixed entering edit mode from a scrolled note sometimes placing the cursor at the end
+- The [26.11.1 release](https://github.com/qownnotes/qownnotes-nextcloud/releases/tag/v26.11.1) of
+  [QOwnNotes for Nextcloud](https://github.com/qownnotes/qownnotes-nextcloud) improves note folder selection
+  (for [qownnotes-android#54](https://github.com/qownnotes/qownnotes-android/issues/54))
+  - Fixed taking over the Nextcloud Notes app's folder on first use, so localized folders like
+    `Notizen` no longer result in a separate `Notes` folder
+  - Choose a note folder with the Nextcloud file picker or from detected existing note folders
+    in settings; changes take effect only when saved, and no notes are moved
+    - An empty note list also offers to use another folder that already contains notes
+  - Added the `GET settings/note-folder-candidates` Notes API extension to list existing note folders
 
 ## 26.11.8
 
