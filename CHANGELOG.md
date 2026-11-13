@@ -4,6 +4,8 @@
 
 - Fixed developer-mode builds with older Qt versions and GCC 14 or newer failing on
   a warning in Qt's headers
+- Fixed Qt5 developer-mode builds with GCC 11 or newer failing on a false-positive
+  allocation warning in Qt's `QSharedPointer` implementation
 - The **local trash** and **server trash** dialogs now support bulk operations on many notes
   - A **Select all** checkbox below the list selects or deselects all notes that match the
     current search, and shows a partial state when only some of them are selected

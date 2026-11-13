@@ -201,6 +201,13 @@ if(UNIX AND DEV_MODE)
                                                 VERSION_GREATER_EQUAL 14)
       target_compile_options(QOwnNotes PRIVATE -Wno-error=template-id-cdtor)
     endif()
+
+    # Qt5's QSharedPointer placement delete triggers a false positive in GCC 11+
+    if(NOT QON_QT6_BUILD
+       AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
+       AND CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 11)
+      target_compile_options(QOwnNotes PRIVATE -Wno-error=mismatched-new-delete)
+    endif()
   endif()
 endif()
 

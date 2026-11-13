@@ -657,6 +657,11 @@ CONFIG(DEV_MODE) {
         gcc:!clang:greaterThan(QMAKE_GCC_MAJOR_VERSION, 13) {
             QMAKE_CXXFLAGS += -Wno-error=template-id-cdtor
         }
+
+        # Qt5's QSharedPointer placement delete triggers a false positive in GCC 11+
+        gcc:!clang:greaterThan(QMAKE_GCC_MAJOR_VERSION, 10):lessThan(QT_MAJOR_VERSION, 6) {
+            QMAKE_CXXFLAGS += -Wno-error=mismatched-new-delete
+        }
     }
 }
 
