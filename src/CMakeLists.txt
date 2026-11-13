@@ -195,6 +195,12 @@ if(UNIX AND DEV_MODE)
   if(NOT APPLE)
     message("Werror enabled on linux")
     target_compile_options(QOwnNotes PRIVATE -Werror)
+
+    # Older Qt headers trigger this warning introduced in GCC 14
+    if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION
+                                                VERSION_GREATER_EQUAL 14)
+      target_compile_options(QOwnNotes PRIVATE -Wno-error=template-id-cdtor)
+    endif()
   endif()
 endif()
 

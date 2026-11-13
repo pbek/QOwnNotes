@@ -652,6 +652,11 @@ CONFIG(DEV_MODE) {
 
         # Suppress warnings-as-errors from bundled qtkeychain sources
         QMAKE_CXXFLAGS += -Wno-error=cast-function-type -Wno-error=switch
+
+        # Older Qt headers trigger this warning introduced in GCC 14
+        gcc:!clang:greaterThan(QMAKE_GCC_MAJOR_VERSION, 13) {
+            QMAKE_CXXFLAGS += -Wno-error=template-id-cdtor
+        }
     }
 }
 
