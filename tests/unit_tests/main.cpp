@@ -14,6 +14,7 @@
 #include "testcases/app/test_network.h"
 #include "testcases/app/test_nextclouddeckdialog.h"
 #include "testcases/app/test_nextclouddeckservice.h"
+#include "testcases/app/test_notefolderdetection.h"
 #include "testcases/app/test_notes.h"
 #include "testcases/app/test_openaiservice.h"
 #include "testcases/app/test_previewdetails.h"
@@ -71,6 +72,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestTouchScrolling(), argc, argv) +
                          QTest::qExec(new TestUtilsGit(), argc, argv) +
                          QTest::qExec(new TestUtilsMisc(), argc, argv) +
+                         QTest::qExec(new TestNoteFolderDetection(), argc, argv) +
                          QTest::qExec(new TestPreviewDetails(), argc, argv) +
 #ifdef LANGUAGETOOL_ENABLED
                          QTest::qExec(new TestLanguageTool(), argc, argv) +

@@ -748,6 +748,8 @@ set(SOURCE_FILES
     utils/gui.h
     utils/listutils.cpp
     utils/listutils.h
+    utils/notefolderdetection.cpp
+    utils/notefolderdetection.h
     utils/markdownformatting.cpp
     utils/markdownformatting.h
     utils/schema.cpp

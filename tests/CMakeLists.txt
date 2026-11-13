@@ -126,6 +126,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckservice.h
     ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckdialog.cpp
     ${QON_TESTS_DIR}/testcases/app/test_nextclouddeckdialog.h
+    ${QON_TESTS_DIR}/testcases/app/test_notefolderdetection.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_notefolderdetection.h
     ${QON_TESTS_DIR}/testcases/app/test_notes.cpp
     ${QON_TESTS_DIR}/testcases/app/test_notes.h
     ${QON_TESTS_DIR}/testcases/app/test_openaiservice.cpp
@@ -268,6 +270,8 @@ set(APP_SOURCE_FILES
     widgets/markdownformattoolbar.cpp
     widgets/markdownformattoolbar.h
     utils/listutils.h
+    utils/notefolderdetection.cpp
+    utils/notefolderdetection.h
     utils/misc.cpp
     utils/misc.h
     utils/previewdetails.cpp

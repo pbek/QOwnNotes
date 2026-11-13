@@ -214,6 +214,7 @@ SOURCES += main.cpp\
     utils/gui.cpp \
     utils/cli.cpp \
     utils/listutils.cpp \
+    utils/notefolderdetection.cpp \
     utils/markdownformatting.cpp \
     utils/schema.cpp \
     dialogs/welcomedialog.cpp \
@@ -394,6 +395,7 @@ HEADERS  += mainwindow.h \
     utils/gui.h \
     utils/cli.h \
     utils/listutils.h \
+    utils/notefolderdetection.h \
     utils/markdownformatting.h \
     utils/schema.h \
     dialogs/welcomedialog.h \
