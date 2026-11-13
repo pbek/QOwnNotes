@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>608</width>
-    <height>458</height>
+    <width>680</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -175,7 +175,7 @@
           <string>Note folder</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="4" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="errorMessageLabel">
             <property name="styleSheet">
              <string notr="true">* { color: #d9534f; }</string>
@@ -195,7 +195,17 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="1" column="0">
+           <widget class="QLabel" name="noteFolderHintLabel">
+            <property name="text">
+             <string>If you already use QOwnNotes or Nextcloud Notes on another device or on the web, select the folder that contains these notes in your locally synchronized Nextcloud folder. Depending on your language, it may be named "Notes", "Notizen" or something else.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
            <widget class="QCheckBox" name="createNoteFolderCheckBox">
             <property name="text">
              <string>Create note folder if not existing</string>
@@ -205,7 +215,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="3" column="0">
            <widget class="QFrame" name="noteFolderSelectFrame">
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
@@ -250,11 +260,83 @@
             </layout>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="5" column="0">
            <widget class="QCheckBox" name="showNoteSubFoldersCheckBox">
             <property name="text">
              <string>Show subfolders</string>
             </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QFrame" name="noteFolderCandidatesFrame">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="noteFolderCandidatesLayout">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>6</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="noteFolderCandidatesHeadlineLabel">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Existing note folders found</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="noteFolderCandidatesLabel">
+               <property name="text">
+                <string>These folders already seem to contain notes. Click one to use it, so your notes are not split between different folders.</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="noteFolderCandidatesListWidget">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::SingleSelection</enum>
+               </property>
+               <property name="spacing">
+                <number>1</number>
+               </property>
+               <property name="verticalScrollMode">
+                <enum>QAbstractItemView::ScrollPerPixel</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>

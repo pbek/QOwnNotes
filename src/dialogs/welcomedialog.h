@@ -1,6 +1,7 @@
 #pragma once
 
 #include "masterdialog.h"
+class QListWidgetItem;
 class QSettings;
 
 namespace Ui {
@@ -31,6 +32,11 @@ class WelcomeDialog : public MasterDialog {
 
     void on_networkSettingsButton_clicked();
 
+    void on_noteFolderCandidatesListWidget_itemClicked(QListWidgetItem *item);
+
+    void on_noteFolderCandidatesListWidget_currentItemChanged(QListWidgetItem *current,
+                                                              QListWidgetItem *previous);
+
    private:
     Ui::WelcomeDialog *ui;
     bool _allowFinishButton;
@@ -38,6 +44,21 @@ class WelcomeDialog : public MasterDialog {
     QSettings *_layoutSettings;
 
     bool handleNoteFolderSetup();
+
+    void initNoteFolderCandidates();
+
+    void setNotesPath(const QString &path);
+
+    void useNoteFolderCandidate(QListWidgetItem *item);
+
+    void selectNoteFolderCandidate(const QString &path);
+
+    void updateNoteFolderCandidateColors();
+
+    QWidget *createNoteFolderCandidateWidget(const QString &path, const QString &details,
+                                             bool isQOwnNotesFolder);
+
+    bool confirmNewNoteFolderCreation();
 
     void updateStepInfo();
 

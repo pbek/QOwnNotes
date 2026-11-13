@@ -2,6 +2,16 @@
 
 ## 26.11.9
 
+- The **welcome dialog** now finds local folders that already contain notes, so your
+  notes are no longer split between a new `Notes` folder and an existing one
+  (for [qownnotes-android#54](https://github.com/qownnotes/qownnotes-android/issues/54))
+  - Folders like a localized Nextcloud Notes folder (e.g. `Notizen`) in your local
+    Nextcloud / ownCloud sync folder, or existing QOwnNotes note folders, are listed with
+    their number of notes, and you can choose one to use it as note folder
+  - Before creating a new note folder while such folders exist, you are asked whether you
+    want to use an existing folder instead; no folder is ever selected automatically
+  - **Show subfolders** is enabled when the chosen folder has notes in subfolders,
+    like Nextcloud Notes categories
 - Refreshed all five **layout preset previews** in the welcome screen and layout preset dialog
   - Transparent screenshot margins now show the dialog's background correctly in light and
     dark mode instead of a mismatched light rectangle
