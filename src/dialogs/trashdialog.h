@@ -2,6 +2,7 @@
 #define TRASHDIALOG_H
 
 #include <QList>
+#include <QStringList>
 
 #include "masterdialog.h"
 
@@ -11,8 +12,10 @@ class TrashDialog;
 
 class MainWindow;
 class QAbstractButton;
+class QAction;
 class QPushButton;
 class QJSValue;
+class QListWidgetItem;
 class QSplitter;
 
 class TrashDialog : public MasterDialog {
@@ -30,6 +33,12 @@ class TrashDialog : public MasterDialog {
     void on_trashListWidget_currentRowChanged(int currentRow);
     void dialogButtonClicked(QAbstractButton *button);
     void on_searchLineEdit_textChanged(const QString &arg1);
+    void onSelectAllCheckBoxClicked();
+    void selectAllVisibleItems();
+    void clearSelection();
+    void restoreSelectedNotesOnServer();
+    void downloadSelectedNotes();
+    void deleteSelectedNotesOnServer();
 
    private:
     enum ButtonRole {
@@ -42,9 +51,20 @@ class TrashDialog : public MasterDialog {
 
     Ui::TrashDialog *ui;
     QSplitter *trashSplitter;
-    QList<QPushButton *> _actionButtons;
+    QPushButton *_restoreButton = nullptr;
+    QPushButton *_downloadButton = nullptr;
+    QPushButton *_deleteButton = nullptr;
+    QAction *_restoreAction = nullptr;
+    QAction *_downloadAction = nullptr;
+    QAction *_deleteAction = nullptr;
+    QAction *_selectAllAction = nullptr;
+    QAction *_clearSelectionAction = nullptr;
     void setupMainSplitter();
+    void setupContextMenu();
     void updatePreviewInfo();
+    int visibleItemCount() const;
+    QList<QListWidgetItem *> selectedVisibleItems() const;
+    QString failedNotesHtml(const QStringList &names) const;
 };
 
 #endif    // TRASHDIALOG_H

@@ -92,11 +92,44 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="trashCountLabel">
-          <property name="text">
-           <string notr="true"/>
+         <layout class="QHBoxLayout" name="selectionLayout">
+          <property name="spacing">
+           <number>6</number>
           </property>
-         </widget>
+          <item>
+           <widget class="QCheckBox" name="selectAllCheckBox">
+            <property name="toolTip">
+             <string>Select or deselect all trashed notes in the list</string>
+            </property>
+            <property name="text">
+             <string>Select all</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="selectionSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="trashCountLabel">
+            <property name="text">
+             <string notr="true"/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>

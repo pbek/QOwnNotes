@@ -2,6 +2,19 @@
 
 ## 26.11.9
 
+- The **local trash** and **server trash** dialogs now support bulk operations on many notes
+  - A **Select all** checkbox below the list selects or deselects all notes that match the
+    current search, and shows a partial state when only some of them are selected
+  - The server trash now allows selecting multiple notes, to restore, download or delete
+    them all at once
+  - Buttons show how many notes they will affect, and the note count shows how many
+    notes are selected
+  - The list has a context menu with all actions, **Select all** (`Ctrl + A`) and
+    **Clear selection**, and `Delete` removes the selected notes
+  - Longer operations show a cancelable progress dialog, and notes that couldn't be
+    restored, removed or deleted are listed afterwards
+  - The note name and details above the preview have more spacing, so they no longer
+    stick to the list
 - The **welcome dialog** now finds local folders that already contain notes, so your
   notes are no longer split between a new `Notes` folder and an existing one
   (for [qownnotes-android#54](https://github.com/qownnotes/qownnotes-android/issues/54))

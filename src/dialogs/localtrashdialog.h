@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QList>
 #include <QStringList>
 
 #include "masterdialog.h"
@@ -13,6 +14,7 @@ class QTreeWidgetItem;
 class QSplitter;
 class QAbstractButton;
 class QPushButton;
+class QAction;
 
 class LocalTrashDialog : public MasterDialog {
     Q_OBJECT
@@ -26,6 +28,9 @@ class LocalTrashDialog : public MasterDialog {
     void dialogButtonClicked(QAbstractButton *button);
     void on_trashTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void on_searchLineEdit_textChanged(const QString &arg1);
+    void onSelectAllCheckBoxClicked();
+    void selectAllVisibleItems();
+    void clearSelection();
 
    private:
     enum ButtonRole {
@@ -39,10 +44,14 @@ class LocalTrashDialog : public MasterDialog {
     QSplitter *trashSplitter;
     QPushButton *_restoreButton = nullptr;
     QPushButton *_removeButton = nullptr;
-    QStringList *dataList;
-    QList<int> *timestampList;
+    QAction *_restoreAction = nullptr;
+    QAction *_removeAction = nullptr;
+    QAction *_selectAllAction = nullptr;
+    QAction *_clearSelectionAction = nullptr;
 
     void setupMainSplitter();
+
+    void setupContextMenu();
 
     void loadTrashedNotes();
 
@@ -51,4 +60,10 @@ class LocalTrashDialog : public MasterDialog {
     void removeSelectedTrashItems();
 
     void updatePreviewInfo();
+
+    int visibleItemCount() const;
+
+    QList<QTreeWidgetItem *> selectedVisibleItems() const;
+
+    QString failedNotesHtml(const QStringList &names) const;
 };

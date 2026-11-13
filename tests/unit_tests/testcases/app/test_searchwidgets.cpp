@@ -1,5 +1,6 @@
 #include "test_searchwidgets.h"
 
+#include <QCheckBox>
 #include <QComboBox>
 #include <QJSEngine>
 #include <QLineEdit>
@@ -346,6 +347,31 @@ void TestSearchWidgets::testCloudTrashTextSearch() {
     for (int row = 0; row < list->count(); ++row) {
         QVERIFY(!list->item(row)->isHidden());
     }
+
+    // Select all must only select the notes that match the search
+    auto *selectAll = dialog.findChild<QCheckBox *>(QStringLiteral("selectAllCheckBox"));
+    QVERIFY(selectAll);
+    search->setText(QStringLiteral("another"));
+
+    // The only matching note became the current one, so it is already selected
+    QCOMPARE(selectAll->checkState(), Qt::Checked);
+    selectAll->click();
+    QVERIFY(list->selectedItems().isEmpty());
+    QCOMPARE(selectAll->checkState(), Qt::Unchecked);
+    selectAll->click();
+    QCOMPARE(list->selectedItems().count(), 1);
+    QCOMPARE(list->selectedItems().first()->data(Qt::UserRole).toString(),
+             QStringLiteral("third.md"));
+    QCOMPARE(selectAll->checkState(), Qt::Checked);
+
+    search->clear();
+    QCOMPARE(selectAll->checkState(), Qt::PartiallyChecked);
+    selectAll->click();
+    QCOMPARE(list->selectedItems().count(), list->count());
+    QCOMPARE(selectAll->checkState(), Qt::Checked);
+    selectAll->click();
+    QVERIFY(list->selectedItems().isEmpty());
+    QCOMPARE(selectAll->checkState(), Qt::Unchecked);
 }
 
 void TestSearchWidgets::testFailedSearchPreservesPosition_data() {
