@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.11.10
+
+- Fixed emoji headings replacing filenames in the **note list** when filenames are allowed
+  to differ from note headings, so filenames can be edited in the list again
+  (for [#3851](https://github.com/pbek/QOwnNotes/issues/3851))
+
 ## 26.11.9
 
 - Fixed developer-mode builds with older Qt versions and GCC 14 or newer failing on

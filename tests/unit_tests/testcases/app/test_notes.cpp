@@ -59,6 +59,56 @@ QString TestNotes::uniqueTestName(const QString &baseName) const {
 #endif
 }
 
+void TestNotes::testEmojiDisplayName_data() {
+    QTest::addColumn<bool>("allowDifferentFileName");
+    QTest::addColumn<QString>("text");
+    QTest::addColumn<QString>("name");
+    QTest::addColumn<QString>("expectedName");
+    QTest::addColumn<QString>("expectedEmoji");
+
+    const QString emoji = QString::fromUtf8("😀");
+    const QString name = QStringLiteral("test.01");
+    QTest::newRow("independent-filename")
+        << true << emoji + QStringLiteral(" Heading\nBody") << name << name << emoji;
+    QTest::newRow("independent-filename-markdown-heading")
+        << true << QStringLiteral("\n# ") + emoji + QStringLiteral(" Heading\nBody") << name << name
+        << emoji;
+    QTest::newRow("independent-filename-frontmatter")
+        << true << QStringLiteral("---\nkey: value\n---\n") + emoji + QStringLiteral(" Heading")
+        << name << name << emoji;
+    QTest::newRow("independent-filename-with-emoji")
+        << true << emoji + QStringLiteral(" Heading") << emoji + name << emoji + name << emoji;
+    QTest::newRow("independent-filename-no-emoji")
+        << true << QStringLiteral("Heading") << name << name << QString();
+    QTest::newRow("headline-derived-name")
+        << false << emoji + QStringLiteral(" Heading\nBody") << QStringLiteral("Heading")
+        << QStringLiteral("Heading") << emoji;
+    QTest::newRow("headline-derived-name-with-emoji")
+        << false << emoji + QStringLiteral(" Heading") << emoji + QStringLiteral(" Heading")
+        << QStringLiteral("Heading") << emoji;
+}
+
+void TestNotes::testEmojiDisplayName() {
+    QFETCH(bool, allowDifferentFileName);
+    QFETCH(QString, text);
+    QFETCH(QString, name);
+    QFETCH(QString, expectedName);
+    QFETCH(QString, expectedEmoji);
+
+    NoteFolder folder = NoteFolder::currentNoteFolder();
+    const QString key = QStringLiteral("allowDifferentNoteFileName");
+    const QVariant previous = folder.settingsValue(key);
+    const auto restoreSetting = qScopeGuard([&]() { folder.setSettingsValue(key, previous); });
+    folder.setSettingsValue(key, allowDifferentFileName);
+
+    Note note;
+    note.setName(name);
+    note.setNoteText(text);
+    QCOMPARE(note.getNameWithoutLeadingEmoji(), expectedName);
+    QCOMPARE(note.getLeadingEmoji(), expectedEmoji);
+    QCOMPARE(note.getName(), name);
+}
+
 void TestNotes::testResourceFileNames_data() {
     QTest::addColumn<QString>("encodedName");
     QTest::addColumn<QString>("expectedName");

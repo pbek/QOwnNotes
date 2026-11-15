@@ -679,9 +679,15 @@ QString Note::getLeadingEmoji() const {
  * Returns the display name for the note with any leading emoji (and following
  * whitespace) stripped. The emoji is sourced from the note text headline so
  * that it is available even when the filename setting removed it from _name.
+ * Independent filenames are returned unchanged so list editing uses the filename.
  * For encrypted notes being edited, the live decrypted text is used.
  */
 QString Note::getNameWithoutLeadingEmoji() const {
+    // Keep the editable filename independent of the headline, including its emoji.
+    if (allowDifferentFileName()) {
+        return _name;
+    }
+
     const QString &text = _decryptedNoteText.isEmpty() ? _noteText : _decryptedNoteText;
     const QString headline = noteHeadline(text);
     const QString emoji = extractLeadingEmoji(headline);

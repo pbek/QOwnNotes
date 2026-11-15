@@ -31,6 +31,8 @@ class TestNotes : public QObject {
     void initTestCase();
     void cleanupTestCase();
     void testNoteCreating();
+    void testEmojiDisplayName_data();
+    void testEmojiDisplayName();
     void testResourceFileNames_data();
     void testResourceFileNames();
     void testResourceCopyContainment_data();
