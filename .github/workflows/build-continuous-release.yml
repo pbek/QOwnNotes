@@ -55,7 +55,7 @@ jobs:
       - name: "⚙️ Install dependencies"
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake pkg-config libgit2-dev
+          sudo apt-get install -y cmake pkg-config libgit2-dev zsync
           sudo apt install libfuse2 desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
 
       - name: "🚧 Compile application"
@@ -141,11 +141,15 @@ jobs:
           cp -L /usr/lib/x86_64-linux-gnu/libcrypto.so.3 ${{ env.BUILD_DIR }}/usr/lib/
 
           find ${{ env.BUILD_DIR }}
-          LDAI_RUNTIME_FILE="$PWD/runtime-x86_64" \
+          # Keep continuous builds on their own update channel.
+          LDAI_UPDATE_INFORMATION="gh-releases-zsync|${GITHUB_REPOSITORY/\//|}|continuous|QOwnNotes-x86_64.AppImage.zsync" \
+            LDAI_OUTPUT=QOwnNotes-x86_64.AppImage \
+            LDAI_RUNTIME_FILE="$PWD/runtime-x86_64" \
             ./linuxdeploy-x86_64.AppImage --appdir ${{ env.BUILD_DIR }} --output appimage
 
           rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage runtime-x86_64
           test -f ${{ env.EXECUTABLE }}-x86_64.AppImage
+          test -s QOwnNotes-x86_64.AppImage.zsync
           if strings ${{ env.EXECUTABLE }}-x86_64.AppImage | grep -F 'libfuse.so.2' > /dev/null; then
             echo "The AppImage still contains the legacy dynamic FUSE runtime" >&2
             exit 1
@@ -159,6 +163,7 @@ jobs:
           name: continuous-appimage
           path: |
             src/QOwnNotes-x86_64.AppImage
+            src/QOwnNotes-x86_64.AppImage.zsync
             src/QOwnNotes-x86_64.AppImage.sha256sum
           if-no-files-found: error
 
@@ -425,6 +430,7 @@ jobs:
           ## Released files
 
           - QOwnNotes-x86_64.AppImage: Portable Linux AppImage build with Qt 6
+          - QOwnNotes-x86_64.AppImage.zsync: Metadata for AppImage delta updates
           - QOwnNotes-x86_64.AppImage.sha256sum: SHA-256 checksum for the AppImage
           - QOwnNotes-amd64.snap: Linux Snap build with Qt 6
           - QOwnNotes-amd64.snap.sha256sum: SHA-256 checksum for the Qt 6 Snap package
@@ -509,6 +515,7 @@ jobs:
           }
 
           copy_file "../release-artifacts/continuous-appimage/QOwnNotes-x86_64.AppImage" "QOwnNotes-x86_64.AppImage"
+          copy_file "../release-artifacts/continuous-appimage/QOwnNotes-x86_64.AppImage.zsync" "QOwnNotes-x86_64.AppImage.zsync"
           copy_file "../release-artifacts/continuous-appimage/QOwnNotes-x86_64.AppImage.sha256sum" "QOwnNotes-x86_64.AppImage.sha256sum"
           copy_first_match "../release-artifacts/continuous-snap-qt6/*.snap" "QOwnNotes-amd64.snap"
           copy_first_match "../release-artifacts/continuous-snap-qt6/*.snap.sha256sum" "QOwnNotes-amd64.snap.sha256sum"

@@ -53,6 +53,7 @@ jobs:
           ## Released files
 
           - QOwnNotes-x86_64.AppImage: Portable Linux AppImage build with Qt 6
+          - QOwnNotes-x86_64.AppImage.zsync: Metadata for AppImage delta updates
           - QOwnNotes-x86_64.AppImage.sha256sum: SHA-256 checksum for the AppImage
           - QOwnNotes-amd64.snap: Linux Snap build with Qt 6
           - QOwnNotes-amd64.snap.sha256sum: SHA-256 checksum for the Qt 6 Snap package
@@ -124,7 +125,7 @@ jobs:
       - name: "⚙️ Install dependencies"
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake pkg-config libgit2-dev
+          sudo apt-get install -y cmake pkg-config libgit2-dev zsync
           sudo apt install libfuse2 desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxkbcommon-x11-0
       - name: "🚧 Compile application"
         run: |
@@ -232,13 +233,16 @@ jobs:
 
           find ${{env.BUILD_DIR}}
 
-          LDAI_RUNTIME_FILE="$PWD/runtime-x86_64" \
+          # Embed the stable update channel and generate matching zsync metadata.
+          LDAI_UPDATE_INFORMATION="gh-releases-zsync|${GITHUB_REPOSITORY/\//|}|latest|QOwnNotes-x86_64.AppImage.zsync" \
+            LDAI_OUTPUT=QOwnNotes-x86_64.AppImage \
+            LDAI_RUNTIME_FILE="$PWD/runtime-x86_64" \
             ./linuxdeploy-x86_64.AppImage --appdir ${{env.BUILD_DIR}} --output appimage
 
           # Cleanup
           rm linuxdeploy-x86_64.AppImage linuxdeploy-plugin-qt-x86_64.AppImage runtime-x86_64
-          # Keep the same asset name as the old Qt5 AppImage so the update process can find it
-          mv *.AppImage ${{env.EXECUTABLE}}-x86_64.AppImage ||:
+          test -s QOwnNotes-x86_64.AppImage
+          test -s QOwnNotes-x86_64.AppImage.zsync
           if strings ${{env.EXECUTABLE}}-x86_64.AppImage | grep -F 'libfuse.so.2' > /dev/null; then
             echo "The AppImage still contains the legacy dynamic FUSE runtime" >&2
             exit 1
@@ -252,6 +256,15 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./src/QOwnNotes-x86_64.AppImage
           asset_name: QOwnNotes-x86_64.AppImage
+          tag: ${{ needs.create_release.outputs.tag }}
+          release_id: ${{ needs.create_release.outputs.release_id }}
+          overwrite: true
+      - name: "📤 Release AppImage zsync metadata"
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./src/QOwnNotes-x86_64.AppImage.zsync
+          asset_name: QOwnNotes-x86_64.AppImage.zsync
           tag: ${{ needs.create_release.outputs.tag }}
           release_id: ${{ needs.create_release.outputs.release_id }}
           overwrite: true

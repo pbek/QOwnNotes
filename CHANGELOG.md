@@ -2,6 +2,9 @@
 
 ## 26.11.10
 
+- GitHub **AppImage** builds now include `.zsync` metadata for delta updates with tools
+  like AppImageUpdate, with separate stable and continuous update channels
+  (for [#3850](https://github.com/pbek/QOwnNotes/issues/3850))
 - Fixed emoji headings replacing filenames in the **note list** when filenames are allowed
   to differ from note headings, so filenames can be edited in the list again
   (for [#3851](https://github.com/pbek/QOwnNotes/issues/3851))
