@@ -107,6 +107,90 @@ void TestQMarkdownTextEdit::testEditingWrappedListDoesNotRestoreInvalidLayout() 
                  "first paragraph- a list item long enough to wrap onto multiple visual lines"));
 }
 
+void TestQMarkdownTextEdit::testHangingIndentLinkHitTesting_data() {
+    QTest::addColumn<int>("tailItems");
+    QTest::newRow("without-scrollbar") << 0;
+    QTest::newRow("with-scrollbar") << 100;
+}
+
+void TestQMarkdownTextEdit::testHangingIndentLinkHitTesting() {
+    QFETCH(int, tailItems);
+    class Editor : public QMarkdownTextEdit {
+       public:
+        using QMarkdownTextEdit::updateLinkCursor;
+    };
+
+    Editor editor;
+    editor.resize(320, 1500);
+    editor.setFont(QFont(QStringLiteral("monospace"), 12));
+    editor.setHighlightingEnabled(false);
+    editor.setHangingIndentEnabled(true);
+    const QString listPrefix = QStringLiteral("        - [ ] ");
+    const QString listText = listPrefix + QStringLiteral("wrapped list content ").repeated(10);
+    const QString destination = QStringLiteral("https://example.org/?q=link-test");
+    editor.setPlainText(QStringLiteral("- [ ] Parent task\n    - [ ] Nested task\n") + listText +
+                        QStringLiteral("\n\n- [-] [Example](") + destination +
+                        QStringLiteral(")?\n") +
+                        QStringLiteral("- [ ] more items\n").repeated(tailItems));
+    editor.show();
+    editor.setFocus();
+    QApplication::processEvents();
+
+    const QTextBlock listBlock = editor.document()->findBlockByNumber(2);
+    const QTextLayout *originalLayout = listBlock.layout();
+    const int originalLineCount = originalLayout->lineCount();
+    QVERIFY(originalLineCount > 1);
+    const QTextLine firstLine = originalLayout->lineAt(0);
+    const qreal firstLineWidth = firstLine.width();
+    const qreal indentX = firstLine.cursorToX(listPrefix.size());
+    const qreal originalHeight = originalLayout->boundingRect().height();
+
+    // Independently calculate the painted height, including any extra lines
+    // introduced by the narrower hanging-indented continuation lines.
+    QTextLayout renderedLayout(listText, editor.document()->defaultFont());
+    renderedLayout.setTextOption(originalLayout->textOption());
+    renderedLayout.beginLayout();
+    qreal y = firstLine.y();
+    for (int i = 0;; ++i) {
+        QTextLine line = renderedLayout.createLine();
+        if (!line.isValid()) {
+            break;
+        }
+        line.setLineWidth(i == 0 ? firstLineWidth
+                                 : firstLineWidth - (indentX - firstLine.x()) +
+                                       qMax<qreal>(4.0, editor.cursorWidth() + 2.0));
+        line.setPosition(QPointF(i == 0 ? firstLine.x() : indentX, y));
+        y += line.height();
+    }
+    renderedLayout.endLayout();
+    QVERIFY(renderedLayout.lineCount() > originalLineCount);
+    const int extraHeight = qRound(renderedLayout.boundingRect().height() - originalHeight);
+
+    QTextCursor linkCursor(editor.document());
+    const QTextBlock linkBlock = editor.document()->findBlockByNumber(4);
+    linkCursor.setPosition(linkBlock.position() + linkBlock.text().indexOf("Example") + 2);
+    const QPoint paintedPosition = editor.cursorRect(linkCursor).center() + QPoint(0, extraHeight);
+    QVERIFY(editor.viewport()->rect().contains(paintedPosition));
+    QVERIFY(editor.QPlainTextEdit::cursorForPosition(paintedPosition).block() != linkBlock);
+
+    QCOMPARE(editor.cursorForPosition(paintedPosition).position(), linkCursor.position());
+    editor.updateLinkCursor(paintedPosition, Qt::ControlModifier);
+    QCOMPARE(editor.viewport()->cursor().shape(), Qt::PointingHandCursor);
+    QCOMPARE(listBlock.layout()->lineCount(), originalLineCount);
+    QCOMPARE(listBlock.layout()->lineAt(0).width(), firstLineWidth);
+
+    QSignalSpy clicked(&editor, &QMarkdownTextEdit::urlClicked);
+    QTest::keyPress(&editor, Qt::Key_Control);
+    QTest::mouseClick(editor.viewport(), Qt::LeftButton, Qt::ControlModifier, paintedPosition);
+    QTest::keyRelease(&editor, Qt::Key_Control);
+    QCOMPARE(clicked.count(), 1);
+    QCOMPARE(clicked.at(0).at(0).toString(), destination);
+
+    editor.setHangingIndentEnabled(false);
+    QCOMPARE(editor.cursorForPosition(paintedPosition).position(),
+             editor.QPlainTextEdit::cursorForPosition(paintedPosition).position());
+}
+
 void TestQMarkdownTextEdit::testToPlainTextPreservesNoBreakSpaces() {
     QMarkdownTextEdit editor;
     const QString text = QStringLiteral("U+00A0") + QChar(0x00A0) + QStringLiteral("NBSP\n") +

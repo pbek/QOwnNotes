@@ -11,6 +11,8 @@ class TestQMarkdownTextEdit : public QObject {
     void testConsecutiveTypingUsesSingleUndoStep();
     void testUpFromStartOfSecondLineMovesToFirstLine();
     void testEditingWrappedListDoesNotRestoreInvalidLayout();
+    void testHangingIndentLinkHitTesting_data();
+    void testHangingIndentLinkHitTesting();
     void testToPlainTextPreservesNoBreakSpaces();
     void testRCodeBlockHighlighting();
     void testCodeBlockLanguageAliases_data();

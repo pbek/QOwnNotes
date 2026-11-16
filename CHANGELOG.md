@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.11.11
+
+- Fixed **Ctrl-hover highlighting** and **Ctrl-clicking links** with hanging indentation
+  enabled when wrapped Markdown list items shift the links below them
+  (for [#3853](https://github.com/pbek/QOwnNotes/issues/3853))
+
 ## 26.11.10
 
 - GitHub **AppImage** builds now include `.zsync` metadata for delta updates with tools
