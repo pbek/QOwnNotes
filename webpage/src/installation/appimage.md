@@ -38,6 +38,44 @@ you can try the [AppImage built on OBS](https://download.opensuse.org/repositori
 it should be built with glibc 2.16.
 :::
 
+## Fcitx input on KDE Plasma Wayland
+
+If Chinese or other input through Fcitx 5 does not work in the AppImage on
+**KDE Plasma with native Wayland**, a global `QT_IM_MODULE=fcitx` setting may be
+the cause. The AppImage bundles its own Qt but currently does not include the
+Fcitx Qt input-method plugin. Explicitly requesting that plugin prevents Qt
+from using native Wayland input.
+
+Fully quit QOwnNotes first, including any instance in the system tray, then try:
+
+```bash
+env -u QT_IM_MODULE ./QOwnNotes-x86_64.AppImage
+```
+
+If you also have `QT_IM_MODULES` configured, unset both variables for this launch:
+
+```bash
+env -u QT_IM_MODULE -u QT_IM_MODULES ./QOwnNotes-x86_64.AppImage
+```
+
+Select **Fcitx 5** in Plasma's **System Settings → Virtual Keyboard** so that
+Plasma starts it with the required Wayland connection. See
+[Fcitx's Plasma/Wayland guidance](https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#KDE_Plasma).
+
+These commands only change the environment for this launch. If this resolves
+the problem, use the same environment override in an application-specific
+launcher rather than changing your global input-method settings.
+
+::: warning
+This workaround is for native Wayland input on KDE Plasma, not X11/XWayland.
+Do not unset input-method variables globally: other applications may need them.
+If you need direct Fcitx Qt integration, consider the native QOwnNotes package
+from your distribution instead.
+:::
+
+For the investigation and confirmed workaround, see
+[issue #3849](https://github.com/pbek/QOwnNotes/issues/3849).
+
 ## Portable mode
 
 You can run the AppImage in **portable mode** by passing the `--portable` argument:
