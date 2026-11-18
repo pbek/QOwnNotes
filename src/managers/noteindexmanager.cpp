@@ -564,11 +564,8 @@ void NoteIndexManager::updateNoteDirectoryWatcher() {
         }
     }
 
-    // Add the .git folder to the watcher if it exists
-    const QString gitPath = notePath + QDir::separator() + QStringLiteral(".git");
-    if (QDir(gitPath).exists()) {
-        addDirectoryToDirectoryWatcher(gitPath);
-    }
+    // Git-internal events are ignored by the change handlers. Watching the entire
+    // object database only adds filesystem work and can exhaust watcher resources.
 
     if (hasSubfolders) {
         const QVector<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAll();
@@ -1288,28 +1285,6 @@ bool NoteIndexManager::noteDirectoryWatcherAddPath(const QString &path) {
 
 bool NoteIndexManager::shouldIgnoreExternalNoteFolderChanges() const {
     return SettingsService().value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool();
-}
-
-void NoteIndexManager::addDirectoryToDirectoryWatcher(const QString &path) {
-    const NoteFolder noteFolder = NoteFolder::currentNoteFolder();
-    if (!noteFolder.isNotePathAllowed(path)) {
-        return;
-    }
-    QDir dir(path);
-    QFileInfoList entries =
-        dir.entryInfoList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden);
-
-    for (const QFileInfo &entryInfo : entries) {
-        QString entryPath = entryInfo.filePath();
-        if (!noteFolder.isNotePathAllowed(entryPath)) {
-            continue;
-        }
-        noteDirectoryWatcherAddPath(entryPath);
-
-        if (entryInfo.isDir()) {
-            addDirectoryToDirectoryWatcher(entryPath);    // Recursively add subdirectories
-        }
-    }
 }
 
 void NoteIndexManager::connectFileWatcher(bool delayed) {

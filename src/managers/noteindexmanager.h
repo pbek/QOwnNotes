@@ -42,7 +42,6 @@ class NoteIndexManager : public QObject {
     void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
                                     bool alsoHandleNotesWereModified = false);
     bool noteDirectoryWatcherAddPath(const QString &path);
-    void addDirectoryToDirectoryWatcher(const QString &path);
     void connectFileWatcher(bool delayed = false);
 
    public slots:

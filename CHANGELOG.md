@@ -2,6 +2,11 @@
 
 ## 26.11.11
 
+- Fixed unnecessary recursive watching of `.git` internals when a note folder is a Git
+  repository, which could cause long freezes during external-change scans on OneDrive
+  and exhaust filesystem watcher resources
+  (for [#3847](https://github.com/pbek/QOwnNotes/issues/3847))
+  - External note-change detection remains enabled, including when Git support is used
 - Fixed **Ctrl-hover highlighting** and **Ctrl-clicking links** with hanging indentation
   enabled when wrapped Markdown list items shift the links below them
   (for [#3853](https://github.com/pbek/QOwnNotes/issues/3853))

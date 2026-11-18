@@ -3502,10 +3502,6 @@ bool MainWindow::noteDirectoryWatcherAddPath(const QString &path) {
     return _noteIndexManager->noteDirectoryWatcherAddPath(path);
 }
 
-void MainWindow::addDirectoryToDirectoryWatcher(const QString &path) {
-    _noteIndexManager->addDirectoryToDirectoryWatcher(path);
-}
-
 /**
  * Updates the note directory watcher
  */

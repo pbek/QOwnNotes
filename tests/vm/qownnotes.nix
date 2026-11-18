@@ -104,6 +104,44 @@ in
 
           machine.screenshot("QOwnNotes-NewNote")
 
+      with subtest("Watch external note changes without watching Git internals"):
+          machine.send_key("ctrl-q")
+          machine.wait_until_fails("pgrep -u alice -f QOwnNotes")
+          git_paths = [
+              "/home/alice/Notes/.git/objects",
+              "/home/alice/Notes/.git/objects/0f",
+              "/home/alice/Notes/.git/objects/0f/test-object",
+              "/home/alice/Notes/.git/refs",
+              "/home/alice/Notes/.git/refs/heads",
+              "/home/alice/Notes/.git/refs/heads/main",
+          ]
+          machine.succeed("mkdir -p /home/alice/Notes/.git/objects/0f /home/alice/Notes/.git/refs/heads")
+          machine.succeed("touch /home/alice/Notes/.git/objects/0f/test-object /home/alice/Notes/.git/refs/heads/main")
+          machine.succeed("chown -R alice:users /home/alice/Notes/.git")
+
+          def watch_check(path):
+              inode = int(machine.succeed(f"stat -c %i {shlex.quote(path)}").strip())
+              return (
+                  f"grep -h -q 'inotify .* ino:{inode:x} ' "
+                  f"/proc/{watcher_pid}/fdinfo/*"
+              )
+
+          ${aliceDo "qownnotes"}
+          machine.wait_for_open_port(22222)
+          # Nix's Qt wrapper changes the process name; match the executable command line.
+          watcher_pid = machine.succeed("pgrep -u alice -f QOwnNotes").strip()
+          assert watcher_pid.isdigit(), watcher_pid
+          machine.wait_until_succeeds(watch_check("/home/alice/Notes"), timeout=timedelta(seconds=60))
+          for path in git_paths:
+              machine.fail(watch_check(path))
+
+          # A new note must still trigger re-indexing and get its own file watch.
+          external_note = "/home/alice/Notes/externally-created.md"
+          machine.succeed(f"echo External-note-watcher-test > {external_note}")
+          machine.wait_until_succeeds(watch_check(external_note), timeout=timedelta(seconds=60))
+          for path in git_paths:
+              machine.fail(watch_check(path))
+
       with subtest("Switch layouts repeatedly with keyboard shortcuts"):
           machine.send_key("ctrl-q")
           machine.wait_until_fails("pgrep -u alice -f QOwnNotes")

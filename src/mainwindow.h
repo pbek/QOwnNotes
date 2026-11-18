@@ -1342,7 +1342,6 @@ class MainWindow : public QMainWindow {
     void setupNoteRelationScene();
     void updateNoteGraphicsView();
     bool noteDirectoryWatcherAddPath(const QString &path);
-    void addDirectoryToDirectoryWatcher(const QString &path);
     bool nextCloudDeckCheck();
 
     // Methods that remain in mainwindow.cpp (delegated or full implementations)
