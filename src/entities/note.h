@@ -200,6 +200,8 @@ class Note {
     bool isFetched() const;
 
     bool copyToPath(const QString &destinationPath, QString noteFolderPath = QString());
+    bool copyToPath(const QString &destinationPath, QString noteFolderPath,
+                    QString *copiedFilePath);
 
     bool exportToPath(const QString &destinationPath, bool withAttachedFiles = false);
 

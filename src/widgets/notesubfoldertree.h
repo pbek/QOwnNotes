@@ -1,13 +1,14 @@
 #pragma once
 
-#include <QTreeWidget>
 #include <QVector>
+
+#include "notedragtreewidget.h"
 
 class NoteSubFolder;
 class Note;
 class QMenu;
 
-class NoteSubFolderTree : public QTreeWidget {
+class NoteSubFolderTree : public NoteDragTreeWidget {
     Q_OBJECT
 
    public:
@@ -26,6 +27,10 @@ class NoteSubFolderTree : public QTreeWidget {
     static void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
     static void moveSelectedNoteSubFoldersToParent(QTreeWidget *treeWidget,
                                                    int destinationParentId);
+    static void moveNoteSubFoldersToParent(QTreeWidget *treeWidget, int destinationParentId,
+                                           const QVector<int> &folderIds);
+    static void copyNoteSubFoldersToParent(QTreeWidget *treeWidget, int destinationParentId,
+                                           const QVector<int> &folderIds);
 
    public Q_SLOTS:
     void onItemExpanded(QTreeWidgetItem *item);

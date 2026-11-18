@@ -1175,6 +1175,14 @@ bool Note::remove(bool withFile) {
  * @return bool
  */
 bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
+    return copyToPath(destinationPath, std::move(noteFolderPath), nullptr);
+}
+
+bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath,
+                      QString *copiedFilePath) {
+    if (copiedFilePath) {
+        copiedFilePath->clear();
+    }
     QDir d;
     if (this->fileExists() && (d.exists(destinationPath))) {
         QFile file(fullNoteFilePath());
@@ -1197,6 +1205,9 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
         const bool isFileCopied = file.copy(destinationFileName);
         if (!isFileCopied) {
             return false;
+        }
+        if (copiedFilePath) {
+            *copiedFilePath = destinationFileName;
         }
 
         if (noteFolderPath.isEmpty()) {

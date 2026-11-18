@@ -324,7 +324,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QTreeWidget" name="noteTreeWidget">
+             <widget class="NoteDragTreeWidget" name="noteTreeWidget">
               <property name="contextMenuPolicy">
                <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
               </property>
@@ -3300,6 +3300,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
+  <customwidget>
+   <class>NoteDragTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>widgets/notedragtreewidget.h</header>
+  </customwidget>
   <customwidget>
    <class>TagChipsWidget</class>
    <extends>QWidget</extends>

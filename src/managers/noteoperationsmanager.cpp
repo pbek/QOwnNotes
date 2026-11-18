@@ -26,6 +26,7 @@
 
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
 #include <QIcon>
 #include <QInputDialog>
 #include <QMenu>
@@ -564,26 +565,38 @@ void NoteOperationsManager::copySelectedNotesToNoteSubFolderId(int noteSubFolder
  * Moves selected notes to a note subfolder
  */
 void NoteOperationsManager::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder) {
-    // Count only note items (not folders) for the confirmation dialog
-    const auto selItems = _ui->noteTreeWidget->selectedItems();
-    int noteCount = 0;
-    for (const auto *item : selItems) {
+    QVector<int> noteIds;
+    for (const auto *item : _ui->noteTreeWidget->selectedItems()) {
         if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
-            noteCount++;
+            noteIds.append(item->data(0, Qt::UserRole).toInt());
         }
     }
+    moveNotesToNoteSubFolder(noteSubFolder, noteIds);
+}
 
+void NoteOperationsManager::moveNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder,
+                                                     const QVector<int> &noteIds) {
+    QVector<int> movableNoteIds;
+    for (int id : noteIds) {
+        const Note note = Note::fetch(id);
+        if (note.isFetched() && note.fullNoteFileDirPath() != noteSubFolder.fullPath()) {
+            movableNoteIds.append(id);
+        }
+    }
+    const int noteCount = movableNoteIds.size();
     if (noteCount == 0) {
         return;
     }
 
-    const QString text = tr("Move %n selected note(s) to note subfolder "
-                            "<strong>%2</strong>?",
-                            "", noteCount)
-                             .arg(noteSubFolder.getName());
+    const QString text =
+        tr("Move %n selected note(s) to note subfolder "
+           "<strong>%2</strong>?",
+           "", noteCount)
+            .arg(noteSubFolder.isFetched() ? noteSubFolder.getName() : tr("note folder"));
 
     if (Utils::Gui::question(_mainWindow, tr("Move selected notes"), text,
                              QStringLiteral("move-notes")) == QMessageBox::Yes) {
+        _mainWindow->storeUpdatedNotesToDisk();
         const QSignalBlocker blocker(_mainWindow->noteDirectoryWatcher);
         Q_UNUSED(blocker)
 
@@ -596,12 +609,7 @@ void NoteOperationsManager::moveSelectedNotesToNoteSubFolder(const NoteSubFolder
         _mainWindow->_noteExternallyRemovedCheckEnabled = false;
 
         bool forceReload = false;
-        for (QTreeWidgetItem *item : selItems) {
-            if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
-                continue;
-            }
-
-            const int noteId = item->data(0, Qt::UserRole).toInt();
+        for (const int noteId : movableNoteIds) {
             Note note = Note::fetch(noteId);
             Note oldNote = note;
 
@@ -691,48 +699,47 @@ void NoteOperationsManager::moveSelectedNotesToNoteSubFolder(const NoteSubFolder
  * Copies selected notes to a note subfolder
  */
 void NoteOperationsManager::copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder) {
-    // Count only note items (not folders) for the confirmation dialog
-    const auto selItems = _ui->noteTreeWidget->selectedItems();
-    int noteCount = 0;
-    for (const auto *item : selItems) {
+    QVector<int> noteIds;
+    for (const auto *item : _ui->noteTreeWidget->selectedItems()) {
         if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::NoteType) {
-            noteCount++;
+            noteIds.append(item->data(0, Qt::UserRole).toInt());
         }
     }
+    copyNotesToNoteSubFolder(noteSubFolder, noteIds);
+}
 
+void NoteOperationsManager::copyNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder,
+                                                     const QVector<int> &noteIds) {
+    QVector<int> copyableNoteIds;
+    for (int id : noteIds) {
+        const Note note = Note::fetch(id);
+        if (note.isFetched()) {
+            copyableNoteIds.append(id);
+        }
+    }
+    const int noteCount = copyableNoteIds.size();
     if (noteCount == 0) {
         return;
     }
 
-    const QString text = tr("Copy %n selected note(s) to note subfolder "
-                            "<strong>%2</strong>?",
-                            "", noteCount)
-                             .arg(noteSubFolder.getName());
+    const QString text =
+        tr("Copy %n selected note(s) to note subfolder "
+           "<strong>%2</strong>?",
+           "", noteCount)
+            .arg(noteSubFolder.isFetched() ? noteSubFolder.getName() : tr("note folder"));
 
     if (Utils::Gui::question(_mainWindow, tr("Copy selected notes"), text,
                              QStringLiteral("copy-notes")) == QMessageBox::Yes) {
+        _mainWindow->storeUpdatedNotesToDisk();
         const QSignalBlocker blocker(_mainWindow->noteDirectoryWatcher);
         Q_UNUSED(blocker)
 
         int noteSubFolderCount = 0;
-        for (QTreeWidgetItem *item : selItems) {
-            if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::NoteType) {
-                continue;
-            }
-
-            const int noteId = item->data(0, Qt::UserRole).toInt();
+        QHash<QString, QVector<Tag>> copiedNoteTags;
+        for (const int noteId : copyableNoteIds) {
             Note note = Note::fetch(noteId);
 
             if (!note.isFetched()) {
-                continue;
-            }
-
-            // don't copy note if source and destination paths are the same
-            if (noteSubFolder.fullPath() == note.fullNoteFileDirPath()) {
-                qWarning() << "Note was not copied because source and "
-                              "destination paths were the same:"
-                           << note.getName();
-
                 continue;
             }
 
@@ -740,38 +747,38 @@ void NoteOperationsManager::copySelectedNotesToNoteSubFolder(const NoteSubFolder
             const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
             // copy note
-            const bool result = note.copyToPath(noteSubFolder.fullPath());
+            QString copiedFilePath;
+            const bool result =
+                note.copyToPath(noteSubFolder.fullPath(), QString(), &copiedFilePath);
             if (result) {
                 noteSubFolderCount++;
                 qDebug() << "Note was copied:" << note.getName();
-
-                // set the new subfolder so the tags are stored correctly
-                note.setNoteSubFolder(noteSubFolder);
-
-                // tag the note again
-                for (const Tag &tag : tags) {
-                    tag.linkToNote(note);
-                }
-
-                // re-link images
-                const bool mediaFileLinksUpdated = note.updateRelativeMediaFileLinks();
-
-                // re-link attachments
-                const bool attachmentFileLinksUpdated = note.updateRelativeAttachmentFileLinks();
-
-                if (mediaFileLinksUpdated || attachmentFileLinksUpdated) {
-                    note.storeNoteTextFileToDisk();
-                }
+                copiedNoteTags.insert(copiedFilePath, tags);
             } else {
                 qWarning() << "Could not copy note:" << note.getName();
             }
         }
 
-        // rebuild the index after the copy
+        // Index the actual copies before assigning tags or updating their asset links.
+        // Never reuse the original note ID or overwrite an existing destination note.
         if (noteSubFolderCount > 0) {
-            // for some reason this only works with a small delay, otherwise
-            // not all changes will be recognized
-            QTimer::singleShot(150, _mainWindow, SLOT(buildNotesIndexAndLoadNoteDirectoryList()));
+            _mainWindow->buildNotesIndexAndLoadNoteDirectoryList(true);
+            for (auto it = copiedNoteTags.cbegin(); it != copiedNoteTags.cend(); ++it) {
+                Note copy =
+                    Note::fetchByFileName(QFileInfo(it.key()).fileName(), noteSubFolder.getId());
+                if (!copy.isFetched()) {
+                    continue;
+                }
+                for (const auto &tag : it.value()) {
+                    tag.linkToNote(copy);
+                }
+                const bool mediaUpdated = copy.updateRelativeMediaFileLinks();
+                const bool attachmentsUpdated = copy.updateRelativeAttachmentFileLinks();
+                if (mediaUpdated || attachmentsUpdated) {
+                    copy.storeNoteTextFileToDisk();
+                }
+            }
+            _mainWindow->buildNotesIndexAndLoadNoteDirectoryList();
         }
 
         _mainWindow->showStatusBarMessage(

@@ -1,5 +1,24 @@
 # QOwnNotes Changelog
 
+## 26.11.12
+
+- Added **drag and drop** for copying and moving notes and subfolders in the note list and folder
+  panel, including mixed selections when the **note tree** is enabled
+  (for [#3854](https://github.com/pbek/QOwnNotes/issues/3854))
+  - Moves use the existing confirmation dialogs on drop, with **Don't ask again**
+    options; starting a drag does not show a dialog
+  - Internal drops offer a **Copy / Move** context menu at the drop position; **Ctrl-drag** selects Copy and
+    **Shift-drag** selects Move without the chooser, while confirmations remain enabled
+  - Notes cannot be dropped into their current subfolder; mixed selections skip notes
+    that are already in the destination
+  - **Shift-drag** shows a move cursor over internal targets instead of the copy cursor
+  - Folder copies include their contents and preserve note tags, never overwrite existing
+    folders, and do not follow symbolic links; links outside the copied tree may need adjustment
+  - Drags can also **copy** notes and folders to a file browser without
+    moving the originals
+  - Fixed a crash when cancelling a drop confirmation with **Escape**, caused by
+    incorrect ownership of the drag object during Qt's cleanup
+
 ## 26.11.11
 
 - Fixed unnecessary recursive watching of `.git` internals when a note folder is a Git

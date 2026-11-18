@@ -1,8 +1,12 @@
 #include "test_notes.h"
 
+#include <QAbstractButton>
+#include <QCheckBox>
 #include <QCoreApplication>
 #include <QDateTime>
 #include <QDir>
+#include <QDrag>
+#include <QDragEnterEvent>
 #include <QFile>
 #include <QFileInfo>
 #include <QFont>
@@ -10,8 +14,11 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QLineEdit>
+#include <QMenu>
 #include <QMessageBox>
+#include <QMimeData>
 #include <QPlainTextEdit>
+#include <QPointer>
 #include <QScopeGuard>
 #include <QSet>
 #include <QSqlQuery>
@@ -21,6 +28,7 @@
 #include <QTreeWidget>
 #include <QUuid>
 #include <QtTest>
+#include <memory>
 
 #include "dialogs/joplinimportdialog.h"
 #include "dialogs/localtrashdialog.h"
@@ -31,9 +39,12 @@
 #include "entities/trashitem.h"
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 #include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
+#include "mainwindow.h"
 #include "services/settingsservice.h"
+#include "utils/directorycopy.h"
 #include "utils/misc.h"
 #include "utils/urlhandler.h"
+#include "widgets/notedragtreewidget.h"
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QRandomGenerator>
@@ -57,6 +68,276 @@ QString TestNotes::uniqueTestName(const QString &baseName) const {
     // QUuid::WithoutBraces was introduced in Qt 5.11; strip the surrounding braces manually
     return baseName + QStringLiteral("-") + QUuid::createUuid().toString().mid(1, 36);
 #endif
+}
+
+namespace {
+class TestableNoteDragTree : public NoteDragTreeWidget {
+   public:
+    using NoteDragTreeWidget::canDropItems;
+    using NoteDragTreeWidget::chooseDropAction;
+    using NoteDragTreeWidget::dragEnterEvent;
+    using NoteDragTreeWidget::dragLeaveEvent;
+    using NoteDragTreeWidget::dropEvent;
+    using NoteDragTreeWidget::mimeData;
+    using NoteDragTreeWidget::setInternalDragCursor;
+    using NoteDragTreeWidget::startDrag;
+};
+}    // namespace
+
+void TestNotes::testNoteDragMimeData() {
+    NoteSubFolder parent;
+    parent.setName(uniqueTestName(QString::fromUtf8("Drag café folder")));
+    QVERIFY(parent.store());
+    NoteSubFolder child;
+    child.setName(QStringLiteral("child"));
+    child.setParentId(parent.getId());
+    QVERIFY(child.store());
+    Note nested;
+    nested.setName(uniqueTestName(QStringLiteral("Nested")));
+    nested.setNoteSubFolderId(child.getId());
+    QVERIFY(nested.store());
+    Note loose;
+    loose.setName(uniqueTestName(QString::fromUtf8("Loose café note")));
+    QVERIFY(loose.store());
+
+    TestableNoteDragTree tree;
+    auto addItem = [&tree](int id, int type) {
+        auto *item = new QTreeWidgetItem(&tree);
+        item->setData(0, Qt::UserRole, id);
+        item->setData(0, Qt::UserRole + 1, type);
+        return item;
+    };
+    // Deliberately use a flat tree: ancestor filtering must use the folder database.
+    auto *parentItem = addItem(parent.getId(), MainWindow::FolderType);
+    auto *childItem = addItem(child.getId(), MainWindow::FolderType);
+    auto *nestedItem = addItem(nested.getId(), MainWindow::NoteType);
+    auto *looseItem = addItem(loose.getId(), MainWindow::NoteType);
+    auto *rootItem = addItem(0, MainWindow::FolderType);
+    auto *invalidItem = addItem(-1, MainWindow::FolderType);
+    std::unique_ptr<QMimeData> mixed(
+        tree.mimeData({parentItem, childItem, nestedItem, looseItem, rootItem, invalidItem}));
+    QCOMPARE(mixed->urls(), QList<QUrl>({QUrl::fromLocalFile(parent.fullPath()),
+                                         QUrl::fromLocalFile(loose.fullNoteFilePath())}));
+    QVERIFY(mixed->hasFormat(QStringLiteral("application/x-qownnotes-items")));
+    QCOMPARE(tree.model()->supportedDropActions(), Qt::DropActions(Qt::CopyAction));
+    QVERIFY(!tree.model()->dropMimeData(mixed.get(), Qt::CopyAction, -1, 0, QModelIndex()));
+    std::unique_ptr<QMimeData> notes(tree.mimeData({nestedItem, looseItem}));
+    QCOMPARE(notes->urls().size(), 2);
+    QCOMPARE(notes->urls().first().toLocalFile(), nested.fullNoteFilePath());
+    std::unique_ptr<QMimeData> nestedOnly(tree.mimeData({nestedItem}));
+    QVERIFY(!tree.canDropItems(nestedOnly.get(), child.getId()));
+    QVERIFY(tree.canDropItems(nestedOnly.get(), parent.getId()));
+    std::unique_ptr<QMimeData> rootOnly(tree.mimeData({looseItem}));
+    QVERIFY(!tree.canDropItems(rootOnly.get(), 0));
+    QVERIFY(tree.canDropItems(rootOnly.get(), child.getId()));
+    QVERIFY(tree.canDropItems(notes.get(), child.getId()));
+    QVERIFY(!tree.canDropItems(mixed.get(), child.getId()));
+    std::unique_ptr<QMimeData> empty(tree.mimeData({rootItem, invalidItem}));
+    QVERIFY(empty->urls().isEmpty());
+    QVERIFY(!tree.canDropItems(empty.get(), 0));
+
+    QVERIFY(nested.remove(false));
+    QVERIFY(loose.remove(false));
+    QVERIFY(child.remove());
+    QVERIFY(parent.remove());
+}
+
+void TestNotes::testNoteDragRejectsExternalDrops() {
+    TestableNoteDragTree tree;
+    QMimeData data;
+    data.setUrls({QUrl::fromLocalFile(QStringLiteral("/external/note.md"))});
+    // A MIME marker alone must not authorize an internal move.
+    data.setData(QStringLiteral("application/x-qownnotes-items"), QByteArrayLiteral("1"));
+    QDragEnterEvent enter(QPoint(1, 1), Qt::CopyAction, &data, Qt::LeftButton, Qt::NoModifier);
+    tree.dragEnterEvent(&enter);
+    QVERIFY(!enter.isAccepted());
+    QDropEvent drop(QPointF(1, 1), Qt::CopyAction, &data, Qt::LeftButton, Qt::NoModifier);
+    QSignalSpy moves(&tree, &NoteDragTreeWidget::moveRequested);
+    tree.dropEvent(&drop);
+    QVERIFY(!drop.isAccepted());
+    QCOMPARE(moves.count(), 0);
+}
+
+void TestNotes::testNoteDragStartsWithoutConfirmation() {
+    SettingsService settings;
+    const QString key = QStringLiteral("MessageBoxOverride/drag-notes-and-folders");
+    const bool hadOverride = settings.contains(key);
+    const QVariant previousOverride = settings.value(key);
+    const auto restore = qScopeGuard([&]() {
+        if (hadOverride) {
+            settings.setValue(key, previousOverride);
+        } else {
+            settings.remove(key);
+        }
+    });
+    settings.remove(key);
+    Note note;
+    note.setName(uniqueTestName(QStringLiteral("CancelledDrag")));
+    QVERIFY(note.store());
+    TestableNoteDragTree tree;
+    auto *item = new QTreeWidgetItem(&tree);
+    item->setData(0, Qt::UserRole, note.getId());
+    item->setData(0, Qt::UserRole + 1, MainWindow::NoteType);
+    item->setSelected(true);
+    QSignalSpy saves(&tree, &NoteDragTreeWidget::saveRequested);
+    QSignalSpy moves(&tree, &NoteDragTreeWidget::moveRequested);
+    bool sawConfirmation = false;
+    QTimer::singleShot(0, &tree, [&]() {
+        auto *dialog = qobject_cast<QMessageBox *>(QApplication::activeModalWidget());
+        if (dialog) {
+            sawConfirmation = dialog->checkBox() != nullptr;
+            dialog->done(QMessageBox::No);
+        }
+        // Cancel the native drag without dropping anything or changing the filesystem.
+        QDrag::cancel();
+    });
+    tree.startDrag(Qt::CopyAction);
+    QVERIFY(!sawConfirmation);
+    QCOMPARE(saves.count(), 1);
+    QCOMPARE(moves.count(), 0);
+    if (QApplication::platformName() == QStringLiteral("minimal") ||
+        QApplication::platformName() == QStringLiteral("offscreen")) {
+        // Headless Qt schedules drag cleanup after exec(), even for a cancelled drag.
+        // A stack-allocated drag would already be destroyed here and can also be
+        // deleted while still on the stack during a nested confirmation dialog.
+        QPointer<QDrag> drag = tree.findChild<QDrag *>();
+        QVERIFY(!drag.isNull());
+        QPointer<QMimeData> mimeData = drag->mimeData();
+        QVERIFY(!mimeData.isNull());
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
+        QVERIFY(drag.isNull());
+        QVERIFY(mimeData.isNull());
+    }
+    QVERIFY(Note::fetch(note.getId()).isFetched());
+    QVERIFY(note.remove(false));
+}
+
+void TestNotes::testNoteDropChoice_data() {
+    QTest::addColumn<int>("modifiers");
+    QTest::addColumn<QString>("button");
+    QTest::addColumn<int>("expectedAction");
+    QTest::newRow("ctrl") << int(Qt::ControlModifier) << QString() << int(Qt::CopyAction);
+    QTest::newRow("shift") << int(Qt::ShiftModifier) << QString() << int(Qt::MoveAction);
+    QTest::newRow("ctrl-shift") << int(Qt::ControlModifier | Qt::ShiftModifier) << QString()
+                                << int(Qt::CopyAction);
+    QTest::newRow("choose-copy") << 0 << QStringLiteral("Copy") << int(Qt::CopyAction);
+    QTest::newRow("choose-move") << 0 << QStringLiteral("Move") << int(Qt::MoveAction);
+    QTest::newRow("escape") << 0 << QStringLiteral("Escape") << int(Qt::IgnoreAction);
+    QTest::newRow("cancel") << 0 << QStringLiteral("Cancel") << int(Qt::IgnoreAction);
+}
+
+void TestNotes::testNoteDropChoice() {
+    QFETCH(int, modifiers);
+    QFETCH(QString, button);
+    QFETCH(int, expectedAction);
+    TestableNoteDragTree tree;
+    const QPoint dropPosition(80, 80);
+    bool sawMenu = false;
+    bool atDropPosition = false;
+    if (!button.isEmpty()) {
+        QTimer::singleShot(0, &tree, [&]() {
+            auto *menu = qobject_cast<QMenu *>(QApplication::activePopupWidget());
+            if (!menu) {
+                return;
+            }
+            sawMenu = true;
+            atDropPosition = menu->geometry().contains(dropPosition);
+            if (button == QStringLiteral("Escape")) {
+                QTest::keyClick(menu, Qt::Key_Escape);
+            } else {
+                for (auto *choice : menu->actions()) {
+                    if (choice->text() == button) {
+                        QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier,
+                                          menu->actionGeometry(choice).center());
+                        return;
+                    }
+                }
+                menu->close();
+            }
+        });
+    }
+    QCOMPARE(int(tree.chooseDropAction(Qt::KeyboardModifiers(modifiers), dropPosition)),
+             expectedAction);
+    QCOMPARE(sawMenu, !button.isEmpty());
+    QCOMPARE(atDropPosition, !button.isEmpty());
+}
+
+void TestNotes::testNoteDragCursor() {
+    TestableNoteDragTree tree;
+    auto *drag = new QDrag(&tree);
+    const QPixmap copyCursor = drag->dragCursor(Qt::CopyAction);
+    tree.setInternalDragCursor(drag, Qt::ShiftModifier);
+    const QPixmap moveCursor = drag->dragCursor(Qt::CopyAction);
+    QVERIFY(!moveCursor.isNull());
+    QVERIFY(moveCursor.toImage() != copyCursor.toImage());
+    tree.setInternalDragCursor(drag, Qt::ControlModifier);
+    QCOMPARE(drag->dragCursor(Qt::CopyAction).toImage(), copyCursor.toImage());
+    tree.setInternalDragCursor(drag, Qt::ControlModifier | Qt::ShiftModifier);
+    QCOMPARE(drag->dragCursor(Qt::CopyAction).toImage(), copyCursor.toImage());
+    tree.setInternalDragCursor(drag, Qt::ShiftModifier);
+    QDragLeaveEvent leave;
+    tree.dragLeaveEvent(&leave);
+    QCOMPARE(drag->dragCursor(Qt::CopyAction).toImage(), copyCursor.toImage());
+}
+
+void TestNotes::testDirectoryCopy() {
+    QTemporaryDir temp;
+    QVERIFY(temp.isValid());
+    const QString source = temp.filePath(QString::fromUtf8("source café"));
+    const QString destination = temp.filePath(QStringLiteral("copy"));
+    QVERIFY(QDir().mkpath(source + QStringLiteral("/child")));
+    auto writeFile = [](const QString &path, const QByteArray &contents) {
+        QFile file(path);
+        return file.open(QIODevice::WriteOnly) && file.write(contents) == contents.size();
+    };
+    QVERIFY(writeFile(source + QStringLiteral("/.hidden"), "hidden"));
+    QVERIFY(writeFile(source + QStringLiteral("/child/note.md"), "# Original"));
+    QString error;
+    QVERIFY2(Utils::copyDirectory(source, destination, &error), qPrintable(error));
+    QFile copy(destination + QStringLiteral("/child/note.md"));
+    QVERIFY(copy.open(QIODevice::ReadOnly));
+    QCOMPARE(copy.readAll(), QByteArray("# Original"));
+    QVERIFY(QFile::exists(destination + QStringLiteral("/.hidden")));
+    QVERIFY(!Utils::copyDirectory(source, destination, &error));
+    QVERIFY(!Utils::copyDirectory(source, source, &error));
+    QVERIFY(!Utils::copyDirectory(source, source + QStringLiteral("/nested-copy"), &error));
+#ifdef Q_OS_UNIX
+    QVERIFY(
+        QFile::link(source + QStringLiteral("/child/note.md"), source + QStringLiteral("/link")));
+    const QString failedDestination = temp.filePath(QStringLiteral("failed-copy"));
+    QVERIFY(!Utils::copyDirectory(source, failedDestination, &error));
+    QVERIFY(!QFileInfo::exists(failedDestination));
+    QVERIFY(QDir(temp.path())
+                .entryList({QStringLiteral(".qownnotes-copy-*")},
+                           QDir::Dirs | QDir::Hidden | QDir::NoDotAndDotDot)
+                .isEmpty());
+#endif
+    QVERIFY(QFile::exists(source + QStringLiteral("/child/note.md")));
+}
+
+void TestNotes::testCopiedNotePath() {
+    QTemporaryDir target;
+    QVERIFY(target.isValid());
+    Note original = createTestNote(uniqueTestName(QStringLiteral("CopyPath")), 0,
+                                   QStringLiteral("# Original\n"));
+    QVERIFY(original.isFetched());
+    QString firstPath;
+    QVERIFY(original.copyToPath(target.path(), QString(), &firstPath));
+    QVERIFY(QFile::exists(firstPath));
+    QString secondPath;
+    QVERIFY(original.copyToPath(target.path(), QString(), &secondPath));
+    QVERIFY(QFile::exists(secondPath));
+    QVERIFY(firstPath != secondPath);
+    QVERIFY(original.fileExists());
+    QFile first(firstPath);
+    QVERIFY(first.open(QIODevice::ReadOnly));
+    QCOMPARE(first.readAll(), original.getNoteText().toUtf8());
+    QString failedPath = QStringLiteral("stale");
+    QVERIFY(
+        !original.copyToPath(target.filePath(QStringLiteral("missing")), QString(), &failedPath));
+    QVERIFY(failedPath.isEmpty());
+    QVERIFY(QFile::remove(original.fullNoteFilePath()));
+    QVERIFY(original.remove(false));
 }
 
 void TestNotes::testEmojiDisplayName_data() {

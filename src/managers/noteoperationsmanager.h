@@ -45,7 +45,9 @@ class NoteOperationsManager : public QObject {
         QString name, QString text,
         MainWindow::CreateNewNoteOptions options = MainWindow::CreateNewNoteOption::None);
     void moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
+    void moveNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder, const QVector<int> &noteIds);
     void copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
+    void copyNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder, const QVector<int> &noteIds);
     void moveSelectedNotesToNoteSubFolderId(int noteSubFolderId);
     void copySelectedNotesToNoteSubFolderId(int noteSubFolderId);
     void buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,

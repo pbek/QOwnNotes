@@ -29,6 +29,14 @@ class TestNotes : public QObject {
 
    private Q_SLOTS:
     void initTestCase();
+    void testNoteDragMimeData();
+    void testNoteDragRejectsExternalDrops();
+    void testNoteDragStartsWithoutConfirmation();
+    void testNoteDropChoice_data();
+    void testNoteDropChoice();
+    void testNoteDragCursor();
+    void testDirectoryCopy();
+    void testCopiedNotePath();
     void cleanupTestCase();
     void testNoteCreating();
     void testEmojiDisplayName_data();

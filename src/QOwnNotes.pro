@@ -296,6 +296,8 @@ SOURCES += main.cpp\
     libraries/fuzzy/kfuzzymatcher.cpp \
     libraries/qr-code-generator/QrCode.cpp \
     widgets/notesubfoldertree.cpp \
+    widgets/notedragtreewidget.cpp \
+    utils/directorycopy.cpp \
     widgets/noterelationscene.cpp \
     managers/spellcheckmanager.cpp \
     managers/systemtraymanager.cpp \
@@ -482,6 +484,8 @@ HEADERS  += mainwindow.h \
     libraries/qr-code-generator/QrCode.hpp \
     libraries/qtwaitingspinner/waitingspinnerwidget.h \
     widgets/notesubfoldertree.h \
+    widgets/notedragtreewidget.h \
+    utils/directorycopy.h \
     widgets/noterelationscene.h \
     managers/spellcheckmanager.h \
     managers/systemtraymanager.h \

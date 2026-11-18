@@ -261,6 +261,10 @@ set(APP_SOURCE_FILES
     threads/scriptthread.cpp
     threads/scriptthread.h
     utils/gui.cpp
+    widgets/notedragtreewidget.cpp
+    widgets/notedragtreewidget.h
+    utils/directorycopy.cpp
+    utils/directorycopy.h
     utils/gui.h
     utils/git.cpp
     utils/git.h

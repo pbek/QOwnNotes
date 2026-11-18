@@ -246,6 +246,33 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _noteTreeManager = new NoteTreeManager(this, ui, this);
     _tagManager = new TagManager(this, ui, this);
     _noteOperationsManager = new NoteOperationsManager(this, ui, this);
+    for (NoteDragTreeWidget *tree :
+         {static_cast<NoteDragTreeWidget *>(ui->noteTreeWidget),
+          static_cast<NoteDragTreeWidget *>(ui->noteSubFolderTreeWidget)}) {
+        connect(tree, &NoteDragTreeWidget::saveRequested, this,
+                &MainWindow::storeUpdatedNotesToDisk);
+        connect(tree, &NoteDragTreeWidget::moveRequested, this,
+                [this, tree](const QVector<int> &noteIds, const QVector<int> &folderIds,
+                             int destinationId) {
+                    const NoteSubFolder destination = NoteSubFolder::fetch(destinationId);
+                    if (destinationId != 0 && !destination.isFetched()) {
+                        return;
+                    }
+                    // Move loose notes first; moving folders rebuilds both trees immediately.
+                    _noteOperationsManager->moveNotesToNoteSubFolder(destination, noteIds);
+                    NoteSubFolderTree::moveNoteSubFoldersToParent(tree, destinationId, folderIds);
+                });
+        connect(tree, &NoteDragTreeWidget::copyRequested, this,
+                [this, tree](const QVector<int> &noteIds, const QVector<int> &folderIds,
+                             int destinationId) {
+                    const NoteSubFolder destination = NoteSubFolder::fetch(destinationId);
+                    if (destinationId != 0 && !destination.isFetched()) {
+                        return;
+                    }
+                    _noteOperationsManager->copyNotesToNoteSubFolder(destination, noteIds);
+                    NoteSubFolderTree::copyNoteSubFoldersToParent(tree, destinationId, folderIds);
+                });
+    }
     _noteIndexManager = new NoteIndexManager(this, ui, this);
     _searchFilterManager = new SearchFilterManager(this, ui, this);
     _mediaInsertionManager = new MediaInsertionManager(this, ui, this);
@@ -6077,6 +6104,10 @@ void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
  * Allows files to be dropped to QOwnNotes
  */
 void MainWindow::dragEnterEvent(QDragEnterEvent *e) {
+    if (e->mimeData()->hasFormat(QStringLiteral("application/x-qownnotes-items"))) {
+        e->ignore();
+        return;
+    }
     if (e->mimeData()->hasUrls()) {
         e->acceptProposedAction();
     }
@@ -6085,7 +6116,13 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *e) {
 /**
  * Handles the copying of notes to the current notes folder
  */
-void MainWindow::dropEvent(QDropEvent *e) { handleInsertingFromMimeData(e->mimeData()); }
+void MainWindow::dropEvent(QDropEvent *e) {
+    if (e->mimeData()->hasFormat(QStringLiteral("application/x-qownnotes-items"))) {
+        e->ignore();
+        return;
+    }
+    handleInsertingFromMimeData(e->mimeData());
+}
 
 /**
  * Handles the inserting of media files and notes from a mime data, for example

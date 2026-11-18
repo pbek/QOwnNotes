@@ -1,6 +1,7 @@
 #include "notesubfoldertree.h"
 
 #include <QFile>
+#include <QFileInfo>
 #include <QHeaderView>
 #include <QKeyEvent>
 #include <QMenu>
@@ -13,10 +14,11 @@
 #include "entities/tag.h"
 #include "mainwindow.h"
 #include "services/settingsservice.h"
+#include "utils/directorycopy.h"
 #include "utils/gui.h"
 #include "utils/misc.h"
 
-NoteSubFolderTree::NoteSubFolderTree(QWidget *parent) : QTreeWidget(parent) {
+NoteSubFolderTree::NoteSubFolderTree(QWidget *parent) : NoteDragTreeWidget(parent) {
     QTimer::singleShot(1, this, [this]() {
         header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
         header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
@@ -668,8 +670,18 @@ void NoteSubFolderTree::removeSelectedNoteSubFolders(QTreeWidget *parent) {
 
 void NoteSubFolderTree::moveSelectedNoteSubFoldersToParent(QTreeWidget *treeWidget,
                                                            int destinationParentId) {
-    const auto selectedItems = treeWidget->selectedItems();
-    if (selectedItems.isEmpty()) {
+    QVector<int> folderIds;
+    for (const auto *item : treeWidget->selectedItems()) {
+        if (item->data(0, Qt::UserRole + 1).toInt() == MainWindow::FolderType) {
+            folderIds.append(item->data(0, Qt::UserRole).toInt());
+        }
+    }
+    moveNoteSubFoldersToParent(treeWidget, destinationParentId, folderIds);
+}
+
+void NoteSubFolderTree::moveNoteSubFoldersToParent(QTreeWidget *treeWidget, int destinationParentId,
+                                                   const QVector<int> &folderIds) {
+    if (folderIds.isEmpty()) {
         return;
     }
 
@@ -680,12 +692,7 @@ void NoteSubFolderTree::moveSelectedNoteSubFoldersToParent(QTreeWidget *treeWidg
     }
 
     QVector<NoteSubFolder> noteSubFolderList;
-    for (auto *item : selectedItems) {
-        if (item->data(0, Qt::UserRole + 1).toInt() != MainWindow::FolderType) {
-            continue;
-        }
-
-        const int id = item->data(0, Qt::UserRole).toInt();
+    for (const int id : folderIds) {
         if (id <= 0) {
             continue;
         }
@@ -851,6 +858,105 @@ void NoteSubFolderTree::moveSelectedNoteSubFoldersToParent(QTreeWidget *treeWidg
 
     // make sure moved folders and moved note links are fully refreshed
     mainWindow->buildNotesIndexAndLoadNoteDirectoryList(true, forceReload);
+}
+
+void NoteSubFolderTree::copyNoteSubFoldersToParent(QTreeWidget *treeWidget, int destinationParentId,
+                                                   const QVector<int> &folderIds) {
+    const NoteSubFolder destination = NoteSubFolder::fetch(destinationParentId);
+    if (destinationParentId != 0 && !destination.isFetched()) {
+        return;
+    }
+    QVector<NoteSubFolder> folders;
+    for (int id : folderIds) {
+        const NoteSubFolder folder = NoteSubFolder::fetch(id);
+        if (id > 0 && folder.isFetched() && !hasSelectedAncestor(folder, folderIds) &&
+            !NoteSubFolder::fetchIdsRecursivelyByParentId(id).contains(destinationParentId)) {
+            folders.append(folder);
+        }
+    }
+    if (folders.isEmpty()) {
+        return;
+    }
+    const QString destinationName =
+        destinationParentId == 0 ? tr("note folder") : destination.getName();
+    if (Utils::Gui::question(
+            treeWidget, tr("Copy selected folders"),
+            tr("Copy <strong>%n</strong> selected folder(s) to <strong>%1</strong>?<br /><br />"
+               "Existing folders will not be overwritten; copies get a new name if needed. "
+               "Relative links to files outside "
+               "the copied folders may need adjustment.",
+               "", folders.size())
+                .arg(destinationName.toHtmlEscaped()),
+            QStringLiteral("copy-folders")) != QMessageBox::Yes) {
+        return;
+    }
+
+    auto *mainWindow = MainWindow::instance();
+    Q_ASSERT(mainWindow);
+    mainWindow->storeUpdatedNotesToDisk();
+    const QString destinationPath =
+        destinationParentId == 0 ? NoteFolder::currentLocalPath() : destination.fullPath();
+    QHash<QString, QVector<Tag>> copiedNoteTags;
+    QStringList errors;
+    int copiedCount = 0;
+    {
+        for (const auto &folder : folders) {
+            const QString sourcePath = folder.fullPath();
+            QString targetPath = QDir(destinationPath).filePath(folder.getName());
+            int suffix = 1;
+            while (QFileInfo::exists(targetPath) || QFileInfo(targetPath).isSymLink()) {
+                targetPath = QDir(destinationPath)
+                                 .filePath(tr("%1 (copy %2)").arg(folder.getName()).arg(suffix++));
+            }
+            QString error;
+            if (!Utils::copyDirectory(sourcePath, targetPath, &error)) {
+                errors.append(error);
+                continue;
+            }
+            copiedCount++;
+            // Keep the original tag assignments without changing any links to originals.
+            for (int id : NoteSubFolder::fetchIdsRecursivelyByParentId(folder.getId())) {
+                for (const auto &note : Note::fetchAllByNoteSubFolderId(id)) {
+                    const QString copiedPath =
+                        QDir(targetPath)
+                            .filePath(QDir(sourcePath).relativeFilePath(note.fullNoteFilePath()));
+                    copiedNoteTags.insert(copiedPath, Tag::fetchAllOfNote(note));
+                }
+            }
+        }
+        if (copiedCount > 0) {
+            mainWindow->buildNotesIndexAndLoadNoteDirectoryList(true);
+            for (auto it = copiedNoteTags.cbegin(); it != copiedNoteTags.cend(); ++it) {
+                const QFileInfo file(it.key());
+                const QString relativeFolder =
+                    QDir(NoteFolder::currentLocalPath()).relativeFilePath(file.absolutePath());
+                const NoteSubFolder copiedFolder =
+                    relativeFolder == QStringLiteral(".")
+                        ? NoteSubFolder()
+                        : NoteSubFolder::fetchByPathData(relativeFolder, QStringLiteral("/"));
+                if (relativeFolder != QStringLiteral(".") && !copiedFolder.isFetched()) {
+                    continue;
+                }
+                const Note copiedNote =
+                    Note::fetchByFileName(file.fileName(), copiedFolder.getId());
+                if (copiedNote.isFetched()) {
+                    for (const auto &tag : it.value()) {
+                        tag.linkToNote(copiedNote);
+                    }
+                }
+            }
+        }
+    }
+    if (copiedCount > 0) {
+        mainWindow->buildNotesIndexAndLoadNoteDirectoryList();
+        mainWindow->showStatusBarMessage(
+            tr("Copied %n note subfolder(s) to %1", "", copiedCount).arg(destinationName),
+            QStringLiteral("📁"));
+    }
+    if (!errors.isEmpty()) {
+        QMessageBox::warning(treeWidget, tr("Could not copy folders"),
+                             errors.join(QLatin1Char('\n')));
+    }
 }
 
 void NoteSubFolderTree::onCurrentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *) {

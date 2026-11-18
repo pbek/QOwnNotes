@@ -2612,6 +2612,10 @@ bool QOwnNotesMarkdownTextEdit::canInsertFromMimeData(const QMimeData *source) c
 }
 
 void QOwnNotesMarkdownTextEdit::dragEnterEvent(QDragEnterEvent *event) {
+    if (event->mimeData()->hasFormat(QStringLiteral("application/x-qownnotes-items"))) {
+        event->ignore();
+        return;
+    }
     if (event->mimeData()->hasUrls()) {
         event->acceptProposedAction();
         return;
@@ -2630,6 +2634,10 @@ void QOwnNotesMarkdownTextEdit::dragMoveEvent(QDragMoveEvent *event) {
 }
 
 void QOwnNotesMarkdownTextEdit::dropEvent(QDropEvent *event) {
+    if (event->mimeData()->hasFormat(QStringLiteral("application/x-qownnotes-items"))) {
+        event->ignore();
+        return;
+    }
     if (event->mimeData()->hasUrls()) {
         if (auto mainWindow = MainWindow::instance()) {
             event->acceptProposedAction();

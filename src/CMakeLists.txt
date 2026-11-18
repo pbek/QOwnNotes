@@ -717,6 +717,10 @@ set(SOURCE_FILES
     widgets/htmlpreviewwidget.cpp
     widgets/notesubfoldertree.cpp
     widgets/notesubfoldertree.h
+    widgets/notedragtreewidget.cpp
+    widgets/notedragtreewidget.h
+    utils/directorycopy.cpp
+    utils/directorycopy.h
     widgets/noterelationscene.cpp
     widgets/noterelationscene.h
     managers/spellcheckmanager.cpp
