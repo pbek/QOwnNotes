@@ -47,7 +47,7 @@ echo "Project path: $PROJECT_PATH"
 git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH --recursive
 cd QOwnNotes || exit 1
 
-# Fail before packaging or replacing any assets if the release is not ready.
+# Wait for the release and check out its verified tag before packaging any assets.
 bash "$ScriptDir/check-source-release.sh" "$ExpectedVersion"
 
 # build binary translation files

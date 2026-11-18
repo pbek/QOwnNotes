@@ -13,7 +13,8 @@ SCRIPT = Path(__file__).resolve().parents[1] / "build-systems/github/check-sourc
 class SourceReleaseSafeguardTest(unittest.TestCase):
     def check_release(self, version="26.11.0", draft="false", gh_status="0",
                       tag_commit="abc", source_commit="abc", fetch_status="0",
-                      publish_after=None, clock_step="300"):
+                      publish_after=None, clock_step="300", tag_version="26.11.0",
+                      checkout_status="0", submodule_status="0", checkout_matches=True):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "src").mkdir()
@@ -37,11 +38,21 @@ echo "$((Now + CLOCK_STEP))" >clock
 ''',
                 "sleep": '#!/usr/bin/env bash\necho "$1" >>sleep-calls\n',
                 "git": '''#!/usr/bin/env bash
+echo "$*" >>git-calls
 case "$1" in
   fetch) exit "$FETCH_STATUS" ;;
+  show) printf '#define VERSION "%s"\n' "$TAG_VERSION" ;;
+  checkout)
+    if [[ $CHECKOUT_STATUS != 0 ]]; then
+      exit "$CHECKOUT_STATUS"
+    fi
+    if [[ $CHECKOUT_MATCHES == True ]]; then
+      echo "$TAG_COMMIT" >head
+    fi ;;
+  submodule) exit "$SUBMODULE_STATUS" ;;
   rev-parse)
     if [[ $2 == HEAD ]]; then
-      echo "$SOURCE_COMMIT"
+      cat head 2>/dev/null || echo "$SOURCE_COMMIT"
     else
       echo "$TAG_COMMIT"
     fi ;;
@@ -57,11 +68,14 @@ esac
                         DRAFT=draft, GH_STATUS=gh_status, TAG_COMMIT=tag_commit,
                         SOURCE_COMMIT=source_commit, FETCH_STATUS=fetch_status,
                         PUBLISH_AFTER="" if publish_after is None else str(publish_after),
-                        CLOCK_STEP=clock_step)
+                        CLOCK_STEP=clock_step, TAG_VERSION=tag_version,
+                        CHECKOUT_STATUS=checkout_status, SUBMODULE_STATUS=submodule_status,
+                        CHECKOUT_MATCHES=str(checkout_matches))
             result = subprocess.run(["bash", str(SCRIPT), "26.11.0"], cwd=root,
                                     env=env, capture_output=True, text=True, timeout=10)
             result.gh_calls = int((root / "gh-calls").read_text()) if (root / "gh-calls").exists() else 0
             result.sleeps = (root / "sleep-calls").read_text().splitlines() if (root / "sleep-calls").exists() else []
+            result.git_calls = (root / "git-calls").read_text().splitlines() if (root / "git-calls").exists() else []
             return result
 
     def test_matching_published_release(self):
@@ -70,12 +84,20 @@ esac
         self.assertIn("safeguard passed", result.stdout)
         self.assertEqual(result.gh_calls, 1)
         self.assertEqual(result.sleeps, [])
+        self.assertIn("checkout --detach abc", result.git_calls)
+        self.assertIn("submodule sync --recursive", result.git_calls)
+        self.assertIn("submodule update --init --recursive", result.git_calls)
 
-    def test_previous_remote_version(self):
+    def test_previous_branch_version_uses_tag(self):
         result = self.check_release(version="26.10.15")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("checkout --detach abc", result.git_calls)
+
+    def test_tag_version_mismatch(self):
+        result = self.check_release(tag_version="26.10.15")
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("does not match", result.stderr)
-        self.assertEqual(result.gh_calls, 0)
+        self.assertFalse(any(call.startswith("checkout") for call in result.git_calls))
         self.assertEqual(result.sleeps, [])
 
     def test_missing_release_or_api_failure(self):
@@ -111,15 +133,26 @@ esac
 
     def test_tag_points_to_different_commit(self):
         result = self.check_release(tag_commit="old")
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIn("different commit", result.stderr)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("checkout --detach old", result.git_calls)
         self.assertEqual(result.sleeps, [])
 
-    def test_commit_mismatch_after_release_published(self):
+    def test_stale_checkout_after_release_published(self):
         result = self.check_release(draft="true", publish_after=1,
                                     clock_step="5", tag_commit="old")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("checkout --detach old", result.git_calls)
+
+    def test_checkout_must_match_tag(self):
+        result = self.check_release(tag_commit="old", checkout_matches=False)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("different commit", result.stderr)
+
+    def test_checkout_failure(self):
+        self.assertNotEqual(self.check_release(checkout_status="1").returncode, 0)
+
+    def test_submodule_failure(self):
+        self.assertNotEqual(self.check_release(submodule_status="1").returncode, 0)
 
     def test_tag_fetch_failure(self):
         self.assertNotEqual(self.check_release(fetch_status="1").returncode, 0)
