@@ -55,7 +55,13 @@ class NextcloudDeckService : public QObject {
         QDateTime createdAt;
         QDateTime lastModified;
         bool archived;
+        // Date the card was marked as done, invalid if the card isn't done
+        QDateTime done;
+        // Older Deck versions don't support marking cards as done
+        bool supportsDone = false;
         QList<Label> labels;
+
+        bool isDone() const { return done.isValid(); }
 
         QList<int> labelIds() const {
             QList<int> ids;
@@ -71,7 +77,8 @@ class NextcloudDeckService : public QObject {
                           << " <order>" << card.order << " <type>" << card.type << " <createdAt>"
                           << card.createdAt.toString(Qt::ISODate) << " <lastModified>"
                           << card.lastModified.toString(Qt::ISODate) << " <archived>"
-                          << card.archived << " <labels>" << card.labels;
+                          << card.archived << " <done>" << card.done.toString(Qt::ISODate)
+                          << " <labels>" << card.labels;
             return dbg.space();
         }
     };
@@ -93,7 +100,8 @@ class NextcloudDeckService : public QObject {
     static QStringList defaultLabelColors();
     int storeCard(const QString& title, const QString& description = "",
                   QDateTime* dueDateTime = nullptr, int cardId = -1, int cardStackId = -1,
-                  int cardOrder = 0, const QString& cardOwner = "");
+                  int cardOrder = 0, const QString& cardOwner = "",
+                  const QDateTime& cardDone = QDateTime());
     QString getCardLinkForId(int cardId);
     bool isEnabledAndValid();
     bool isEnabled();
@@ -103,6 +111,7 @@ class NextcloudDeckService : public QObject {
     void rememberRecentCard(const Card& card);
     void forgetRecentCard(int cardId);
     bool archiveCard(int cardId);
+    bool setCardDone(int cardId, bool done, int* resultStackId = nullptr);
     bool deleteCard(int cardId);
     bool moveCard(int cardId, int targetBoardId, int targetStackId, int order = 0);
     int parseCardIdFromUrl(const QString& url) const;

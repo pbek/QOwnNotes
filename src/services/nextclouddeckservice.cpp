@@ -130,7 +130,8 @@ void NextcloudDeckService::forgetRecentCard(int cardId) {
 
 int NextcloudDeckService::storeCard(const QString& title, const QString& description,
                                     QDateTime* dueDateTime, int cardId, int cardStackId,
-                                    int cardOrder, const QString& cardOwner) {
+                                    int cardOrder, const QString& cardOwner,
+                                    const QDateTime& cardDone) {
     int resultCardId = -1;
     auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
@@ -179,6 +180,15 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     } else {
         // Explicitly send null to clear the due date on updates
         bodyJson["duedate"] = QJsonValue::Null;
+    }
+
+    if (isUpdate) {
+        // Deck clears the done state of a card if it is missing in an update request,
+        // so the current done state needs to be sent to preserve it
+        bodyJson["done"] =
+            cardDone.isValid()
+                ? QJsonValue(cardDone.toTimeZone(QTimeZone::utc()).toString(Qt::ISODate))
+                : QJsonValue(QJsonValue::Null);
     }
 
     qDebug() << __func__ << " - 'bodyJson': " << bodyJson;
@@ -397,6 +407,46 @@ bool NextcloudDeckService::archiveCard(int cardId) {
     delete (manager);
 
     return result;
+}
+
+/**
+ * Marks a card as done or not done
+ *
+ * Deck moves cards that are marked as done into the done stack of the board, if one is configured.
+ * The stack the card is in afterwards is stored in resultStackId, it is 0 if it is unknown.
+ */
+bool NextcloudDeckService::setCardDone(int cardId, bool done, int* resultStackId) {
+    if (resultStackId != nullptr) {
+        *resultStackId = 0;
+    }
+
+    if (cardId < 1) {
+        return false;
+    }
+
+    const QUrl url(serverUrl + QStringLiteral("/index.php/apps/deck/cards/") +
+                   QString::number(cardId) +
+                   (done ? QStringLiteral("/done") : QStringLiteral("/undone")));
+    int statusCode = 0;
+    QByteArray data;
+    bool timedOut = false;
+
+    if (sendJsonRequest("PUT", url, QJsonObject(), &statusCode, &data, &timedOut)) {
+        if (resultStackId != nullptr) {
+            *resultStackId =
+                QJsonDocument::fromJson(data).object().value(QStringLiteral("stackId")).toInt();
+        }
+
+        return true;
+    }
+
+    Utils::Gui::warning(qobject_cast<QWidget*>(parent()), tr("Error while updating card"),
+                        (done ? tr("The card could not be marked as done. %1")
+                              : tr("The card could not be marked as not done. %1"))
+                            .arg(errorMessageForResponse(statusCode, data, timedOut)),
+                        QStringLiteral("nextcloud-deck-set-done-failed"));
+
+    return false;
 }
 
 bool NextcloudDeckService::isCardUrl(const QString& url) {
@@ -851,6 +901,14 @@ NextcloudDeckService::Card NextcloudDeckService::cardFromJson(const QJsonObject&
     const QString duedateString = object[QStringLiteral("duedate")].toString();
     if (!duedateString.isEmpty() && duedateString != QStringLiteral("null")) {
         card.duedate = QDateTime::fromString(duedateString, Qt::ISODate);
+    }
+
+    // Deck versions that support marking cards as done always return the done date,
+    // which is null if the card isn't done
+    card.supportsDone = object.contains(QStringLiteral("done"));
+    const QString doneString = object[QStringLiteral("done")].toString();
+    if (!doneString.isEmpty()) {
+        card.done = QDateTime::fromString(doneString, Qt::ISODate);
     }
 
     const qint64 createdAtTimestamp = object[QStringLiteral("createdAt")].toVariant().toLongLong();

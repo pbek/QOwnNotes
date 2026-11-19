@@ -270,7 +270,7 @@ void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
     int cardId = nextcloudDeckService.storeCard(
         title, ui->descriptionTextEdit->toPlainText(),
         ui->dueDateTimeCheckBox->isChecked() ? dateTime : nullptr, cardIdToUpdate,
-        _currentCard.stackId, _currentCard.order, _currentCard.owner);
+        _currentCard.stackId, _currentCard.order, _currentCard.owner, _currentCard.done);
 
     // Clean up allocated dateTime to prevent memory leak
     delete dateTime;
@@ -279,6 +279,12 @@ void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
         // Keep the dialog open and allow retrying after a failed request
         setSaveButtonsEnabled(!title.isEmpty());
         return;
+    }
+
+    // The done state is changed separately, so Deck can move the card into the done stack
+    // of the board if one is configured
+    if (cardIdToUpdate > 0) {
+        updateCardsDoneState(nextcloudDeckService, {cardId}, ui->doneCheckBox->isChecked());
     }
 
     // Tags can only be assigned to stored cards, so they are synced after storing the card
@@ -775,8 +781,17 @@ void NextcloudDeckDialog::reloadCardList() {
 
     // Populate the tree widget with cards
     QList<QTreeWidgetItem *> items;    // Collect items for batch insertion (more efficient)
-    const QColor mutedColor =
-        ui->cardItemTreeWidget->palette().color(QPalette::Disabled, QPalette::Text);
+    // Style sheets, like the one of the dark mode, don't change the disabled text color, which
+    // made muted cards unreadable on dark alternating rows. The muted color is blended from the
+    // actual text and background colors instead, so it stays readable in light and dark mode.
+    ui->cardItemTreeWidget->ensurePolished();
+    const QPalette &listPalette = ui->cardItemTreeWidget->palette();
+    const QColor textColor = listPalette.color(QPalette::Active, QPalette::Text);
+    const QColor baseColor = listPalette.color(QPalette::Active, QPalette::Base);
+    const auto blendChannel = [](int text, int base) { return (text * 3 + base) / 4; };
+    const QColor mutedColor(blendChannel(textColor.red(), baseColor.red()),
+                            blendChannel(textColor.green(), baseColor.green()),
+                            blendChannel(textColor.blue(), baseColor.blue()));
     const QDateTime now = QDateTime::currentDateTime();
 
     for (const auto &card : _cards) {
@@ -795,12 +810,23 @@ void NextcloudDeckDialog::reloadCardList() {
             item->setForeground(0, QBrush(mutedColor));
         }
 
+        // Show done cards struck through, like Deck does
+        if (card.isDone()) {
+            QFont font = item->font(0);
+            font.setStrikeOut(true);
+            item->setFont(0, font);
+            item->setForeground(0, QBrush(mutedColor));
+        }
+
         // Set the due date in the second column
         if (card.duedate.isValid()) {
             item->setText(1, card.duedate.toString("yyyy-MM-dd hh:mm"));
 
-            // Highlight due dates that are already in the past
-            if (card.duedate < now) {
+            // Done cards can't be overdue or due today, so their due date isn't highlighted
+            if (card.isDone()) {
+                item->setForeground(1, QBrush(mutedColor));
+            } else if (card.duedate < now) {
+                // Highlight due dates that are already in the past
                 // Use a muted red that is readable in light and dark mode
                 item->setForeground(1, QBrush(QColor(0xd9, 0x53, 0x4f)));
                 QFont font = item->font(1);
@@ -838,8 +864,13 @@ void NextcloudDeckDialog::reloadCardList() {
         item->setData(0, Qt::UserRole, card.id);
 
         // Set tooltip with description if available
-        if (!card.description.isEmpty()) {
-            item->setToolTip(0, card.description);
+        QString toolTip = card.description;
+        if (card.isDone()) {
+            toolTip = toolTip.isEmpty() ? doneDateText(card)
+                                        : doneDateText(card) + QStringLiteral("\n\n") + toolTip;
+        }
+        if (!toolTip.isEmpty()) {
+            item->setToolTip(0, toolTip);
         }
 
         items.append(item);
@@ -924,6 +955,19 @@ void NextcloudDeckDialog::updateEditState() {
         ui->createAndInsertLinkButton->setShortcut(primaryShortcut);
     }
 
+    // Deck doesn't allow creating cards that are already done
+    ui->doneCheckBox->setEnabled(isExistingCard && _currentCard.supportsDone);
+    if (isExistingCard && !_currentCard.supportsDone) {
+        ui->doneCheckBox->setToolTip(
+            tr("Your version of Nextcloud Deck doesn't support marking cards as done"));
+    } else if (isExistingCard && _currentCard.isDone()) {
+        ui->doneCheckBox->setToolTip(doneDateText(_currentCard));
+    } else if (isExistingCard) {
+        ui->doneCheckBox->setToolTip(tr("Mark the card as done in Nextcloud Deck"));
+    } else {
+        ui->doneCheckBox->setToolTip(tr("Cards can be marked as done after they were created"));
+    }
+
     // Existing cards can be linked from the context menu of the card list
     ui->createAndInsertLinkButton->setVisible(!isExistingCard);
     ui->editHintLabel->setVisible(!isExistingCard && !isNewCard);
@@ -945,6 +989,7 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->editFrame->setEnabled(false);
     ui->titleLineEdit->setText(QString());
     ui->descriptionTextEdit->setPlainText(QString());
+    ui->doneCheckBox->setChecked(false);
     ui->dueDateTimeCheckBox->setChecked(false);
     setDueDateEditsEnabled(false);
     setSaveButtonsEnabled(false);
@@ -996,6 +1041,7 @@ void NextcloudDeckDialog::jumpToCard(int id) {
 
         ui->titleLineEdit->setText(_currentCard.title);
         ui->descriptionTextEdit->setPlainText(_currentCard.description);
+        ui->doneCheckBox->setChecked(_currentCard.isDone());
         updateAvailableLabels();
         ui->labelsWidget->setSelectedIds(_currentCard.labelIds());
 
@@ -1187,9 +1233,29 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
     const int selectedCount = ui->cardItemTreeWidget->selectedItems().count();
     QAction *deleteCardsAction = nullptr;
     QAction *moveCardsAction = nullptr;
+    QAction *doneCardsAction = nullptr;
+    bool allSelectedCardsDone = true;
 
     if (selectedCount > 0) {
         menu.addSeparator();
+
+        // Mark all cards as done, unless they are all done already
+        bool doneSupported = true;
+        for (const auto *selectedCard : ui->cardItemTreeWidget->selectedItems()) {
+            const auto card = _cards.value(selectedCard->data(0, Qt::UserRole).toInt());
+            doneSupported = doneSupported && card.supportsDone;
+            allSelectedCardsDone = allSelectedCardsDone && card.isDone();
+        }
+
+        // Older Deck versions don't support marking cards as done
+        if (doneSupported) {
+            doneCardsAction = menu.addAction(
+                allSelectedCardsDone ? tr("Mar&k %n card(s) as not done", "", selectedCount)
+                                     : tr("Mar&k %n card(s) as done", "", selectedCount));
+            doneCardsAction->setIcon(QIcon::fromTheme(
+                QStringLiteral("view-task"), QIcon(":icons/breeze-qownnotes/16x16/view-task.svg")));
+        }
+
         moveCardsAction = menu.addAction(tr("&Move %n card(s)…", "", selectedCount));
         moveCardsAction->setIcon(QIcon::fromTheme(
             QStringLiteral("edit-move"), QIcon(":icons/breeze-qownnotes/16x16/edit-move.svg")));
@@ -1227,7 +1293,111 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
             cardIds.append(selectedCard->data(0, Qt::UserRole).toInt());
         }
         moveCards(cardIds);
+    } else if (doneCardsAction != nullptr && selectedItem == doneCardsAction) {
+        QList<int> cardIds;
+        for (const auto *selectedCard : ui->cardItemTreeWidget->selectedItems()) {
+            cardIds.append(selectedCard->data(0, Qt::UserRole).toInt());
+        }
+        setCardsDone(cardIds, !allSelectedCardsDone);
     }
+}
+
+/**
+ * Marks the cards as done or not done
+ *
+ * Deck moves cards that are marked as done into the done stack of the board, if one is configured
+ */
+void NextcloudDeckDialog::setCardsDone(const QList<int> &cardIds, bool done) {
+    // Reloading the card list discards pending changes in the editor
+    if (hasUnsavedChanges()) {
+        if (QMessageBox::question(
+                this, done ? tr("Mark card(s) as done") : tr("Mark card(s) as not done"),
+                tr("The current card has unsaved changes. Discard them?"),
+                QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Cancel) != QMessageBox::Yes) {
+            return;
+        }
+    }
+
+    NextcloudDeckService nextcloudDeckService(this);
+
+    if (updateCardsDoneState(nextcloudDeckService, cardIds, done)) {
+        const int selectedCardId = _currentCard.id;
+        reloadCardList();
+        selectCardInList(selectedCardId);
+    }
+}
+
+/**
+ * Marks the cards as done or not done
+ *
+ * Cards that Deck moved into the done stack of the board vanish from the card list,
+ * so the user is told where they went
+ *
+ * Returns true if at least one card was changed
+ */
+bool NextcloudDeckDialog::updateCardsDoneState(NextcloudDeckService &nextcloudDeckService,
+                                               const QList<int> &cardIds, bool done) {
+    bool anyChanged = false;
+    int movedCount = 0;
+    QStringList destinationTitles;
+
+    for (int cardId : cardIds) {
+        if (!_cards.contains(cardId)) {
+            continue;
+        }
+
+        const auto card = _cards.value(cardId);
+        if (!card.supportsDone || card.isDone() == done) {
+            continue;
+        }
+
+        int resultStackId = 0;
+        if (!nextcloudDeckService.setCardDone(cardId, done, &resultStackId)) {
+            continue;
+        }
+
+        anyChanged = true;
+
+        if (resultStackId > 0 && resultStackId != card.stackId) {
+            ++movedCount;
+            const QString title = boardStackTitle(card.boardId, resultStackId);
+            if (!title.isEmpty() && !destinationTitles.contains(title)) {
+                destinationTitles.append(title);
+            }
+        }
+    }
+
+    if (movedCount > 0) {
+        Utils::Gui::information(
+            this, tr("Card(s) moved"),
+            destinationTitles.isEmpty()
+                ? tr("Nextcloud Deck moved %n card(s) into the done stack of the board.", "",
+                     movedCount)
+                : tr("Nextcloud Deck moved %n card(s) into the done stack \"%1\".", "", movedCount)
+                      .arg(destinationTitles.join(QStringLiteral(", "))),
+            QStringLiteral("nextcloud-deck-cards-moved-to-done-stack"));
+    }
+
+    return anyChanged;
+}
+
+/**
+ * Returns the "board / stack" title of a stack, like it is shown in the stack selector
+ */
+QString NextcloudDeckDialog::boardStackTitle(int boardId, int stackId) const {
+    for (int i = 0; i < ui->boardStackComboBox->count(); ++i) {
+        if (ui->boardStackComboBox->itemData(i, Qt::UserRole).toInt() == boardId &&
+            ui->boardStackComboBox->itemData(i, Qt::UserRole + 1).toInt() == stackId) {
+            return ui->boardStackComboBox->itemText(i);
+        }
+    }
+
+    return QString();
+}
+
+QString NextcloudDeckDialog::doneDateText(const NextcloudDeckService::Card &card) {
+    return tr("Marked as done on %1")
+        .arg(QLocale().toString(card.done.toLocalTime(), QLocale::ShortFormat));
 }
 
 void NextcloudDeckDialog::searchLinkInNotes(QTreeWidgetItem *item) {
@@ -1327,7 +1497,8 @@ bool NextcloudDeckDialog::hasUnsavedChanges() const {
            ui->descriptionTextEdit->toPlainText() != _currentCard.description ||
            ui->dueDateTimeCheckBox->isChecked() != _currentCard.duedate.isValid() ||
            (ui->dueDateTimeCheckBox->isChecked() && dueDateTime() != _currentCard.duedate) ||
-           !ui->labelsWidget->hasSameSelection(_currentCard.labelIds());
+           !ui->labelsWidget->hasSameSelection(_currentCard.labelIds()) ||
+           (_currentCard.id > 0 && ui->doneCheckBox->isChecked() != _currentCard.isDone());
 }
 
 /**

@@ -128,6 +128,11 @@ class NextcloudDeckDialog : public MasterDialog {
     void storeCurrentCard(bool insertLinkAndClose);
     void deleteSelectedCards();
     void moveCards(const QList<int> &cardIds);
+    void setCardsDone(const QList<int> &cardIds, bool done);
+    bool updateCardsDoneState(NextcloudDeckService &nextcloudDeckService, const QList<int> &cardIds,
+                              bool done);
+    QString boardStackTitle(int boardId, int stackId) const;
+    static QString doneDateText(const NextcloudDeckService::Card &card);
     QHash<int, NextcloudDeckService::Card> _cards;
     NextcloudDeckService::Card _currentCard;
     QHash<int, QList<NextcloudDeckService::Label>> _boardLabels;

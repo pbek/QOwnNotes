@@ -22,6 +22,16 @@
   - Quick presets for 09:00, 12:00, 15:00 and 18:00 and a **Now** button set common times
   - The picked time is shown right away, **Escape** restores the previous time
   - The mouse wheel, the arrow keys and **Tab** allow fine adjustments with the keyboard
+- Added a **Done** checkbox to the **Nextcloud Deck** card dialog to mark cards as done
+  (for [#3827](https://github.com/pbek/QOwnNotes/issues/3827))
+  - Multiple cards can be marked as done or not done from the context menu of the card list
+  - Done cards are struck through in the card list, show when they were done in their tooltip,
+    and their due date is no longer highlighted as overdue
+  - If a done stack is configured for the board in Nextcloud Deck, Deck moves cards
+    that are marked as done into it, and you are told where they went
+  - Saving a card no longer clears its done state in Nextcloud Deck
+  - Done and archived cards and missing due dates are now muted in a way that stays
+    readable in dark mode, including on alternating rows
 - Added **drag and drop** for copying and moving notes and subfolders in the note list and folder
   panel, including mixed selections when the **note tree** is enabled
   (for [#3854](https://github.com/pbek/QOwnNotes/issues/3854))
