@@ -40,10 +40,13 @@
 #include <QDirIterator>
 #include <QFile>
 #include <QFileSystemWatcher>
+#include <QOperatingSystemVersion>
 #include <QPointer>
 #include <QProgressDialog>
+#include <QScopedValueRollback>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QTextStream>
 #include <QTimer>
 #include <QTreeWidgetItem>
 
@@ -70,12 +73,17 @@ struct FileWatchDisabler {
 };
 
 NoteIndexManager::NoteIndexManager(MainWindow *mainWindow, Ui::MainWindow *ui, QObject *parent)
-    : QObject(parent), _mainWindow(mainWindow), _ui(ui) {}
+    : QObject(parent), _mainWindow(mainWindow), _ui(ui) {
+    _directoryRecheckTimer.setSingleShot(true);
+    connect(&_directoryRecheckTimer, &QTimer::timeout, this,
+            &NoteIndexManager::recheckChangedDirectories);
+}
 
 /**
  * Builds the index of notes and note sub folders
  */
-bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
+bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild,
+                                       const QSet<QString> &changedNotePaths) {
     QString notePath = Utils::Misc::removeIfEndsWith(_mainWindow->notesPath, QDir::separator());
     NoteSubFolder noteSubFolder;
     bool hasNoteSubFolder = false;
@@ -209,8 +217,10 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
         // update or create a note from the file
         bool noteWasUpdated = false;
-        const Note note =
-            Note::updateOrCreateFromFile(file, noteSubFolder, withNoteNameHook, &noteWasUpdated);
+        const Note note = Note::updateOrCreateFromFile(
+            file, noteSubFolder, withNoteNameHook, &noteWasUpdated,
+            !changedNotePaths.isEmpty() &&
+                changedNotePaths.contains(QDir::fromNativeSeparators(fileName)));
 
         // add the note id to in the end check if notes need to be removed
         _mainWindow->_buildNotesIndexAfterNoteIdList << note.getId();
@@ -293,7 +303,8 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                     << parentNoteSubFolder.getId();
 
                 // build the notes index for the note subfolder
-                const bool result = buildNotesIndex(parentNoteSubFolder.getId());
+                const bool result =
+                    buildNotesIndex(parentNoteSubFolder.getId(), false, changedNotePaths);
                 if (result) {
                     wasModified = true;
                 }
@@ -416,9 +427,9 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
  * @param forceLoad
  * @param reloadTabs
  */
-void NoteIndexManager::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild, bool forceLoad,
-                                                               bool reloadTabs) {
-    const bool wasBuilt = buildNotesIndex(0, forceBuild);
+void NoteIndexManager::buildNotesIndexAndLoadNoteDirectoryList(
+    bool forceBuild, bool forceLoad, bool reloadTabs, const QSet<QString> &changedNotePaths) {
+    const bool wasBuilt = buildNotesIndex(0, forceBuild, changedNotePaths);
 
     if (wasBuilt || forceLoad) {
         loadNoteDirectoryList();
@@ -687,7 +698,9 @@ void NoteIndexManager::removeConflictedNotesDatabaseCopies() {
                                       QStringLiteral("🗄️"));
 }
 
-void NoteIndexManager::notesWereModified(const QString &str) {
+void NoteIndexManager::notesWereModified(const QString &str) { checkModifiedNote(str, false); }
+
+void NoteIndexManager::checkModifiedNote(const QString &str, bool contentChangeDetected) {
     if (str == _watchedNoteFolderDatabasePath) {
         noteFolderDatabaseWasModified();
         return;
@@ -731,7 +744,9 @@ void NoteIndexManager::notesWereModified(const QString &str) {
             const QString oldNoteText = note.getNoteText();
 
             // fetch text of note from disk
-            note.updateNoteTextFromDisk();
+            if (!note.updateNoteTextFromDisk()) {
+                return;
+            }
             const QString noteTextOnDisk = Utils::Misc::transformLineFeeds(note.getNoteText());
             const bool isCurrentNoteNotEditedForAWhile =
                 _mainWindow->currentNoteLastEdited.addSecs(60) < QDateTime::currentDateTime();
@@ -755,7 +770,8 @@ void NoteIndexManager::notesWereModified(const QString &str) {
 
             // Check if the old note text is the same or similar as the one on disk
             // only if the current note wasn't edited recently
-            if (isCurrentNoteNotEditedForAWhile &&
+            // The index may already contain the replacement that triggered this check.
+            if (!contentChangeDetected && isCurrentNoteNotEditedForAWhile &&
                 Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, threshold)) {
                 qDebug() << __func__ << " - Old and new text are same or similar, ignoring";
                 return;
@@ -924,12 +940,33 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
         _noteFolderRootSignature = signature;
     }
 
-    qDebug() << "notesDirectoryWasModified: " << str;
+    if (_directoryReloadInProgress) {
+        scheduleDirectoryRecheck(str);
+        return;
+    }
+
+    const QScopedValueRollback<bool> reloading(_directoryReloadInProgress, true);
+    const int folderId = NoteFolder::currentNoteFolderId();
+    const QString root = _mainWindow->notesPath;
+    QSet<QString> changedNotePaths;
+    if (!subfolderMatchesIndex(str, changedNotePaths)) {
+        qDebug() << "notesDirectoryWasModified: " << str;
+        reloadAfterDirectoryChange(changedNotePaths);
+    }
+
+    // Even if the directory matches now, a sync client may still be about to rename a
+    // temporary file over a note without another directory notification (see #3468).
+    if (folderId == NoteFolder::currentNoteFolderId() && root == _mainWindow->notesPath) {
+        scheduleDirectoryRecheck(str);
+    }
+}
+
+void NoteIndexManager::reloadAfterDirectoryChange(const QSet<QString> &changedNotePaths) {
     _mainWindow->showStatusBarMessage(tr("Notes directory was modified externally"),
                                       QStringLiteral("🔄"), 5000);
 
     // rebuild and reload the notes directory list
-    buildNotesIndexAndLoadNoteDirectoryList();
+    buildNotesIndexAndLoadNoteDirectoryList(false, false, true, changedNotePaths);
 
     // check if the current note was modified
     // this fixes not detected external note changes of the current note if the
@@ -938,24 +975,11 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
     QString noteFileName = _mainWindow->currentNote.getFileName();
     if (!noteFileName.isEmpty()) {
         // Use the full path, like a filesystem watcher would, instead of just the file-name
-        notesWereModified(_mainWindow->currentNote.fullNoteFilePath());
+        const QString relativePath =
+            QDir::fromNativeSeparators(_mainWindow->currentNote.relativeNoteFilePath());
+        checkModifiedNote(_mainWindow->currentNote.fullNoteFilePath(),
+                          changedNotePaths.contains(relativePath));
     }
-
-    // Schedule a deferred re-index to handle sync clients (e.g. Nextcloud) that
-    // use a temp-file + atomic rename strategy to update note files. The rename
-    // may complete after the first directoryChanged event fires — and on Linux
-    // inotify does not always emit a second event for an in-place rename — so
-    // the initial buildNotesIndexAndLoadNoteDirectoryList() above may run before
-    // the updated content is in place. The deferred pass captures the final state.
-    // See: https://github.com/pbek/QOwnNotes/issues/3468
-    QTimer::singleShot(1000, _mainWindow, [this]() {
-        if (!_mainWindow->_isNotesDirectoryWasModifiedDisabled &&
-            !shouldIgnoreExternalNoteFolderChanges()) {
-            qDebug() << __func__ << " - deferred re-index after external directory change";
-            noteFolderDatabaseWasModified();
-            buildNotesIndexAndLoadNoteDirectoryList();
-        }
-    });
 
     // also update the text of the text edit if current note has changed
     bool updateNoteText = !_mainWindow->currentNote.exists();
@@ -963,6 +987,178 @@ void NoteIndexManager::notesDirectoryWasModified(const QString &str) {
 
     // restore old selected row (but don't update the note text)
     _mainWindow->setCurrentNote(std::move(_mainWindow->currentNote), updateNoteText);
+}
+
+void NoteIndexManager::scheduleDirectoryRecheck(const QString &path) {
+    const int folderId = NoteFolder::currentNoteFolderId();
+    const QString root = _mainWindow->notesPath;
+    if (!_directoryRecheckTimer.isActive() || folderId != _directoryRecheckFolderId ||
+        root != _directoryRecheckRoot) {
+        _pendingDirectoryRechecks.clear();
+        _directoryRecheckFolderId = folderId;
+        _directoryRecheckRoot = root;
+        _directoryRecheckBatchAge.start();
+    }
+
+    _pendingDirectoryRechecks.insert(QDir::cleanPath(QDir::fromNativeSeparators(path)));
+    // Give a burst time to settle without postponing the check indefinitely.
+    const qint64 remaining = 2000 - _directoryRecheckBatchAge.elapsed();
+    _directoryRecheckTimer.start(int(qBound(qint64(0), remaining, qint64(1000))));
+}
+
+void NoteIndexManager::recheckChangedDirectories() {
+    if (_mainWindow->_isNotesDirectoryWasModifiedDisabled ||
+        shouldIgnoreExternalNoteFolderChanges() ||
+        _directoryRecheckRoot != _mainWindow->notesPath ||
+        _directoryRecheckFolderId != NoteFolder::currentNoteFolderId()) {
+        _pendingDirectoryRechecks.clear();
+        return;
+    }
+    // A progress or conflict dialog can process timer events during an index rebuild.
+    if (_directoryReloadInProgress) {
+        _directoryRecheckTimer.start(200);
+        return;
+    }
+
+    const QScopedValueRollback<bool> reloading(_directoryReloadInProgress, true);
+    QSet<QString> paths;
+    paths.swap(_pendingDirectoryRechecks);
+    noteFolderDatabaseWasModified();
+    QSet<QString> changedNotePaths;
+    bool needsReindex = false;
+    for (const QString &path : paths) {
+        if (!subfolderMatchesIndex(path, changedNotePaths)) {
+            needsReindex = true;
+        }
+    }
+    if (needsReindex) {
+        qDebug() << __func__ << " - deferred re-index after external directory change";
+        // Keep the legacy deferred pass for directories that cannot be checked. When
+        // a comparison found changed contents, also check the editor for a conflict.
+        if (changedNotePaths.isEmpty()) {
+            buildNotesIndexAndLoadNoteDirectoryList();
+        } else {
+            reloadAfterDirectoryChange(changedNotePaths);
+        }
+    }
+}
+
+bool NoteIndexManager::subfolderMatchesIndex(const QString &path,
+                                             QSet<QString> &changedNotePaths) const {
+    // On Windows, Qt's directory notification can be triggered by attribute-only
+    // changes (e.g. OneDrive). Leave the root/database handling and other platforms alone.
+    if (QOperatingSystemVersion::currentType() != QOperatingSystemVersion::Windows) {
+        return false;
+    }
+    const NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    const QDir root(noteFolder.getLocalPath());
+    const QString absolutePath = QDir::cleanPath(QDir::fromNativeSeparators(path));
+    const QString relativePath = root.relativeFilePath(absolutePath);
+    if (relativePath == QStringLiteral(".") || !Utils::Misc::isSafeRelativePath(relativePath)) {
+        return false;
+    }
+    const NoteSubFolder subfolder =
+        NoteSubFolder::fetchByPathData(relativePath, QStringLiteral("/"));
+    if (!subfolder.isFetched()) {
+        return false;
+    }
+
+    // Bound synchronous verification. Fall back to the normal re-index on uncertainty.
+    constexpr int maxFolders = 32;
+    constexpr int maxNotes = 128;
+    constexpr qint64 maxBytes = 8 * 1024 * 1024;
+    const int maxNoteSize = Utils::Misc::getMaximumNoteFileSize();
+    const auto filters = Note::noteFileExtensionList(QStringLiteral("*."));
+    QSet<QString> watchedPaths;
+    for (const QString &watched : _mainWindow->noteDirectoryWatcher.directories() +
+                                      _mainWindow->noteDirectoryWatcher.files()) {
+        watchedPaths.insert(QDir::cleanPath(QDir::fromNativeSeparators(watched)));
+    }
+    QList<QPair<QString, int>> pending{{absolutePath, subfolder.getId()}};
+    int folderCount = 1;
+    int noteCount = 0;
+    qint64 bytes = 0;
+    bool matches = true;
+    while (!pending.isEmpty()) {
+        const auto item = pending.takeLast();
+        const QDir dir(item.first);
+        if (!watchedPaths.contains(item.first) || !dir.isReadable() ||
+            !noteFolder.isNotePathAllowed(item.first)) {
+            return false;
+        }
+
+        QHash<QString, int> indexedFolders;
+        for (const NoteSubFolder &child : NoteSubFolder::fetchAllByParentId(item.second)) {
+            indexedFolders.insert(child.getName(), child.getId());
+        }
+        for (const QFileInfo &child :
+             dir.entryInfoList(QDir::Dirs | QDir::Hidden | QDir::NoDotAndDotDot, QDir::Unsorted)) {
+            const QString name = child.fileName();
+            if (NoteSubFolder::willFolderBeIgnored(name)) {
+                continue;
+            }
+            const QString childPath = child.absoluteFilePath();
+            if (NoteFolder::isCurrentSubfolderPathExcluded(root.relativeFilePath(childPath))) {
+                continue;
+            }
+            const int childId = indexedFolders.take(name);
+            if (childId == 0 || child.isSymLink() || ++folderCount > maxFolders) {
+                return false;
+            }
+            pending.append(qMakePair(childPath, childId));
+        }
+        if (!indexedFolders.isEmpty()) {
+            return false;
+        }
+
+        QStringList filenames = dir.entryList(filters, QDir::Files, QDir::Unsorted);
+        Note::applyIgnoredNotesSetting(filenames);
+        if (filenames.size() > maxNotes - noteCount) {
+            return false;
+        }
+        noteCount += int(filenames.size());
+        const auto notes = Note::fetchAllByNoteSubFolderId(item.second);
+        if (notes.size() != filenames.size()) {
+            return false;
+        }
+        for (const Note &note : notes) {
+            if (note.getHasDirtyData() || !filenames.contains(note.getFileName())) {
+                return false;
+            }
+            const QString notePath = dir.filePath(note.getFileName());
+            const QFileInfo info(notePath);
+            const qint64 size = info.size();
+            if (!watchedPaths.contains(notePath) || !info.isFile() || info.isSymLink() ||
+                size > maxNoteSize || size > maxBytes - bytes ||
+                !noteFolder.isNotePathAllowed(notePath)) {
+                return false;
+            }
+            bytes += size;
+            QFile file(notePath);
+            if (!file.open(Utils::Misc::getNoteFileOpenFlags())) {
+                return false;
+            }
+            QTextStream stream(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+            stream.setCodec("UTF-8");
+#endif
+            // Compare the text itself: a replacement can preserve size and mtime.
+            const QString indexedText = note.getNoteText();
+            const QString text = stream.read(qint64(indexedText.size()) + 1);
+            if (file.error() != QFileDevice::NoError ||
+                stream.status() == QTextStream::ReadCorruptData) {
+                return false;
+            }
+            if (text != indexedText || !stream.atEnd()) {
+                changedNotePaths.insert(root.relativeFilePath(notePath));
+                matches = false;
+            }
+            if (info.lastModified() != note.getFileLastModified()) {
+                matches = false;
+            }
+        }
+    }
+    return matches;
 }
 
 void NoteIndexManager::noteFolderDatabaseWasModified() {

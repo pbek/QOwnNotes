@@ -19,6 +19,7 @@
 #include <QMimeData>
 #include <QPlainTextEdit>
 #include <QPointer>
+#include <QSaveFile>
 #include <QScopeGuard>
 #include <QSet>
 #include <QSqlQuery>
@@ -1052,6 +1053,32 @@ void TestNotes::testDeferredCurrentNoteSave() {
     QCOMPARE(currentFile.readAll(), afterReload.toUtf8());
     QVERIFY(currentChanged);
     QVERIFY(!current.getHasDirtyData());
+}
+
+void TestNotes::testForcedReadWithUnchangedFileMetadata() {
+    const Note note = createTestNote(uniqueTestName(QStringLiteral("Same metadata")), 0,
+                                     QStringLiteral("before"));
+    QFile file(note.fullNoteFilePath());
+    const QDateTime timestamp = QFileInfo(file).lastModified();
+
+    QSaveFile replacement(file.fileName());
+    QVERIFY(replacement.open(QIODevice::WriteOnly));
+    QCOMPARE(replacement.write("after!"), qint64(6));
+    QVERIFY(replacement.commit());
+    QVERIFY(file.open(QIODevice::ReadWrite));
+    QVERIFY(file.setFileTime(timestamp, QFileDevice::FileModificationTime));
+    file.close();
+    QCOMPARE(QFileInfo(file).lastModified(), timestamp);
+    QCOMPARE(file.size(), qint64(note.getFileSize()));
+
+    bool wasUpdated = false;
+    QCOMPARE(Note::updateOrCreateFromFile(file, {}, false, &wasUpdated).getNoteText(),
+             QStringLiteral("before"));
+    QVERIFY(!wasUpdated);
+    QCOMPARE(Note::updateOrCreateFromFile(file, {}, false, &wasUpdated, true).getNoteText(),
+             QStringLiteral("after!"));
+    QVERIFY(wasUpdated);
+    QCOMPARE(Note::fetch(note.getId()).getNoteText(), QStringLiteral("after!"));
 }
 
 void TestNotes::initTestCase() {

@@ -147,6 +147,7 @@ class TestNotes : public QObject {
 
     void testDeferredCurrentNoteSave_data();
     void testDeferredCurrentNoteSave();
+    void testForcedReadWithUnchangedFileMetadata();
 };
 
 #endif    // TESTNOTES_H

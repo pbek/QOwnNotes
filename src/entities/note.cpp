@@ -3773,14 +3773,15 @@ void Note::createFromFile(QFile &file, int noteSubFolderId, bool withNoteNameHoo
  * @return
  */
 Note Note::updateOrCreateFromFile(QFile &file, const NoteSubFolder &noteSubFolder,
-                                  bool withNoteNameHook, bool *wasUpdated) {
+                                  bool withNoteNameHook, bool *wasUpdated, bool forceRead) {
     const QFileInfo fileInfo(file);
     Note note = fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
 
     // Regardless if the file was found or not, if the size differs or the
     // file was modified after the internal note was modified we want to load
     // the note content again
-    if ((fileInfo.size() != note.getFileSize()) || (fileInfo.lastModified() > note.getModified())) {
+    if (forceRead || fileInfo.size() != note.getFileSize() ||
+        fileInfo.lastModified() > note.getModified()) {
         // Load file data and store note
         note.createFromFile(file, noteSubFolder.getId(), withNoteNameHook);
 

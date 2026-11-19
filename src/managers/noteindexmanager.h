@@ -14,8 +14,11 @@
 
 #pragma once
 
+#include <QElapsedTimer>
 #include <QObject>
+#include <QSet>
 #include <QString>
+#include <QTimer>
 
 class MainWindow;
 
@@ -30,9 +33,11 @@ class NoteIndexManager : public QObject {
     explicit NoteIndexManager(MainWindow *mainWindow, Ui::MainWindow *ui,
                               QObject *parent = nullptr);
 
-    bool buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false);
+    bool buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false,
+                         const QSet<QString> &changedNotePaths = {});
     void buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false, bool forceLoad = false,
-                                                 bool reloadTabs = true);
+                                                 bool reloadTabs = true,
+                                                 const QSet<QString> &changedNotePaths = {});
     void loadNoteDirectoryList();
     void updateNoteDirectoryWatcher();
     void clearNoteDirectoryWatcher();
@@ -57,6 +62,11 @@ class NoteIndexManager : public QObject {
     static qint64 noteFolderDatabaseDataVersion();
     static QString fileIdentity(const QString &path);
     QString noteFolderRootSignature() const;
+    void scheduleDirectoryRecheck(const QString &path);
+    void recheckChangedDirectories();
+    bool subfolderMatchesIndex(const QString &path, QSet<QString> &changedNotePaths) const;
+    void reloadAfterDirectoryChange(const QSet<QString> &changedNotePaths);
+    void checkModifiedNote(const QString &path, bool contentChangeDetected);
 
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
@@ -67,4 +77,10 @@ class NoteIndexManager : public QObject {
     QString _noteFolderDatabaseFileId;
     qint64 _noteFolderDatabaseDataVersion = -1;
     bool _noteFolderDatabaseCheckPending = false;
+    QTimer _directoryRecheckTimer;
+    QElapsedTimer _directoryRecheckBatchAge;
+    QSet<QString> _pendingDirectoryRechecks;
+    QString _directoryRecheckRoot;
+    int _directoryRecheckFolderId = 0;
+    bool _directoryReloadInProgress = false;
 };

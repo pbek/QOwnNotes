@@ -2,6 +2,11 @@
 
 ## 26.11.12
 
+- Avoided unnecessary full note-folder scans on Windows when a watched subfolder's
+  notes are unchanged, reducing stalls after OneDrive sync notifications
+  (for [#3847](https://github.com/pbek/QOwnNotes/issues/3847))
+  - Nearby directory notifications share a delayed check, which still handles notes
+    that synchronization clients update by replacing the file
 - Added **drag and drop** for copying and moving notes and subfolders in the note list and folder
   panel, including mixed selections when the **note tree** is enabled
   (for [#3854](https://github.com/pbek/QOwnNotes/issues/3854))
