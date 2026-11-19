@@ -466,8 +466,15 @@ TimePickerPopup::TimePickerPopup(const QTime &time, const QDate &date, QWidget *
     const QColor highlight = pal.color(QPalette::Highlight);
     const QColor highlightedText = pal.color(QPalette::HighlightedText);
     const int presetHeight = fontMetrics().height() + 10;
-    const int headerFontSize = QFontInfo(scaledFont(font(), 2.4)).pixelSize();
-    const int smallFontSize = QFontInfo(scaledFont(font(), 0.9)).pixelSize();
+
+    // Use the configured size rather than resolving a font, which may not exist
+    // on headless platforms.
+    const QFont baseFont = font();
+    const qreal basePixelSize = baseFont.pixelSize() > 0
+                                    ? baseFont.pixelSize()
+                                    : baseFont.pointSizeF() * logicalDpiY() / 72.0;
+    const int headerFontSize = qMax(6, qRound(basePixelSize * 2.4));
+    const int smallFontSize = qMax(6, qRound(basePixelSize * 0.9));
 
     // Keep a visible border, even if a style sheet of a parent removes the borders of frames.
     // The buttons keep the same border width in every state, so they don't move on hover.
@@ -792,8 +799,9 @@ void TimePickerButton::showPopup() {
     if (screen != nullptr) {
         const QRect available = screen->availableGeometry();
 
-        position.setX(
-            qBound(available.left(), position.x(), available.right() - popup->width() + 1));
+        // Align to the left edge if the popup is wider than the screen.
+        const int maxX = qMax(available.left(), available.right() - popup->width() + 1);
+        position.setX(qBound(available.left(), position.x(), maxX));
 
         if (position.y() + popup->height() > available.bottom()) {
             position.setY(

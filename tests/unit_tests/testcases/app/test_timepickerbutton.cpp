@@ -175,5 +175,6 @@ void TestTimePickerButton::testDarkModeStyleSheet() {
 
     // The large time display isn't shrunk by the font size of the style sheet
     auto *hourButton = popup->findChild<QToolButton *>(QStringLiteral("timePickerHourButton"));
-    QVERIFY(QFontInfo(hourButton->font()).pixelSize() > 28);
+    QVERIFY(hourButton != nullptr);
+    QVERIFY(hourButton->font().pixelSize() > 28);
 }
