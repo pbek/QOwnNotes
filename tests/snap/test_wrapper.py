@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 import unittest
@@ -127,6 +128,10 @@ class TestSnapWrapper(unittest.TestCase):
                     self.environment["SNAP_USER_DATA"] + "/.config",
                 )
                 self.assertEqual(
+                    environment["GIT_CONFIG_GLOBAL"],
+                    environment["XDG_CONFIG_HOME"] + "/git/config",
+                )
+                self.assertEqual(
                     environment["XDG_DATA_HOME"],
                     self.environment["SNAP_USER_DATA"] + "/.local/share",
                 )
@@ -152,6 +157,46 @@ class TestSnapWrapper(unittest.TestCase):
                 for key, value in overrides.items():
                     self.assertEqual(environment[key], value)
                 self.assertEqual(environment["HOME"], str(self.home))
+                self.assertEqual(
+                    environment["GIT_CONFIG_GLOBAL"],
+                    overrides["XDG_CONFIG_HOME"] + "/git/config",
+                )
+
+    @unittest.skipUnless(shutil.which("git"), "Git is required")
+    def test_git_versioning_ignores_host_global_config(self):
+        host_config = self.home / ".gitconfig"
+        # An invalid host config makes any attempt to read it fail without Snap.
+        host_config.write_text("[broken\n")
+        environment = self.launch(
+            WRAPPERS[0],
+            {"GIT_CONFIG_GLOBAL": str(host_config), "GIT_CONFIG_NOSYSTEM": "1"},
+        )["env"]
+        repo = self.home / "notes"
+        repo.mkdir()
+
+        def git(*args):
+            return subprocess.run(
+                ["git", *args],
+                cwd=repo,
+                env=environment,
+                capture_output=True,
+                text=True,
+                check=True,
+            ).stdout.strip()
+
+        git("init")
+        # This must also work before the Snap-local global config exists.
+        git("config", "commit.gpgsign", "false")
+        config = Path(environment["XDG_CONFIG_HOME"]) / "git/config"
+        config.parent.mkdir(parents=True)
+        git("config", "--global", "user.name", "Snap Git User")
+        git("config", "--global", "user.email", "snap@example.invalid")
+        (repo / "note.md").write_text("# Note\n")
+        git("add", "-A")
+        git("commit", "-m", "QOwnNotes commit")
+        self.assertEqual(git("log", "-1", "--format=%an"), "Snap Git User")
+        self.assertTrue(config.is_file())
+        self.assertEqual(host_config.read_text(), "[broken\n")
 
     def test_missing_real_home_keeps_private_home(self):
         for wrapper in WRAPPERS:

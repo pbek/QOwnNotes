@@ -7,6 +7,9 @@
   (for [#3847](https://github.com/pbek/QOwnNotes/issues/3847))
   - Nearby directory notifications share a delayed check, which still handles notes
     that synchronization clients update by replacing the file
+- Fixed **Git versioning in the Snap** failing when a host `~/.gitconfig` is present
+  by using the Snap's private Git config
+  (for [#3857](https://github.com/pbek/QOwnNotes/issues/3857))
 - Added **drag and drop** for copying and moving notes and subfolders in the note list and folder
   panel, including mixed selections when the **note tree** is enabled
   (for [#3854](https://github.com/pbek/QOwnNotes/issues/3854))

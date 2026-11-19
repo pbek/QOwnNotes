@@ -259,8 +259,25 @@ void Utils::Git::showLog(const QString &filePath) {
 }
 
 #ifdef USE_LIBGIT2
+namespace {
+void initLibGit2() {
+    static const int initResult = [] {
+        const int result = git_libgit2_init();
+        const QByteArray snapUserData = qgetenv("SNAP_USER_DATA");
+        if (result > 0 && !snapUserData.isEmpty()) {
+            // libgit2's normal repository APIs do not honor GIT_CONFIG_GLOBAL.
+            // Keep the .gitconfig lookup in private storage; XDG config is already Snap-local.
+            git_libgit2_opts(GIT_OPT_SET_SEARCH_PATH, GIT_CONFIG_LEVEL_GLOBAL,
+                             snapUserData.constData());
+        }
+        return result;
+    }();
+    Q_UNUSED(initResult);
+}
+}    // namespace
+
 bool Utils::Git::initRepository(const QString &path) {
-    git_libgit2_init();
+    initLibGit2();
 
     git_repository *repo = nullptr;
     // First, check if the directory is already a git repository
@@ -285,7 +302,7 @@ bool Utils::Git::initRepository(const QString &path) {
 }
 
 bool Utils::Git::commitAll(const QString &path, const QString &message) {
-    git_libgit2_init();
+    initLibGit2();
 
     git_repository *repo = nullptr;
     if (git_repository_open(&repo, path.toUtf8().constData()) != 0) {
@@ -400,6 +417,7 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int li
     }
 
     // Get the Git repository
+    initLibGit2();
     git_repository *repo = nullptr;
     QString noteFolderPath = NoteFolder::currentLocalPath();
     if (git_repository_open(&repo, noteFolderPath.toUtf8().constData()) != 0) {

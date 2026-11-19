@@ -7,6 +7,8 @@ if [ -n "$SNAP_REAL_HOME" ] && [ -d "$SNAP_REAL_HOME" ]; then
   export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$SNAP_USER_DATA/.config}"
   export XDG_DATA_HOME="${XDG_DATA_HOME:-$SNAP_USER_DATA/.local/share}"
   export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$SNAP_USER_COMMON/.cache}"
+  # The home interface does not grant Git access to the host's .gitconfig.
+  export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/config"
   export HOME="$SNAP_REAL_HOME"
 fi
 
