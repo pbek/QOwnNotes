@@ -10,6 +10,16 @@
 - Fixed **Git versioning in the Snap** failing when a host `~/.gitconfig` is present
   by using the Snap's private Git config
   (for [#3857](https://github.com/pbek/QOwnNotes/issues/3857))
+- Added a **time picker** next to the due date of the **Nextcloud Deck** card dialog,
+  so the time no longer needs to be typed
+  (for [#3856](https://github.com/pbek/QOwnNotes/issues/3856))
+  - The due date and the due time now have separate fields, the date keeps its calendar
+    and the time gets the new clock picker
+  - The picker follows the light and dark mode and the accent color
+  - The clock face shows hours on two rings and switches to the minutes after an hour was picked
+  - Quick presets for 09:00, 12:00, 15:00 and 18:00 and a **Now** button set common times
+  - The picked time is shown right away, **Escape** restores the previous time
+  - The mouse wheel, the arrow keys and **Tab** allow fine adjustments with the keyboard
 - Added **drag and drop** for copying and moving notes and subfolders in the note list and folder
   panel, including mixed selections when the **note tree** is enabled
   (for [#3854](https://github.com/pbek/QOwnNotes/issues/3854))

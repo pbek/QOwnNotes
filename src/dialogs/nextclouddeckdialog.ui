@@ -83,20 +83,40 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QDateTimeEdit" name="dueDateTimeEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
+       <layout class="QHBoxLayout" name="dueDateTimeLayout">
+        <property name="spacing">
+         <number>4</number>
         </property>
-        <property name="currentSection">
-         <enum>QDateTimeEdit::HourSection</enum>
-        </property>
-        <property name="calendarPopup">
-         <bool>true</bool>
-        </property>
-       </widget>
+        <item>
+         <widget class="QDateEdit" name="dueDateEdit">
+          <property name="toolTip">
+           <string>Due date of the card</string>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTimeEdit" name="dueTimeEdit">
+          <property name="toolTip">
+           <string>Due time of the card</string>
+          </property>
+          <property name="currentSection">
+           <enum>QDateTimeEdit::HourSection</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="TimePickerButton" name="dueTimePickerButton"/>
+        </item>
+       </layout>
       </item>
       <item row="4" column="1">
        <widget class="QFrame" name="dueDateAdjustFrame">
@@ -527,6 +547,11 @@
    <extends>QWidget</extends>
    <header location="global">widgets/tagchipswidget.h</header>
   </customwidget>
+  <customwidget>
+   <class>TimePickerButton</class>
+   <extends>QToolButton</extends>
+   <header location="global">widgets/timepickerbutton.h</header>
+  </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>boardStackComboBox</tabstop>
@@ -537,7 +562,9 @@
   <tabstop>reloadCardListButton</tabstop>
   <tabstop>titleLineEdit</tabstop>
   <tabstop>dueDateTimeCheckBox</tabstop>
-  <tabstop>dueDateTimeEdit</tabstop>
+  <tabstop>dueDateEdit</tabstop>
+  <tabstop>dueTimeEdit</tabstop>
+  <tabstop>dueTimePickerButton</tabstop>
   <tabstop>subd1DayButton</tabstop>
   <tabstop>sub1HourButton</tabstop>
   <tabstop>sub10MinButton</tabstop>

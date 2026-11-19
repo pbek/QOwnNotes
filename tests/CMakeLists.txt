@@ -144,6 +144,8 @@ set(TEST_SOURCE_FILES
     ${QON_TESTS_DIR}/testcases/app/test_settingsservice.h
     ${QON_TESTS_DIR}/testcases/app/test_tagchipswidget.cpp
     ${QON_TESTS_DIR}/testcases/app/test_tagchipswidget.h
+    ${QON_TESTS_DIR}/testcases/app/test_timepickerbutton.cpp
+    ${QON_TESTS_DIR}/testcases/app/test_timepickerbutton.h
     ${QON_TESTS_DIR}/testcases/app/test_markdownformattoolbar.cpp
     ${QON_TESTS_DIR}/testcases/app/test_markdownformattoolbar.h
     ${QON_TESTS_DIR}/testcases/app/test_todosettingswidget.cpp
@@ -295,6 +297,8 @@ set(APP_SOURCE_FILES
     widgets/nextclouddecklabeldelegate.h
     widgets/tagchipswidget.cpp
     widgets/tagchipswidget.h
+    widgets/timepickerbutton.cpp
+    widgets/timepickerbutton.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
     widgets/notepreviewwidget.cpp

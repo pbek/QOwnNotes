@@ -225,6 +225,7 @@ SOURCES += main.cpp\
     widgets/loadingoverlaywidget.cpp \
     widgets/nextclouddecklabeldelegate.cpp \
     widgets/tagchipswidget.cpp \
+    widgets/timepickerbutton.cpp \
     widgets/markdownformattoolbar.cpp \
     widgets/filenavigationwidget.cpp \
     widgets/backlinkwidget.cpp \
@@ -408,6 +409,7 @@ HEADERS  += mainwindow.h \
     widgets/loadingoverlaywidget.h \
     widgets/nextclouddecklabeldelegate.h \
     widgets/tagchipswidget.h \
+    widgets/timepickerbutton.h \
     widgets/markdownformattoolbar.h \
     widgets/filenavigationwidget.h \
     widgets/backlinkwidget.h \

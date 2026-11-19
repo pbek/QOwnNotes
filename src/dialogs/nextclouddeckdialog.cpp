@@ -37,6 +37,8 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
     ui->setupUi(this);
     ui->descriptionLayout->insertWidget(
         0, new MarkdownFormatToolbar(ui->descriptionTextEdit, ui->editFrame));
+    ui->dueTimePickerButton->setTimeEdit(ui->dueTimeEdit);
+    ui->dueTimePickerButton->setDateEdit(ui->dueDateEdit);
     if (_mode == Mode::InsertLinks) {
         // Keep picker geometry separate from the full management dialog.
         setObjectName(QStringLiteral("NextcloudDeckLinkDialog"));
@@ -77,7 +79,7 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
     ui->newItemEdit->setFocus();
 
     // Set the default due date to one hour from now
-    ui->dueDateTimeEdit->setDateTime(QDateTime::currentDateTime().addSecs(3600));
+    setDueDateTime(QDateTime::currentDateTime().addSecs(3600));
 
     // Hide currently unused UI elements
     ui->showDueTodayItemsOnlyCheckBox->setHidden(true);
@@ -255,7 +257,7 @@ void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
         configureDeckService(nextcloudDeckService);
     }
 
-    auto *dateTime = new QDateTime(ui->dueDateTimeEdit->dateTime());
+    auto *dateTime = new QDateTime(dueDateTime());
     dateTime->setTimeZone(QTimeZone::systemTimeZone());
     // We want to set the seconds to 0
     dateTime->setTime(dateTime->time().addSecs(0 - dateTime->time().second()));
@@ -479,36 +481,51 @@ bool NextcloudDeckDialog::eventFilter(QObject *obj, QEvent *event) {
 }
 
 void NextcloudDeckDialog::on_add1HourButton_clicked() {
-    ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(3600));
+    setDueDateTime(dueDateTime().addSecs(3600));
 }
 
 void NextcloudDeckDialog::on_add10MinButton_clicked() {
-    ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(600));
+    setDueDateTime(dueDateTime().addSecs(600));
 }
 
-void NextcloudDeckDialog::on_add1DayButton_clicked() {
-    ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addDays(1));
-}
+void NextcloudDeckDialog::on_add1DayButton_clicked() { setDueDateTime(dueDateTime().addDays(1)); }
 
 void NextcloudDeckDialog::on_sub10MinButton_clicked() {
-    ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(-600));
+    setDueDateTime(dueDateTime().addSecs(-600));
 }
 
 void NextcloudDeckDialog::on_sub1HourButton_clicked() {
-    ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addSecs(-3600));
+    setDueDateTime(dueDateTime().addSecs(-3600));
 }
 
-void NextcloudDeckDialog::on_subd1DayButton_clicked() {
-    ui->dueDateTimeEdit->setDateTime(ui->dueDateTimeEdit->dateTime().addDays(-1));
-}
+void NextcloudDeckDialog::on_subd1DayButton_clicked() { setDueDateTime(dueDateTime().addDays(-1)); }
 
 void NextcloudDeckDialog::on_titleLineEdit_textChanged(const QString &arg1) {
     setSaveButtonsEnabled(!arg1.isEmpty());
 }
 
 void NextcloudDeckDialog::on_dueDateTimeCheckBox_toggled(bool checked) {
-    ui->dueDateTimeEdit->setEnabled(checked);
-    ui->dueDateAdjustFrame->setEnabled(checked);
+    setDueDateEditsEnabled(checked);
+}
+
+/**
+ * Returns the due date and time of the separate date and time edits in local time
+ */
+QDateTime NextcloudDeckDialog::dueDateTime() const {
+    return QDateTime(ui->dueDateEdit->date(), ui->dueTimeEdit->time());
+}
+
+void NextcloudDeckDialog::setDueDateTime(const QDateTime &dateTime) {
+    // Cards from the server have UTC due dates, the edits show the local time
+    const QDateTime localDateTime = dateTime.toLocalTime();
+    ui->dueDateEdit->setDate(localDateTime.date());
+    ui->dueTimeEdit->setTime(localDateTime.time());
+}
+
+void NextcloudDeckDialog::setDueDateEditsEnabled(bool enabled) {
+    ui->dueDateEdit->setEnabled(enabled);
+    ui->dueTimeEdit->setEnabled(enabled);
+    ui->dueDateAdjustFrame->setEnabled(enabled);
 }
 
 void NextcloudDeckDialog::setTitle(const QString &title) { ui->titleLineEdit->setText(title); }
@@ -905,8 +922,7 @@ void NextcloudDeckDialog::resetEditFrameControls() {
     ui->titleLineEdit->setText(QString());
     ui->descriptionTextEdit->setPlainText(QString());
     ui->dueDateTimeCheckBox->setChecked(false);
-    ui->dueDateTimeEdit->setEnabled(false);
-    ui->dueDateAdjustFrame->setEnabled(false);
+    setDueDateEditsEnabled(false);
     setSaveButtonsEnabled(false);
     ui->archiveCardButton->setEnabled(false);
     ui->deleteCardButton->setEnabled(false);
@@ -962,7 +978,7 @@ void NextcloudDeckDialog::jumpToCard(int id) {
         // Set the due date
         if (_currentCard.duedate.isValid()) {
             ui->dueDateTimeCheckBox->setChecked(true);
-            ui->dueDateTimeEdit->setDateTime(_currentCard.duedate);
+            setDueDateTime(_currentCard.duedate);
         } else {
             ui->dueDateTimeCheckBox->setChecked(false);
         }
@@ -1035,10 +1051,10 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     // selected card, in that case they must not be reset when creating a new card
     const QString description = ui->descriptionTextEdit->toPlainText();
     const bool dueDateEnabled = ui->dueDateTimeCheckBox->isChecked();
-    const QDateTime dueDateTime = ui->dueDateTimeEdit->dateTime();
+    const QDateTime currentDueDateTime = dueDateTime();
     const bool keepDescription = description != _currentCard.description;
     const bool keepDueDate = dueDateEnabled != _currentCard.duedate.isValid() ||
-                             (dueDateEnabled && dueDateTime != _currentCard.duedate);
+                             (dueDateEnabled && currentDueDateTime != _currentCard.duedate);
     const QList<int> labelIds = ui->labelsWidget->selectedIds();
     const bool keepLabels = !ui->labelsWidget->hasSameSelection(_currentCard.labelIds());
 
@@ -1060,8 +1076,7 @@ void NextcloudDeckDialog::on_newItemEdit_returnPressed() {
     ui->descriptionTextEdit->setFocus();
 
     // Keep an already entered due date, otherwise default to one hour from now
-    ui->dueDateTimeEdit->setDateTime(keepDueDate ? dueDateTime
-                                                 : QDateTime::currentDateTime().addSecs(3600));
+    setDueDateTime(keepDueDate ? currentDueDateTime : QDateTime::currentDateTime().addSecs(3600));
     ui->dueDateTimeCheckBox->setChecked(keepDueDate ? dueDateEnabled : true);
 }
 
@@ -1287,8 +1302,7 @@ bool NextcloudDeckDialog::hasUnsavedChanges() const {
     return ui->titleLineEdit->text() != _currentCard.title ||
            ui->descriptionTextEdit->toPlainText() != _currentCard.description ||
            ui->dueDateTimeCheckBox->isChecked() != _currentCard.duedate.isValid() ||
-           (ui->dueDateTimeCheckBox->isChecked() &&
-            ui->dueDateTimeEdit->dateTime() != _currentCard.duedate) ||
+           (ui->dueDateTimeCheckBox->isChecked() && dueDateTime() != _currentCard.duedate) ||
            !ui->labelsWidget->hasSameSelection(_currentCard.labelIds());
 }
 

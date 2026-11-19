@@ -594,6 +594,8 @@ set(SOURCE_FILES
     widgets/nextclouddecklabeldelegate.h
     widgets/tagchipswidget.cpp
     widgets/tagchipswidget.h
+    widgets/timepickerbutton.cpp
+    widgets/timepickerbutton.h
     widgets/markdownformattoolbar.cpp
     widgets/markdownformattoolbar.h
     widgets/filenavigationwidget.cpp

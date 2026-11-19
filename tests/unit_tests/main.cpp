@@ -23,6 +23,7 @@
 #include "testcases/app/test_searchwidgets.h"
 #include "testcases/app/test_settingsservice.h"
 #include "testcases/app/test_tagchipswidget.h"
+#include "testcases/app/test_timepickerbutton.h"
 #include "testcases/app/test_todosettingswidget.h"
 #include "testcases/app/test_touchscrolling.h"
 #include "testcases/app/test_utilsgit.h"
@@ -66,6 +67,7 @@ int main(int argc, char *argv[]) {
                          QTest::qExec(new TestNextcloudDeckService(), argc, argv) +
                          QTest::qExec(new TestNextcloudDeckDialog(), argc, argv) +
                          QTest::qExec(new TestTagChipsWidget(), argc, argv) +
+                         QTest::qExec(new TestTimePickerButton(), argc, argv) +
                          QTest::qExec(new TestMarkdownFormatToolbar(), argc, argv) +
                          QTest::qExec(new TestQMarkdownTextEdit(), argc, argv) +
                          QTest::qExec(new TestSearchWidgets(), argc, argv) +

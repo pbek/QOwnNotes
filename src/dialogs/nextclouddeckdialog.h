@@ -128,6 +128,9 @@ class NextcloudDeckDialog : public MasterDialog {
     int editedCardBoardId() const;
     void createLabel(const QString &title, const QString &color);
     bool hasUnsavedChanges() const;
+    QDateTime dueDateTime() const;
+    void setDueDateTime(const QDateTime &dateTime);
+    void setDueDateEditsEnabled(bool enabled);
     void filterCardList(const QString &text);
 
     void openUrlInBrowserForItem(const QTreeWidgetItem *item);
