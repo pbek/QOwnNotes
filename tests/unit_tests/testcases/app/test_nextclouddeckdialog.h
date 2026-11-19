@@ -15,6 +15,7 @@ class TestNextcloudDeckDialog : public QObject {
     void testNewCardButtons();
     void testLabelsEditor();
     void testSearchCardsByTag();
+    void testDueDateButtons();
 };
 
 #endif    // TESTNEXTCLOUDDECKDIALOG_H

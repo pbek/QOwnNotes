@@ -16,6 +16,8 @@
   - The due date and the due time now have separate fields, the date keeps its calendar
     and the time gets the new clock picker
   - The picker follows the light and dark mode and the accent color
+  - New **Today**, **Tomorrow** and **Next week** buttons set the due date and keep the time,
+    the buttons that move the due date earlier or later are now labeled
   - The clock face shows hours on two rings and switches to the minutes after an hour was picked
   - Quick presets for 09:00, 12:00, 15:00 and 18:00 and a **Now** button set common times
   - The picked time is shown right away, **Escape** restores the previous time

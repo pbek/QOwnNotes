@@ -118,6 +118,16 @@
         </item>
        </layout>
       </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="dueDateShiftLabel">
+        <property name="toolTip">
+         <string>Move the due date earlier or later</string>
+        </property>
+        <property name="text">
+         <string>Shift:</string>
+        </property>
+       </widget>
+      </item>
       <item row="4" column="1">
        <widget class="QFrame" name="dueDateAdjustFrame">
         <property name="frameShape">
@@ -234,7 +244,87 @@
         </layout>
        </widget>
       </item>
-      <item row="5" column="0" alignment="Qt::AlignTop">
+      <item row="5" column="0">
+       <widget class="QLabel" name="dueDateSetLabel">
+        <property name="toolTip">
+         <string>Set the due date to a common day, the time is kept</string>
+        </property>
+        <property name="text">
+         <string>Set to:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QFrame" name="dueDateQuickFrame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <layout class="QHBoxLayout" name="dueDateQuickLayout">
+         <property name="spacing">
+          <number>4</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="dueDateTodayButton">
+           <property name="toolTip">
+            <string>Set the due date to today, the time is kept</string>
+           </property>
+           <property name="text">
+            <string>Today</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="dueDateTomorrowButton">
+           <property name="toolTip">
+            <string>Set the due date to tomorrow, the time is kept</string>
+           </property>
+           <property name="text">
+            <string>Tomorrow</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="dueDateNextWeekButton">
+           <property name="toolTip">
+            <string>Set the due date to the first day of next week, the time is kept</string>
+           </property>
+           <property name="text">
+            <string>Next week</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="dueDateQuickTrailingSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="6" column="0" alignment="Qt::AlignTop">
        <widget class="QLabel" name="labelsLabel">
         <property name="toolTip">
          <string>Tags of the card, they are shared with all cards of the board</string>
@@ -247,10 +337,10 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
+      <item row="6" column="1">
        <widget class="TagChipsWidget" name="labelsWidget" native="true"/>
       </item>
-      <item row="6" column="0" colspan="2">
+      <item row="7" column="0" colspan="2">
        <widget class="QLabel" name="descriptionLabel">
         <property name="text">
          <string>Description:</string>
@@ -260,7 +350,7 @@
         </property>
        </widget>
       </item>
-      <item row="7" column="0" colspan="2">
+      <item row="8" column="0" colspan="2">
        <layout class="QVBoxLayout" name="descriptionLayout">
         <item>
          <widget class="QOwnNotesMarkdownTextEdit" name="descriptionTextEdit">
@@ -271,7 +361,7 @@
         </item>
        </layout>
       </item>
-      <item row="8" column="0" colspan="2">
+      <item row="9" column="0" colspan="2">
        <widget class="QFrame" name="buttonFrame">
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -571,6 +661,9 @@
   <tabstop>add10MinButton</tabstop>
   <tabstop>add1HourButton</tabstop>
   <tabstop>add1DayButton</tabstop>
+  <tabstop>dueDateTodayButton</tabstop>
+  <tabstop>dueDateTomorrowButton</tabstop>
+  <tabstop>dueDateNextWeekButton</tabstop>
   <tabstop>descriptionTextEdit</tabstop>
   <tabstop>moveCardButton</tabstop>
   <tabstop>archiveCardButton</tabstop>

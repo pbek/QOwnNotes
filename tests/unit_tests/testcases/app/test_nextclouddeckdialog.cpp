@@ -1,7 +1,9 @@
 #include "test_nextclouddeckdialog.h"
 
 #include <QAction>
+#include <QCheckBox>
 #include <QComboBox>
+#include <QDateTimeEdit>
 #include <QFrame>
 #include <QLabel>
 #include <QLineEdit>
@@ -247,4 +249,46 @@ void TestNextcloudDeckDialog::testSearchCardsByTag() {
 
     QCOMPARE(tree->columnCount(), 3);
     QVERIFY(dynamic_cast<NextcloudDeckLabelDelegate *>(tree->itemDelegateForColumn(2)) != nullptr);
+}
+
+void TestNextcloudDeckDialog::testDueDateButtons() {
+    NextcloudDeckDialog dialog;
+    auto *dateEdit = dialog.findChild<QDateEdit *>(QStringLiteral("dueDateEdit"));
+    auto *timeEdit = dialog.findChild<QTimeEdit *>(QStringLiteral("dueTimeEdit"));
+    auto *quickFrame = dialog.findChild<QFrame *>(QStringLiteral("dueDateQuickFrame"));
+    auto *shiftLabel = dialog.findChild<QLabel *>(QStringLiteral("dueDateShiftLabel"));
+    QVERIFY(dateEdit && timeEdit && quickFrame && shiftLabel);
+
+    // The edit frame is only enabled while a card is edited
+    dialog.findChild<QFrame *>(QStringLiteral("editFrame"))->setEnabled(true);
+    auto *checkBox = dialog.findChild<QCheckBox *>(QStringLiteral("dueDateTimeCheckBox"));
+    checkBox->setChecked(true);
+
+    // The quick buttons set the date and keep the time
+    timeEdit->setTime(QTime(16, 45));
+    dialog.findChild<QToolButton *>(QStringLiteral("dueDateTomorrowButton"))->click();
+    QCOMPARE(dateEdit->date(), QDate::currentDate().addDays(1));
+    QCOMPARE(timeEdit->time(), QTime(16, 45));
+    dialog.findChild<QToolButton *>(QStringLiteral("dueDateTodayButton"))->click();
+    QCOMPARE(dateEdit->date(), QDate::currentDate());
+    dialog.findChild<QToolButton *>(QStringLiteral("dueDateNextWeekButton"))->click();
+    QCOMPARE(dateEdit->date(), NextcloudDeckDialog::nextWeekStartDate(QDate::currentDate(),
+                                                                      QLocale().firstDayOfWeek()));
+    QCOMPARE(timeEdit->time(), QTime(16, 45));
+
+    // The next week always starts after the given day
+    QCOMPARE(NextcloudDeckDialog::nextWeekStartDate(QDate(2026, 11, 19), Qt::Monday),
+             QDate(2026, 11, 23));
+    QCOMPARE(NextcloudDeckDialog::nextWeekStartDate(QDate(2026, 11, 23), Qt::Monday),
+             QDate(2026, 11, 30));
+    QCOMPARE(NextcloudDeckDialog::nextWeekStartDate(QDate(2026, 11, 21), Qt::Sunday),
+             QDate(2026, 11, 22));
+
+    // The labels and buttons follow the due date checkbox
+    checkBox->setChecked(false);
+    QVERIFY(!quickFrame->isEnabled());
+    QVERIFY(!shiftLabel->isEnabled());
+    checkBox->setChecked(true);
+    QVERIFY(quickFrame->isEnabled());
+    QVERIFY(shiftLabel->isEnabled());
 }

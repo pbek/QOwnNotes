@@ -4,6 +4,7 @@
 #include <QDialogButtonBox>
 #include <QKeyEvent>
 #include <QLabel>
+#include <QLocale>
 #include <QMenu>
 #include <QMessageBox>
 #include <QPushButton>
@@ -525,7 +526,30 @@ void NextcloudDeckDialog::setDueDateTime(const QDateTime &dateTime) {
 void NextcloudDeckDialog::setDueDateEditsEnabled(bool enabled) {
     ui->dueDateEdit->setEnabled(enabled);
     ui->dueTimeEdit->setEnabled(enabled);
+    ui->dueDateShiftLabel->setEnabled(enabled);
     ui->dueDateAdjustFrame->setEnabled(enabled);
+    ui->dueDateSetLabel->setEnabled(enabled);
+    ui->dueDateQuickFrame->setEnabled(enabled);
+}
+
+void NextcloudDeckDialog::on_dueDateTodayButton_clicked() {
+    ui->dueDateEdit->setDate(QDate::currentDate());
+}
+
+void NextcloudDeckDialog::on_dueDateTomorrowButton_clicked() {
+    ui->dueDateEdit->setDate(QDate::currentDate().addDays(1));
+}
+
+void NextcloudDeckDialog::on_dueDateNextWeekButton_clicked() {
+    ui->dueDateEdit->setDate(nextWeekStartDate(QDate::currentDate(), QLocale().firstDayOfWeek()));
+}
+
+/**
+ * Returns the first day of the week after the given date, like the next Monday
+ */
+QDate NextcloudDeckDialog::nextWeekStartDate(const QDate &date, Qt::DayOfWeek firstDayOfWeek) {
+    const int days = (firstDayOfWeek - date.dayOfWeek() + 7) % 7;
+    return date.addDays(days == 0 ? 7 : days);
 }
 
 void NextcloudDeckDialog::setTitle(const QString &title) { ui->titleLineEdit->setText(title); }

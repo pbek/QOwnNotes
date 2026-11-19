@@ -1,6 +1,7 @@
 #ifndef NEXTCLOUDDECKDIALOG_H
 #define NEXTCLOUDDECKDIALOG_H
 
+#include <QDate>
 #include <QDialog>
 #include <QHash>
 #include <QList>
@@ -29,6 +30,7 @@ class NextcloudDeckDialog : public MasterDialog {
     ~NextcloudDeckDialog();
     void setTitle(const QString &title);
     void setCardId(int id, int boardId = -1);
+    static QDate nextWeekStartDate(const QDate &date, Qt::DayOfWeek firstDayOfWeek);
 
    private slots:
     void on_saveButton_clicked();
@@ -46,6 +48,12 @@ class NextcloudDeckDialog : public MasterDialog {
     void on_sub1HourButton_clicked();
 
     void on_subd1DayButton_clicked();
+
+    void on_dueDateTodayButton_clicked();
+
+    void on_dueDateTomorrowButton_clicked();
+
+    void on_dueDateNextWeekButton_clicked();
 
     void on_titleLineEdit_textChanged(const QString &arg1);
 
