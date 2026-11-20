@@ -1078,9 +1078,15 @@ QToolButton::menu-arrow:open {
 }
 
 QPushButton::menu-indicator {
+  image: url(:/qss_icons/rc/down_arrow.png);
   subcontrol-origin: padding;
-  subcontrol-position: bottom right;
-  left: 8px;
+  subcontrol-position: center right;
+  right: 4px;
+  margin-left: 6px;
+}
+
+QPushButton::menu-indicator:disabled {
+  image: url(:/qss_icons/rc/down_arrow_disabled.png);
 }
 
 QTableView {

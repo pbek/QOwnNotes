@@ -7,6 +7,7 @@
 #include <QJsonValue>
 #include <QList>
 #include <QObject>
+#include <QStringList>
 #include <QtNetwork/QNetworkRequest>
 
 #include "entities/cloudconnection.h"
@@ -50,6 +51,7 @@ class NextcloudDeckService : public QObject {
         QString description;
         QString owner;
         QDateTime duedate;
+        QDateTime startdate;
         int order;
         QString type;
         QDateTime createdAt;
@@ -60,6 +62,10 @@ class NextcloudDeckService : public QObject {
         // Older Deck versions don't support marking cards as done
         bool supportsDone = false;
         QList<Label> labels;
+        QStringList assignees;
+        QList<int> dependentCardIds;
+        QString color;
+        int attachmentCount = -1;
 
         bool isDone() const { return done.isValid(); }
 
@@ -99,10 +105,9 @@ class NextcloudDeckService : public QObject {
     static QList<Label> labelsFromJson(const QJsonValue& value);
     static QStringList defaultLabelColors();
     int storeCard(const QString& title, const QString& description = "",
-                  QDateTime* dueDateTime = nullptr, int cardId = -1, int cardStackId = -1,
-                  int cardOrder = 0, const QString& cardOwner = "",
-                  const QDateTime& cardDone = QDateTime());
+                  const QDateTime* dueDateTime = nullptr, const Card* existingCard = nullptr);
     QString getCardLinkForId(int cardId);
+    QUrl getCardRedirectUrl(int cardId) const;
     bool isEnabledAndValid();
     bool isEnabled();
     QList<Board> getBoards();

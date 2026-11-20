@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 26.11.13
+
+- Added optional **Nextcloud Deck** card list columns for ID, start date, attachment
+  count, dependencies, assignees, last modified date, and card color
+  (for [#3860](https://github.com/pbek/QOwnNotes/issues/3860))
+  - The **Columns** menu remembers your choices without changing the default view
+  - Editing a card preserves the start date and color set in Deck
+  - Menu arrows of buttons in dark mode are now vertically centered
+
 ## 26.11.12
 
 - Avoided unnecessary full note-folder scans on Windows when a watched subfolder's

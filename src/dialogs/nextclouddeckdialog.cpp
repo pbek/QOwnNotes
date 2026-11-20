@@ -2,11 +2,13 @@
 
 #include <QDesktopServices>
 #include <QDialogButtonBox>
+#include <QHeaderView>
 #include <QKeyEvent>
 #include <QLabel>
 #include <QLocale>
 #include <QMenu>
 #include <QMessageBox>
+#include <QPixmap>
 #include <QPushButton>
 #include <QRegularExpression>
 #include <QShortcut>
@@ -32,6 +34,23 @@
 #include "widgets/markdownformattoolbar.h"
 #include "widgets/nextclouddecklabeldelegate.h"
 #include "widgets/tagchipswidget.h"
+
+namespace {
+enum CardColumn {
+    CardIdColumn = 3,
+    StartDateColumn,
+    AttachmentsColumn,
+    DependenciesColumn,
+    AssigneesColumn,
+    LastModifiedColumn,
+    ColorColumn,
+    CardColumnCount,
+};
+
+const auto cardColumnsStateKey = QStringLiteral("NextcloudDeckDialog/cardColumnsState");
+const auto legacyCardLayoutKey =
+    QStringLiteral("NextcloudDeckDialog/cardItemTreeWidgetHeaderLayout");
+}    // namespace
 
 NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
     : MasterDialog(parent), ui(new Ui::NextcloudDeckDialog), _mode(mode) {
@@ -91,6 +110,57 @@ NextcloudDeckDialog::NextcloudDeckDialog(QWidget *parent, Mode mode)
 
 NextcloudDeckDialog::~NextcloudDeckDialog() { delete ui; }
 
+void NextcloudDeckDialog::done(int result) {
+    if (_mode == Mode::Manage) {
+        SettingsService().setValue(cardColumnsStateKey,
+                                   ui->cardItemTreeWidget->header()->saveState());
+    }
+    MasterDialog::done(result);
+}
+
+void NextcloudDeckDialog::setupCardColumns() {
+    auto *tree = ui->cardItemTreeWidget;
+    if (_mode != Mode::Manage) {
+        ui->cardColumnsButton->hide();
+        Utils::Gui::initTreeWidgetHeaderOrderPersistence(tree, legacyCardLayoutKey);
+        return;
+    }
+
+    // Restore the original three columns before expanding the header for existing users.
+    Utils::Gui::restoreTreeWidgetHeaderLayout(tree, legacyCardLayoutKey);
+    tree->setColumnCount(CardColumnCount);
+    auto *header = tree->header();
+    header->setSectionsMovable(true);
+    header->setFirstSectionMovable(true);
+
+    const QStringList labels{tr("Card ID"),      tr("Start date"), tr("Attachments"),
+                             tr("Dependencies"), tr("Assignees"),  tr("Last modified"),
+                             tr("Card color")};
+    for (int column = CardIdColumn; column < CardColumnCount; ++column) {
+        tree->headerItem()->setText(column, labels.at(column - CardIdColumn));
+        tree->setColumnHidden(column, true);
+    }
+
+    const auto savedState = SettingsService().value(cardColumnsStateKey).toByteArray();
+    const bool restored = !savedState.isEmpty() && header->restoreState(savedState);
+    _sizeCardColumnsOnLoad =
+        !restored && !Utils::Gui::hasTreeWidgetHeaderLayout(tree, legacyCardLayoutKey);
+
+    auto *menu = new QMenu(ui->cardColumnsButton);
+    ui->cardColumnsButton->setMenu(menu);
+    for (int column = CardIdColumn; column < CardColumnCount; ++column) {
+        auto *action = menu->addAction(tree->headerItem()->text(column));
+        action->setCheckable(true);
+        action->setChecked(!tree->isColumnHidden(column));
+        connect(action, &QAction::toggled, this, [tree, column](bool visible) {
+            if (!visible && tree->sortColumn() == column) {
+                tree->sortItems(0, Qt::AscendingOrder);
+            }
+            tree->setColumnHidden(column, !visible);
+        });
+    }
+}
+
 void NextcloudDeckDialog::setupUi() {
     setupMainSplitter();
 
@@ -101,10 +171,7 @@ void NextcloudDeckDialog::setupUi() {
         refreshUi();
     }
 
-    // The tags column made the layout of the former two-column header incompatible
-    Utils::Gui::initTreeWidgetHeaderOrderPersistence(
-        ui->cardItemTreeWidget,
-        QStringLiteral("NextcloudDeckDialog/cardItemTreeWidgetHeaderLayout"));
+    setupCardColumns();
     ui->cardItemTreeWidget->setItemDelegateForColumn(
         2, new NextcloudDeckLabelDelegate(ui->cardItemTreeWidget));
 
@@ -258,22 +325,19 @@ void NextcloudDeckDialog::storeCurrentCard(bool insertLinkAndClose) {
         configureDeckService(nextcloudDeckService);
     }
 
-    auto *dateTime = new QDateTime(dueDateTime());
-    dateTime->setTimeZone(QTimeZone::systemTimeZone());
+    QDateTime dateTime = dueDateTime();
+    dateTime.setTimeZone(QTimeZone::systemTimeZone());
     // We want to set the seconds to 0
-    dateTime->setTime(dateTime->time().addSecs(0 - dateTime->time().second()));
+    dateTime.setTime(dateTime.time().addSecs(-dateTime.time().second()));
     const QString &title = ui->titleLineEdit->text();
 
     // Check if we're updating an existing card or creating a new one
     int cardIdToUpdate = (_currentCard.id > 0) ? _currentCard.id : -1;
 
-    int cardId = nextcloudDeckService.storeCard(
-        title, ui->descriptionTextEdit->toPlainText(),
-        ui->dueDateTimeCheckBox->isChecked() ? dateTime : nullptr, cardIdToUpdate,
-        _currentCard.stackId, _currentCard.order, _currentCard.owner, _currentCard.done);
-
-    // Clean up allocated dateTime to prevent memory leak
-    delete dateTime;
+    int cardId =
+        nextcloudDeckService.storeCard(title, ui->descriptionTextEdit->toPlainText(),
+                                       ui->dueDateTimeCheckBox->isChecked() ? &dateTime : nullptr,
+                                       cardIdToUpdate > 0 ? &_currentCard : nullptr);
 
     if (cardId < 1) {
         // Keep the dialog open and allow retrying after a failed request
@@ -863,6 +927,38 @@ void NextcloudDeckDialog::reloadCardList() {
         // Store the card ID as user data for later reference
         item->setData(0, Qt::UserRole, card.id);
 
+        if (_mode == Mode::Manage) {
+            item->setData(CardIdColumn, Qt::DisplayRole, card.id);
+            if (card.startdate.isValid()) {
+                item->setText(StartDateColumn,
+                              card.startdate.toLocalTime().toString("yyyy-MM-dd hh:mm"));
+            }
+            if (card.attachmentCount >= 0) {
+                item->setData(AttachmentsColumn, Qt::DisplayRole, card.attachmentCount);
+            }
+            QStringList dependencies;
+            for (const int dependencyId : card.dependentCardIds) {
+                dependencies.append(dependencyTitle(dependencyId));
+            }
+            item->setText(DependenciesColumn, dependencies.join(QStringLiteral(", ")));
+            item->setToolTip(DependenciesColumn, dependencies.join(QLatin1Char('\n')));
+            item->setText(AssigneesColumn, card.assignees.join(QStringLiteral(", ")));
+            item->setToolTip(AssigneesColumn, card.assignees.join(QLatin1Char('\n')));
+            if (card.lastModified.isValid()) {
+                item->setText(LastModifiedColumn,
+                              card.lastModified.toLocalTime().toString("yyyy-MM-dd hh:mm"));
+            }
+            const QColor color(card.color.startsWith(QLatin1Char('#'))
+                                   ? card.color
+                                   : QLatin1Char('#') + card.color);
+            if (color.isValid()) {
+                QPixmap swatch(12, 12);
+                swatch.fill(color);
+                item->setIcon(ColorColumn, QIcon(swatch));
+                item->setText(ColorColumn, color.name());
+            }
+        }
+
         // Set tooltip with description if available
         QString toolTip = card.description;
         if (card.isDone()) {
@@ -879,12 +975,14 @@ void NextcloudDeckDialog::reloadCardList() {
     // Add all items at once - this ensures proper ownership transfer
     ui->cardItemTreeWidget->addTopLevelItems(items);
 
-    if (Utils::Gui::hasTreeWidgetHeaderLayout(ui->cardItemTreeWidget)) {
+    if (_mode == Mode::InsertLinks &&
+        Utils::Gui::hasTreeWidgetHeaderLayout(ui->cardItemTreeWidget)) {
         Utils::Gui::restoreTreeWidgetHeaderLayout(ui->cardItemTreeWidget);
-    } else {
+    } else if (_mode == Mode::InsertLinks || (_sizeCardColumnsOnLoad && !items.isEmpty())) {
         // Auto-resize columns to content until the user customizes the layout.
         ui->cardItemTreeWidget->resizeColumnToContents(0);
         ui->cardItemTreeWidget->resizeColumnToContents(1);
+        _sizeCardColumnsOnLoad = false;
     }
 
     updateCardCountLabel();
@@ -1201,6 +1299,12 @@ void NextcloudDeckDialog::openUrlInBrowserForItem(const QTreeWidgetItem *item) {
     QDesktopServices::openUrl(QUrl(nextcloudDeckService.getCardLinkForId(cardId)));
 }
 
+QString NextcloudDeckDialog::dependencyTitle(int cardId) const {
+    const auto card = _cards.constFind(cardId);
+    return card == _cards.cend() ? QStringLiteral("#%1").arg(cardId)
+                                 : tr("%1 (#%2)").arg(card->title).arg(cardId);
+}
+
 void NextcloudDeckDialog::on_cardItemTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
                                                                   int column) {
     Q_UNUSED(column)
@@ -1228,6 +1332,21 @@ void NextcloudDeckDialog::on_cardItemTreeWidget_customContextMenuRequested(const
     QAction *searchInNotesAction = menu.addAction(tr("&Search for card link in notes"));
     searchInNotesAction->setIcon(QIcon::fromTheme(
         QStringLiteral("edit-find"), QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
+
+    auto *currentItem = ui->cardItemTreeWidget->currentItem();
+    if (currentItem != nullptr && !ui->cardItemTreeWidget->isColumnHidden(DependenciesColumn)) {
+        const auto card = _cards.constFind(currentItem->data(0, Qt::UserRole).toInt());
+        if (card != _cards.cend() && !card->dependentCardIds.isEmpty()) {
+            auto *dependenciesMenu = menu.addMenu(tr("Open dependency in browser"));
+            for (const int dependencyId : card->dependentCardIds) {
+                auto *action = dependenciesMenu->addAction(dependencyTitle(dependencyId));
+                connect(action, &QAction::triggered, this, [this, dependencyId]() {
+                    NextcloudDeckService service(this);
+                    QDesktopServices::openUrl(service.getCardRedirectUrl(dependencyId));
+                });
+            }
+        }
+    }
 
     // Add delete action for selected cards
     const int selectedCount = ui->cardItemTreeWidget->selectedItems().count();

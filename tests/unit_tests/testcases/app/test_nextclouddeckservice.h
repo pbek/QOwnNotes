@@ -11,6 +11,7 @@ class TestNextcloudDeckService : public QObject {
     void testInvalidMove();
     void testParseLabels();
     void testLabelRequests();
+    void testCardMetadata();
     void testRecentCards();
     void testInvalidRecentCards();
 };

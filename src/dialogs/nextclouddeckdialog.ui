@@ -519,15 +519,29 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QLineEdit" name="newItemEdit">
-        <property name="placeholderText">
-         <string>Search or create card</string>
-        </property>
-        <property name="clearButtonEnabled">
-         <bool>true</bool>
-        </property>
-       </widget>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="cardSearchLayout">
+         <item>
+          <widget class="QLineEdit" name="newItemEdit">
+           <property name="placeholderText">
+            <string>Search or create card</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cardColumnsButton">
+           <property name="text">
+            <string>Col&amp;umns</string>
+           </property>
+           <property name="toolTip">
+            <string>Show or hide optional card columns</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
       </item>
       <item row="2" column="0">
        <widget class="QTreeWidget" name="cardItemTreeWidget">
@@ -660,6 +674,7 @@
  <tabstops>
   <tabstop>boardStackComboBox</tabstop>
   <tabstop>newItemEdit</tabstop>
+  <tabstop>cardColumnsButton</tabstop>
   <tabstop>cardItemTreeWidget</tabstop>
   <tabstop>showArchivedCardsCheckBox</tabstop>
   <tabstop>showDueTodayItemsOnlyCheckBox</tabstop>

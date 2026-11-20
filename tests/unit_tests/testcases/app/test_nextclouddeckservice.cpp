@@ -342,3 +342,76 @@ void TestNextcloudDeckService::testLabelRequests() {
 
     QVERIFY(connection.remove());
 }
+
+void TestNextcloudDeckService::testCardMetadata() {
+    QTcpServer server;
+    QVERIFY(server.listen(QHostAddress::LocalHost));
+    CloudConnection connection;
+    connection.setName(QStringLiteral("Deck metadata test"));
+    connection.setServerUrl(QStringLiteral("http://127.0.0.1:%1").arg(server.serverPort()));
+    QVERIFY(connection.store());
+
+    const QByteArray stacks = R"([{"id":34,"boardId":12,"cards":[
+        {"id":56,"title":"Full card","startdate":"2026-11-20T14:30:00+02:00",
+         "color":"FF5733","attachmentCount":2,"lastModified":1795179300,
+         "dependentCards":[57,98],"assignedUsers":[
+            {"participant":{"uid":"alice","displayname":"Alice Example"}},
+            {"participant":{"uid":"bob"}}
+         ]},
+        {"id":57,"title":"Older card"}
+    ]}])";
+    QList<QJsonObject> cardUpdates;
+    connect(&server, &QTcpServer::newConnection, &server, [&]() {
+        auto *socket = server.nextPendingConnection();
+        connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
+        connect(socket, &QTcpSocket::readyRead, &server,
+                [&, socket, buffer = QByteArray()]() mutable {
+                    buffer += socket->readAll();
+                    const int headerEnd = buffer.indexOf("\r\n\r\n");
+                    if (headerEnd < 0) {
+                        return;
+                    }
+                    QByteArray body = stacks;
+                    if (buffer.startsWith("PUT ")) {
+                        const auto update = QJsonDocument::fromJson(buffer.mid(headerEnd + 4));
+                        if (!update.isObject()) {
+                            return;
+                        }
+                        cardUpdates.append(update.object());
+                        body = "{}";
+                    }
+                    socket->write(
+                        "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nContent-Length: " +
+                        QByteArray::number(body.size()) + "\r\nConnection: close\r\n\r\n" + body);
+                    socket->disconnectFromHost();
+                });
+    });
+
+    NextcloudDeckService service(nullptr, connection.getId());
+    service.setBoardAndStackIds(12, 34);
+    const auto cards = service.getCards();
+    QCOMPARE(cards.size(), 2);
+    const auto card = cards.value(56);
+    QCOMPARE(card.startdate.toUTC().toString(Qt::ISODate), QStringLiteral("2026-11-20T12:30:00Z"));
+    QCOMPARE(card.color, QStringLiteral("FF5733"));
+    QCOMPARE(card.attachmentCount, 2);
+    QCOMPARE(card.lastModified.toSecsSinceEpoch(), qint64(1795179300));
+    QCOMPARE(card.dependentCardIds, QList<int>({57, 98}));
+    QCOMPARE(card.assignees, QStringList({QStringLiteral("Alice Example"), QStringLiteral("bob")}));
+    const auto olderCard = cards.value(57);
+    QVERIFY(!olderCard.startdate.isValid());
+    QVERIFY(olderCard.color.isEmpty());
+    QCOMPARE(olderCard.attachmentCount, -1);
+    QVERIFY(olderCard.assignees.isEmpty());
+    QVERIFY(olderCard.dependentCardIds.isEmpty());
+
+    QCOMPARE(service.storeCard(QStringLiteral("Renamed"), {}, nullptr, &card), 56);
+    QCOMPARE(service.storeCard(QStringLiteral("Also renamed"), {}, nullptr, &olderCard), 57);
+    QCOMPARE(cardUpdates.size(), 2);
+    QCOMPARE(cardUpdates.at(0).value(QStringLiteral("startdate")).toString(),
+             QStringLiteral("2026-11-20T12:30:00Z"));
+    QCOMPARE(cardUpdates.at(0).value(QStringLiteral("color")).toString(), QStringLiteral("FF5733"));
+    QVERIFY(!cardUpdates.at(1).contains(QStringLiteral("startdate")));
+    QVERIFY(!cardUpdates.at(1).contains(QStringLiteral("color")));
+    QVERIFY(connection.remove());
+}

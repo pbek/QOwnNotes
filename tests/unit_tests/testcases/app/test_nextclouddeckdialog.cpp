@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QListWidget>
+#include <QMenu>
 #include <QPlainTextEdit>
 #include <QPushButton>
 #include <QSignalBlocker>
@@ -18,6 +19,7 @@
 #include <QtTest>
 
 #include "dialogs/nextclouddeckdialog.h"
+#include "services/settingsservice.h"
 #include "widgets/markdownformattoolbar.h"
 #include "widgets/nextclouddecklabeldelegate.h"
 #include "widgets/tagchipswidget.h"
@@ -73,6 +75,52 @@ void TestNextcloudDeckDialog::testModes() {
     QCOMPARE(
         picker.findChild<QTreeWidget *>(QStringLiteral("cardItemTreeWidget"))->contextMenuPolicy(),
         Qt::NoContextMenu);
+}
+
+void TestNextcloudDeckDialog::testOptionalCardColumns() {
+    SettingsService settings;
+    const auto settingsKey = QStringLiteral("NextcloudDeckDialog/cardColumnsState");
+    settings.remove(settingsKey);
+
+    const auto treeName = QStringLiteral("cardItemTreeWidget");
+    const auto buttonName = QStringLiteral("cardColumnsButton");
+    {
+        NextcloudDeckDialog dialog;
+        auto *tree = dialog.findChild<QTreeWidget *>(treeName);
+        auto *button = dialog.findChild<QPushButton *>(buttonName);
+        QVERIFY(button->menu());
+        const auto actions = button->menu()->actions();
+        QCOMPARE(actions.size(), 7);
+        QCOMPARE(tree->columnCount(), 10);
+        for (int column = 0; column < tree->columnCount(); ++column) {
+            QCOMPARE(tree->isColumnHidden(column), column >= 3);
+        }
+        actions.at(0)->trigger();
+        actions.at(4)->trigger();
+        QVERIFY(!tree->isColumnHidden(3));
+        QVERIFY(!tree->isColumnHidden(7));
+        dialog.reject();
+    }
+    {
+        NextcloudDeckDialog dialog;
+        auto *tree = dialog.findChild<QTreeWidget *>(treeName);
+        const auto actions = dialog.findChild<QPushButton *>(buttonName)->menu()->actions();
+        QVERIFY(actions.at(0)->isChecked());
+        QVERIFY(!actions.at(1)->isChecked());
+        QVERIFY(actions.at(4)->isChecked());
+        QVERIFY(!tree->isColumnHidden(3));
+        QVERIFY(tree->isColumnHidden(4));
+        QVERIFY(!tree->isColumnHidden(7));
+        tree->sortItems(7, Qt::DescendingOrder);
+        actions.at(4)->trigger();
+        QVERIFY(tree->isColumnHidden(7));
+        QCOMPARE(tree->sortColumn(), 0);
+
+        NextcloudDeckDialog picker(nullptr, NextcloudDeckDialog::Mode::InsertLinks);
+        QVERIFY(picker.findChild<QPushButton *>(buttonName)->isHidden());
+        QCOMPARE(picker.findChild<QTreeWidget *>(treeName)->columnCount(), 3);
+    }
+    settings.remove(settingsKey);
 }
 
 void TestNextcloudDeckDialog::testDescriptionToolbar() {
@@ -247,7 +295,6 @@ void TestNextcloudDeckDialog::testSearchCardsByTag() {
     QVERIFY(!tree->topLevelItem(0)->isHidden());
     QVERIFY(!tree->topLevelItem(2)->isHidden());
 
-    QCOMPARE(tree->columnCount(), 3);
     QVERIFY(dynamic_cast<NextcloudDeckLabelDelegate *>(tree->itemDelegateForColumn(2)) != nullptr);
 }
 

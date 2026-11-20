@@ -129,9 +129,7 @@ void NextcloudDeckService::forgetRecentCard(int cardId) {
 }
 
 int NextcloudDeckService::storeCard(const QString& title, const QString& description,
-                                    QDateTime* dueDateTime, int cardId, int cardStackId,
-                                    int cardOrder, const QString& cardOwner,
-                                    const QDateTime& cardDone) {
+                                    const QDateTime* dueDateTime, const Card* existingCard) {
     int resultCardId = -1;
     auto* manager = new QNetworkAccessManager();
     QEventLoop loop;
@@ -145,9 +143,11 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     // 10 sec timeout for the request
     timer.start(10000);
 
-    bool isUpdate = (cardId > 0);
+    const bool isUpdate = existingCard != nullptr && existingCard->id > 0;
+    const int cardId = isUpdate ? existingCard->id : -1;
     // For updates use the card's own stackId if provided, otherwise fall back to configured stack
-    int effectiveStackId = (isUpdate && cardStackId > 0) ? cardStackId : this->stackId;
+    int effectiveStackId =
+        (isUpdate && existingCard->stackId > 0) ? existingCard->stackId : this->stackId;
     QUrl url;
 
     if (isUpdate) {
@@ -167,11 +167,12 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     bodyJson["title"] = title;
     bodyJson["type"] = "plain";
     // Use the card's actual order for updates to avoid reordering side-effects
-    bodyJson["order"] = isUpdate ? cardOrder : 0;
+    bodyJson["order"] = isUpdate ? existingCard->order : 0;
     // Description is always required by the API; send an empty string if not provided
     bodyJson["description"] = description;
     // Owner is required by the Deck API for card updates
-    bodyJson["owner"] = !cardOwner.isEmpty() ? cardOwner : cloudConnection.getUsername();
+    bodyJson["owner"] = isUpdate && !existingCard->owner.isEmpty() ? existingCard->owner
+                                                                   : cloudConnection.getUsername();
 
     if (dueDateTime != nullptr) {
         // We need to convert the DateTime to UTC to get around Deck's/Nextcloud's timezone issue
@@ -185,10 +186,16 @@ int NextcloudDeckService::storeCard(const QString& title, const QString& descrip
     if (isUpdate) {
         // Deck clears the done state of a card if it is missing in an update request,
         // so the current done state needs to be sent to preserve it
-        bodyJson["done"] =
-            cardDone.isValid()
-                ? QJsonValue(cardDone.toTimeZone(QTimeZone::utc()).toString(Qt::ISODate))
-                : QJsonValue(QJsonValue::Null);
+        bodyJson["done"] = existingCard->done.isValid()
+                               ? QJsonValue(existingCard->done.toUTC().toString(Qt::ISODate))
+                               : QJsonValue(QJsonValue::Null);
+        // Deck can clear these fields on PUT when they are omitted.
+        if (existingCard->startdate.isValid()) {
+            bodyJson["startdate"] = existingCard->startdate.toUTC().toString(Qt::ISODate);
+        }
+        if (!existingCard->color.isEmpty()) {
+            bodyJson["color"] = existingCard->color;
+        }
     }
 
     qDebug() << __func__ << " - 'bodyJson': " << bodyJson;
@@ -568,6 +575,10 @@ QString NextcloudDeckService::getCardLinkForId(int cardId) {
         .arg(this->serverUrl, QString::number(this->boardId), QString::number(cardId));
 }
 
+QUrl NextcloudDeckService::getCardRedirectUrl(int cardId) const {
+    return QUrl(QStringLiteral("%1/index.php/apps/deck/card/%2").arg(serverUrl).arg(cardId));
+}
+
 void NextcloudDeckService::setBoardAndStackIds(int boardId, int stackId) {
     this->boardId = boardId;
     this->stackId = stackId;
@@ -896,6 +907,31 @@ NextcloudDeckService::Card NextcloudDeckService::cardFromJson(const QJsonObject&
     card.type = object[QStringLiteral("type")].toString();
     card.archived = object[QStringLiteral("archived")].toBool();
     card.labels = labelsFromJson(object[QStringLiteral("labels")]);
+    card.startdate =
+        QDateTime::fromString(object[QStringLiteral("startdate")].toString(), Qt::ISODate);
+    card.color = object[QStringLiteral("color")].toString();
+    card.attachmentCount = object[QStringLiteral("attachmentCount")].toInt(-1);
+
+    const auto assignedUsers = object[QStringLiteral("assignedUsers")].toArray();
+    for (const auto& entry : assignedUsers) {
+        const auto participant = entry.toObject().value(QStringLiteral("participant"));
+        const auto user = participant.toObject();
+        QString name = user.value(QStringLiteral("displayname")).toString();
+        if (name.isEmpty()) {
+            name = user.value(QStringLiteral("uid")).toString(participant.toString());
+        }
+        if (!name.isEmpty()) {
+            card.assignees.append(name);
+        }
+    }
+
+    const auto dependentCards = object[QStringLiteral("dependentCards")].toArray();
+    for (const auto& entry : dependentCards) {
+        const int id = entry.toInt();
+        if (id > 0) {
+            card.dependentCardIds.append(id);
+        }
+    }
 
     // Parse datetime fields from ISO 8601 strings
     const QString duedateString = object[QStringLiteral("duedate")].toString();

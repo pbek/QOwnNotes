@@ -87,6 +87,7 @@ class NextcloudDeckDialog : public MasterDialog {
     void on_reloadCardListButton_clicked();
 
    protected:
+    void done(int result) override;
     void showEvent(QShowEvent *event) override;
 
    private:
@@ -96,6 +97,7 @@ class NextcloudDeckDialog : public MasterDialog {
     int _pendingBoardId = -1;
     int _loadingDepth = 0;
     bool _loadingCanceled = false;
+    bool _sizeCardColumnsOnLoad = false;
     QPointer<NextcloudDeckService> _activeDeckService;
     void initialLoad();
     void beginLoading(const QString &title);
@@ -107,6 +109,7 @@ class NextcloudDeckDialog : public MasterDialog {
     void insertSelectedCardLinks();
     void updateInsertLinksButton();
     void setupMainSplitter();
+    void setupCardColumns();
     QSplitter *mainSplitter;
     void setupUi();
     void refreshUi();
@@ -123,6 +126,7 @@ class NextcloudDeckDialog : public MasterDialog {
     void configureDeckServiceForCard(NextcloudDeckService &nextcloudDeckService, int cardId) const;
     void updateDeckControlsEnabledState();
     void updateCardCountLabel();
+    QString dependencyTitle(int cardId) const;
     void updateEditState();
     void setSaveButtonsEnabled(bool enabled);
     void storeCurrentCard(bool insertLinkAndClose);
