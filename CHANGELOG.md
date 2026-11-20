@@ -7,6 +7,9 @@
   (for [#3860](https://github.com/pbek/QOwnNotes/issues/3860))
   - The **Columns** menu remembers your choices without changing the default view
   - Editing a card preserves the start date and color set in Deck
+  - When the **Assignees** column is shown, the search also finds cards by assignee
+  - Assignees and dependencies that Deck doesn't provide, like for archived cards,
+    are shown as "—" instead of looking empty
   - Menu arrows of buttons in dark mode are now vertically centered
 
 ## 26.11.12

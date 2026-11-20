@@ -64,6 +64,9 @@ class NextcloudDeckService : public QObject {
         QList<Label> labels;
         QStringList assignees;
         QList<int> dependentCardIds;
+        // Deck doesn't send assignees and dependencies for archived cards or on older versions
+        bool assigneesKnown = false;
+        bool dependenciesKnown = false;
         QString color;
         int attachmentCount = -1;
 

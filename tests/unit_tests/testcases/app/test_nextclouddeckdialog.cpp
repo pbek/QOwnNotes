@@ -123,6 +123,41 @@ void TestNextcloudDeckDialog::testOptionalCardColumns() {
     settings.remove(settingsKey);
 }
 
+void TestNextcloudDeckDialog::testSearchCardsByAssignee() {
+    SettingsService().remove(QStringLiteral("NextcloudDeckDialog/cardColumnsState"));
+    NextcloudDeckDialog dialog;
+    auto *tree = populatePicker(dialog);
+    const int assigneesColumn = 7;
+    tree->topLevelItem(1)->setText(assigneesColumn, QStringLiteral("Alice Example"));
+    tree->topLevelItem(1)->setData(assigneesColumn, Qt::UserRole, QStringLiteral("Alice Example"));
+    // Placeholder of a card whose assignees Deck didn't provide
+    tree->topLevelItem(2)->setText(assigneesColumn, QStringLiteral("—"));
+    auto *search = dialog.findChild<QLineEdit *>(QStringLiteral("newItemEdit"));
+
+    // Hidden assignees are not searched, so cards don't match for no visible reason
+    search->setText(QStringLiteral("alice"));
+    QVERIFY(tree->topLevelItem(1)->isHidden());
+
+    // Showing the column applies the current search right away
+    auto *assigneesAction = dialog.findChild<QPushButton *>(QStringLiteral("cardColumnsButton"))
+                                ->menu()
+                                ->actions()
+                                .at(4);
+    assigneesAction->trigger();
+    QVERIFY(tree->topLevelItem(0)->isHidden());
+    QVERIFY(!tree->topLevelItem(1)->isHidden());
+    QVERIFY(tree->topLevelItem(2)->isHidden());
+
+    search->setText(QStringLiteral("card 2 alice"));
+    QVERIFY(!tree->topLevelItem(1)->isHidden());
+    search->setText(QStringLiteral("—"));
+    QVERIFY(tree->topLevelItem(2)->isHidden());
+
+    assigneesAction->trigger();
+    search->setText(QStringLiteral("alice"));
+    QVERIFY(tree->topLevelItem(1)->isHidden());
+}
+
 void TestNextcloudDeckDialog::testDescriptionToolbar() {
     NextcloudDeckDialog dialog;
     auto *toolbar = dialog.findChild<MarkdownFormatToolbar *>();

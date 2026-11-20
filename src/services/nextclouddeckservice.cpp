@@ -912,7 +912,9 @@ NextcloudDeckService::Card NextcloudDeckService::cardFromJson(const QJsonObject&
     card.color = object[QStringLiteral("color")].toString();
     card.attachmentCount = object[QStringLiteral("attachmentCount")].toInt(-1);
 
-    const auto assignedUsers = object[QStringLiteral("assignedUsers")].toArray();
+    const auto assignedUsersValue = object[QStringLiteral("assignedUsers")];
+    card.assigneesKnown = assignedUsersValue.isArray();
+    const auto assignedUsers = assignedUsersValue.toArray();
     for (const auto& entry : assignedUsers) {
         const auto participant = entry.toObject().value(QStringLiteral("participant"));
         const auto user = participant.toObject();
@@ -925,7 +927,9 @@ NextcloudDeckService::Card NextcloudDeckService::cardFromJson(const QJsonObject&
         }
     }
 
-    const auto dependentCards = object[QStringLiteral("dependentCards")].toArray();
+    const auto dependentCardsValue = object[QStringLiteral("dependentCards")];
+    card.dependenciesKnown = dependentCardsValue.isArray();
+    const auto dependentCards = dependentCardsValue.toArray();
     for (const auto& entry : dependentCards) {
         const int id = entry.toInt();
         if (id > 0) {

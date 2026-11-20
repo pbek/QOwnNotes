@@ -152,11 +152,14 @@ void NextcloudDeckDialog::setupCardColumns() {
         auto *action = menu->addAction(tree->headerItem()->text(column));
         action->setCheckable(true);
         action->setChecked(!tree->isColumnHidden(column));
-        connect(action, &QAction::toggled, this, [tree, column](bool visible) {
+        connect(action, &QAction::toggled, this, [this, tree, column](bool visible) {
             if (!visible && tree->sortColumn() == column) {
                 tree->sortItems(0, Qt::AscendingOrder);
             }
             tree->setColumnHidden(column, !visible);
+            if (column == AssigneesColumn) {
+                filterCardList(ui->newItemEdit->text());
+            }
         });
     }
 }
@@ -936,14 +939,33 @@ void NextcloudDeckDialog::reloadCardList() {
             if (card.attachmentCount >= 0) {
                 item->setData(AttachmentsColumn, Qt::DisplayRole, card.attachmentCount);
             }
-            QStringList dependencies;
-            for (const int dependencyId : card.dependentCardIds) {
-                dependencies.append(dependencyTitle(dependencyId));
+            const auto setUnavailable = [&](int column) {
+                item->setText(column, QStringLiteral("—"));
+                item->setForeground(column, QBrush(mutedColor));
+                item->setToolTip(column,
+                                 card.archived
+                                     ? tr("Nextcloud Deck doesn't provide this for archived cards")
+                                     : tr("Your Nextcloud Deck version doesn't provide this"));
+            };
+            if (card.dependenciesKnown) {
+                QStringList dependencies;
+                for (const int dependencyId : card.dependentCardIds) {
+                    dependencies.append(dependencyTitle(dependencyId));
+                }
+                item->setText(DependenciesColumn, dependencies.join(QStringLiteral(", ")));
+                item->setToolTip(DependenciesColumn, dependencies.join(QLatin1Char('\n')));
+            } else {
+                setUnavailable(DependenciesColumn);
             }
-            item->setText(DependenciesColumn, dependencies.join(QStringLiteral(", ")));
-            item->setToolTip(DependenciesColumn, dependencies.join(QLatin1Char('\n')));
-            item->setText(AssigneesColumn, card.assignees.join(QStringLiteral(", ")));
-            item->setToolTip(AssigneesColumn, card.assignees.join(QLatin1Char('\n')));
+            if (card.assigneesKnown) {
+                const QString assignees = card.assignees.join(QStringLiteral(", "));
+                item->setText(AssigneesColumn, assignees);
+                item->setToolTip(AssigneesColumn, card.assignees.join(QLatin1Char('\n')));
+                // The search uses this instead of the text, which can be a placeholder
+                item->setData(AssigneesColumn, Qt::UserRole, assignees);
+            } else {
+                setUnavailable(AssigneesColumn);
+            }
             if (card.lastModified.isValid()) {
                 item->setText(LastModifiedColumn,
                               card.lastModified.toLocalTime().toString("yyyy-MM-dd hh:mm"));
@@ -1621,7 +1643,8 @@ bool NextcloudDeckDialog::hasUnsavedChanges() const {
 }
 
 /**
- * Shows only the cards whose title or tags contain every word of the search text
+ * Shows only the cards whose title, tags or visible assignees contain every word of the
+ * search text
  */
 void NextcloudDeckDialog::filterCardList(const QString &text) {
     static const QRegularExpression whitespace(QStringLiteral("\\s+"));
@@ -1632,9 +1655,17 @@ void NextcloudDeckDialog::filterCardList(const QString &text) {
         }
     }
 
+    const bool searchAssignees = _mode == Mode::Manage &&
+                                 ui->cardItemTreeWidget->columnCount() > AssigneesColumn &&
+                                 !ui->cardItemTreeWidget->isColumnHidden(AssigneesColumn);
+
     for (int i = 0; i < ui->cardItemTreeWidget->topLevelItemCount(); ++i) {
         auto *item = ui->cardItemTreeWidget->topLevelItem(i);
-        const QString searchableText = item->text(0) + QLatin1Char('\n') + item->text(2);
+        QString searchableText = item->text(0) + QLatin1Char('\n') + item->text(2);
+        if (searchAssignees) {
+            searchableText +=
+                QLatin1Char('\n') + item->data(AssigneesColumn, Qt::UserRole).toString();
+        }
         bool show = true;
 
         for (const auto &word : words) {

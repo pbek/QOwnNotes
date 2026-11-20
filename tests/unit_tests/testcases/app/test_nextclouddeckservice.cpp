@@ -358,7 +358,9 @@ void TestNextcloudDeckService::testCardMetadata() {
             {"participant":{"uid":"alice","displayname":"Alice Example"}},
             {"participant":{"uid":"bob"}}
          ]},
-        {"id":57,"title":"Older card"}
+        {"id":57,"title":"Older card"},
+        {"id":58,"title":"Archived card","assignedUsers":null,"dependentCards":null},
+        {"id":59,"title":"Unassigned card","assignedUsers":[],"dependentCards":[]}
     ]}])";
     QList<QJsonObject> cardUpdates;
     connect(&server, &QTcpServer::newConnection, &server, [&]() {
@@ -390,8 +392,18 @@ void TestNextcloudDeckService::testCardMetadata() {
     NextcloudDeckService service(nullptr, connection.getId());
     service.setBoardAndStackIds(12, 34);
     const auto cards = service.getCards();
-    QCOMPARE(cards.size(), 2);
+    QCOMPARE(cards.size(), 4);
     const auto card = cards.value(56);
+    QVERIFY(card.assigneesKnown);
+    QVERIFY(card.dependenciesKnown);
+    // Missing and null values mean Deck didn't provide the data, not that there is none
+    for (const int id : {57, 58}) {
+        QVERIFY(!cards.value(id).assigneesKnown);
+        QVERIFY(!cards.value(id).dependenciesKnown);
+    }
+    QVERIFY(cards.value(59).assigneesKnown);
+    QVERIFY(cards.value(59).dependenciesKnown);
+    QVERIFY(cards.value(59).assignees.isEmpty());
     QCOMPARE(card.startdate.toUTC().toString(Qt::ISODate), QStringLiteral("2026-11-20T12:30:00Z"));
     QCOMPARE(card.color, QStringLiteral("FF5733"));
     QCOMPARE(card.attachmentCount, 2);

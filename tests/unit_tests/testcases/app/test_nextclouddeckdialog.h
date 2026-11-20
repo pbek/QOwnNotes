@@ -9,6 +9,7 @@ class TestNextcloudDeckDialog : public QObject {
    private Q_SLOTS:
     void testModes();
     void testOptionalCardColumns();
+    void testSearchCardsByAssignee();
     void testDescriptionToolbar();
     void testInsertLinks_data();
     void testInsertLinks();
