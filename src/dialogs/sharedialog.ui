@@ -23,7 +23,7 @@
    <iconset theme="document-share" resource="../breeze-qownnotes.qrc">
     <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,1,0">
    <item row="1" column="0">
     <widget class="QLineEdit" name="passwordLineEdit">
      <property name="toolTip">

@@ -42,9 +42,22 @@ ShareDialog::ShareDialog(const Note &note, QWidget *parent)
 
     // update the share link checkbox and link url line edit
     updateDialog();
+    updateDescriptionHeight();
 }
 
 ShareDialog::~ShareDialog() { delete ui; }
+
+void ShareDialog::resizeEvent(QResizeEvent *event) {
+    MasterDialog::resizeEvent(event);
+    updateDescriptionHeight();
+}
+
+void ShareDialog::updateDescriptionHeight() {
+    // Reserve only the height needed at the current width, not at the narrowest width.
+    const QMargins margins = ui->gridLayout->contentsMargins();
+    const int labelWidth = contentsRect().width() - margins.left() - margins.right();
+    ui->infoLabel1->setMinimumHeight(ui->infoLabel1->heightForWidth(labelWidth));
+}
 
 /**
  * Updates the share link checkbox and link url line edit

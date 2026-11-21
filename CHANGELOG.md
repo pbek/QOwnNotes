@@ -2,6 +2,8 @@
 
 ## 26.11.13
 
+- Fixed the **Share note** dialog opening or resizing too short to show the full
+  public sharing description
 - Added optional **Nextcloud Deck** card list columns for ID, start date, attachment
   count, dependencies, assignees, last modified date, and card color
   (for [#3860](https://github.com/pbek/QOwnNotes/issues/3860))
