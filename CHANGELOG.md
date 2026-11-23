@@ -4,6 +4,15 @@
 
 - Improved startup with large note folders by avoiding a second rebuild of the
   note list (for [#3858](https://github.com/pbek/QOwnNotes/issues/3858))
+- Changes in [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android)
+  [v26.11.3](https://github.com/qownnotes/qownnotes-android/releases/tag/v26.11.3):
+  - The editor's **Insert date** and **Insert date and time** tools now support custom
+    formats with a live preview in **Date formats** settings. The defaults are unchanged
+  - Tapping **Clear** or **Filter** in compact note search no longer expands the search
+    field or shifts the buttons
+    ([fix commit](https://github.com/qownnotes/qownnotes-android/commit/6eb152b5aedc601ae1ef13090bf1afc165661cbe))
+  - Updated Jetpack Compose and the Android build tools without changing the minimum
+    or target Android versions
 
 ## 26.11.13
 
