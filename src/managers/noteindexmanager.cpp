@@ -426,12 +426,14 @@ bool NoteIndexManager::buildNotesIndex(int noteSubFolderId, bool forceRebuild,
  * @param forceBuild
  * @param forceLoad
  * @param reloadTabs
+ * @return Whether the note directory list was loaded
  */
-void NoteIndexManager::buildNotesIndexAndLoadNoteDirectoryList(
+bool NoteIndexManager::buildNotesIndexAndLoadNoteDirectoryList(
     bool forceBuild, bool forceLoad, bool reloadTabs, const QSet<QString> &changedNotePaths) {
     const bool wasBuilt = buildNotesIndex(0, forceBuild, changedNotePaths);
+    const bool shouldLoad = wasBuilt || forceLoad;
 
-    if (wasBuilt || forceLoad) {
+    if (shouldLoad) {
         loadNoteDirectoryList();
 
         // Expire trashed items
@@ -444,6 +446,8 @@ void NoteIndexManager::buildNotesIndexAndLoadNoteDirectoryList(
         // restore the note tabs
         Utils::Gui::reloadNoteTabs(_ui->noteEditTabWidget);
     }
+
+    return shouldLoad;
 }
 
 /**

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.11.14
+
+- Improved startup with large note folders by avoiding a second rebuild of the
+  note list (for [#3858](https://github.com/pbek/QOwnNotes/issues/3858))
+
 ## 26.11.13
 
 - Fixed the **Share note** dialog opening or resizing too short to show the full

@@ -455,7 +455,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _systemTrayManager = new SystemTrayManager(this, ui, showSystemTray, this);
     _systemTrayManager->createSystemTrayIcon();
 
-    buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
+    const bool noteListLoaded =
+        _noteIndexManager->buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
 
     this->noteDiffDialog = new NoteDiffDialog();
 
@@ -510,11 +511,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     _krunnerManager = new KRunnerManager(this, this);
 #endif
 
-    // Update panels sort and order
-    // Best don't do that with QTimer::singleShot
+    // Keep panel initialization synchronous, but don't rebuild an already loaded note list.
     // See: https://github.com/pbek/QOwnNotes/issues/2309
     // See: https://github.com/pbek/QOwnNotes/issues/2319
-    updatePanelsSortOrder();
+    updateNoteSortActions();
+    if (!noteListLoaded) {
+        loadNoteDirectoryList();
+    }
+    reloadNoteSubFolderTree();
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(UpdateService::AppStart);
@@ -8091,14 +8095,12 @@ void MainWindow::on_actionScript_settings_triggered() {
 }
 
 void MainWindow::updatePanelsSortOrder() {
-    updateNotesPanelSortOrder();
+    updateNoteSortActions();
+    loadNoteDirectoryList();
     reloadNoteSubFolderTree();
-    // do not reload it again, it has already been reloaded when
-    // updateNotesPanelSortOrder() was called
-    // reloadTagTree();
 }
 
-void MainWindow::updateNotesPanelSortOrder() {
+void MainWindow::updateNoteSortActions() {
     SettingsService settings;
     int sort = settings.value(QStringLiteral("notesPanelSort"), SORT_BY_LAST_CHANGE).toInt();
     ui->actionAlphabetical->setChecked(sort == SORT_ALPHABETICAL);
@@ -8109,8 +8111,6 @@ void MainWindow::updateNotesPanelSortOrder() {
     int order = settings.value(QStringLiteral("notesPanelOrder")).toInt();
     ui->actionAscending->setChecked(order == ORDER_ASCENDING);
     ui->actionDescending->setChecked(order == ORDER_DESCENDING);
-
-    loadNoteDirectoryList();
 }
 
 /**

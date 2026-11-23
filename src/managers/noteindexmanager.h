@@ -35,7 +35,7 @@ class NoteIndexManager : public QObject {
 
     bool buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false,
                          const QSet<QString> &changedNotePaths = {});
-    void buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false, bool forceLoad = false,
+    bool buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false, bool forceLoad = false,
                                                  bool reloadTabs = true,
                                                  const QSet<QString> &changedNotePaths = {});
     void loadNoteDirectoryList();

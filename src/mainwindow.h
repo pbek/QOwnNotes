@@ -1371,7 +1371,7 @@ class MainWindow : public QMainWindow {
     void generateAiModelComboBox();
     void storeTagTreeWidgetExpandState() const;
     void updatePanelsSortOrder();
-    void updateNotesPanelSortOrder();
+    void updateNoteSortActions();
     void setMenuEnabled(QMenu *menu, bool enabled);
     void loadDictionaryNames();
     void loadSpellingBackends();
