@@ -288,6 +288,8 @@ set(APP_SOURCE_FILES
     utils/schema.cpp
     utils/schema.h
     widgets/logwidget.cpp
+    widgets/label.cpp
+    widgets/label.h
     widgets/layoutpresetwidget.cpp
     widgets/layoutpresetwidget.h
     widgets/layoutpresetwidget.ui
@@ -311,6 +313,8 @@ set(APP_SOURCE_FILES
     widgets/qtexteditsearchwidget.cpp
     widgets/qtexteditsearchwidget.h
     widgets/qtexteditsearchwidget.ui
+    widgets/scriptlistwidget.cpp
+    widgets/scriptlistwidget.h
     widgets/scriptsettingwidget.cpp
     widgets/scriptsettingwidget.h
     widgets/scriptsettingwidget.ui
