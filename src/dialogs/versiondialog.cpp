@@ -1,12 +1,16 @@
 #include "versiondialog.h"
 
+#include <diff_match_patch.h>
 #include <utils/misc.h>
 
 #include <QDebug>
 #include <QJSValue>
 #include <QJSValueIterator>
+#include <QLabel>
 #include <QPushButton>
 #include <QSplitter>
+#include <QTextBrowser>
+#include <QVBoxLayout>
 
 #include "mainwindow.h"
 #include "services/settingsservice.h"
@@ -67,8 +71,32 @@ VersionDialog::VersionDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui:
  * Fills the version list, can also be called after the dialog was opened
  */
 void VersionDialog::setVersions(const QJSValue &versions) {
-    const Note note = MainWindow::instance()->getCurrentNote();
+    const Note note =
+        _localComparisonNote ? *_localComparisonNote : MainWindow::instance()->getCurrentNote();
     setVersions(versions, note, nullptr);
+}
+
+void VersionDialog::enableLocalComparison(const Note &note, const QString &editorText,
+                                          bool decrypted) {
+    _localComparisonNote.reset(new Note(note));
+    _localComparisonText = Utils::Misc::transformLineFeeds(editorText);
+    _localComparisonDecrypted = decrypted;
+
+    auto *tab = new QWidget(ui->tabWidget);
+    auto *layout = new QVBoxLayout(tab);
+    auto *label = new QLabel(
+        tr("Local editor text (including unsaved edits) → Selected server version\n"
+           "Struck-through text is local only; highlighted additions are in the server version."),
+        tab);
+    label->setWordWrap(true);
+    layout->addWidget(label);
+
+    _localComparisonBrowser = new QTextBrowser(tab);
+    _localComparisonBrowser->setPlaceholderText(tr("Select a server version to compare"));
+    layout->addWidget(_localComparisonBrowser);
+    ui->tabWidget->addTab(tab, tr("Compare with local note"));
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this,
+            &VersionDialog::updateLocalComparison);
 }
 
 void VersionDialog::setGitVersions(const QJSValue &versions, const Note &note,
@@ -92,6 +120,9 @@ void VersionDialog::setVersions(const QJSValue &versions, const Note &note,
             "QTextEdit,QPlainTextEdit {border: 3px dashed #aa0000;}";
         ui->noteTextEdit->setStyleSheet(encryptedStyle);
         ui->diffBrowser->setStyleSheet(encryptedStyle);
+        if (_localComparisonBrowser && _localComparisonDecrypted) {
+            _localComparisonBrowser->setStyleSheet(encryptedStyle);
+        }
     }
 
     if (currentNoteText != nullptr) {
@@ -124,9 +155,13 @@ void VersionDialog::setVersions(const QJSValue &versions, const Note &note,
         diffHtml.replace(QLatin1String("\\n"), QLatin1String("&para;<br />"));
         diffHtml.replace(QLatin1String("\n"), QLatin1String("<br />"));
 
-        ui->versionListWidget->addItem(itemName);
+        auto *item = new QListWidgetItem(itemName, ui->versionListWidget);
         _diffList->append(diffHtml);
         QString noteText = versionsIterator.value().property(QStringLiteral("data")).toString();
+        if (_localComparisonBrowser) {
+            // Preserve the server text so the comparison can match the editor's encryption state.
+            item->setData(Qt::UserRole, noteText);
+        }
 
         // Decrypt the note text if possible
         if (canDecryptNoteText) {
@@ -168,8 +203,12 @@ void VersionDialog::storeSettings() {
     // Store the splitter sizes and last-used version view tab
     SettingsService settings;
     settings.setValue(QStringLiteral("versionSplitterSizes"), versionSplitter->saveState());
-    settings.setValue(QStringLiteral("VersionDialog/tabWidgetIndex"),
-                      ui->tabWidget->currentIndex());
+    // Don't save the cloud-only comparison tab as the default for the shared dialog.
+    if (_localComparisonBrowser == nullptr ||
+        ui->tabWidget->currentWidget() != _localComparisonBrowser->parentWidget()) {
+        settings.setValue(QStringLiteral("VersionDialog/tabWidgetIndex"),
+                          ui->tabWidget->currentIndex());
+    }
 }
 
 VersionDialog::~VersionDialog() {
@@ -238,6 +277,7 @@ void VersionDialog::updateVersionPreview() {
             hasVersion ? Utils::Gui::readableDiffHtml(_diffList->value(currentRow)) : QString());
     }
     ui->noteTextEdit->setPlainText(hasVersion ? _dataList->value(currentRow) : QString());
+    updateLocalComparison();
 
     // Highlight and jump to the matches of the selected version
     if (hasVersion && !ui->searchLineEdit->text().isEmpty()) {
@@ -246,6 +286,47 @@ void VersionDialog::updateVersionPreview() {
         searchWidget->activate(false);
         ui->noteTextEdit->ensureCursorVisible();
     }
+}
+
+void VersionDialog::updateLocalComparison() {
+    if (_localComparisonBrowser == nullptr ||
+        ui->tabWidget->currentWidget() != _localComparisonBrowser->parentWidget()) {
+        return;
+    }
+
+    const auto *item = ui->versionListWidget->currentItem();
+    if (item == nullptr || item->isHidden()) {
+        _localComparisonBrowser->clear();
+        return;
+    }
+
+    QString serverText = item->data(Qt::UserRole).toString();
+    if (_localComparisonDecrypted) {
+        Note historicalNote = *_localComparisonNote;
+        historicalNote.setNoteText(serverText);
+        const QString encryptedText = Note::parseEncryptedNoteText(serverText);
+        if (!encryptedText.isEmpty()) {
+            serverText = historicalNote.getDecryptedNoteText(encryptedText);
+            if (Note::parseEncryptedNoteText(serverText) == encryptedText) {
+                _localComparisonBrowser->setPlainText(
+                    tr("The selected server version could not be decrypted for comparison."));
+                return;
+            }
+        }
+    }
+
+    serverText = Utils::Misc::transformLineFeeds(serverText);
+    if (_localComparisonText == serverText) {
+        _localComparisonBrowser->setPlainText(tr("No differences from the local editor text."));
+        return;
+    }
+
+    diff_match_patch diff;
+    auto changes = diff.diff_main(_localComparisonText, serverText);
+    diff.diff_cleanupSemantic(changes);
+    _localComparisonBrowser->setHtml(
+        QStringLiteral("<div style=\"white-space: pre-wrap;\">%1</div>")
+            .arg(Utils::Gui::readableDiffHtml(diff.diff_prettyHtml(changes))));
 }
 
 /**

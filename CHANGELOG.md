@@ -5,6 +5,8 @@
 - **Show note git versions** now includes a read-only **Current note** entry,
   so you can compare historical versions with what is in the editor, including unsaved edits
   (for [#3810](https://github.com/pbek/QOwnNotes/issues/3810))
+- The **Nextcloud / ownCloud** version dialog now lets you **Compare with local note**
+  to see how a selected server version differs from the editor text, including unsaved edits.
 
 ## 26.11.14
 

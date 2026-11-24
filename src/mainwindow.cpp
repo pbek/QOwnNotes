@@ -5267,6 +5267,9 @@ void MainWindow::on_actionShow_versions_triggered() {
     // Show the dialog right away with a loading overlay, closing it cancels the request
     auto *dialog = new VersionDialog(this);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
+    const auto *editor = activeNoteTextEdit();
+    dialog->enableLocalComparison(currentNote, editor->toPlainText(),
+                                  editor == ui->encryptedNoteTextEdit);
     connect(dialog, &QDialog::finished, this, &MainWindow::enableShowVersionsButton);
     dialog->showLoadingOverlay(
         tr("Loading note versions…"),
