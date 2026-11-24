@@ -19,6 +19,12 @@
   is hidden when Deck is unavailable for the current note folder. **Enable AI** and
   **Manage Nextcloud Deck cards** remain available for setup
   (for [#3256](https://github.com/pbek/QOwnNotes/issues/3256))
+- There was a new release of [QOwnNotes for Android](https://github.com/qownnotes/qownnotes-android),
+  [v26.11.4](https://github.com/qownnotes/qownnotes-android/releases/tag/v26.11.4)
+  - Share screenshots and other files to QOwnNotes from Android to create a new note or
+    search for an existing note and attach the file. Files up to 32 MiB are saved on
+    the device first and synchronized with the note
+    (for [#44](https://github.com/qownnotes/qownnotes-android/issues/44))
 
 ## 26.11.14
 
