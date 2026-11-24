@@ -8,6 +8,7 @@ class TestNetwork : public QObject {
    private Q_SLOTS:
     void initTestCase();
     void testQOwnNotesApiDiscovery();
+    void testNextcloudServerStatus();
     void testCalendarWrite_data();
     void testCalendarWrite();
     void testCalendarReadFailurePreservesICS();

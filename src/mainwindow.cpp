@@ -1235,8 +1235,8 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
  * Attempts to check the api app version
  */
 void MainWindow::startAppVersionTest() {
-    if (!CloudService::hasCloudSettings() &&
-        CloudConnection::currentCloudConnection().getAppQOwnNotesAPIEnabled()) {
+    if (!CloudService::hasCloudSettings() ||
+        !CloudConnection::currentCloudConnection().getAppQOwnNotesAPIEnabled()) {
         return;
     }
 

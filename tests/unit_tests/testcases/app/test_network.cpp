@@ -182,6 +182,15 @@ void TestNetwork::testQOwnNotesApiDiscovery() {
     }
 }
 
+void TestNetwork::testNextcloudServerStatus() {
+    QVERIFY(
+        CloudService::isNextcloudServerStatus(R"({"productname":"Nextcloud","version":"32.0.0"})"));
+    QVERIFY(!CloudService::isNextcloudServerStatus(
+        R"({"productname":"ownCloud","version":"10.16.0"})"));
+    QVERIFY(!CloudService::isNextcloudServerStatus(R"({"version":"32.0.0"})"));
+    QVERIFY(!CloudService::isNextcloudServerStatus("<html>Nextcloud</html>"));
+}
+
 // Disabled on Linux because of https://github.com/pbek/QOwnNotes/issues/3212
 #ifndef Q_OS_LINUX
 void TestNetwork::testSSL() {

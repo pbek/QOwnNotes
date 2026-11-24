@@ -2,6 +2,9 @@
 
 ## 26.11.15
 
+- QOwnNotes now shows a dismissible warning at startup when a Nextcloud connection still
+  uses the deprecated QOwnNotesAPI app, with a link to the migration guide. ownCloud users
+  are not prompted to switch (for [#3787](https://github.com/pbek/QOwnNotes/issues/3787))
 - Saving script settings now applies them without restarting QOwnNotes, and
   **Reload scripting engine** picks up edits to local scripts even when no scripts were
   enabled or disabled (for [#3861](https://github.com/pbek/QOwnNotes/issues/3861))

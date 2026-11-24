@@ -226,6 +226,13 @@ QString CloudService::apiAppName() const {
                                                                  : QStringLiteral("QOwnNotesAPI");
 }
 
+bool CloudService::isNextcloudServerStatus(const QByteArray &data) {
+    const auto status = QJsonDocument::fromJson(data).object();
+    return status.value(QStringLiteral("productname"))
+               .toString()
+               .compare(QStringLiteral("Nextcloud"), Qt::CaseInsensitive) == 0;
+}
+
 void CloudService::setApiBase(const QString &path) {
     rootPath = path;
     versionListPath = path % QStringLiteral("note/versions");
@@ -277,6 +284,10 @@ void CloudService::discoverApi(const std::function<void()> &callback) {
 
 void CloudService::slotAuthenticationRequired(QNetworkReply *reply, QAuthenticator *authenticator) {
     Q_UNUSED(authenticator)
+    if (reply->property("serverStatusCheck").toBool()) {
+        reply->abort();
+        return;
+    }
     qWarning() << "Username and/or password incorrect";
 
 #ifndef INTEGRATION_TESTS
@@ -308,7 +319,8 @@ void CloudService::slotCalendarAuthenticationRequired(QNetworkReply *reply,
  * @param reply
  */
 void CloudService::slotReplyFinished(QNetworkReply *reply) {
-    if (reply->property("apiDiscovery").toBool()) return;
+    if (reply->property("apiDiscovery").toBool() || reply->property("serverStatusCheck").toBool())
+        return;
 #ifndef INTEGRATION_TESTS
     QUrl url = reply->url();
     QString urlPath = url.path();
@@ -558,17 +570,12 @@ void CloudService::checkAppInfo(QNetworkReply *reply) {
  * @param reply
  */
 void CloudService::checkAppVersion(QNetworkReply *reply) {
-    QString data = QString(reply->readAll());
-    // qDebug() << data;
+    if (reply->error() != QNetworkReply::NoError) {
+        return;
+    }
 
-    // we have to add [], so the string can be parsed as JSON
-    data = QStringLiteral("[") % data % QStringLiteral("]");
-
-    QJSEngine engine;
-    QJSValue result = engine.evaluate(data);
-
-    QString appVersion =
-        result.property(0).property(QStringLiteral("app_version")).toVariant().toString();
+    const auto appInfo = QJsonDocument::fromJson(reply->readAll()).object();
+    const QString appVersion = appInfo.value(QStringLiteral("app_version")).toString();
 
     if (appVersion.isEmpty()) {
         return;
@@ -592,11 +599,45 @@ void CloudService::checkAppVersion(QNetworkReply *reply) {
                                 "the QOwnNotes Nextcloud app. On ownCloud, a compatible "
                                 "QOwnNotesAPI version is required.")
                                  .arg(appVersion));
+    } else if (apiAppName() == QStringLiteral("QOwnNotesAPI")) {
+        checkLegacyApiDeprecation();
     }
 #endif
-
-    reply->deleteLater();
 }
+
+#ifndef INTEGRATION_TESTS
+void CloudService::checkLegacyApiDeprecation() {
+    // The legacy app also runs on ownCloud, so confirm the server product before suggesting a move.
+    const QNetworkRequest request(QUrl(serverUrl % QStringLiteral("/status.php")));
+    auto *reply = networkManager->get(request);
+    reply->setProperty("serverStatusCheck", true);
+    ignoreSslErrorsIfAllowed(reply);
+    QTimer::singleShot(10000, reply, &QNetworkReply::abort);
+
+    const int generation = apiDiscoveryGeneration;
+    connect(reply, &QNetworkReply::finished, this, [this, reply, generation]() {
+        reply->deleteLater();
+        if (generation != apiDiscoveryGeneration || reply->error() != QNetworkReply::NoError ||
+            !isNextcloudServerStatus(reply->readAll())) {
+            return;
+        }
+
+        auto *mainWindow = MainWindow::instance();
+        if (mainWindow == nullptr) {
+            return;
+        }
+        Utils::Gui::warning(
+            mainWindow, tr("QOwnNotesAPI is deprecated on Nextcloud"),
+            tr("This Nextcloud connection is using the deprecated QOwnNotesAPI app. You can "
+               "keep using it for now, but we recommend switching to QOwnNotes for Nextcloud "
+               "if your server supports it.<br /><br />"
+               "Read the <a href=\"%1\">migration guide</a> before removing QOwnNotesAPI.")
+                .arg(QStringLiteral("https://github.com/qownnotes/qownnotes-nextcloud/blob/main/"
+                                    "docs/migration.md")),
+            QStringLiteral("legacyNextcloudApiDeprecation"), QMessageBox::Ok);
+    });
+}
+#endif
 
 /**
  * @brief CloudService::connectionTest

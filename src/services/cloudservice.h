@@ -110,6 +110,8 @@ class CloudService : public QObject {
 
     static QString apiBaseFromCapabilities(const QByteArray &data);
 
+    static bool isNextcloudServerStatus(const QByteArray &data);
+
     QString apiAppName() const;
 
    private:
@@ -194,7 +196,11 @@ class CloudService : public QObject {
 
     void handleUpdateNoteShareReply(const QString &urlPart, const QString &data);
 
-    static void checkAppVersion(QNetworkReply *reply);
+    void checkAppVersion(QNetworkReply *reply);
+
+#ifndef INTEGRATION_TESTS
+    void checkLegacyApiDeprecation();
+#endif
 
     void handleImportBookmarksReply(QString &data);
 
