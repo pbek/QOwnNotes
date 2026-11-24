@@ -38,6 +38,7 @@ QString gitCommand();
 bool prepareLogProcess(QProcess& process, const QString& command, const QString& filePath);
 void showLog(const QString& filePath);
 bool hasLogCommand();
+bool hasNoteHistoryBackend();
 bool isCurrentNoteFolderUseGit();
 #ifdef USE_LIBGIT2
 bool initRepository(const QString& path);

@@ -7,6 +7,11 @@
   (for [#3810](https://github.com/pbek/QOwnNotes/issues/3810))
 - The **Nextcloud / ownCloud** version dialog now lets you **Compare with local note**
   to see how a selected server version differs from the editor text, including unsaved edits.
+- Renamed **Show note versions** to **Show cloud note versions** to distinguish it from Git
+  history. Cloud versions, remote trash, and note sharing are now disabled when cloud support
+  is turned off (for [#3256](https://github.com/pbek/QOwnNotes/issues/3256))
+- The note-list context menu now offers built-in Git history for Git-enabled folders even
+  without an external Git log command (for [#3256](https://github.com/pbek/QOwnNotes/issues/3256))
 
 ## 26.11.14
 

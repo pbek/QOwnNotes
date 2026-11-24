@@ -1597,7 +1597,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
    </property>
    <property name="text">
-    <string>Show note &amp;versions</string>
+     <string>Show cloud note &amp;versions</string>
    </property>
    <property name="toolTip">
     <string>Show note versions on server</string>

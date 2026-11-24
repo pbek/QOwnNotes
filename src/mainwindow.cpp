@@ -2679,6 +2679,7 @@ bool MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
         gitCommitCurrentNoteFolder();
     }
 
+    updateCloudActionsEnabled();
     generateSystemTrayContextMenu();
     updateWindowTitle();
     _noteTabManager->_lastNoteId = 0;
@@ -3141,11 +3142,10 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     initSavedSearchesCompleter();
 
     // show or hide the note git version menu entry
+    ui->actionShow_note_git_versions->setVisible(Utils::Git::hasNoteHistoryBackend());
 #ifdef USE_LIBGIT2
-    ui->actionShow_note_git_versions->setVisible(true);
     ui->actionShow_note_git_versions_external->setVisible(Utils::Git::hasLogCommand());
 #else
-    ui->actionShow_note_git_versions->setVisible(Utils::Git::hasLogCommand());
     ui->actionShow_note_git_versions_external->setVisible(false);
 #endif
 
@@ -3944,12 +3944,11 @@ void MainWindow::updateShareButton() {
 }
 
 /**
- * Enables or disables the cloud dependent actions (cloud versions, trash and
- * sharing) depending on whether the current note folder uses a cloud
- * connection
+ * Enables cloud versions, trash and sharing only if cloud support is enabled
+ * and the current note folder uses a cloud connection.
  */
 void MainWindow::updateCloudActionsEnabled() {
-    const bool enabled = NoteFolder::isCurrentCloudConnectionSet();
+    const bool enabled = CloudService::isCloudSupportEnabled();
     ui->actionShow_versions->setEnabled(enabled);
     ui->actionShow_trash->setEnabled(enabled);
     ui->actionShare_note->setEnabled(enabled);
@@ -5256,9 +5255,7 @@ void MainWindow::on_action_Settings_triggered() {
 }
 
 void MainWindow::on_actionShow_versions_triggered() {
-    // Check if we have selected a note and if a cloud connection is set for
-    // the current note folder
-    if (!currentNote.exists() || !NoteFolder::isCurrentCloudConnectionSet()) {
+    if (!currentNote.exists() || !CloudService::isCloudSupportEnabled()) {
         return;
     }
 
@@ -5280,12 +5277,12 @@ void MainWindow::on_actionShow_versions_triggered() {
     cloud->loadVersions(this->currentNote.relativeNoteFilePath(QStringLiteral("/")), dialog);
 }
 
-void MainWindow::enableShowVersionsButton() { ui->actionShow_versions->setDisabled(false); }
+void MainWindow::enableShowVersionsButton() {
+    ui->actionShow_versions->setEnabled(CloudService::isCloudSupportEnabled());
+}
 
 void MainWindow::on_actionShow_trash_triggered() {
-    // If no cloud connection is set for the current note folder there are no
-    // trashed notes on a cloud server
-    if (!NoteFolder::isCurrentCloudConnectionSet()) {
+    if (!CloudService::isCloudSupportEnabled()) {
         return;
     }
 
@@ -5304,7 +5301,9 @@ void MainWindow::on_actionShow_trash_triggered() {
     cloud->loadTrash(dialog);
 }
 
-void MainWindow::enableShowTrashButton() { ui->actionShow_trash->setDisabled(false); }
+void MainWindow::enableShowTrashButton() {
+    ui->actionShow_trash->setEnabled(CloudService::isCloudSupportEnabled());
+}
 
 void MainWindow::on_actionSelect_all_notes_triggered() { selectAllNotes(); }
 
@@ -7192,9 +7191,7 @@ void MainWindow::on_actionShare_note_triggered() {
     Q_UNUSED(blocker)
     ui->actionShare_note->setChecked(currentNote.isShared());
 
-    // If no cloud connection is set for the current note folder notes can't
-    // be shared
-    if (!NoteFolder::isCurrentCloudConnectionSet()) {
+    if (!CloudService::isCloudSupportEnabled()) {
         return;
     }
 

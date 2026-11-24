@@ -164,6 +164,14 @@ bool Utils::Git::hasLogCommand() {
     return !settings.value("gitLogCommand").toString().isEmpty();
 }
 
+bool Utils::Git::hasNoteHistoryBackend() {
+#ifdef USE_LIBGIT2
+    return true;
+#else
+    return hasLogCommand();
+#endif
+}
+
 /**
  * Prepares an external log process without interpreting the note path as command text
  */

@@ -650,7 +650,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
             _ui->action_Open_note_in_external_editor->icon(), tr("Open note in external editor"));
         openNoteWindowAction = noteMenu.addAction(_ui->actionView_note_in_new_window->icon(),
                                                   tr("Open note in different window"));
-        if (CloudService::isCloudSupportEnabled() && NoteFolder::isCurrentCloudConnectionSet()) {
+        if (CloudService::isCloudSupportEnabled()) {
             const QIcon cloudIcon = QIcon::fromTheme(
                 QStringLiteral("folder-cloud"),
                 QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/folder-cloud.svg")));
@@ -665,8 +665,7 @@ void NoteTreeManager::openNotesContextMenu(const QPoint globalPos, bool hasNotes
             noteMenu.addAction(copyIcon, tr("Copy absolute path of note"));
         copyNoteFileNameToClipboardAction = noteMenu.addAction(copyIcon, tr("Copy note filename"));
 
-        showNoteGitLogAction = new QAction(_mainWindow);
-        if (Utils::Git::isCurrentNoteFolderUseGit() && Utils::Git::hasLogCommand()) {
+        if (Utils::Git::isCurrentNoteFolderUseGit() && Utils::Git::hasNoteHistoryBackend()) {
             showNoteGitLogAction = noteMenu.addAction(_ui->actionShow_note_git_versions->icon(),
                                                       tr("Show note git versions"));
         }
