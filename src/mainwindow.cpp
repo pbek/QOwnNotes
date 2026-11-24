@@ -2680,6 +2680,7 @@ bool MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
     }
 
     updateCloudActionsEnabled();
+    updateDeckInsertActionVisibility();
     generateSystemTrayContextMenu();
     updateWindowTitle();
     _noteTabManager->_lastNoteId = 0;
@@ -3209,9 +3210,9 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     // reset cloud service instance
     CloudService::instance(true);
 
-    // update the cloud dependent actions (cloud versions, trash and sharing),
-    // the cloud connection of the current note folder may have changed
+    // The cloud settings or the current folder's connection may have changed.
     updateCloudActionsEnabled();
+    updateDeckInsertActionVisibility();
 
     if (!isAppLaunch) {
         // the notes need to be reloaded and subfolder panel needs to be populated
@@ -3952,6 +3953,12 @@ void MainWindow::updateCloudActionsEnabled() {
     ui->actionShow_versions->setEnabled(enabled);
     ui->actionShow_trash->setEnabled(enabled);
     ui->actionShare_note->setEnabled(enabled);
+}
+
+void MainWindow::updateDeckInsertActionVisibility() {
+    // Keep Deck management visible as a setup entry.
+    NextcloudDeckService deckService(this);
+    ui->actionInsert_Nextcloud_Deck_card->setVisible(deckService.isEnabled());
 }
 
 /**

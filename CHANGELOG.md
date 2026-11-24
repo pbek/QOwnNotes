@@ -12,6 +12,10 @@
   is turned off (for [#3256](https://github.com/pbek/QOwnNotes/issues/3256))
 - The note-list context menu now offers built-in Git history for Git-enabled folders even
   without an external Git log command (for [#3256](https://github.com/pbek/QOwnNotes/issues/3256))
+- The **AI model** submenu is hidden while AI is off, and **Insert Nextcloud Deck card link**
+  is hidden when Deck is unavailable for the current note folder. **Enable AI** and
+  **Manage Nextcloud Deck cards** remain available for setup
+  (for [#3256](https://github.com/pbek/QOwnNotes/issues/3256))
 
 ## 26.11.14
 

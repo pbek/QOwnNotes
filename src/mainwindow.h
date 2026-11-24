@@ -1253,6 +1253,8 @@ class MainWindow : public QMainWindow {
 
     void updateCloudActionsEnabled();
 
+    void updateDeckInsertActionVisibility();
+
     void initShortcuts();
 
     void buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy = true,

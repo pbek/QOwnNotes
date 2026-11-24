@@ -178,9 +178,11 @@ void AiToolbarManager::generateAiModelComboBox() {
 void AiToolbarManager::buildAiToolbarAndActions() {
     _aiToolbar->clear();
     _aiToolbar->addAction(_ui->actionEnable_AI);
+    const bool aiEnabled = OpenAiService::getEnabled();
     _ui->actionEnable_AI->blockSignals(true);
-    _ui->actionEnable_AI->setChecked(OpenAiService::getEnabled());
+    _ui->actionEnable_AI->setChecked(aiEnabled);
     _ui->actionEnable_AI->blockSignals(false);
+    _ui->menuAI_model->menuAction()->setVisible(aiEnabled);
 
     _aiBackendComboBox = new QComboBox(_mainWindow);
     connect(_aiBackendComboBox,
@@ -221,6 +223,7 @@ void AiToolbarManager::buildAiToolbarAndActions() {
 
 void AiToolbarManager::on_actionEnable_AI_toggled(bool arg1) {
     OpenAiService::setEnabled(arg1);
+    _ui->menuAI_model->menuAction()->setVisible(arg1);
     qDebug() << __func__ << " - 'checked': " << arg1;
 }
 
