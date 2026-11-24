@@ -2,6 +2,9 @@
 
 ## 26.11.15
 
+- Saving script settings now applies them without restarting QOwnNotes, and
+  **Reload scripting engine** picks up edits to local scripts even when no scripts were
+  enabled or disabled (for [#3861](https://github.com/pbek/QOwnNotes/issues/3861))
 - **Show note git versions** now includes a read-only **Current note** entry,
   so you can compare historical versions with what is in the editor, including unsaved edits
   (for [#3810](https://github.com/pbek/QOwnNotes/issues/3810))

@@ -3,11 +3,11 @@
 #include <dialogs/filedialog.h>
 
 #include <QDebug>
-#include <QJsonDocument>
 #include <QJsonObject>
 #include <limits>
 
 #include "services/cryptoservice.h"
+#include "services/scriptingservice.h"
 #include "ui_scriptsettingwidget.h"
 
 ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, const Script &script,
@@ -141,6 +141,20 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, const Script &script,
         ui->selectionComboBox->setCurrentIndex(currentIndex);
         ui->selectionComboBox->show();
     }
+
+    // Connect after populating the controls so opening the page does not save settings.
+    connect(ui->stringLineEdit, &QLineEdit::textChanged, this, &ScriptSettingWidget::storeString);
+    connect(ui->integerSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this,
+            [this](int value) { storeSettingsVariable(value); });
+    connect(ui->textEdit, &QPlainTextEdit::textChanged, this,
+            [this]() { storeSettingsVariable(ui->textEdit->toPlainText()); });
+    connect(ui->filePathLineEdit, &QLineEdit::textChanged, this,
+            [this](const QString &path) { storeSettingsVariable(path); });
+    connect(ui->booleanCheckBox, &QCheckBox::toggled, this,
+            [this](bool checked) { storeSettingsVariable(checked); });
+    connect(
+        ui->selectionComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,
+        [this](int) { storeSettingsVariable(ui->selectionComboBox->currentData().toString()); });
 }
 
 ScriptSettingWidget::~ScriptSettingWidget() { delete ui; }
@@ -151,9 +165,11 @@ ScriptSettingWidget::~ScriptSettingWidget() { delete ui; }
  * @param value
  */
 void ScriptSettingWidget::storeSettingsVariable(const QJsonValue &value) {
-    // we need to fetch the data again so we are not overwriting data of other
+    // Fetch the data again so we are not overwriting data of other
     // ScriptSettingWidget instances
-    _script.refetch();
+    if (!_script.refetch()) {
+        return;
+    }
 
     QString identifier = _variableMap["identifier"].toString();
 
@@ -164,48 +180,29 @@ void ScriptSettingWidget::storeSettingsVariable(const QJsonValue &value) {
     }
 
     QJsonObject jsonObject = _script.getSettingsVariablesJsonObject();
+    if (jsonObject.value(identifier) == value) {
+        return;
+    }
+
     jsonObject.insert(identifier, value);
     _script.setSettingsVariablesJson(jsonObject);
-    _script.store();
-}
-
-/**
- * Stores the settings variable from the stringLineEdit
- *
- * @param arg1
- */
-void ScriptSettingWidget::on_stringLineEdit_textChanged(const QString &arg1) {
-    if (_variableMap["type"].toString() == "string-secret") {
-        const QString key = QStringLiteral("database/script/%1/settings/!%2")
-                                .arg(_script.getId())
-                                .arg(_variableMap["identifier"].toString());
-        storeSettingsVariable(CryptoService::instance()->encryptToString(arg1, key));
-    } else {
-        storeSettingsVariable(arg1);
+    if (_script.store()) {
+        ScriptingService::instance()->markScriptSettingsChanged();
     }
 }
 
 /**
- * Stores the settings variable from the integerSpinBox
- *
- * @param arg1
+ * Stores the settings variable from the stringLineEdit
  */
-void ScriptSettingWidget::on_integerSpinBox_valueChanged(int arg1) { storeSettingsVariable(arg1); }
-
-/**
- * Stores the settings variable from the textEdit
- */
-void ScriptSettingWidget::on_textEdit_textChanged() {
-    storeSettingsVariable(ui->textEdit->toPlainText());
-}
-
-/**
- * Stores the settings variable from the filePathLineEdit
- *
- * @param arg1
- */
-void ScriptSettingWidget::on_filePathLineEdit_textChanged(const QString &arg1) {
-    storeSettingsVariable(arg1);
+void ScriptSettingWidget::storeString(const QString &value) {
+    if (_variableMap["type"].toString() == "string-secret") {
+        const QString key = QStringLiteral("database/script/%1/settings/!%2")
+                                .arg(_script.getId())
+                                .arg(_variableMap["identifier"].toString());
+        storeSettingsVariable(CryptoService::instance()->encryptToString(value, key));
+    } else {
+        storeSettingsVariable(value);
+    }
 }
 
 /**
@@ -232,18 +229,4 @@ void ScriptSettingWidget::on_filePathButton_clicked() {
             ui->filePathLineEdit->setText(QDir::toNativeSeparators(fileName));
         }
     }
-}
-
-/**
- * Stores the settings variable from booleanCheckBox
- *
- * @param checked
- */
-void ScriptSettingWidget::on_booleanCheckBox_toggled(bool checked) {
-    storeSettingsVariable(checked);
-}
-
-void ScriptSettingWidget::on_selectionComboBox_currentIndexChanged(int index) {
-    Q_UNUSED(index);
-    storeSettingsVariable(ui->selectionComboBox->currentData().toString());
 }

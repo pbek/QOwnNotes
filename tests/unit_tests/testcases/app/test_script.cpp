@@ -1,10 +1,19 @@
 #include "test_script.h"
 
+#include <QDateTime>
 #include <QDir>
+#include <QFile>
+#include <QJsonObject>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QScopeGuard>
 #include <QTemporaryDir>
 #include <QTest>
 
 #include "entities/script.h"
+#include "services/scriptingservice.h"
+#include "services/settingsservice.h"
+#include "widgets/settings/scriptingsettingswidget.h"
 
 void TestScript::testChangelogForVersionRange() {
     const QString changelog = QStringLiteral(
@@ -147,4 +156,88 @@ void TestScript::testRepositoryPathsRejectUnsafeNames() {
     QCOMPARE(unsafeIdentifierScriptPath, QStringLiteral("/stored/script.qml"));
     QVERIFY(!repositoryPath.isEmpty());
     QCOMPARE(unsafeScriptNamePath, repositoryPath + QStringLiteral("/example.qml"));
+}
+
+void TestScript::testApplySettingsAndReloadEngine() {
+    SettingsService appSettings;
+    const QString trackingKey = QStringLiteral("appMetrics/disableTracking");
+    const QVariant previousTrackingSetting = appSettings.value(trackingKey);
+    appSettings.setValue(trackingKey, true);
+    const auto restoreTracking = qScopeGuard([&]() {
+        if (previousTrackingSetting.isValid()) {
+            appSettings.setValue(trackingKey, previousTrackingSetting);
+        } else {
+            appSettings.remove(trackingKey);
+        }
+    });
+
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+    const QString path = directory.filePath(QStringLiteral("url-title.qml"));
+    const QDateTime initialTimestamp = QDateTime::currentDateTime().addSecs(-60);
+    const auto writeScript = [&](const QByteArray &prefix, int revision) {
+        const QByteArray source = QByteArray(R"(
+import QtQml
+QtObject {
+    property string title
+    property var settingsVariables: [
+        { identifier: "title", name: "Title", type: "string", default: "initial" }
+    ]
+    function fetchUrlTitleHook(url) { return ")") +
+                                  prefix + QByteArray(R"(" + title }
+})");
+        QFile file(path);
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate) ||
+            file.write(source) != source.size() || !file.flush()) {
+            return false;
+        }
+        // Give each edit a distinct timestamp for QML's disk cache.
+        return file.setFileTime(initialTimestamp.addSecs(revision),
+                                QFileDevice::FileModificationTime);
+    };
+    QVERIFY(writeScript("", 0));
+
+    Script script;
+    script.setName(QStringLiteral("URL title test"));
+    script.setScriptPath(path);
+    script.setEnabled(true);
+    QVERIFY(script.store());
+    auto *service = ScriptingService::instance();
+    const auto cleanup = qScopeGuard([&]() {
+        script.remove();
+        service->reloadEngine();
+    });
+    service->reloadEngine();
+
+    const auto title = [service]() {
+        return service->callFetchUrlTitleHook(QStringLiteral("https://example.com"));
+    };
+    QCOMPARE(title(), QStringLiteral("initial"));
+
+    ScriptingSettingsWidget settings;
+    settings.initialize();
+    auto *editor = settings.findChild<QLineEdit *>(QStringLiteral("stringLineEdit"));
+    QVERIFY(editor);
+    QCOMPARE(editor->text(), QStringLiteral("initial"));
+    QVERIFY(Script::fetch(script.getId()).getSettingsVariablesJsonObject().isEmpty());
+
+    editor->setText(QStringLiteral("updated"));
+    QCOMPARE(title(), QStringLiteral("initial"));
+    settings.storeSettings();
+    QCOMPARE(title(), QStringLiteral("updated"));
+
+    QVERIFY(writeScript("First edit: ", 1));
+    settings.storeSettings();
+    QCOMPARE(title(), QStringLiteral("updated"));
+
+    auto *reload = settings.findChild<QPushButton *>(QStringLiteral("scriptReloadEngineButton"));
+    QVERIFY(reload);
+    reload->click();
+    QCOMPARE(title(), QStringLiteral("First edit: updated"));
+
+    QVERIFY(writeScript("Second edit: ", 2));
+    auto *reload2 = settings.findChild<QPushButton *>(QStringLiteral("scriptReloadEngineButton2"));
+    QVERIFY(reload2);
+    reload2->click();
+    QCOMPARE(title(), QStringLiteral("Second edit: updated"));
 }

@@ -40,6 +40,11 @@ class ScriptingService : public QObject {
     static ScriptingService *createInstance(QObject *parent);
     QQmlEngine *engine() const;
     void initComponents();
+
+    // Script settings are saved before the running QML components are reloaded.
+    void markScriptSettingsChanged() { _scriptSettingsChanged = true; }
+    bool hasPendingScriptSettingsChanges() const { return _scriptSettingsChanged; }
+
     QString callInsertMediaHook(QFile *file, QString markdownText);
     QString callInsertAttachmentHook(QFile *file, QString markdownText);
     QString callFetchUrlTitleHook(const QString &url) const;
@@ -232,6 +237,7 @@ class ScriptingService : public QObject {
     bool _isInitializingComponents = false;
     bool _isReloadingEngine = false;
     bool _reloadEngineRequested = false;
+    bool _scriptSettingsChanged = false;
     bool methodExistsForObject(QObject *object, const QString &method) const;
     QString callNoteToMarkdownHtmlHookForObject(ScriptComponent *scriptComponent, Note *note,
                                                 const QString &html, const bool forExport);

@@ -377,7 +377,7 @@ void SettingsDialog::storeSettings() {
     // Apply and store the toolbar configuration
     on_applyToolbarButton_clicked();
 
-    // Store the enabled state of the scripts
+    // Apply scripting settings
     ui->scriptingSettingsWidget->storeSettings();
 
     // Store git settings

@@ -84,9 +84,18 @@ void ScriptingSettingsWidget::initialize() {
 }
 
 /**
- * Stores settings for the scripting page (enabled states of scripts)
+ * Stores enabled states and applies saved script settings
  */
-void ScriptingSettingsWidget::storeSettings() { storeScriptListEnabledState(); }
+void ScriptingSettingsWidget::storeSettings() {
+    const bool enabledStateChanged = storeScriptListEnabledState();
+    auto *scriptingService =
+        enabledStateChanged ? ScriptingService::instance() : ScriptingService::instanceOrNull();
+    // Avoid an expensive engine reload when neither the enabled states nor the settings changed.
+    if (scriptingService != nullptr &&
+        (enabledStateChanged || scriptingService->hasPendingScriptSettingsChanges())) {
+        scriptingService->reloadEngine();
+    }
+}
 
 /**
  * Reloads the script list
@@ -504,9 +513,9 @@ void ScriptingSettingsWidget::on_scriptNameLineEdit_editingFinished() {
 }
 
 /**
- * Stores the enabled states of the scripts
+ * Stores the enabled states of the scripts and returns whether any changed
  */
-void ScriptingSettingsWidget::storeScriptListEnabledState() {
+bool ScriptingSettingsWidget::storeScriptListEnabledState() {
     bool changed = false;
 
     for (int i = 0; i < ui->scriptListWidget->count(); i++) {
@@ -515,21 +524,15 @@ void ScriptingSettingsWidget::storeScriptListEnabledState() {
         int scriptId = item->data(Qt::UserRole).toInt();
 
         Script script = Script::fetch(scriptId);
-        if (script.isFetched()) {
-            if (script.getEnabled() != enabled) {
-                script.setEnabled(enabled);
-                script.store();
+        if (script.isFetched() && script.getEnabled() != enabled) {
+            script.setEnabled(enabled);
+            if (script.store()) {
                 changed = true;
             }
         }
     }
 
-    // Only reload the scripting engine if the enabled state of at least one
-    // script actually changed — avoids an expensive engine restart on every
-    // settings dialog OK press when nothing was modified
-    if (changed) {
-        ScriptingService::instance()->reloadEngine();
-    }
+    return changed;
 }
 
 void ScriptingSettingsWidget::on_scriptValidationButton_clicked() { validateCurrentScript(); }
@@ -540,6 +543,7 @@ void ScriptingSettingsWidget::on_scriptValidationButton_clicked() { validateCurr
 void ScriptingSettingsWidget::on_scriptReloadEngineButton_clicked() {
     // Store the enabled states and reload the scripting engine
     storeScriptListEnabledState();
+    ScriptingService::instance()->reloadEngine();
 
     // Trigger the item change so that the page is reloaded for script variables
     reloadCurrentScriptPage();
@@ -556,7 +560,7 @@ void ScriptingSettingsWidget::on_scriptReloadEngineButton2_clicked() {
 void ScriptingSettingsWidget::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
     Q_UNUSED(item)
 
-    storeScriptListEnabledState();
+    storeSettings();
     reloadCurrentScriptPage();
 }
 

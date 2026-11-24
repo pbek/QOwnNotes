@@ -21,25 +21,14 @@ class ScriptSettingWidget : public QWidget {
     ~ScriptSettingWidget();
 
    private slots:
-    void on_stringLineEdit_textChanged(const QString &arg1);
-
-    void on_integerSpinBox_valueChanged(int arg1);
-
-    void on_textEdit_textChanged();
-
-    void on_filePathLineEdit_textChanged(const QString &arg1);
-
     void on_filePathButton_clicked();
-
-    void on_booleanCheckBox_toggled(bool checked);
-
-    void on_selectionComboBox_currentIndexChanged(int index);
 
    private:
     Ui::ScriptSettingWidget *ui;
     QMap<QString, QVariant> _variableMap;
     Script _script;
 
+    void storeString(const QString &value);
     void storeSettingsVariable(const QJsonValue &value);
 };
 

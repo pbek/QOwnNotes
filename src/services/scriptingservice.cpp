@@ -391,6 +391,7 @@ void ScriptingService::initComponents() {
     }
 
     _isInitializingComponents = true;
+    _scriptSettingsChanged = false;
 
     clearCustomStyleSheets();
     _scriptComponents.clear();

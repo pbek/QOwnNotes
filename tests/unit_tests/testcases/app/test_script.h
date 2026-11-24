@@ -14,6 +14,7 @@ class TestScript : public QObject {
     void testRepositoryUrlsUseMainBranch();
     void testSnapRepositoryPathUsesCurrentRevision();
     void testRepositoryPathsRejectUnsafeNames();
+    void testApplySettingsAndReloadEngine();
 };
 
 #endif    // TESTSCRIPT_H

@@ -183,6 +183,9 @@ set(APP_SOURCE_FILES
     dialogs/nextclouddeckdialog.cpp
     dialogs/nextclouddeckdialog.h
     dialogs/nextclouddeckdialog.ui
+    dialogs/scriptrepositorydialog.cpp
+    dialogs/scriptrepositorydialog.h
+    dialogs/scriptrepositorydialog.ui
     dialogs/trashdialog.cpp
     dialogs/trashdialog.h
     entities/bookmark.cpp
@@ -308,9 +311,15 @@ set(APP_SOURCE_FILES
     widgets/qtexteditsearchwidget.cpp
     widgets/qtexteditsearchwidget.h
     widgets/qtexteditsearchwidget.ui
+    widgets/scriptsettingwidget.cpp
+    widgets/scriptsettingwidget.h
+    widgets/scriptsettingwidget.ui
     widgets/settings/aisettingswidget.cpp
     widgets/settings/aisettingswidget.h
     widgets/settings/aisettingswidget.ui
+    widgets/settings/scriptingsettingswidget.cpp
+    widgets/settings/scriptingsettingswidget.h
+    widgets/settings/scriptingsettingswidget.ui
     widgets/settings/todosettingswidget.cpp
     widgets/settings/todosettingswidget.h
     widgets/settings/todosettingswidget.ui)
