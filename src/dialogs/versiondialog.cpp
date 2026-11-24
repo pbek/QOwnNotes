@@ -67,13 +67,24 @@ VersionDialog::VersionDialog(QWidget *parent) : MasterDialog(parent), ui(new Ui:
  * Fills the version list, can also be called after the dialog was opened
  */
 void VersionDialog::setVersions(const QJSValue &versions) {
+    const Note note = MainWindow::instance()->getCurrentNote();
+    setVersions(versions, note, nullptr);
+}
+
+void VersionDialog::setGitVersions(const QJSValue &versions, const Note &note,
+                                   const QString &currentNoteText) {
+    setVersions(versions, note, &currentNoteText);
+}
+
+void VersionDialog::setVersions(const QJSValue &versions, const Note &note,
+                                const QString *currentNoteText) {
     QString itemName;
     QString diffHtml;
+    _currentNoteItem = nullptr;
     ui->versionListWidget->clear();
     _diffList->clear();
     _dataList->clear();
-    const auto currentNote = MainWindow::instance()->getCurrentNote();
-    const bool canDecryptNoteText = currentNote.canDecryptNoteText();
+    const bool canDecryptNoteText = note.canDecryptNoteText();
 
     // If the text was decrypted, we use the styling of the encrypted note text edit
     if (canDecryptNoteText) {
@@ -81,6 +92,12 @@ void VersionDialog::setVersions(const QJSValue &versions) {
             "QTextEdit,QPlainTextEdit {border: 3px dashed #aa0000;}";
         ui->noteTextEdit->setStyleSheet(encryptedStyle);
         ui->diffBrowser->setStyleSheet(encryptedStyle);
+    }
+
+    if (currentNoteText != nullptr) {
+        _currentNoteItem = new QListWidgetItem(tr("Current note"), ui->versionListWidget);
+        _diffList->append(QString());
+        _dataList->append(*currentNoteText);
     }
 
     // Init the iterator for the versions
@@ -113,14 +130,16 @@ void VersionDialog::setVersions(const QJSValue &versions) {
 
         // Decrypt the note text if possible
         if (canDecryptNoteText) {
-            noteText = currentNote.getDecryptedNoteText(Note::parseEncryptedNoteText(noteText));
+            noteText = note.getDecryptedNoteText(Note::parseEncryptedNoteText(noteText));
         }
 
         _dataList->append(noteText);
     }
 
-    if (ui->versionListWidget->count() > 0) {
-        ui->versionListWidget->setCurrentRow(0);
+    // Select the newest historical version by default, not the comparison baseline.
+    const int firstVersionRow = _currentNoteItem == nullptr ? 0 : 1;
+    if (ui->versionListWidget->count() > firstVersionRow) {
+        ui->versionListWidget->setCurrentRow(firstVersionRow);
     }
 
     updateVersionPreview();
@@ -194,13 +213,16 @@ void VersionDialog::on_versionListWidget_currentRowChanged(int) { updateVersionP
 
 void VersionDialog::updateVersionPreview() {
     const int currentRow = ui->versionListWidget->currentRow();
-    const bool hasVersion = currentRow >= 0 && !ui->versionListWidget->item(currentRow)->isHidden();
-    _restoreButton->setEnabled(hasVersion);
+    const auto *item = ui->versionListWidget->currentItem();
+    const bool hasVersion = item != nullptr && !item->isHidden();
+    const bool isCurrentNote = hasVersion && item == _currentNoteItem;
+    _restoreButton->setEnabled(hasVersion && !isCurrentNote);
     updateCountLabel();
 
-    if (hasVersion) {
-        ui->previewHeaderLabel->setText(
-            tr("Version from %1").arg(ui->versionListWidget->item(currentRow)->text()));
+    if (isCurrentNote) {
+        ui->previewHeaderLabel->setText(item->text());
+    } else if (hasVersion) {
+        ui->previewHeaderLabel->setText(tr("Version from %1").arg(item->text()));
     } else if (ui->versionListWidget->count() == 0) {
         ui->previewHeaderLabel->setText(tr("No versions loaded"));
     } else if (!ui->searchLineEdit->text().isEmpty()) {
@@ -209,8 +231,12 @@ void VersionDialog::updateVersionPreview() {
         ui->previewHeaderLabel->setText(tr("No version selected"));
     }
 
-    ui->diffBrowser->setHtml(hasVersion ? Utils::Gui::readableDiffHtml(_diffList->value(currentRow))
-                                        : QString());
+    if (isCurrentNote) {
+        ui->diffBrowser->setPlainText(tr("Historical versions are compared with this snapshot."));
+    } else {
+        ui->diffBrowser->setHtml(
+            hasVersion ? Utils::Gui::readableDiffHtml(_diffList->value(currentRow)) : QString());
+    }
     ui->noteTextEdit->setPlainText(hasVersion ? _dataList->value(currentRow) : QString());
 
     // Highlight and jump to the matches of the selected version
@@ -226,21 +252,27 @@ void VersionDialog::updateVersionPreview() {
  * Shows how many versions are in the list, and how many of them match the search
  */
 void VersionDialog::updateCountLabel() {
-    const int total = ui->versionListWidget->count();
+    const int firstVersionRow = _currentNoteItem == nullptr ? 0 : 1;
+    const int total = ui->versionListWidget->count() - firstVersionRow;
 
     if (ui->searchLineEdit->text().isEmpty()) {
-        ui->versionCountLabel->setText(tr("%n version(s)", "", total));
+        ui->versionCountLabel->setText(_currentNoteItem == nullptr
+                                           ? tr("%n version(s)", "", total)
+                                           : tr("%n historical version(s)", "", total));
         return;
     }
 
     int visible = 0;
-    for (int row = 0; row < total; ++row) {
+    for (int row = firstVersionRow; row < ui->versionListWidget->count(); ++row) {
         if (!ui->versionListWidget->item(row)->isHidden()) {
             ++visible;
         }
     }
 
-    ui->versionCountLabel->setText(tr("%1 of %n version(s)", "", total).arg(visible));
+    const QString countText = _currentNoteItem == nullptr
+                                  ? tr("%1 of %n version(s)", "", total)
+                                  : tr("%1 of %n historical version(s)", "", total);
+    ui->versionCountLabel->setText(countText.arg(visible));
 }
 
 void VersionDialog::dialogButtonClicked(QAbstractButton *button) {
@@ -248,7 +280,7 @@ void VersionDialog::dialogButtonClicked(QAbstractButton *button) {
 
     if (actionRole == Restore) {
         auto *currentItem = ui->versionListWidget->currentItem();
-        if (currentItem == nullptr || currentItem->isHidden()) {
+        if (currentItem == nullptr || currentItem == _currentNoteItem || currentItem->isHidden()) {
             return;
         }
         MainWindow::instance()->setCurrentNoteText(

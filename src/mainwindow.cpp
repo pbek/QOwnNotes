@@ -7983,6 +7983,10 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
 
     // Copy the note, because the current note could change while events are processed
     const Note note = currentNote;
+    // Use the same editor snapshot (including unsaved edits) in the preview and in the diffs.
+    const auto *editor = activeNoteTextEdit();
+    const QString currentNoteText = editor->toPlainText();
+    const bool currentNoteTextIsDecrypted = editor == ui->encryptedNoteTextEdit;
 
     // Show the dialog right away with a loading overlay, closing it cancels the gathering
     auto *dialog = new VersionDialog(this);
@@ -8001,7 +8005,8 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     eventTimer.start();
 
     auto versions = Utils::Git::getNoteVersions(
-        engine, note, limit, [&dialogPointer, &isDialogOpen, &eventTimer, limit](int count) {
+        engine, note, currentNoteText, currentNoteTextIsDecrypted, limit,
+        [&dialogPointer, &isDialogOpen, &eventTimer, limit](int count) {
             if (!isDialogOpen()) {
                 return false;
             }
@@ -8046,7 +8051,7 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
         return;
     }
 
-    dialog->setVersions(versions);
+    dialog->setGitVersions(versions, note, currentNoteText);
     dialog->hideLoadingOverlay();
 #else
     QString relativeFilePath = currentNote.relativeNoteFilePath();

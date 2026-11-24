@@ -4,8 +4,10 @@
 #include "masterdialog.h"
 
 class MainWindow;
+class Note;
 class QAbstractButton;
 class QJSValue;
+class QListWidgetItem;
 class QPushButton;
 class QSplitter;
 
@@ -22,6 +24,7 @@ class VersionDialog : public MasterDialog {
     ~VersionDialog();
 
     void setVersions(const QJSValue &versions);
+    void setGitVersions(const QJSValue &versions, const Note &note, const QString &currentNoteText);
 
    private slots:
     void storeSettings();
@@ -41,6 +44,8 @@ class VersionDialog : public MasterDialog {
     QPushButton *_restoreButton;
     QStringList *_diffList;
     QStringList *_dataList;
+    QListWidgetItem *_currentNoteItem = nullptr;
+    void setVersions(const QJSValue &versions, const Note &note, const QString *currentNoteText);
     void setupMainSplitter();
     void updateVersionPreview();
     void updateCountLabel();

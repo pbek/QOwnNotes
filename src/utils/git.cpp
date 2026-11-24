@@ -29,6 +29,7 @@
 #include <QJSEngine>
 
 #include "diff_match_patch.h"
+#include "misc.h"
 #endif
 
 /**
@@ -405,9 +406,13 @@ bool Utils::Git::commitAll(const QString &path, const QString &message) {
  * ]
  *
  * @param note
+ * @param currentNoteText Text from the active editor
+ * @param currentNoteTextIsDecrypted Whether the editor is showing the decrypted note
  * @return
  */
-QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int limit,
+QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note,
+                                     const QString &currentNoteText,
+                                     bool currentNoteTextIsDecrypted, int limit,
                                      const std::function<bool(int)> &progressCallback) {
     QJSValue versions = engine.newArray();
 
@@ -436,13 +441,6 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int li
     git_revwalk_push_head(walker);
 
     git_oid oid;
-    QString previousContent = note.getNoteText();
-    bool canDecryptNoteText = note.canDecryptNoteText();
-
-    if (canDecryptNoteText) {
-        previousContent = note.getDecryptedNoteText(Note::parseEncryptedNoteText(previousContent));
-    }
-
     bool isFirst = true;
     int versionIndex = 0;
 
@@ -460,19 +458,23 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int li
                     git_blob *blob = nullptr;
                     if (git_blob_lookup(&blob, repo, git_tree_entry_id(entry)) == 0) {
                         const char *content = (const char *)git_blob_rawcontent(blob);
-                        const QString &originalCurrentContent = QString::fromUtf8(content);
-                        QString currentContent = originalCurrentContent;
+                        const QString versionText = QString::fromUtf8(content);
+                        // Compare in the same form as the editor, even if a password is cached
+                        // while the editor is still showing encrypted text.
+                        const QString versionDiffText = Utils::Misc::transformLineFeeds(
+                            currentNoteTextIsDecrypted
+                                ? note.getDecryptedNoteText(
+                                      Note::parseEncryptedNoteText(versionText))
+                                : versionText);
 
-                        if (canDecryptNoteText) {
-                            currentContent = note.getDecryptedNoteText(
-                                Note::parseEncryptedNoteText(currentContent));
-                        }
-
-                        if (isFirst && currentContent == previousContent) {
+                        const bool matchesCurrent = isFirst && versionDiffText == currentNoteText;
+                        isFirst = false;
+                        if (matchesCurrent) {
                             // Skip the first version if it matches the current content
                             git_blob_free(blob);
                             git_tree_entry_free(entry);
-                            isFirst = false;
+                            git_tree_free(tree);
+                            git_commit_free(commit);
                             continue;
                         }
 
@@ -488,10 +490,10 @@ QJSValue Utils::Git::getNoteVersions(QJSEngine &engine, const Note &note, int li
                                                 QLocale::ShortFormat)));
 
                         // Store the content
-                        version.setProperty("data", originalCurrentContent);
+                        version.setProperty("data", versionText);
 
                         // Generate diff HTML
-                        QList<Diff> diffs = differ.diff_main(previousContent, currentContent);
+                        QList<Diff> diffs = differ.diff_main(currentNoteText, versionDiffText);
                         differ.diff_cleanupSemantic(diffs);
                         QString diffHtml = differ.diff_prettyHtml(diffs);
                         version.setProperty("diffHtml", diffHtml);

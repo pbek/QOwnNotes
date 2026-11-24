@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 26.11.15
+
+- **Show note git versions** now includes a read-only **Current note** entry,
+  so you can compare historical versions with what is in the editor, including unsaved edits
+  (for [#3810](https://github.com/pbek/QOwnNotes/issues/3810))
+
 ## 26.11.14
 
 - Improved startup with large note folders by avoiding a second rebuild of the

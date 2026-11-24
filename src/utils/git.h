@@ -43,7 +43,8 @@ bool isCurrentNoteFolderUseGit();
 bool initRepository(const QString& path);
 bool commitAll(const QString& path, const QString& message);
 // The progress callback gets the number of versions found so far, returning false cancels
-QJSValue getNoteVersions(QJSEngine& engine, const Note& note, int limit = 100,
+QJSValue getNoteVersions(QJSEngine& engine, const Note& note, const QString& currentNoteText,
+                         bool currentNoteTextIsDecrypted, int limit = 100,
                          const std::function<bool(int)>& progressCallback = {});
 #endif
 }    // namespace Git
