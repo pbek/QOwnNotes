@@ -39,6 +39,7 @@ class TestNotes : public QObject {
     void testCopiedNotePath();
     void cleanupTestCase();
     void testNoteCreating();
+    void testTagColorWithCachedSubfolderPath();
     void testEmojiDisplayName_data();
     void testEmojiDisplayName();
     void testResourceFileNames_data();

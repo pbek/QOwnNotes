@@ -31,6 +31,7 @@
 
 #include <QDesktopServices>
 #include <QDir>
+#include <QHash>
 #include <QIcon>
 #include <QInputDialog>
 #include <QMenu>
@@ -81,6 +82,50 @@ void NoteTreeManager::diffSelectedNotesWithExternalTool() {
  * Adds a note to the note tree widget
  */
 bool NoteTreeManager::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *parent) {
+    return addNoteToNoteTreeWidget(note, parent, nullptr);
+}
+
+struct NoteTreeManager::NoteRowData {
+    bool showPreview;
+    bool detectLeadingEmoji;
+    bool editable;
+    bool hasTags;
+    bool favorite;
+    QString subfolderPath;
+};
+
+void NoteTreeManager::addNotesToNoteTreeWidget(const QVector<Note> &notes) {
+    if (notes.isEmpty()) {
+        return;
+    }
+
+    // Read folder-wide settings once and reuse paths only for this rebuild.
+    NoteRowData rowData{Utils::Misc::isNoteListPreview(),
+                        Utils::Misc::isDetectLeadingEmojiInNoteTitle(),
+                        Note::allowDifferentFileName(),
+                        Tag::countAll() > 0,
+                        false,
+                        {}};
+    const QStringList favorites = Note::getFavoriteNoteIdentifiers();
+    QHash<int, QString> subfolderPaths;
+    for (const Note &note : notes) {
+        const int folderId = note.getNoteSubFolderId();
+        auto path = subfolderPaths.find(folderId);
+        if (path == subfolderPaths.end()) {
+            path = subfolderPaths.insert(folderId, note.relativeNoteSubFolderPath());
+        }
+        rowData.subfolderPath = path.value();
+        rowData.favorite =
+            !favorites.isEmpty() &&
+            favorites.contains(rowData.subfolderPath.isEmpty()
+                                   ? note.getFileName()
+                                   : rowData.subfolderPath + QLatin1Char('/') + note.getFileName());
+        addNoteToNoteTreeWidget(note, nullptr, &rowData);
+    }
+}
+
+bool NoteTreeManager::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *parent,
+                                              const NoteRowData *rowData) {
     const QString name = note.getName();
 
     // skip notes without name
@@ -88,13 +133,17 @@ bool NoteTreeManager::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem 
         return false;
     }
 
-    const bool isNoteListPreview = Utils::Misc::isNoteListPreview();
-    const bool detectLeadingEmoji = Utils::Misc::isDetectLeadingEmojiInNoteTitle();
+    const bool isNoteListPreview =
+        rowData == nullptr ? Utils::Misc::isNoteListPreview() : rowData->showPreview;
+    const bool detectLeadingEmoji = rowData == nullptr
+                                        ? Utils::Misc::isDetectLeadingEmojiInNoteTitle()
+                                        : rowData->detectLeadingEmoji;
     const bool isConflictedCopy = note.isConflictedCopy();
+    const QString *subfolderPath = rowData == nullptr ? nullptr : &rowData->subfolderPath;
 
     // add a note item to the tree
     auto *noteItem = new QTreeWidgetItem();
-    Utils::Gui::setTreeWidgetItemToolTipForNote(noteItem, note);
+    Utils::Gui::setTreeWidgetItemToolTipForNote(noteItem, note, nullptr, subfolderPath);
 
     // When emoji detection is enabled, display the name without the leading
     // emoji (the emoji will be shown as the item icon instead)
@@ -108,7 +157,7 @@ bool NoteTreeManager::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem 
     noteItem->setData(0, Qt::UserRole + 1, MainWindow::NoteType);
 
     // Store favorite status for sorting (UserRole + 2)
-    const bool isFavorite = note.isFavorite();
+    const bool isFavorite = rowData == nullptr ? note.isFavorite() : rowData->favorite;
     noteItem->setData(0, Qt::UserRole + 2, isFavorite);
 
     // Set the icon: conflict marker takes priority, then leading emoji,
@@ -130,13 +179,15 @@ bool NoteTreeManager::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem 
         noteItem->setIcon(0, Utils::Gui::noteIcon());
     }
 
-    const Tag tag = Tag::fetchOneOfNoteWithColor(note);
-    if (tag.isFetched()) {
-        // set the color of the note tree widget item
-        Utils::Gui::handleTreeWidgetItemTagColor(noteItem, tag);
+    if (rowData == nullptr || rowData->hasTags) {
+        const Tag tag = Tag::fetchOneOfNoteWithColor(note, subfolderPath);
+        if (tag.isFetched()) {
+            // Set the color of the note tree widget item.
+            Utils::Gui::handleTreeWidgetItemTagColor(noteItem, tag);
+        }
     }
 
-    const bool isEditable = Note::allowDifferentFileName();
+    const bool isEditable = rowData == nullptr ? Note::allowDifferentFileName() : rowData->editable;
     if (isEditable) {
         noteItem->setFlags(noteItem->flags() | Qt::ItemIsEditable);
     }

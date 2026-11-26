@@ -554,7 +554,7 @@ bool Tag::hasChild(const int tagId) const {
 /**
  * Fetches all linked tags of a note
  */
-QVector<Tag> Tag::fetchAllOfNote(const Note &note) {
+QVector<Tag> Tag::fetchAllOfNote(const Note &note, const QString *subfolderPath) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -567,7 +567,9 @@ QVector<Tag> Tag::fetchAllOfNote(const Note &note) {
                        "l.note_sub_folder_path = :noteSubFolderPath "
                        "ORDER BY t.priority ASC, t.name ASC"));
     query.bindValue(QStringLiteral(":fileName"), note.getName());
-    query.bindValue(QStringLiteral(":noteSubFolderPath"), note.getNoteSubFolder().relativePath());
+    query.bindValue(
+        QStringLiteral(":noteSubFolderPath"),
+        subfolderPath == nullptr ? note.getNoteSubFolder().relativePath() : *subfolderPath);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -731,8 +733,8 @@ QStringList Tag::searchAllNamesByName(const QString &name, bool ignoreAccents) {
 /**
  * Fetches one Tag of a note that has a color
  */
-Tag Tag::fetchOneOfNoteWithColor(const Note &note) {
-    const auto tagList = fetchAllOfNote(note);
+Tag Tag::fetchOneOfNoteWithColor(const Note &note, const QString *subfolderPath) {
+    const auto tagList = fetchAllOfNote(note, subfolderPath);
     for (const Tag &tag : tagList) {
         if (tag.getColor().isValid()) {
             return tag;

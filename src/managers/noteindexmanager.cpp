@@ -21,6 +21,7 @@
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
 #include <entities/trashitem.h>
+#include <managers/notetreemanager.h>
 #include <services/cloudservice.h>
 #include <services/databaseservice.h>
 #include <services/metricsservice.h>
@@ -492,9 +493,7 @@ void NoteIndexManager::loadNoteDirectoryList() {
     } else {
         // load all notes and add them to the note list widget
         const QVector<Note> noteList = Note::fetchAll();
-        for (const Note &note : noteList) {
-            _mainWindow->addNoteToNoteTreeWidget(note);
-        }
+        _mainWindow->noteTreeManager()->addNotesToNoteTreeWidget(noteList);
 
         itemCount = noteList.count();
     }

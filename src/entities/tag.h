@@ -108,7 +108,7 @@ class Tag : protected TagHeader {
 
     static Tag fetchByName(const QString &name, const int parentId);
 
-    static QVector<Tag> fetchAllOfNote(const Note &note);
+    static QVector<Tag> fetchAllOfNote(const Note &note, const QString *subfolderPath = nullptr);
 
     static QStringList fetchAllNames();
 
@@ -140,7 +140,7 @@ class Tag : protected TagHeader {
 
     static void convertDirSeparator();
 
-    static Tag fetchOneOfNoteWithColor(const Note &note);
+    static Tag fetchOneOfNoteWithColor(const Note &note, const QString *subfolderPath = nullptr);
 
     static void migrateDarkColors();
 

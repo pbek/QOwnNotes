@@ -37,6 +37,7 @@
 #include "entities/commandsnippet.h"
 #include "entities/notefolder.h"
 #include "entities/notesubfolder.h"
+#include "entities/tag.h"
 #include "entities/trashitem.h"
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 #include "libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h"
@@ -958,6 +959,43 @@ NoteSubFolder TestNotes::createTestNoteSubFolder(const QString &name, int parent
     }
 
     return subFolder;
+}
+
+void TestNotes::testTagColorWithCachedSubfolderPath() {
+    QVERIFY(DatabaseService::setupNoteFolderTables());
+    NoteSubFolder parent = createTestNoteSubFolder(uniqueTestName(QStringLiteral("tag-parent")));
+    NoteSubFolder child = createTestNoteSubFolder(QStringLiteral("child"), parent.getId());
+    const auto cleanupFolders = qScopeGuard([&] {
+        child.remove();
+        parent.remove();
+    });
+
+    Note root;
+    root.setName(uniqueTestName(QStringLiteral("Tag note")));
+    Note nested = root;
+    nested.setNoteSubFolderId(child.getId());
+
+    Tag red;
+    red.setName(uniqueTestName(QStringLiteral("Red tag")));
+    red.setColor(Qt::red);
+    QVERIFY(red.store());
+    const auto cleanupRed = qScopeGuard([&] { red.remove(); });
+    QVERIFY(red.linkToNote(root));
+
+    Tag blue;
+    blue.setName(uniqueTestName(QStringLiteral("Blue tag")));
+    blue.setColor(Qt::blue);
+    QVERIFY(blue.store());
+    const auto cleanupBlue = qScopeGuard([&] { blue.remove(); });
+    QVERIFY(blue.linkToNote(nested));
+
+    const QString rootPath = root.relativeNoteSubFolderPath();
+    const QString nestedPath = nested.relativeNoteSubFolderPath();
+    QVERIFY(rootPath.isEmpty());
+    QCOMPARE(nestedPath, parent.getName() + QStringLiteral("/child"));
+    QCOMPARE(Tag::fetchOneOfNoteWithColor(root, &rootPath).getId(), red.getId());
+    QCOMPARE(Tag::fetchOneOfNoteWithColor(nested, &nestedPath).getId(), blue.getId());
+    QCOMPARE(Tag::fetchOneOfNoteWithColor(nested).getId(), blue.getId());
 }
 
 Note TestNotes::createTestNote(const QString &name, int noteSubFolderId,

@@ -33,6 +33,7 @@ class NoteTreeManager : public QObject {
     explicit NoteTreeManager(MainWindow *mainWindow, Ui::MainWindow *ui, QObject *parent = nullptr);
 
     bool addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *parent = nullptr);
+    void addNotesToNoteTreeWidget(const QVector<Note> &notes);
     void updateNoteTreeWidgetItem(const Note &note, QTreeWidgetItem *noteItem = nullptr);
     void updateNoteTreeWidgetItemIcon(const Note &note);
     void makeCurrentNoteFirstInNoteList();
@@ -53,6 +54,10 @@ class NoteTreeManager : public QObject {
     void on_noteOperationsButton_clicked();
 
    private:
+    struct NoteRowData;
+    bool addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *parent,
+                                 const NoteRowData *rowData);
+
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;
 
