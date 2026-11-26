@@ -237,5 +237,36 @@ in
               }
           assert settings["General"]["currentLayout"] == "shortcut-editor", dict(settings["General"])
           assert settings["General"]["centralWidget"] == "note-edit", dict(settings["General"])
+
+      with subtest("Reload consecutive atomic replacements without overwriting them on autosave"):
+          profile = "/home/alice/atomic-replacement"
+          note = f"{profile}/notes/Replacement.md"
+          settings_text = f"""[General]
+      notesPath={profile}/notes
+      guiFirstRunInit=true
+      acceptAllExternalModifications=true
+      enableNoteChecksumChecks=true
+      noteSaveIntervalTime=5
+      [appMetrics]
+      notificationShown=true
+      disableTracking=true
+      [security]
+      keychainMigrationNoticeAcknowledged=true
+      """
+          machine.succeed(f"mkdir -p {profile}/config/PBE {profile}/notes")
+          machine.succeed(f"printf %s {shlex.quote(settings_text)} > {profile}/config/PBE/QOwnNotes.conf")
+          machine.succeed(f"printf '%s\\n' '# Original note content' > {note}")
+          machine.succeed(f"chown -R alice:users {profile}")
+          ${aliceDo "XDG_CONFIG_HOME=/home/alice/atomic-replacement/config XDG_DATA_HOME=/home/alice/atomic-replacement/data qownnotes"}
+          machine.wait_for_text("Original note content")
+
+          for text in ("First replacement from disk", "Second replacement from disk"):
+              temp_note = f"{profile}/notes/.Replacement.md.~download"
+              machine.succeed(f"printf '%s\\n' {shlex.quote('# ' + text)} > {temp_note}")
+              machine.succeed(f"mv -f {temp_note} {note}")
+              machine.wait_for_text(text)
+              # The editor must show this version and the next autosave must not undo it.
+              machine.sleep(6)
+              assert machine.succeed(f"cat {note}").strip() == f"# {text}"
     '';
 }

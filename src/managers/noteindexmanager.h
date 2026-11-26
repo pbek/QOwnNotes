@@ -66,7 +66,6 @@ class NoteIndexManager : public QObject {
     void recheckChangedDirectories();
     bool subfolderMatchesIndex(const QString &path, QSet<QString> &changedNotePaths) const;
     void reloadAfterDirectoryChange(const QSet<QString> &changedNotePaths);
-    void checkModifiedNote(const QString &path, bool contentChangeDetected);
 
     MainWindow *_mainWindow;
     Ui::MainWindow *_ui;

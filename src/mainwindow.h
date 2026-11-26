@@ -19,6 +19,7 @@
 #include <services/webappclientservice.h>
 #include <widgets/logwidget.h>
 
+#include <QByteArray>
 #include <QColor>
 #include <QFileSystemWatcher>
 #include <QMainWindow>
@@ -958,7 +959,7 @@ class MainWindow : public QMainWindow {
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
-    QString _currentNoteTextHash;
+    QByteArray _currentNoteTextHash;
     NoteDiffDialog *noteDiffDialog = nullptr;
     bool _noteDiffDialogExecuting = false;
     UpdateService *updateService;
@@ -1318,6 +1319,7 @@ class MainWindow : public QMainWindow {
     void openNotesContextMenu(const QPoint globalPos, bool hasNotes = true,
                               bool hasFolders = false);
 
+    static QByteArray noteTextHash(const QString &text);
     void updateCurrentNoteTextHash();
 
     void removeConflictedNotesDatabaseCopies();

@@ -3312,9 +3312,14 @@ void MainWindow::updateTreeWidgetItemHeight(QTreeWidget *treeWidget, int height)
 }
 
 void MainWindow::updateNoteTextFromDisk(Note note) {
-    note.updateNoteTextFromDisk();
+    if (!note.updateNoteTextFromDisk()) {
+        return;
+    }
+
+    note.setHasDirtyData(false);
     note.store();
     this->currentNote = note;
+    updateCurrentNoteTextHash();
     updateNoteEncryptionUI();
 
     {
@@ -3358,7 +3363,11 @@ void MainWindow::autoReadOnlyModeTimerSlot() {
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
-    noteTextEditTextWasUpdated();
+    // A mismatch with the file on disk is not evidence of an edit. The file
+    // may have changed externally while the editor is still showing old text.
+    if (!ui->encryptedNoteTextEdit->isHidden() || ui->noteTextEdit->document()->isModified()) {
+        noteTextEditTextWasUpdated();
+    }
     _noteIndexManager->storeUpdatedNotesToDisk();
 }
 
@@ -3788,6 +3797,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
 
     // update the text of the text edit
     if (updateNoteText) {
+        updateCurrentNoteTextHash();
         const QSignalBlocker blocker(ui->noteTextEdit);
         Q_UNUSED(blocker)
 
@@ -3843,10 +3853,6 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     _navigationManager->updateNoteTextStatistics();
     noteEditCursorPositionChanged();
 
-    // create a hash of the text of the current note to be able if it was
-    // modified outside of QOwnNotes
-    updateCurrentNoteTextHash();
-
     // clear external image cache
     Note::externalImageHash()->clear();
 
@@ -3873,13 +3879,15 @@ void MainWindow::closeOrphanedTabs() const { _noteTabManager->closeOrphanedTabs(
 bool MainWindow::jumpToTab(const Note &note) const { return _noteTabManager->jumpToTab(note); }
 
 /**
- * Creates a hash of the text of the current note to be able to tell if it was
- * modified outside of QOwnNotes
+ * Hashes note text consistently for the editor baseline and disk comparison.
  */
+QByteArray MainWindow::noteTextHash(const QString &text) {
+    return QCryptographicHash::hash(Utils::Misc::transformLineFeeds(text).toUtf8(),
+                                    QCryptographicHash::Sha1);
+}
+
 void MainWindow::updateCurrentNoteTextHash() {
-    _currentNoteTextHash = QString(
-        QCryptographicHash::hash(currentNote.getNoteText().toLocal8Bit(), QCryptographicHash::Sha1)
-            .toHex());
+    _currentNoteTextHash = noteTextHash(currentNote.getNoteText());
 }
 
 void MainWindow::updateActionUiEnabled() {

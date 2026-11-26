@@ -35,7 +35,6 @@
 #include <widgets/notetreewidgetitem.h>
 
 #include <QCoreApplication>
-#include <QCryptographicHash>
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
@@ -46,6 +45,7 @@
 #include <QScopedValueRollback>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QTextDocument>
 #include <QTextStream>
 #include <QTimer>
 #include <QTreeWidgetItem>
@@ -702,9 +702,7 @@ void NoteIndexManager::removeConflictedNotesDatabaseCopies() {
                                       QStringLiteral("🗄️"));
 }
 
-void NoteIndexManager::notesWereModified(const QString &str) { checkModifiedNote(str, false); }
-
-void NoteIndexManager::checkModifiedNote(const QString &str, bool contentChangeDetected) {
+void NoteIndexManager::notesWereModified(const QString &str) {
     if (str == _watchedNoteFolderDatabasePath) {
         noteFolderDatabaseWasModified();
         return;
@@ -745,51 +743,24 @@ void NoteIndexManager::checkModifiedNote(const QString &str, bool contentChangeD
                 qDebug() << __func__ << " - Modification date didn't change, continuing";
             }
 
-            const QString oldNoteText = note.getNoteText();
-
             // fetch text of note from disk
             if (!note.updateNoteTextFromDisk()) {
                 return;
             }
-            const QString noteTextOnDisk = Utils::Misc::transformLineFeeds(note.getNoteText());
-            const bool isCurrentNoteNotEditedForAWhile =
-                _mainWindow->currentNoteLastEdited.addSecs(60) < QDateTime::currentDateTime();
-            // If the current note wasn't edited for a while, we want that it is possible
-            // to get updated even with small changes, so we are setting a threshold of 0.
-            // If it was recently edited, we use a threshold of 8 for the similarity check
-            // to avoid false positives, but we'll still show the dialog if changes are detected.
-            const int threshold = isCurrentNoteNotEditedForAWhile ? 0 : 8;
-
-            const QString noteTextOnDiskHash = QString(
-                QCryptographicHash::hash(noteTextOnDisk.toLocal8Bit(), QCryptographicHash::Sha1)
-                    .toHex());
-
-            // skip dialog if text of note file on disk and current note are
-            // equal
-            if (noteTextOnDiskHash == _mainWindow->_currentNoteTextHash) {
+            // The index may already contain the new text. Compare against the
+            // last version loaded into the editor or saved by QOwnNotes instead.
+            const QByteArray diskTextHash = MainWindow::noteTextHash(note.getNoteText());
+            if (diskTextHash == _mainWindow->_currentNoteTextHash) {
                 qDebug() << __func__
                          << " - Note text and _currentNoteTextHash are the same, ignoring";
                 return;
             }
 
-            // Check if the old note text is the same or similar as the one on disk
-            // only if the current note wasn't edited recently
-            // The index may already contain the replacement that triggered this check.
-            if (!contentChangeDetected && isCurrentNoteNotEditedForAWhile &&
-                Utils::Misc::isSimilar(oldNoteText, noteTextOnDisk, threshold)) {
-                qDebug() << __func__ << " - Old and new text are same or similar, ignoring";
-                return;
-            }
-
-            // fetch current text
-            const QString noteTextEditText = _ui->noteTextEdit->toPlainText();
-
-            // skip dialog if text of note file on disk text from note text
-            // edit are equal or similar, but only if the note wasn't edited recently
-            // If it was recently edited, we want to show the dialog even for small changes
+            const bool isCurrentNoteNotEditedForAWhile =
+                _mainWindow->currentNoteLastEdited.addSecs(60) < QDateTime::currentDateTime();
             if (isCurrentNoteNotEditedForAWhile &&
-                Utils::Misc::isSimilar(noteTextEditText, noteTextOnDisk, threshold)) {
-                qDebug() << __func__ << " - Note text and text on disk are too similar, ignoring";
+                diskTextHash == MainWindow::noteTextHash(_ui->noteTextEdit->toPlainText())) {
+                qDebug() << __func__ << " - Editor text matches the text on disk, ignoring";
                 return;
             }
 
@@ -802,6 +773,7 @@ void NoteIndexManager::checkModifiedNote(const QString &str, bool contentChangeD
                 // reloading the current note text straight away
                 // if we didn't change it for a minute
                 if (!_mainWindow->currentNote.getHasDirtyData() &&
+                    !_ui->noteTextEdit->document()->isModified() &&
                     isCurrentNoteNotEditedForAWhile) {
                     _mainWindow->updateNoteTextFromDisk(std::move(note));
                     return;
@@ -839,7 +811,10 @@ void NoteIndexManager::checkModifiedNote(const QString &str, bool contentChangeD
                     // the note text has to be stored newly because the
                     // external change is already in the note table entry
                     _mainWindow->currentNote.storeNewText(_ui->noteTextEdit->toPlainText());
-                    _mainWindow->currentNote.storeNoteTextFileToDisk();
+                    if (_mainWindow->currentNote.storeNoteTextFileToDisk()) {
+                        _mainWindow->updateCurrentNoteTextHash();
+                        _ui->noteTextEdit->document()->setModified(false);
+                    }
                 } break;
 
                 // reload note file from disk
@@ -976,13 +951,8 @@ void NoteIndexManager::reloadAfterDirectoryChange(const QSet<QString> &changedNo
     // this fixes not detected external note changes of the current note if the
     // event for the change in the current note comes after the event that the
     // note folder was modified
-    QString noteFileName = _mainWindow->currentNote.getFileName();
-    if (!noteFileName.isEmpty()) {
-        // Use the full path, like a filesystem watcher would, instead of just the file-name
-        const QString relativePath =
-            QDir::fromNativeSeparators(_mainWindow->currentNote.relativeNoteFilePath());
-        checkModifiedNote(_mainWindow->currentNote.fullNoteFilePath(),
-                          changedNotePaths.contains(relativePath));
+    if (!_mainWindow->currentNote.getFileName().isEmpty()) {
+        notesWereModified(_mainWindow->currentNote.fullNoteFilePath());
     }
 
     // also update the text of the text edit if current note has changed
@@ -1037,10 +1007,17 @@ void NoteIndexManager::recheckChangedDirectories() {
     }
     if (needsReindex) {
         qDebug() << __func__ << " - deferred re-index after external directory change";
-        // Keep the legacy deferred pass for directories that cannot be checked. When
-        // a comparison found changed contents, also check the editor for a conflict.
+        // Even when we can't identify changed files before rebuilding, recheck
+        // the editor if its directory was affected.
         if (changedNotePaths.isEmpty()) {
             buildNotesIndexAndLoadNoteDirectoryList();
+            if (!_mainWindow->currentNote.getFileName().isEmpty()) {
+                const QString notePath = _mainWindow->currentNote.fullNoteFilePath();
+                const QString directory = QDir::cleanPath(QFileInfo(notePath).absolutePath());
+                if (paths.contains(directory)) {
+                    notesWereModified(notePath);
+                }
+            }
         } else {
             reloadAfterDirectoryChange(changedNotePaths);
         }
@@ -1132,10 +1109,14 @@ bool NoteIndexManager::subfolderMatchesIndex(const QString &path,
             const QString notePath = dir.filePath(note.getFileName());
             const QFileInfo info(notePath);
             const qint64 size = info.size();
-            if (!watchedPaths.contains(notePath) || !info.isFile() || info.isSymLink() ||
-                size > maxNoteSize || size > maxBytes - bytes ||
-                !noteFolder.isNotePathAllowed(notePath)) {
+            if (!info.isFile() || info.isSymLink() || size > maxNoteSize ||
+                size > maxBytes - bytes || !noteFolder.isNotePathAllowed(notePath)) {
                 return false;
+            }
+            // A rename can drop the watch and preserve the file's metadata.
+            // Rebuild to restore the watch, but still compare the file contents.
+            if (!watchedPaths.contains(notePath)) {
+                matches = false;
             }
             bytes += size;
             QFile file(notePath);
@@ -1333,6 +1314,11 @@ QString NoteIndexManager::noteFolderRootSignature() const {
 }
 
 void NoteIndexManager::storeUpdatedNotesToDisk() {
+    // Don't disconnect the watcher on an idle autosave tick.
+    if (!Note::hasDirtyNotes()) {
+        return;
+    }
+
     // disconnect the watcher before saving on disk
     FileWatchDisabler disable(_mainWindow);
 
@@ -1345,13 +1331,12 @@ void NoteIndexManager::storeUpdatedNotesToDisk() {
     bool noteWasRenamed = false;
     bool currentNoteTextChanged = false;
 
-    // Without checksum checks, the modal dialog processes autosave timers that
-    // can overwrite external changes while the user is choosing.
+    // The modal dialog processes autosave timers. An index rebuild can have
+    // refreshed the checksum, so don't rely on it to protect the file here.
     // Leave this note dirty until the choice is made, but still save other notes.
     // Qt5 can leave the dialog visible after its event loop exits during shutdown.
     const bool skipCurrentNote =
-        _mainWindow->_noteDiffDialogExecuting && _mainWindow->isNoteDiffDialogOpen() &&
-        !SettingsService().value(QStringLiteral("enableNoteChecksumChecks"), false).toBool();
+        _mainWindow->_noteDiffDialogExecuting && _mainWindow->isNoteDiffDialogOpen();
 
     // currentNote will be set by this method if the filename has changed
     const int count =
@@ -1399,6 +1384,9 @@ void NoteIndexManager::storeUpdatedNotesToDisk() {
             // create a hash of the text of the current note to be able if it
             // was modified outside of QOwnNotes
             _mainWindow->updateCurrentNoteTextHash();
+            if (!_mainWindow->currentNote.getHasDirtyData()) {
+                _ui->noteTextEdit->document()->setModified(false);
+            }
 
             _ui->noteTextEdit->setMarkdownLspDocumentPath(
                 _mainWindow->currentNote.fullNoteFilePath(), _ui->noteTextEdit->toPlainText());

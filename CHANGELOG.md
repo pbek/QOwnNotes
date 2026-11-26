@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 26.11.16
+
+- Fixed an open, unedited note sometimes missing an external file replacement and
+  autosave then writing the old editor text back over the change
+  (for [#3862](https://github.com/pbek/QOwnNotes/issues/3862) and
+  [#3468](https://github.com/pbek/QOwnNotes/issues/3468))
+
 ## 26.11.15
 
 - QOwnNotes now shows a dismissible warning at startup when a Nextcloud connection still
