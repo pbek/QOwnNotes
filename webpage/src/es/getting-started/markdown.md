@@ -41,9 +41,9 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** a partir del **
 ## Énfasis
 
 ```markdown
-Emphasis, aka italics, with _asterisks_ or _underscores_.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
 Aplique un estilo de énfasis combinado con **asteriscos y _guiones bajos_**.
 ```
@@ -87,11 +87,11 @@ Hay muchas formas de crear listas.
 1. Los números reales no importan, solo que sean números
 1. Otro elemento.
 
-- Unordered list can use asterisks
+* Unordered list can use asterisks
 
-* Or minuses
+- Or minuses
 
-- Or pluses
++ Or pluses
 ```
 
 ::: tip
@@ -354,11 +354,11 @@ Hyphens
 
 Asterisks
 
----
+***
 
 Underscores
 
----
+___
 ```
 
 ## Saltos de línea

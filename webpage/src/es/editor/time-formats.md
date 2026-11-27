@@ -2,7 +2,7 @@
 
 Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 
-Puede utilizar esta página para crear un formato de hora predeterminado personal. Puedes introducir esa cadena en _Nota_ > _Configuración_ > _Editor _ > _Insertar hora actual_.
+Puede utilizar esta página para crear un formato de hora predeterminado personal. Puede introducir esa cadena en _Nota_ > _Configuración_ > _Editor _ > _Insertar hora actual_.
 
 ## Expresiones para la fecha
 

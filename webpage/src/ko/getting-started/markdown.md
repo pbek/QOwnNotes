@@ -41,9 +41,9 @@ Alt-H2
 ## 강조
 
 ```markdown
-Emphasis, aka italics, with _asterisks_ or _underscores_.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
 **별표와 밑줄**을 함께 사용하여 강조합니다.
 ```
@@ -86,11 +86,11 @@ _밑줄_
 1. 실제 숫자는 중요하지 않습니다. 단지 숫자일 뿐입니다
 1. 그리고 또 다른 항목입니다.
 
-- Unordered list can use asterisks
+* Unordered list can use asterisks
 
-* Or minuses
+- Or minuses
 
-- Or pluses
++ Or pluses
 ```
 
 ::: tip
@@ -414,11 +414,11 @@ Hyphens
 
 Asterisks
 
----
+***
 
 Underscores
 
----
+___
 </pre>
 
 <h2 spaces-before="0">

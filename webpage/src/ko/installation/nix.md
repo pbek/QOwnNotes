@@ -13,6 +13,21 @@ NixOS 불안정 채널을 사용하여 최신 버전의 QOwnNotes를 얻는 것�
 
 그런 다음 `qownnotes` 또는 `QOwnNotes` 명령으로 QOwnNotes를 실행할 수 있습니다.
 
+## Run directly from GitHub
+
+With Nix flakes enabled, you can build and run the repository version directly:
+
+```bash
+nix run github:pbek/qownnotes
+```
+
+The flake automatically fetches the required Git submodules at the same repository revision. For a local checkout, initialize the submodules and include them explicitly:
+
+```bash
+git submodule update --init --recursive
+nix run '.?submodules=1'
+```
+
 ::: tip
 
 QOwnNotes 명령줄 스니펫 관리자 [qc](https://github.com/qownnotes/qc)는 [Nix 스토어](https://search.nixos.org/packages?channel=unstable&show=qc)를 통해 설치할 수도 있습니다

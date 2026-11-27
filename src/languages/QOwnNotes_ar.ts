@@ -7,6 +7,14 @@
 <source>About QOwnNotes</source>
 <translation>حول QOwnNotes</translation>
 </message>
+<message>
+<source>&amp;Copy version information</source>
+<translation type="unfinished">&amp;Copy version information</translation>
+</message>
+<message>
+<source>Version information copied</source>
+<translation type="unfinished">Version information copied</translation>
+</message>
 </context>
 <context>
 <name>ActionDialog</name>
@@ -143,8 +151,8 @@
 <translation>إدراج مرفق</translation>
 </message>
 <message>
-<source>Image filename or URL</source>
-<translation>اسم ملف الصورة أو عنوان URL</translation>
+<source>File name or URL</source>
+<translation type="unfinished">File name or URL</translation>
 </message>
 <message>
 <source>Path to file or URL</source>
@@ -155,12 +163,16 @@
 <translation>اختر الملف</translation>
 </message>
 <message>
-<source>Title of the image link</source>
-<translation>عنوان رابط الصورة</translation>
+<source>Title of the attachment link</source>
+<translation type="unfinished">Title of the attachment link</translation>
 </message>
 <message>
-<source>Title</source>
-<translation>عنوان</translation>
+<source>The file name will be used if no title is entered</source>
+<translation type="unfinished">The file name will be used if no title is entered</translation>
+</message>
+<message>
+<source>Title (optional)</source>
+<translation type="unfinished">Title (optional)</translation>
 </message>
 <message>
 <source>Cancel download</source>
@@ -172,8 +184,24 @@
 <translation>تحميل URL</translation>
 </message>
 <message>
+<source>&amp;Insert attachment</source>
+<translation type="unfinished">&amp;Insert attachment</translation>
+</message>
+<message>
 <source>Select file to insert</source>
 <translation>حدد ملفًا لإدراجه</translation>
+</message>
+<message>
+<source>This is not a valid path or URL</source>
+<translation type="unfinished">This is not a valid path or URL</translation>
+</message>
+<message>
+<source>The file will be downloaded when inserting the attachment</source>
+<translation type="unfinished">The file will be downloaded when inserting the attachment</translation>
+</message>
+<message>
+<source>The file doesn't exist</source>
+<translation type="unfinished">The file doesn't exist</translation>
 </message>
 <message>
 <source>Download error</source>
@@ -318,6 +346,22 @@
 <message>
 <source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</source>
 <translation type="unfinished">Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;If your server requires a password for shared links, please enter one in the password field of the share dialog and try again.</translation>
+</message>
+<message>
+<source>Unexpected HTTP response: %1</source>
+<translation type="unfinished">Unexpected HTTP response: %1</translation>
+</message>
+<message>
+<source>Task could not be saved</source>
+<translation type="unfinished">Task could not be saved</translation>
+</message>
+<message>
+<source>Could not save the task on the server. The cached task has not been changed.
+
+%1</source>
+<translation type="unfinished">Could not save the task on the server. The cached task has not been changed.
+
+%1</translation>
 </message>
 <message>
 <source>No bookmarks</source>
@@ -657,6 +701,17 @@ Connection error message: </translation>
 </message>
 </context>
 <context>
+<name>CommandBar</name>
+<message>
+<source>Search for actions…</source>
+<translation type="unfinished">Search for actions…</translation>
+</message>
+<message>
+<source>No action matches your search</source>
+<translation type="unfinished">No action matches your search</translation>
+</message>
+</context>
+<context>
 <name>DebugOptionSettingsWidget</name>
 <message>
 <source>Enable logging to file</source>
@@ -809,12 +864,20 @@ Connection error message: </translation>
 <translation>القواميس التي تم تنزيلها</translation>
 </message>
 <message>
+<source>No dictionaries were downloaded yet. Select a dictionary on the left side to download it.</source>
+<translation type="unfinished">No dictionaries were downloaded yet. Select a dictionary on the left side to download it.</translation>
+</message>
+<message>
 <source>If checked only the downloaded dictionaries will be used</source>
 <translation>هذا الاختيار لاستخدام القواميس التي تم تنزيلها فقط</translation>
 </message>
 <message>
 <source>Disable external dictionaries</source>
 <translation>تعطيل القواميس الخارجية</translation>
+</message>
+<message>
+<source>Please restart QOwnNotes to use the changed dictionaries.</source>
+<translation type="unfinished">Please restart QOwnNotes to use the changed dictionaries.</translation>
 </message>
 <message>
 <source>Delete selected dictionaries</source>
@@ -1261,6 +1324,25 @@ Connection error message: </translation>
 %1</translation>
 </message>
 <message>
+<source>This dictionary was already downloaded</source>
+<translation type="unfinished">This dictionary was already downloaded</translation>
+</message>
+<message>
+<source>Delete dictionaries</source>
+<translation type="unfinished">Delete dictionaries</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</source>
+<translation type="unfinished">
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</numerusform>
+</translation>
+</message>
+<message>
 <source>Could not remove dictionary file:
 %1</source>
 <translation>تعذر إزالة ملف القاموس:
@@ -1467,6 +1549,14 @@ Connection error message: </translation>
 <translation type="unfinished">Insert autocompletion directly if there is only one result</translation>
 </message>
 <message>
+<source>Do not append a space after autocompletion</source>
+<translation type="unfinished">Do not append a space after autocompletion</translation>
+</message>
+<message>
+<source>Do not insert a space after autocompletion</source>
+<translation type="unfinished">Do not insert a space after autocompletion</translation>
+</message>
+<message>
 <source>Tabs and Indents</source>
 <translation type="unfinished">Tabs and Indents</translation>
 </message>
@@ -1638,6 +1728,25 @@ Connection error message: </translation>
 <translation>بيانات التطبيق</translation>
 </message>
 <message>
+<source>The file couldn't be opened: %1</source>
+<translation type="unfinished">The file couldn't be opened: %1</translation>
+</message>
+<message>
+<source>Importing notes…</source>
+<translation type="unfinished">Importing notes…</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were imported</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+</translation>
+</message>
+<message>
 <source>Attribute</source>
 <translation>خاصية</translation>
 </message>
@@ -1687,6 +1796,29 @@ Connection error message: </translation>
 <message>
 <source>Export current note as PDF</source>
 <translation type="unfinished">Export current note as PDF</translation>
+</message>
+<message>
+<source>Select folder for exported PDFs</source>
+<translation type="unfinished">Select folder for exported PDFs</translation>
+</message>
+<message>
+<source>PDF export failed</source>
+<translation type="unfinished">PDF export failed</translation>
+</message>
+<message>
+<source>Could not export the note to "%1".</source>
+<translation type="unfinished">Could not export the note to "%1".</translation>
+</message>
+<message numerus="yes">
+<source>Exported %n note(s) as PDF.</source>
+<translation type="unfinished">
+<numerusform>Exported %n note(s) as PDF.</numerusform>
+<numerusform>Exported %n note(s) as PDF.</numerusform>
+<numerusform>Exported %n note(s) as PDF.</numerusform>
+<numerusform>Exported %n note(s) as PDF.</numerusform>
+<numerusform>Exported %n note(s) as PDF.</numerusform>
+<numerusform>Exported %n note(s) as PDF.</numerusform>
+</translation>
 </message>
 <message>
 <source>HTML files</source>
@@ -3140,12 +3272,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>إدراج صورة</translation>
 </message>
 <message>
-<source>Image filename or URL</source>
-<translation>اسم ملف الصورة أو عنوان URL</translation>
-</message>
-<message>
 <source>Path to file or URL</source>
 <translation>المسار إلى ملف أو URL</translation>
+</message>
+<message>
+<source>Title (optional)</source>
+<translation type="unfinished">Title (optional)</translation>
 </message>
 <message>
 <source>Scaling width:</source>
@@ -3168,16 +3300,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>لا تقم بنسخ الصورة إلى مجلد الوسائط</translation>
 </message>
 <message>
+<source>Image file name or URL</source>
+<translation type="unfinished">Image file name or URL</translation>
+</message>
+<message>
 <source>Title of the image link</source>
 <translation>عنوان رابط الصورة</translation>
 </message>
 <message>
-<source>Title</source>
-<translation>عنوان</translation>
-</message>
-<message>
 <source>Select image file</source>
 <translation>حدد ملف الصورة</translation>
+</message>
+<message>
+<source>&amp;Insert image</source>
+<translation type="unfinished">&amp;Insert image</translation>
+</message>
+<message>
+<source>Image from the clipboard, %1 × %2 pixels</source>
+<translation type="unfinished">Image from the clipboard, %1 × %2 pixels</translation>
 </message>
 <message>
 <source>Image files</source>
@@ -3190,6 +3330,34 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Select image to insert</source>
 <translation>حدد صورة لإدراجها</translation>
+</message>
+<message>
+<source>This is not a valid path or URL</source>
+<translation type="unfinished">This is not a valid path or URL</translation>
+</message>
+<message>
+<source>The image couldn't be downloaded</source>
+<translation type="unfinished">The image couldn't be downloaded</translation>
+</message>
+<message>
+<source>The downloaded file isn't an image that can be shown</source>
+<translation type="unfinished">The downloaded file isn't an image that can be shown</translation>
+</message>
+<message>
+<source>%1 × %2 pixels, %3</source>
+<translation type="unfinished">%1 × %2 pixels, %3</translation>
+</message>
+<message>
+<source>The file doesn't exist</source>
+<translation type="unfinished">The file doesn't exist</translation>
+</message>
+<message>
+<source>The file is empty</source>
+<translation type="unfinished">The file is empty</translation>
+</message>
+<message>
+<source>The file isn't an image that can be shown</source>
+<translation type="unfinished">The file isn't an image that can be shown</translation>
 </message>
 </context>
 <context>
@@ -3637,6 +3805,34 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <source>Minimum 10 characters</source>
 <translation>10 رموز كأدنى حد</translation>
 </message>
+<message>
+<source>Describe your issue</source>
+<translation type="unfinished">Describe your issue</translation>
+</message>
+<message>
+<source>Please enter a title with at least 8 characters and at least 10 characters in every text field to continue.</source>
+<translation type="unfinished">Please enter a title with at least 8 characters and at least 10 characters in every text field to continue.</translation>
+</message>
+<message>
+<source>Log output</source>
+<translation type="unfinished">Log output</translation>
+</message>
+<message>
+<source>Debug information</source>
+<translation type="unfinished">Debug information</translation>
+</message>
+<message>
+<source>The debug information is needed to report a problem.</source>
+<translation type="unfinished">The debug information is needed to report a problem.</translation>
+</message>
+<message>
+<source>Submit your issue</source>
+<translation type="unfinished">Submit your issue</translation>
+</message>
+<message>
+<source>Step %1 of %2: %3</source>
+<translation type="unfinished">Step %1 of %2: %3</translation>
+</message>
 </context>
 <context>
 <name>JoplinImportDialog</name>
@@ -3689,8 +3885,35 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>استيراد مرفقات</translation>
 </message>
 <message>
+<source>Turn on note subfolders for the current note folder to be able to import folders.</source>
+<translation type="unfinished">Turn on note subfolders for the current note folder to be able to import folders.</translation>
+</message>
+<message>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation>حدد «RAW - مجلد تصدير Joplin» لاستيراده</translation>
+</message>
+<message>
+<source>The selected directory doesn't exist</source>
+<translation type="unfinished">The selected directory doesn't exist</translation>
+</message>
+<message>
+<source>Importing notes…</source>
+<translation type="unfinished">Importing notes…</translation>
+</message>
+<message>
+<source>No Joplin files were found in the selected directory</source>
+<translation type="unfinished">No Joplin files were found in the selected directory</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were imported</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+<numerusform>%n note(s) were imported</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -4115,6 +4338,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>ابحث عن عنوان لإنشاء رابط إليه</translation>
 </message>
 <message>
+<source>The selected note has no headings, the link will point to the whole note</source>
+<translation type="unfinished">The selected note has no headings, the link will point to the whole note</translation>
+</message>
+<message>
 <source>Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</source>
 <translation type="unfinished">Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</translation>
 </message>
@@ -4143,6 +4370,36 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <translation>ابحث عن ملاحظة لإنشاء رابط إليها</translation>
 </message>
 <message>
+<source>Fetching the title of the webpage…</source>
+<translation type="unfinished">Fetching the title of the webpage…</translation>
+</message>
+<message>
+<source>&amp;Insert link</source>
+<translation type="unfinished">&amp;Insert link</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s)</source>
+<translation type="unfinished">
+<numerusform>%n note(s)</numerusform>
+<numerusform>%n note(s)</numerusform>
+<numerusform>%n note(s)</numerusform>
+<numerusform>%n note(s)</numerusform>
+<numerusform>%n note(s)</numerusform>
+<numerusform>%n note(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n note(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n note(s)</numerusform>
+<numerusform>%1 of %n note(s)</numerusform>
+<numerusform>%1 of %n note(s)</numerusform>
+<numerusform>%1 of %n note(s)</numerusform>
+<numerusform>%1 of %n note(s)</numerusform>
+<numerusform>%1 of %n note(s)</numerusform>
+</translation>
+</message>
+<message>
 <source>Select file to link to</source>
 <translation>اختر ملفاً لربطه</translation>
 </message>
@@ -4168,14 +4425,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 </message>
 </context>
 <context>
+<name>LoadingOverlayWidget</name>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
+</message>
+<message>
+<source>%1 of %2 received · %3</source>
+<translation type="unfinished">%1 of %2 received · %3</translation>
+</message>
+<message>
+<source>%1 received · %2</source>
+<translation type="unfinished">%1 received · %2</translation>
+</message>
+<message>
+<source>Waiting for the server · %1</source>
+<translation type="unfinished">Waiting for the server · %1</translation>
+</message>
+</context>
+<context>
 <name>LocalTrashDialog</name>
 <message>
 <source>Locally trashed notes</source>
 <translation>الملاحظات المهملة محليًا</translation>
 </message>
 <message>
-<source>Find note name</source>
-<translation>العثور على اسم ملاحظة</translation>
+<source>Find note name or text</source>
+<translation type="unfinished">Find note name or text</translation>
 </message>
 <message>
 <source>Name</source>
@@ -4184,6 +4460,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <message>
 <source>Trashed</source>
 <translation>مهملة</translation>
+</message>
+<message>
+<source>Select a trashed note to see its text</source>
+<translation type="unfinished">Select a trashed note to see its text</translation>
 </message>
 <message>
 <source>Restore</source>
@@ -4260,6 +4540,40 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
 <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة</numerusform>
 <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة</numerusform>
 </translation>
+</message>
+<message numerus="yes">
+<source>%n trashed note(s)</source>
+<translation type="unfinished">
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n trashed note(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>No trashed notes</source>
+<translation type="unfinished">No trashed notes</translation>
+</message>
+<message>
+<source>No trashed note matches the search</source>
+<translation type="unfinished">No trashed note matches the search</translation>
+</message>
+<message>
+<source>No trashed note selected</source>
+<translation type="unfinished">No trashed note selected</translation>
 </message>
 </context>
 <context>
@@ -5599,6 +5913,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
 </message>
 <message>
+<source>%1 of up to %2 versions found</source>
+<translation type="unfinished">%1 of up to %2 versions found</translation>
+</message>
+<message>
 <source>No versions available</source>
 <translation type="unfinished">No versions available</translation>
 </message>
@@ -5616,6 +5934,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>%n script update(s) were installed</numerusform>
 <numerusform>%n script update(s) were installed</numerusform>
 </translation>
+</message>
+<message>
+<source>Loading bookmarks…</source>
+<translation type="unfinished">Loading bookmarks…</translation>
+</message>
+<message>
+<source>Bookmarks are currently loaded from your Nextcloud server</source>
+<translation type="unfinished">Bookmarks are currently loaded from your Nextcloud server</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -5711,10 +6037,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
 <numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
 </translation>
-</message>
-<message>
-<source>Done with gathering note versions from git</source>
-<translation type="unfinished">Done with gathering note versions from git</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
@@ -5976,8 +6298,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Send notes to</translation>
 </message>
 <message>
+<source>Loading note versions…</source>
+<translation type="unfinished">Loading note versions…</translation>
+</message>
+<message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
 <translation type="unfinished">Note versions are currently loaded from your Nextcloud / ownCloud server</translation>
+</message>
+<message>
+<source>Loading trashed notes…</source>
+<translation type="unfinished">Loading trashed notes…</translation>
 </message>
 <message>
 <source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
@@ -6218,6 +6548,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</source>
 <translation type="unfinished">Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</translation>
+</message>
+<message>
+<source>&amp;Update table</source>
+<translation type="unfinished">&amp;Update table</translation>
+</message>
+<message>
+<source>Header</source>
+<translation type="unfinished">Header</translation>
 </message>
 <message>
 <source>Cannot remove header</source>
@@ -6586,8 +6924,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">New note</translation>
 </message>
 <message>
-<source>Note name</source>
-<translation type="unfinished">Note name</translation>
+<source>Note name:</source>
+<translation type="unfinished">Note name:</translation>
+</message>
+<message>
+<source>Enter the name of the new note</source>
+<translation type="unfinished">Enter the name of the new note</translation>
+</message>
+<message>
+<source>&amp;Create note</source>
+<translation type="unfinished">&amp;Create note</translation>
 </message>
 </context>
 <context>
@@ -6607,6 +6953,50 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>-1d</source>
 <translation>−١ يوم</translation>
+</message>
+<message>
+<source>New card</source>
+<translation type="unfinished">New card</translation>
+</message>
+<message>
+<source>Select a card from the list, or type a title into the search field and press Enter to create a new card.</source>
+<translation type="unfinished">Select a card from the list, or type a title into the search field and press Enter to create a new card.</translation>
+</message>
+<message>
+<source>Title:</source>
+<translation type="unfinished">Title:</translation>
+</message>
+<message>
+<source>Set a due date for the card</source>
+<translation type="unfinished">Set a due date for the card</translation>
+</message>
+<message>
+<source>Move the due date one day earlier</source>
+<translation type="unfinished">Move the due date one day earlier</translation>
+</message>
+<message>
+<source>Move the due date one hour earlier</source>
+<translation type="unfinished">Move the due date one hour earlier</translation>
+</message>
+<message>
+<source>Move the due date ten minutes earlier</source>
+<translation type="unfinished">Move the due date ten minutes earlier</translation>
+</message>
+<message>
+<source>Move the due date ten minutes later</source>
+<translation type="unfinished">Move the due date ten minutes later</translation>
+</message>
+<message>
+<source>Move the due date one hour later</source>
+<translation type="unfinished">Move the due date one hour later</translation>
+</message>
+<message>
+<source>Move the due date one day later</source>
+<translation type="unfinished">Move the due date one day later</translation>
+</message>
+<message>
+<source>Add a description using Markdown</source>
+<translation type="unfinished">Add a description using Markdown</translation>
 </message>
 <message>
 <source>Move card to another board or stack</source>
@@ -6633,6 +7023,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Delete</translation>
 </message>
 <message>
+<source>Create card</source>
+<translation type="unfinished">Create card</translation>
+</message>
+<message>
+<source>Create card, insert a link to it into the current note and close the dialog</source>
+<translation type="unfinished">Create card, insert a link to it into the current note and close the dialog</translation>
+</message>
+<message>
+<source>Create and insert link</source>
+<translation type="unfinished">Create and insert link</translation>
+</message>
+<message>
 <source>Show archived cards</source>
 <translation type="unfinished">Show archived cards</translation>
 </message>
@@ -6645,16 +7047,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Show only items due today</translation>
 </message>
 <message>
+<source>Reload</source>
+<translation type="unfinished">Reload</translation>
+</message>
+<message>
 <source>Summary</source>
 <translation type="unfinished">Summary</translation>
-</message>
-<message>
-<source>Reload the card item list from server</source>
-<translation type="unfinished">Reload the card item list from server</translation>
-</message>
-<message>
-<source>Reload…</source>
-<translation type="unfinished">Reload…</translation>
 </message>
 <message>
 <source>Search or create card</source>
@@ -6663,10 +7061,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Select the board and stack to work with</source>
 <translation type="unfinished">Select the board and stack to work with</translation>
-</message>
-<message>
-<source>Create card and insert link into current note</source>
-<translation>أنشئ بطاقة وأضف رابطها في الملاحظة الحالية</translation>
 </message>
 <message>
 <source>&amp;Save</source>
@@ -6717,12 +7111,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
 </message>
 <message>
-<source>Reload from server</source>
-<translation type="unfinished">Reload from server</translation>
-</message>
-<message>
 <source>Reload boards, stacks and cards from server</source>
 <translation type="unfinished">Reload boards, stacks and cards from server</translation>
+</message>
+<message>
+<source>Loading Nextcloud Deck cards…</source>
+<translation type="unfinished">Loading Nextcloud Deck cards…</translation>
+</message>
+<message>
+<source>Data is currently loaded from your Nextcloud server</source>
+<translation type="unfinished">Data is currently loaded from your Nextcloud server</translation>
 </message>
 <message>
 <source>Do you want to delete the selected Nextcloud Deck card?</source>
@@ -6764,6 +7162,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Move</translation>
 </message>
 <message>
+<source>Loading Nextcloud Deck boards…</source>
+<translation type="unfinished">Loading Nextcloud Deck boards…</translation>
+</message>
+<message>
 <source>%1 / %2</source>
 <translation type="unfinished">%1 / %2</translation>
 </message>
@@ -6772,8 +7174,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">The due date is in the past</translation>
 </message>
 <message>
+<source>The card is due today</source>
+<translation type="unfinished">The card is due today</translation>
+</message>
+<message>
 <source>No due date</source>
 <translation type="unfinished">No due date</translation>
+</message>
+<message numerus="yes">
+<source>%n card(s)</source>
+<translation type="unfinished">
+<numerusform>%n card(s)</numerusform>
+<numerusform>%n card(s)</numerusform>
+<numerusform>%n card(s)</numerusform>
+<numerusform>%n card(s)</numerusform>
+<numerusform>%n card(s)</numerusform>
+<numerusform>%n card(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n card(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n card(s)</numerusform>
+<numerusform>%1 of %n card(s)</numerusform>
+<numerusform>%1 of %n card(s)</numerusform>
+<numerusform>%1 of %n card(s)</numerusform>
+<numerusform>%1 of %n card(s)</numerusform>
+<numerusform>%1 of %n card(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Edit archived card</source>
+<translation type="unfinished">Edit archived card</translation>
+</message>
+<message>
+<source>Edit card</source>
+<translation type="unfinished">Edit card</translation>
+</message>
+<message>
+<source>Save</source>
+<translation type="unfinished">Save</translation>
+</message>
+<message>
+<source>Save the changes to the card</source>
+<translation type="unfinished">Save the changes to the card</translation>
+</message>
+<message>
+<source>No card selected</source>
+<translation type="unfinished">No card selected</translation>
+</message>
+<message>
+<source>Create card and keep the dialog open</source>
+<translation type="unfinished">Create card and keep the dialog open</translation>
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
@@ -6896,8 +7348,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NoteBookmarkDialog</name>
 <message>
-<source>Note Bookmarks</source>
-<translation type="unfinished">Note Bookmarks</translation>
+<source>Note bookmarks</source>
+<translation type="unfinished">Note bookmarks</translation>
 </message>
 <message>
 <source>Slot</source>
@@ -6936,6 +7388,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation type="unfinished">Reload the bookmark list</translation>
 </message>
 <message>
+<source>Cursor position in the note</source>
+<translation type="unfinished">Cursor position in the note</translation>
+</message>
+<message numerus="yes">
+<source>%n bookmark(s)</source>
+<translation type="unfinished">
+<numerusform>%n bookmark(s)</numerusform>
+<numerusform>%n bookmark(s)</numerusform>
+<numerusform>%n bookmark(s)</numerusform>
+<numerusform>%n bookmark(s)</numerusform>
+<numerusform>%n bookmark(s)</numerusform>
+<numerusform>%n bookmark(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>No bookmarks are stored yet. Use the "Store bookmark at slot" actions to store the current note and cursor position as bookmark.</source>
+<translation type="unfinished">No bookmarks are stored yet. Use the "Store bookmark at slot" actions to store the current note and cursor position as bookmark.</translation>
+</message>
+<message>
 <source>Are you sure you want to delete the bookmark at slot %1?</source>
 <translation type="unfinished">Are you sure you want to delete the bookmark at slot %1?</translation>
 </message>
@@ -6970,6 +7441,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Jump to the note in the main window</source>
 <translation type="unfinished">Jump to the note in the main window</translation>
 </message>
+<message>
+<source>Folder: %1</source>
+<translation type="unfinished">Folder: %1</translation>
+</message>
+<message>
+<source>Last modified at %1</source>
+<translation type="unfinished">Last modified at %1</translation>
+</message>
+<message>
+<source>The note is encrypted and can't be decrypted</source>
+<translation type="unfinished">The note is encrypted and can't be decrypted</translation>
+</message>
 </context>
 <context>
 <name>NoteDiffDialog</name>
@@ -6980,6 +7463,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>The current note was modified outside of this application!</source>
 <translation>الملاحظة الحالية تم تعديلها خارج هذا البرنامج!</translation>
+</message>
+<message>
+<source>Text with a red background was removed outside of QOwnNotes, text with a green background was added.</source>
+<translation type="unfinished">Text with a red background was removed outside of QOwnNotes, text with a green background was added.</translation>
 </message>
 <message>
 <source>Differences:</source>
@@ -6998,12 +7485,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>تجاهل جميع التعديلات الخارجية في المستقبل</translation>
 </message>
 <message>
-<source>Yes</source>
-<translation>نعم</translation>
+<source>&amp;Reload from disk</source>
+<translation type="unfinished">&amp;Reload from disk</translation>
 </message>
 <message>
-<source>No</source>
-<translation>كلا</translation>
+<source>Accept the external changes and load the note text from disk</source>
+<translation type="unfinished">Accept the external changes and load the note text from disk</translation>
+</message>
+<message>
+<source>&amp;Keep current text</source>
+<translation type="unfinished">&amp;Keep current text</translation>
+</message>
+<message>
+<source>Ignore the external changes and overwrite the note on disk with the current text</source>
+<translation type="unfinished">Ignore the external changes and overwrite the note on disk with the current text</translation>
 </message>
 </context>
 <context>
@@ -7930,6 +8425,10 @@ Do you want to delete those files as well?</numerusform>
 <translation type="unfinished">Diff selected notes</translation>
 </message>
 <message>
+<source>Export selected notes to individual PDFs…</source>
+<translation type="unfinished">Export selected notes to individual PDFs…</translation>
+</message>
+<message>
 <source>Open note in external editor</source>
 <translation type="unfinished">Open note in external editor</translation>
 </message>
@@ -8272,6 +8771,13 @@ Do you want to delete those files as well?</numerusform>
 </message>
 </context>
 <context>
+<name>PreviewDetails</name>
+<message>
+<source>Details</source>
+<translation type="unfinished">Details</translation>
+</message>
+</context>
+<context>
 <name>PreviewFontSettingsWidget</name>
 <message>
 <source>Rendering</source>
@@ -8375,12 +8881,84 @@ Do you want to delete those files as well?</numerusform>
 <source>Could not delete password</source>
 <translation type="unfinished">Could not delete password</translation>
 </message>
+<message>
+<source>Password not found</source>
+<translation type="unfinished">Password not found</translation>
+</message>
 </context>
 <context>
 <name>QKeychain::Job</name>
 <message>
 <source>Both service name and key are empty</source>
 <translation type="unfinished">Both service name and key are empty</translation>
+</message>
+<message>
+<source>No error</source>
+<translation type="unfinished">No error</translation>
+</message>
+<message>
+<source>The specified item could not be found in the keychain</source>
+<translation type="unfinished">The specified item could not be found in the keychain</translation>
+</message>
+<message>
+<source>User canceled the operation</source>
+<translation type="unfinished">User canceled the operation</translation>
+</message>
+<message>
+<source>User interaction is not allowed</source>
+<translation type="unfinished">User interaction is not allowed</translation>
+</message>
+<message>
+<source>No keychain is available. You may need to restart your computer</source>
+<translation type="unfinished">No keychain is available. You may need to restart your computer</translation>
+</message>
+<message>
+<source>The user name or passphrase you entered is not correct</source>
+<translation type="unfinished">The user name or passphrase you entered is not correct</translation>
+</message>
+<message>
+<source>A cryptographic verification failure has occurred</source>
+<translation type="unfinished">A cryptographic verification failure has occurred</translation>
+</message>
+<message>
+<source>Function or operation not implemented</source>
+<translation type="unfinished">Function or operation not implemented</translation>
+</message>
+<message>
+<source>I/O error</source>
+<translation type="unfinished">I/O error</translation>
+</message>
+<message>
+<source>Already open with with write permission</source>
+<translation type="unfinished">Already open with with write permission</translation>
+</message>
+<message>
+<source>Invalid parameters passed to a function</source>
+<translation type="unfinished">Invalid parameters passed to a function</translation>
+</message>
+<message>
+<source>Failed to allocate memory</source>
+<translation type="unfinished">Failed to allocate memory</translation>
+</message>
+<message>
+<source>Bad parameter or invalid state for operation</source>
+<translation type="unfinished">Bad parameter or invalid state for operation</translation>
+</message>
+<message>
+<source>An internal component failed</source>
+<translation type="unfinished">An internal component failed</translation>
+</message>
+<message>
+<source>The specified item already exists in the keychain</source>
+<translation type="unfinished">The specified item already exists in the keychain</translation>
+</message>
+<message>
+<source>Unable to decode the provided data</source>
+<translation type="unfinished">Unable to decode the provided data</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation type="unfinished">Unknown error</translation>
 </message>
 </context>
 <context>
@@ -8491,6 +9069,10 @@ Do you want to delete those files as well?</numerusform>
 <source>Could not decrypt data: %1</source>
 <translation type="unfinished">Could not decrypt data: %1</translation>
 </message>
+<message>
+<source>Password not found</source>
+<translation type="unfinished">Password not found</translation>
+</message>
 </context>
 <context>
 <name>QKeychain::WritePasswordJobPrivate</name>
@@ -8561,6 +9143,10 @@ Do you want to delete those files as well?</numerusform>
 <message>
 <source>Writing credentials failed: %1</source>
 <translation type="unfinished">Writing credentials failed: %1</translation>
+</message>
+<message>
+<source>Password not found</source>
+<translation type="unfinished">Password not found</translation>
 </message>
 </context>
 <context>
@@ -8886,10 +9472,6 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </translation>
 </message>
 <message>
-<source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation>تم تفعيل خاصية المجلدات الفرعية للملاحظات لمجلد الملاحظة الحالية حتى يمكن استيراد مجلدات.</translation>
-</message>
-<message>
 <source>Login flow failed</source>
 <translation>فشل تدفق الولوج</translation>
 </message>
@@ -9016,6 +9598,10 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 <message>
 <source>Entry not found</source>
 <translation type="unfinished">Entry not found</translation>
+</message>
+<message>
+<source>error 0x%1: %2</source>
+<translation type="unfinished">error 0x%1: %2</translation>
 </message>
 </context>
 <context>
@@ -9268,6 +9854,14 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 <source>Match case sensitive</source>
 <translation>مطابقة التحسس لحالة الأحرف</translation>
 </message>
+<message>
+<source>Current match / number of matches</source>
+<translation type="unfinished">Current match / number of matches</translation>
+</message>
+<message>
+<source>No matches</source>
+<translation type="unfinished">No matches</translation>
+</message>
 </context>
 <context>
 <name>QTextEditSearchWidget</name>
@@ -9330,6 +9924,25 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 <message>
 <source>Match case sensitive</source>
 <translation>مطابقة حساسة لحالة الأحرف (للأحرف اللاتينية)</translation>
+</message>
+<message>
+<source>No matches</source>
+<translation type="unfinished">No matches</translation>
+</message>
+<message>
+<source>%1 of %2</source>
+<translation type="unfinished">%1 of %2</translation>
+</message>
+<message numerus="yes">
+<source>%n match(es)</source>
+<translation type="unfinished">
+<numerusform>%n match(es)</numerusform>
+<numerusform>%n match(es)</numerusform>
+<numerusform>%n match(es)</numerusform>
+<numerusform>%n match(es)</numerusform>
+<numerusform>%n match(es)</numerusform>
+<numerusform>%n match(es)</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -9432,6 +10045,52 @@ Are the folder and the file writable?</translation>
 <message>
 <source>Find script</source>
 <translation>اعثر على بُريمج</translation>
+</message>
+<message>
+<source>The script repository couldn't be loaded</source>
+<translation type="unfinished">The script repository couldn't be loaded</translation>
+</message>
+<message numerus="yes">
+<source>%n script(s)</source>
+<translation type="unfinished">
+<numerusform>%n script(s)</numerusform>
+<numerusform>%n script(s)</numerusform>
+<numerusform>%n script(s)</numerusform>
+<numerusform>%n script(s)</numerusform>
+<numerusform>%n script(s)</numerusform>
+<numerusform>%n script(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n script(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n script(s)</numerusform>
+<numerusform>%1 of %n script(s)</numerusform>
+<numerusform>%1 of %n script(s)</numerusform>
+<numerusform>%1 of %n script(s)</numerusform>
+<numerusform>%1 of %n script(s)</numerusform>
+<numerusform>%1 of %n script(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>The script repository couldn't be loaded, please check your internet connection.</source>
+<translation type="unfinished">The script repository couldn't be loaded, please check your internet connection.</translation>
+</message>
+<message>
+<source>No script matches your search.</source>
+<translation type="unfinished">No script matches your search.</translation>
+</message>
+<message>
+<source>This script isn't supported on your platform</source>
+<translation type="unfinished">This script isn't supported on your platform</translation>
+</message>
+<message>
+<source>This script needs a newer version of QOwnNotes</source>
+<translation type="unfinished">This script needs a newer version of QOwnNotes</translation>
+</message>
+<message>
+<source>This script is already installed</source>
+<translation type="unfinished">This script is already installed</translation>
 </message>
 <message>
 <source>Script updates</source>
@@ -9730,40 +10389,29 @@ Do you want to install it anyway?</source>
 <translation>تم استيراد %v من %m إشارة مرجعية</translation>
 </message>
 <message numerus="yes">
-<source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-<translation>
-<numerusform>تم العثور على
-%n
-&lt;strong&gt;
-إشارة مرجعية
-&lt;/strong&gt;
-على الخادم</numerusform>
-<numerusform>تم العثور على
-%n
-&lt;strong&gt;
-إشارة مرجعية
-&lt;/strong&gt;
-على الخادم</numerusform>
-<numerusform>&lt;strong&gt;
-%n
-إشارات مرجعية 
-&lt;/strong&gt;
-موجودة على الخادم</numerusform>
-<numerusform>&lt;strong&gt;
-%n
-إشارات مرجعية 
-&lt;/strong&gt;
-موجودة على الخادم</numerusform>
-<numerusform>&lt;strong&gt;
-%n
-إشارات مرجعية 
-&lt;/strong&gt;
-موجودة على الخادم</numerusform>
-<numerusform>&lt;strong&gt;
-%n
-إشارات مرجعية 
-&lt;/strong&gt;
-موجودة على الخادم</numerusform>
+<source>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</source>
+<translation type="unfinished">
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+</translation>
+</message>
+<message>
+<source>No bookmarks were found on the server.</source>
+<translation type="unfinished">No bookmarks were found on the server.</translation>
+</message>
+<message numerus="yes">
+<source>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</source>
+<translation type="unfinished">
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 </context>
@@ -9966,6 +10614,10 @@ Do you want to install it anyway?</source>
 <translation>مفعّل</translation>
 </message>
 <message>
+<source>No settings match your search</source>
+<translation type="unfinished">No settings match your search</translation>
+</message>
+<message>
 <source>KDE Plasma activities</source>
 <translation type="unfinished">KDE Plasma activities</translation>
 </message>
@@ -10017,6 +10669,10 @@ Do you want to install it anyway?</source>
 <translation type="unfinished">Password for the shared link (optional)</translation>
 </message>
 <message>
+<source>Waiting for the link from the server…</source>
+<translation type="unfinished">Waiting for the link from the server…</translation>
+</message>
+<message>
 <source>Share note on Nextcloud / ownCloud</source>
 <translation type="unfinished">Share note on Nextcloud / ownCloud</translation>
 </message>
@@ -10031,6 +10687,18 @@ Do you want to install it anyway?</source>
 <message>
 <source>The public url of your note</source>
 <translation>عنوان URL العمومي لملاحظتك</translation>
+</message>
+<message>
+<source>Copy link to clipboard</source>
+<translation type="unfinished">Copy link to clipboard</translation>
+</message>
+<message>
+<source>The link was copied to the clipboard</source>
+<translation type="unfinished">The link was copied to the clipboard</translation>
+</message>
+<message>
+<source>Open link in the browser</source>
+<translation type="unfinished">Open link in the browser</translation>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
@@ -10246,6 +10914,33 @@ Do you want to install it anyway?</source>
 <translation>آخر تعديل في %1</translation>
 </message>
 <message>
+<source>No orphaned attachments</source>
+<translation type="unfinished">No orphaned attachments</translation>
+</message>
+<message>
+<source>No attachments in the current note</source>
+<translation type="unfinished">No attachments in the current note</translation>
+</message>
+<message>
+<source>No attachments</source>
+<translation type="unfinished">No attachments</translation>
+</message>
+<message>
+<source>No attachment selected</source>
+<translation type="unfinished">No attachment selected</translation>
+</message>
+<message numerus="yes">
+<source>Used in %n note(s):</source>
+<translation type="unfinished">
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+</translation>
+</message>
+<message>
 <source>Path: %1</source>
 <translation>المسار: %1</translation>
 </message>
@@ -10279,6 +10974,28 @@ Do you want to install it anyway?</source>
 <message>
 <source>&amp;Add attachments to current note</source>
 <translation>&amp;أضف المرفقات إلى الملاحظة الحالية</translation>
+</message>
+<message numerus="yes">
+<source>%n attachment(s)</source>
+<translation type="unfinished">
+<numerusform>%n attachment(s)</numerusform>
+<numerusform>%n attachment(s)</numerusform>
+<numerusform>%n attachment(s)</numerusform>
+<numerusform>%n attachment(s)</numerusform>
+<numerusform>%n attachment(s)</numerusform>
+<numerusform>%n attachment(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n attachment(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n attachment(s)</numerusform>
+<numerusform>%1 of %n attachment(s)</numerusform>
+<numerusform>%1 of %n attachment(s)</numerusform>
+<numerusform>%1 of %n attachment(s)</numerusform>
+<numerusform>%1 of %n attachment(s)</numerusform>
+<numerusform>%1 of %n attachment(s)</numerusform>
+</translation>
 </message>
 <message>
 <source>File doesn't exist</source>
@@ -10380,6 +11097,45 @@ Do you want to install it anyway?</source>
 <translation>آخر تعديل في %1</translation>
 </message>
 <message>
+<source>No orphaned images</source>
+<translation type="unfinished">No orphaned images</translation>
+</message>
+<message>
+<source>No images in the current note</source>
+<translation type="unfinished">No images in the current note</translation>
+</message>
+<message>
+<source>No images</source>
+<translation type="unfinished">No images</translation>
+</message>
+<message>
+<source>No image selected</source>
+<translation type="unfinished">No image selected</translation>
+</message>
+<message>
+<source>%1 × %2 pixels</source>
+<translation type="unfinished">%1 × %2 pixels</translation>
+</message>
+<message>
+<source>Image can't be shown</source>
+<translation type="unfinished">Image can't be shown</translation>
+</message>
+<message>
+<source>Not used in any note</source>
+<translation type="unfinished">Not used in any note</translation>
+</message>
+<message numerus="yes">
+<source>Used in %n note(s):</source>
+<translation type="unfinished">
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+<numerusform>Used in %n note(s):</numerusform>
+</translation>
+</message>
+<message>
 <source>Path: %1</source>
 <translation>المسار: %1</translation>
 </message>
@@ -10396,6 +11152,28 @@ Do you want to install it anyway?</source>
 <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; ملفات محددة؟</numerusform>
 <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; ملف محدد؟</numerusform>
 <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; ملف محدد؟</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n image(s)</source>
+<translation type="unfinished">
+<numerusform>%n image(s)</numerusform>
+<numerusform>%n image(s)</numerusform>
+<numerusform>%n image(s)</numerusform>
+<numerusform>%n image(s)</numerusform>
+<numerusform>%n image(s)</numerusform>
+<numerusform>%n image(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n image(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n image(s)</numerusform>
+<numerusform>%1 of %n image(s)</numerusform>
+<numerusform>%1 of %n image(s)</numerusform>
+<numerusform>%1 of %n image(s)</numerusform>
+<numerusform>%1 of %n image(s)</numerusform>
+<numerusform>%1 of %n image(s)</numerusform>
 </translation>
 </message>
 <message>
@@ -10549,6 +11327,10 @@ Do you want to install it anyway?</source>
 <translation>محدد النص:</translation>
 </message>
 <message>
+<source>&amp;Insert table</source>
+<translation type="unfinished">&amp;Insert table</translation>
+</message>
+<message>
 <source>CSV files</source>
 <translation>ملفات CSV</translation>
 </message>
@@ -10560,6 +11342,10 @@ Do you want to install it anyway?</source>
 <source>Select CSV file to import</source>
 <translation>اختر ملف CSV ليتم استيراده</translation>
 </message>
+<message>
+<source>The clipboard doesn't contain any text</source>
+<translation type="unfinished">The clipboard doesn't contain any text</translation>
+</message>
 </context>
 <context>
 <name>TagAddDialog</name>
@@ -10568,12 +11354,16 @@ Do you want to install it anyway?</source>
 <translation>أضف وسماً جديداً</translation>
 </message>
 <message>
-<source>Add new tag</source>
-<translation>أضف الوسم الجديد</translation>
+<source>Tag name:</source>
+<translation type="unfinished">Tag name:</translation>
 </message>
 <message>
 <source>New tag</source>
 <translation>وسم جديد</translation>
+</message>
+<message>
+<source>&amp;Add tag</source>
+<translation type="unfinished">&amp;Add tag</translation>
 </message>
 </context>
 <context>
@@ -10783,6 +11573,10 @@ Do you want to install it anyway?</source>
 <translation>الاختلافات:</translation>
 </message>
 <message>
+<source>Text with a red background will be removed, text with a green background will be added.</source>
+<translation type="unfinished">Text with a red background will be removed, text with a green background will be added.</translation>
+</message>
+<message>
 <source>Don't show dialog again</source>
 <translation type="unfinished">Don't show dialog again</translation>
 </message>
@@ -10798,16 +11592,56 @@ Do you want to install it anyway?</source>
 <translation>قائمة المهام</translation>
 </message>
 <message>
+<source>Select a todo item from the list, or type a summary into the search field and press Enter to create a new todo item.</source>
+<translation type="unfinished">Select a todo item from the list, or type a summary into the search field and press Enter to create a new todo item.</translation>
+</message>
+<message>
+<source>Summary:</source>
+<translation type="unfinished">Summary:</translation>
+</message>
+<message>
+<source>Priority:</source>
+<translation type="unfinished">Priority:</translation>
+</message>
+<message>
 <source>Priority</source>
 <translation>الأولوية</translation>
 </message>
 <message>
-<source>Reminder</source>
-<translation>تذكير</translation>
-</message>
-<message>
 <source>Summary</source>
 <translation>ملخص</translation>
+</message>
+<message>
+<source>Reminder:</source>
+<translation type="unfinished">Reminder:</translation>
+</message>
+<message>
+<source>Set a reminder for the todo item</source>
+<translation type="unfinished">Set a reminder for the todo item</translation>
+</message>
+<message>
+<source>Tags:</source>
+<translation type="unfinished">Tags:</translation>
+</message>
+<message>
+<source>Description:</source>
+<translation type="unfinished">Description:</translation>
+</message>
+<message>
+<source>Add a description using Markdown</source>
+<translation type="unfinished">Add a description using Markdown</translation>
+</message>
+<message>
+<source>Insert a link to the todo item into the current note or import it as a note</source>
+<translation type="unfinished">Insert a link to the todo item into the current note or import it as a note</translation>
+</message>
+<message>
+<source>Remove the current todo item (Ctrl+R)</source>
+<translation type="unfinished">Remove the current todo item (Ctrl+R)</translation>
+</message>
+<message>
+<source>Save the current todo item (Ctrl+S)</source>
+<translation type="unfinished">Save the current todo item (Ctrl+S)</translation>
 </message>
 <message>
 <source>Save</source>
@@ -10816,6 +11650,10 @@ Do you want to install it anyway?</source>
 <message>
 <source>Note…</source>
 <translation>ملاحظة…</translation>
+</message>
+<message>
+<source>Select your todo list</source>
+<translation type="unfinished">Select your todo list</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
@@ -10850,24 +11688,12 @@ Do you want to install it anyway?</source>
 <translation>إيجاد أو إنشاء عنصر قائمة مهام</translation>
 </message>
 <message>
-<source>Tags</source>
-<translation>الوسوم</translation>
-</message>
-<message>
 <source>Add new tag</source>
 <translation>أضف وسما جديدا</translation>
 </message>
 <message>
 <source>Due date</source>
 <translation>الموعد النهائي</translation>
-</message>
-<message>
-<source>select your todo list</source>
-<translation>حدد قائمة مهامك</translation>
-</message>
-<message>
-<source>Save the current todo item</source>
-<translation>احفظ عنصر قائمة المهام الحالي</translation>
 </message>
 <message>
 <source>Save the current todo item and insert a link to it into the current note</source>
@@ -10882,12 +11708,16 @@ Do you want to install it anyway?</source>
 <translation>استورد كملاحظة</translation>
 </message>
 <message>
-<source>Remove the current todo item</source>
-<translation>أزل عنصر قائمة المهام الحالي</translation>
-</message>
-<message>
 <source>Todo list items are being loaded from the server</source>
 <translation>يجري تحميل عناصر قائمة المهام من الخادم</translation>
+</message>
+<message>
+<source>Task could not be saved</source>
+<translation type="unfinished">Task could not be saved</translation>
+</message>
+<message>
+<source>Could not load the task from the server. Please try again.</source>
+<translation type="unfinished">Could not load the task from the server. Please try again.</translation>
 </message>
 <message>
 <source>Reload from server</source>
@@ -10906,6 +11736,34 @@ Do you want to install it anyway?</source>
 <translation>امسح ذاكرة التخزين المؤقت للتقويم وأعد تحميل المهام من الخادم</translation>
 </message>
 <message>
+<source>The due date is in the past</source>
+<translation type="unfinished">The due date is in the past</translation>
+</message>
+<message>
+<source>The todo item is due today</source>
+<translation type="unfinished">The todo item is due today</translation>
+</message>
+<message>
+<source>Not set</source>
+<translation type="unfinished">Not set</translation>
+</message>
+<message>
+<source>Low</source>
+<translation type="unfinished">Low</translation>
+</message>
+<message>
+<source>Medium</source>
+<translation type="unfinished">Medium</translation>
+</message>
+<message>
+<source>High</source>
+<translation type="unfinished">High</translation>
+</message>
+<message>
+<source>Priority: %1</source>
+<translation type="unfinished">Priority: %1</translation>
+</message>
+<message>
 <source>Remove todo item</source>
 <translation>أزل عنصر قائمة المهام</translation>
 </message>
@@ -10914,6 +11772,40 @@ Do you want to install it anyway?</source>
 This cannot be undone!</source>
 <translation>هل تريد إزالة عنصر قائمة المهام الحالي؟
 لا يمكن التراجع عن هذا فيما بعد!</translation>
+</message>
+<message numerus="yes">
+<source>%n todo item(s)</source>
+<translation type="unfinished">
+<numerusform>%n todo item(s)</numerusform>
+<numerusform>%n todo item(s)</numerusform>
+<numerusform>%n todo item(s)</numerusform>
+<numerusform>%n todo item(s)</numerusform>
+<numerusform>%n todo item(s)</numerusform>
+<numerusform>%n todo item(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n todo item(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n todo item(s)</numerusform>
+<numerusform>%1 of %n todo item(s)</numerusform>
+<numerusform>%1 of %n todo item(s)</numerusform>
+<numerusform>%1 of %n todo item(s)</numerusform>
+<numerusform>%1 of %n todo item(s)</numerusform>
+<numerusform>%1 of %n todo item(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Edit completed todo item</source>
+<translation type="unfinished">Edit completed todo item</translation>
+</message>
+<message>
+<source>Edit todo item</source>
+<translation type="unfinished">Edit todo item</translation>
+</message>
+<message>
+<source>No todo item selected</source>
+<translation type="unfinished">No todo item selected</translation>
 </message>
 <message>
 <source>Create sub-task</source>
@@ -11169,8 +12061,8 @@ This cannot be undone!</source>
 <translation>الملاحظات المهملة</translation>
 </message>
 <message>
-<source>Find note name</source>
-<translation>العثور على اسم ملاحظة</translation>
+<source>Find note name or text</source>
+<translation type="unfinished">Find note name or text</translation>
 </message>
 <message>
 <source>&amp;Restore selected note on server</source>
@@ -11183,6 +12075,10 @@ This cannot be undone!</source>
 <message>
 <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
 <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</translation>
+</message>
+<message>
+<source>Select a trashed note to see its text</source>
+<translation type="unfinished">Select a trashed note to see its text</translation>
 </message>
 <message>
 <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
@@ -11199,6 +12095,44 @@ This cannot be undone!</source>
 <message>
 <source>&amp;Cancel</source>
 <translation>إل&amp;غاء</translation>
+</message>
+<message numerus="yes">
+<source>%n trashed note(s)</source>
+<translation type="unfinished">
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+<numerusform>%n trashed note(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n trashed note(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+<numerusform>%1 of %n trashed note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Trashed: %1</source>
+<translation type="unfinished">Trashed: %1</translation>
+</message>
+<message>
+<source>No trashed notes</source>
+<translation type="unfinished">No trashed notes</translation>
+</message>
+<message>
+<source>No trashed note matches the search</source>
+<translation type="unfinished">No trashed note matches the search</translation>
+</message>
+<message>
+<source>No trashed note selected</source>
+<translation type="unfinished">No trashed note selected</translation>
 </message>
 <message>
 <source>Delete note on server</source>
@@ -11256,12 +12190,36 @@ This cannot be undone!</source>
 <translation>حمّل فقط</translation>
 </message>
 <message>
+<source>Version %1</source>
+<translation type="unfinished">Version %1</translation>
+</message>
+<message>
+<source>You are currently using version %1</source>
+<translation type="unfinished">You are currently using version %1</translation>
+</message>
+<message>
+<source>Download the new version without installing it</source>
+<translation type="unfinished">Download the new version without installing it</translation>
+</message>
+<message>
+<source>Download and install the new version</source>
+<translation type="unfinished">Download and install the new version</translation>
+</message>
+<message>
 <source>&amp;Download latest</source>
 <translation>&amp;تنزيل النسخة الأخيرة</translation>
 </message>
 <message>
+<source>Open the download of the new version in your browser</source>
+<translation type="unfinished">Open the download of the new version in your browser</translation>
+</message>
+<message>
 <source>&amp;Skip version</source>
 <translation>تخطى الإصدار</translation>
+</message>
+<message>
+<source>Don't show this dialog again for this version</source>
+<translation type="unfinished">Don't show this dialog again for this version</translation>
 </message>
 <message>
 <source>&amp;Disable dialog</source>
@@ -11422,6 +12380,10 @@ This cannot be undone!</source>
 <translation type="unfinished">Note versions on your Nextcloud / ownCloud server</translation>
 </message>
 <message>
+<source>Find text in versions</source>
+<translation type="unfinished">Find text in versions</translation>
+</message>
+<message>
 <source>Diff</source>
 <translation>الاختلاف</translation>
 </message>
@@ -11430,12 +12392,62 @@ This cannot be undone!</source>
 <translation>نص الملاحظة</translation>
 </message>
 <message>
+<source>Select a version to see its changes</source>
+<translation type="unfinished">Select a version to see its changes</translation>
+</message>
+<message>
+<source>Select a version to see its note text</source>
+<translation type="unfinished">Select a version to see its note text</translation>
+</message>
+<message>
 <source>&amp;Restore selected version</source>
 <translation>استعد الإصدار المحدد</translation>
 </message>
 <message>
+<source>Replace the text of the current note with the selected version</source>
+<translation type="unfinished">Replace the text of the current note with the selected version</translation>
+</message>
+<message>
 <source>&amp;Cancel</source>
 <translation>ألغ</translation>
+</message>
+<message>
+<source>Version from %1</source>
+<translation type="unfinished">Version from %1</translation>
+</message>
+<message>
+<source>No versions loaded</source>
+<translation type="unfinished">No versions loaded</translation>
+</message>
+<message>
+<source>No version matches the search</source>
+<translation type="unfinished">No version matches the search</translation>
+</message>
+<message>
+<source>No version selected</source>
+<translation type="unfinished">No version selected</translation>
+</message>
+<message numerus="yes">
+<source>%n version(s)</source>
+<translation type="unfinished">
+<numerusform>%n version(s)</numerusform>
+<numerusform>%n version(s)</numerusform>
+<numerusform>%n version(s)</numerusform>
+<numerusform>%n version(s)</numerusform>
+<numerusform>%n version(s)</numerusform>
+<numerusform>%n version(s)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n version(s)</source>
+<translation type="unfinished">
+<numerusform>%1 of %n version(s)</numerusform>
+<numerusform>%1 of %n version(s)</numerusform>
+<numerusform>%1 of %n version(s)</numerusform>
+<numerusform>%1 of %n version(s)</numerusform>
+<numerusform>%1 of %n version(s)</numerusform>
+<numerusform>%1 of %n version(s)</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -11781,6 +12793,10 @@ This cannot be undone!</source>
 <source>Copy token</source>
 <translation>نسخ الرمز</translation>
 </message>
+<message>
+<source>The token was copied to the clipboard.</source>
+<translation type="unfinished">The token was copied to the clipboard.</translation>
+</message>
 </context>
 <context>
 <name>WelcomeDialog</name>
@@ -11855,6 +12871,22 @@ This cannot be undone!</source>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>سيقوم كيو-أون-نوتس بتعقب بيانات استخدام مجهولة المصدر، سيساعد هذا في تقرير أي أجزاء كيو-أون-نوتس يمكن تطويرها لاحقاً ولأجل إيجاد وإصلاح العيوب البرمجية، يمكنك تعطيل هذا السلوك في الإعدادات.</translation>
+</message>
+<message>
+<source>Layout</source>
+<translation type="unfinished">Layout</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud</source>
+<translation type="unfinished">Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Metrics</source>
+<translation type="unfinished">Metrics</translation>
+</message>
+<message>
+<source>Step %1 of %2: %3</source>
+<translation type="unfinished">Step %1 of %2: %3</translation>
 </message>
 <message>
 <source>Cannot create note path! You have to create the note folder manually!</source>

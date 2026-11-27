@@ -31,14 +31,14 @@ Nextcloud Notes app.
 - **API-only mode**: administrators can disable the web interface and only
   provide the APIs
 
-## Requirements
+## Requisitos
 
-- Nextcloud 32 to 35
-- PHP 8.2 to 8.5
+- Nextcloud 32 a 35
+- PHP 8.2 a 8.5
 - The PHP extension `pdo_sqlite` for tags (the admin settings show a hint if
   it is missing)
 
-## Installation
+## Instalación
 
 Install **QOwnNotes** from the
 [Nextcloud App Store](https://apps.nextcloud.com/apps/qownnotes)
@@ -55,7 +55,7 @@ files in your Nextcloud as QOwnNotesAPI and Nextcloud Notes, and all three apps
 can be installed at the same time.
 :::
 
-## Note folder
+## Carpeta de notas
 
 If you never set a note folder in the app, it uses the note folder of the
 Nextcloud Notes app, or `Notes`. You can change it in **QOwnNotes settings** in
@@ -65,7 +65,7 @@ Like in QOwnNotes Desktop, the folders `media`, `attachments` and `trash`,
 hidden folders and folders matching your "ignored subfolders" setting are not
 shown as note subfolders.
 
-## Markdown editor
+## Editor de Markdown
 
 ![Markdown preview with checkable tasks](/img/qownnotes-nextcloud-preview.webp)
 
@@ -74,12 +74,12 @@ Markdown markers and comments. Fenced code blocks with a language label (for
 example `js`, `python` or `php`) also get syntax highlighting in the editor and
 the preview, with colors for light and dark themes.
 
-| Shortcut                     | Action                                                                   |
+| Shortcut                     | Acción                                                                   |
 | ---------------------------- | ------------------------------------------------------------------------ |
 | <kbd>Ctrl + F</kbd>          | Search in the note (also case, whole words and regex) |
 | <kbd>Enter</kbd>             | Jump to the next match in the search field                               |
 | <kbd>Shift + Enter</kbd>     | Jump to the previous match in the search field                           |
-| <kbd>Ctrl + Space</kbd>      | Check or uncheck the task at the cursor, or follow a link                |
+| <kbd>Ctrl + Espacio</kbd>    | Check or uncheck the task at the cursor, or follow a link                |
 | <kbd>Ctrl</kbd> + Left click | Follow a link (<kbd>Cmd</kbd> on macOS)               |
 
 The arrow on the left of the search field shows the replace field.
@@ -169,7 +169,7 @@ Please read the
 [migration guide](https://github.com/qownnotes/qownnotes-nextcloud/blob/main/docs/migration.md)
 for all the details.
 
-## More information
+## Más información
 
 - [Nextcloud App Store](https://apps.nextcloud.com/apps/qownnotes)
 - [GitHub repository](https://github.com/qownnotes/qownnotes-nextcloud)

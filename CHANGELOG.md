@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 26.11.17
+
+- Updated the Spanish, Polish, Russian, German, Italian, Brazilian Portuguese,
+  Simplified Chinese, and French translations (thank you, pbek, jd-develop, AlejandroMoc)
+
 ## 26.11.16
 
 - Improved flat note-list refresh performance for large note folders during

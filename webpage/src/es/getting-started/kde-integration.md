@@ -1,4 +1,4 @@
-# KDE integration
+# Integración con KDE
 
 QOwnNotes can be built with optional [KDE Frameworks](https://develop.kde.org/products/frameworks/)
 integration. The KDE build is the same application with the same settings, notes and
@@ -9,7 +9,7 @@ The KDE build is currently only available for Linux and Qt6. All features check 
 needed desktop services are available, so the KDE build also works on other desktops.
 :::
 
-## Features
+## Características
 
 ### Plasma global shortcuts
 
@@ -21,7 +21,7 @@ their menu path (e.g. `Note → New note`).
 If the Plasma shortcut service isn't running, the usual global shortcut implementation is
 used instead.
 
-### Desktop notifications
+### Notificaciones de escritorio
 
 Notifications are sent as native KDE notifications, which you can configure in
 _System Settings → Notifications → Applications → QOwnNotes_.
@@ -42,7 +42,7 @@ bug report, if it is installed. Reports are never submitted automatically.
 The note folder and workspace links to Plasma activities use the PlasmaActivities library,
 which reacts faster to activity changes.
 
-### Color schemes
+### Esquema de color
 
 In the _Interface settings_ you can select one of the installed KDE color schemes for the
 QOwnNotes interface, independently of the color scheme of your desktop. The default,

@@ -2,9 +2,9 @@
 
 ## Slackware 15.0
 
-First install [Qt 6 from SlackBuilds.org](https://slackbuilds.org/repository/15.0/libraries/qt6/), including its required dependencies.
+Primero instale [Qt 6 desde SlackBuilds.org](https://slackbuilds.org/repository/15.0/libraries/qt6/), incluyendo sus dependencias requeridas.
 
-Then check out the QOwnNotes SlackBuilds repository and build the application.
+Luego, consulte el repositorio de SlackBuilds de QOwnNotes y construya la aplicación.
 
 ```bash
 cd /tmp

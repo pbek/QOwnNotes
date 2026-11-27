@@ -815,23 +815,23 @@ var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 
 ```cpp
 /**
- * Fetches all tags by doing a substring search on the name field
+ * Récupère tous les tags par le biais d'une recherche de sous-chaîne sur le champ « nom ».
  *
- * @param name {QString} name to search for
- * @param ignoreAccents {bool} if true, accents of Latin characters are ignored
- *                             (optional, default: false)
- * @return {QStringList} list of tag names
+ * @param name {QString} nom à rechercher
+ * @param ignoreAccents {bool} si vrai, les accents des caractères latins sont ignorés
+ *                             (optionnel, défaut : faux)
+ * @return {QStringList} liste des noms des tags
  */
-QStringList ScriptingService::searchTagsByName(QString name, bool ignoreAccents = false);
+QStringList ScriptingService::searchTagsByName(QString name);
 ```
 
 ### Exemple
 
 ```js
-// searches for all tags with the word game in it
-var tags = script.searchTagsByName("game");
+// recherche tous les tags contenant le mot « jeu »
+var tags = script.searchTagsByName("jeu");
 
-// searches for all tags with the word café or cafe in it
+// recherche tous les tags contenant le mot « café » ou « cafe »
 var tags = script.searchTagsByName("cafe", true);
 ```
 
@@ -1104,22 +1104,22 @@ void ScriptingService::informationMessageBox(QString text, QString title);
 script.informationMessageBox ("Le texte que je veux afficher", "Un titre facultatif");
 ```
 
-## Showing a desktop notification
+## Afficher une notification sur le bureau
 
 ### Appel de méthode et paramètres
 
 ```cpp
 /**
- * Shows a desktop notification
+ * Affiche une notification sur le bureau
  *
- * In KDE builds the notification can be configured in Plasma's notification settings.
- * Without a notification service it falls back to the system tray and then to the
- * status bar. Identical notifications within 10 seconds are only shown once.
+ * Dans les environnements KDE, la notification peut êre configurée dans les préférences de notifications de Plasma.
+ * Sans service de notifications, se reporte sur la barre système puis vers la
+ * barre de statut. Les notifications identiques espacées de moins de 10 secondes ne sont montrées qu’une seule fois.
  *
- * @param text plain text of the notification
- * @param title (optional)
- * @return true if the notification was handed to the desktop notification system or the
- *         system tray, false if it was only shown in the status bar
+ * @param text texte brut de la notification
+ * @param title titre (optionnel)
+ * @return true si la notification a été prise en charge par le système de notifications du bureau ou
+ *         la barre système, false si elle n’a été affichée que dans la barre de statut
  */
 bool ScriptingService::showNotification(QString text, QString title);
 ```
@@ -1127,12 +1127,12 @@ bool ScriptingService::showNotification(QString text, QString title);
 ### Exemple
 
 ```js
-// show a desktop notification without interrupting the user
-script.showNotification("The export has finished", "My export script");
+// affiche une notification de bureau sans interrompre l’utilisateur
+script.showNotification("L’export est terminé", "Mon script d’export");
 ```
 
 ::: tip
-Clicking the notification shows the QOwnNotes window. The text is shown as plain text. Unlike `script.informationMessageBox()`, the notification doesn't block the script. In builds with KDE integration, the _Script notification_ event can be disabled or changed in Plasma's notification settings; if it is disabled, nothing is shown.
+Cliquer sur la notification affiche la fenêtre QOwnNotes. Le texte est affiché comme texte brut. Contrairement à `script.informationMessageBox()`, la notification ne bloque pas le script. Dans les versions avec l’intégration KDE, l’évènement _Script notification_ peut être désactivé ou changé dans les préférences de notifications de Plasma ; s’il est désactivé, rien n’est affiché.
 :::
 
 ## Affichage d'une boîte de message de question
@@ -1704,7 +1704,7 @@ QString ScriptingService :: inputDialogGetItem (
          int courant, booléen modifiable);
 ```
 
-An empty string will be returned, if `Cancel` was clicked or `Escape` was pressed.
+Une chaîne vide sera renvoyée si `Annuler` a été cliqué ou si la touche `Échap` a été pressée.
 
 ### Exemple
 
@@ -1721,7 +1721,7 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [input-dialogs.qml](ht
 
 ## Ouverture d'une boîte de dialogue de saisie de texte sur une ligne
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 / **
@@ -1768,7 +1768,7 @@ QString ScriptingService::inputDialogGetMultiLineText(
 
 Une chaîne vide sera renvoyée si `Annuler` a été cliqué ou si la touche `Échap` a été pressée.
 
-### Example
+### Exemple
 
 ```js
 var result = script.inputDialogGetMultiLineText(
@@ -1781,7 +1781,7 @@ script.log(result);
 
 ## Ouverture d’une boîte de dialogue montrant les différences entre deux textes
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
@@ -1861,7 +1861,7 @@ if (script.fileExists(filePath)) {
 
 ## Écrire du texte dans un fichier
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
@@ -1875,7 +1875,7 @@ if (script.fileExists(filePath)) {
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### Exemple
 
 ```js
 var result = script.writeToFile(filePath, html);
@@ -1888,7 +1888,7 @@ Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-h
 
 You don't need to write your own date formatting function in your scripts. The QML engine already provides `Qt.formatDateTime`, `Qt.formatDate` and `Qt.formatTime` to format a JavaScript `Date` object with a format string.
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```js
 /**
@@ -1909,12 +1909,12 @@ Commonly used placeholders are:
 | `yy`        | Year with two digits                    | `26`        |
 | `MM`        | Month with leading zero                 | `09`        |
 | `M`         | Month without leading zero              | `9`         |
-| `MMM`       | Abbreviated localized month name        | `Sep`       |
-| `MMMM`      | Full localized month name               | `September` |
+| `MMM`       | Abbreviated localized month name        | `sept.`     |
+| `MMMM`      | Full localized month name               | `septembre` |
 | `dd`        | Day with leading zero                   | `05`        |
 | `d`         | Day without leading zero                | `5`         |
-| `ddd`       | Abbreviated localized day name          | `Tue`       |
-| `dddd`      | Full localized day name                 | `Tuesday`   |
+| `ddd`       | Abbreviated localized day name          | `Mar`       |
+| `dddd`      | Full localized day name                 | `Mardi`     |
 | `HH`        | Hour (0-23) with leading zero           | `07`        |
 | `hh`        | Hour with leading zero (1-12 with `AP`) | `07`        |
 | `mm`        | Minute with leading zero                | `04`        |
@@ -1929,7 +1929,7 @@ For all available placeholders please take a look at the Qt documentation of [QD
 The placeholders are case-sensitive. `yyyy` is the year and `MM` is the month, while `mm` is the minute. Placeholders like `YYYY` or `DD`, which are known from other date libraries, are not supported. ISO week numbers are also not supported by the format strings.
 :::
 
-### Example
+### Exemple
 
 ```js
 var date = new Date();
@@ -1967,7 +1967,7 @@ Gardez à l'esprit que vous devez avoir la bibliothèque QML `websocket` de Qt i
 
 Il est possible d'injecter des règles de mise en évidence directement dans l'éditeur en définissant et assignant des expressions régulières à un état de mise en évidence.
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
@@ -2022,7 +2022,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 | LinkInternal               | 34     |
 | Whitespace                 | 35     |
 
-### Example
+### Exemple
 
 ```js
 // Met en évidence une ligne de texte telle que « BLOCK: du texte » comme bloc de citation (état 18 : blockquote)
@@ -2040,7 +2040,7 @@ Vous pouvez également jeter un œil aux exemples dans [highlighting.qml](https:
 
 Vous pouvez également ajouter des règles de mise en évidence avec des couleurs de premier/arrière plan et des styles de polices personnalisés, au lieu d’être limité par les états de mise en évidence prédéfinis. Cela vous permet de définir vos propres schémas de couleur pour des motifs syntaxiques personnalisés.
 
-### Method call and parameters
+### Appel de méthode et paramètres
 
 ```cpp
 /**
@@ -2071,7 +2071,7 @@ void ScriptingService::addHighlightingRule(const QString &pattern,
 Vous pouvez combiner un `state` prédéfini avec des propriétés de formatage personnalisées. Les propriétés personnalisées écraseront les valeurs par défaut de l’état. Utilisez l’état `-1` (`NoState`) si vous ne voulez utiliser que du formatage personnalisé.
 :::
 
-### Example
+### Exemple
 
 ```js
 function init() {

@@ -23,7 +23,7 @@
 - <kbd>Alt</kbd> + <kbd>Av Pág</kbd> salta a la pestaña de la siguiente nota
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> cierra la pestaña de la nota actual
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd> alterna el modo sin distracciones
-  - también puedes cerrarlo con <kbd>Esc</kbd>
+  - también puede cerrarlo con <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> imprime la nota actual como texto
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> imprime la nota actual como markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>V</kbd> pega notas, imágenes y html desde el portapapeles

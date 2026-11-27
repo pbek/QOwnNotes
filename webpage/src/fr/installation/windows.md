@@ -1,6 +1,14 @@
 # Installer sur Microsoft Windows™
 
-Téléchargez la dernière **archive Windows** à partir de [la pages des Releases de QOwnNotes sur GitHub](https://github.com/pbek/QOwnNotes/releases) (cherchez le fichier nommé `QOwnNotes.zip`) et décompressez-la où vous le souhaitez. Aucune installation n'est nécessaire!
+## Installer
+
+Download the latest **Windows installer** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.msi`) and double-click it to install QOwnNotes.
+
+QOwnNotes will be installed for your user account into `%LOCALAPPDATA%\Programs\QOwnNotes`, so no administration permissions are needed and the **automatic updater** will work. A shortcut will be added to the start menu.
+
+## ZIP archive
+
+Alternatively, download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. Aucune installation n'est nécessaire!
 
 ::: warning
 Si vous souhaitez utiliser le **programme de mise à jour automatique**, assurez-vous de le décompresser dans un endroit où votre compte utilisateur a un accès en écriture. Par défaut, votre compte utilisateur **n'a probablement pas d'accès en écriture** à des emplacements tels que `C:\Program Files (x86) ` ou `C:\Program Files`.
@@ -18,15 +26,15 @@ Vous n'avez pas absolument besoin du mode portable si vous ne disposez juste pas
 
 ## Windows 8.1 et ultérieur
 
-The Windows release is built with **Qt6** and needs at least **Windows 10**.
+La version pour Windows est compilée avec **Qt6** et nécessite au moins **Windows 10**.
 
-The legacy Qt 5.7 build for Windows XP to Windows 8.1 is no longer updated. The final version is **QOwnNotes 26.10.0**, which you can download as [QOwnNotes-Qt5.7-legacy.zip](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip) ([SHA-256 checksum](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip.sha256sum)) from the [26.10.0 release on GitHub](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.0).
+L’ancienne version avec Qt 5.7 pour Windows XP à Windows 8.1 n’est plus mis à jour. La version finale est **QOwnNotes 26.10.0**, que vous pouvez télécharger avec [QOwnNotes-Qt5.7-legacy.zip](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip) ([somme de contrôle SHA-256](https://github.com/pbek/QOwnNotes/releases/download/v26.10.0/QOwnNotes-Qt5.7-legacy.zip.sha256sum)) depuis la [page GitHub de la version 26.10.0](https://github.com/pbek/QOwnNotes/releases/tag/v26.10.0).
 
-Unzip it to a folder of your liking and run `QOwnNotes.exe` from that folder, no installation is required.
+Décompressez-le vers un dossier de votre préférence et exécutez `QOwnNotes.exe` depuis ce dossier, aucune installation n’est requise.
 
 ::: tip
 Info
-The automatic update mechanism does not work with the legacy build!
+Le mécanisme de mise à jour automatique ne fonctionne pas avec cette ancienne version !
 :::
 
 ## Chocolatey

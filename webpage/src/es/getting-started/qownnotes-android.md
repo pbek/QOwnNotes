@@ -62,14 +62,14 @@ QOwnNotes database.
 
 | Feature                                     | QOwnNotes Android | Nextcloud Notes mobile |
 | ------------------------------------------- | ----------------- | ---------------------- |
-| Offline editing with conflict detection     | Yes               | Limited                |
-| Note version history via QOwnNotesAPI       | Yes               | No                     |
-| Remote trash browsing and restore           | Yes               | No                     |
-| Favorites with offline toggle               | Yes               | No                     |
-| Three-state checkbox lists                  | Yes               | No                     |
-| Wiki-link and legacy `note://` link support | Yes               | No                     |
+| Offline editing with conflict detection     | Sí                | Limited                |
+| Note version history via QOwnNotesAPI       | Sí                | No                     |
+| Remote trash browsing and restore           | Sí                | No                     |
+| Favorites with offline toggle               | Sí                | No                     |
+| Three-state checkbox lists                  | Sí                | No                     |
+| Wiki-link and legacy `note://` link support | Sí                | No                     |
 
-## More information
+## Más información
 
-- [GitHub repository](https://github.com/qownnotes/qownnotes-android)
+- [Repositorio de GitHub](https://github.com/qownnotes/qownnotes-android)
 - [Changelog](https://github.com/qownnotes/qownnotes-android/blob/main/CHANGELOG.md)

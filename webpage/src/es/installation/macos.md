@@ -27,7 +27,7 @@ La aplicación utiliza su **actualizador interno** para actualizarse. Puede ver 
 
 Hay un barril de QOwnNotes mantenido por la comunidad en [Homebrew](https://formulae.brew.sh/cask/qownnotes).
 
-Puedes instalarlo con:
+Puede instalarlo con:
 
 ```bash
 brew install qownnotes

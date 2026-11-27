@@ -1,6 +1,14 @@
 # نصب سیستم عامل ویندوز مایکروسافت
 
-Download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. هیچ نیازی به نصب نیست!
+## Installer
+
+Download the latest **Windows installer** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.msi`) and double-click it to install QOwnNotes.
+
+QOwnNotes will be installed for your user account into `%LOCALAPPDATA%\Programs\QOwnNotes`, so no administration permissions are needed and the **automatic updater** will work. A shortcut will be added to the start menu.
+
+## ZIP archive
+
+Alternatively, download the latest **Windows archive** from [QOwnNotes Releases on GitHub](https://github.com/pbek/QOwnNotes/releases) (look for a file called `QOwnNotes.zip`) and unzip it to anywhere you like. هیچ نیازی به نصب نیست!
 
 ::: warning
 در صورت تمایل به استفاده از **بروز رسان خودکار**، لطفاً مطمئن شوید که آن هر جایی که حساب کاربری شما دسترسی نوشتاری دارد، از حالت فشرده خارج شده باشد. By default, your user account most likely **doesn't have write access** to places like `C:\Program Files (x86)` or `C:\Program Files`.

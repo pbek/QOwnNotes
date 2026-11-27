@@ -209,7 +209,7 @@ QOwnNotes puede usar un servicio local de [Harper](https://writewithharper.com/)
 
 - Es **opcional** y funciona en conjunto con el soporte actual de correctores ortográficos
 - Enable it in `Settings -> Editor -> Harper`, then configure the **transport**, `harper-ls` command or TCP target, **dialect**, and the linters you want to use
-- También puedes activarlo rápidamente desde el menú **Editar** con `Verificar gramática con Harper`
+- También puede activarlo rápidamente desde el menú **Editar** con `Verificar gramática con Harper`
 - En el menú contextual del editor se ofrecen sugerencias y acciones de ignorar para los problemas detectados
 
 ::: tip

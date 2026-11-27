@@ -31,7 +31,7 @@ class NoteApi {
 };
 ```
 
-You can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) to work with `fileCreated` or `fileLastModified`. To format them you can use `Qt.formatDateTime`, see [Formatting dates and times](methods-and-objects.md#formatting-dates-and-times).
+Vous pouvez utiliser les méthodes de [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) pour travailler avec `fileCreated` ou `fileLastModified`. Pour les formater, vous pouvez utiliser `Qt.formatDateTime`, consultez [Formater des horodatages](methods-and-objects.md#formatting-dates-and-times).
 
 ### Exemple
 
@@ -167,28 +167,28 @@ class MainWindow {
 ### Exemple
 
 ```js
-// Force a reload of the note list
+// Force un rechargement de la liste des notes
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// Créé un nouveau sous-dossier de notes « My fancy folder » dans le sous-dossier de notes courant
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// Insère du HTML dans la note courante en tant que Markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' layout as current layout
+// Charge la dispositon « Edit » en tant que disposition courante
 mainWindow.setCurrentLayout(mainWindow.getLayoutUuid("Edit"));
 
-// Jump to the tag "test" in the tag tree
-// There is an example in https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
+// Va au tag « test » dans l’arbre des tags
+// Il y a un exemple dans https://github.com/pbek/QOwnNotes/blob/main/docs/scripting/examples/custom-actions.qml
 var tag = script.getTagByNameBreadcrumbList(["test"]);
 mainWindow.jumpToTag(tag.id);
 
-// Get all notes that are opened in tabs
+// Récupère toutes les notes ouvertes dans des onglets
 var noteIds = mainWindow.getNoteTabNoteIdList();
 noteIds.forEach(function (noteId) {
   var note = script.fetchNoteById(noteId);
 
-  // do something with the note
+  // faire quelque chose avec la note
 });
 ```

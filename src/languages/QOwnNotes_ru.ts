@@ -7,6 +7,14 @@
 <source>About QOwnNotes</source>
 <translation>О QOwnNotes</translation>
 </message>
+<message>
+<source>&amp;Copy version information</source>
+<translation>&amp;Копировать сведения о версии</translation>
+</message>
+<message>
+<source>Version information copied</source>
+<translation>Сведения о версии скопированы</translation>
+</message>
 </context>
 <context>
 <name>ActionDialog</name>
@@ -143,8 +151,8 @@
 <translation>Вставить вложение</translation>
 </message>
 <message>
-<source>Image filename or URL</source>
-<translation>Имя файла или URL-адрес изображения</translation>
+<source>File name or URL</source>
+<translation>Имя файла или URL</translation>
 </message>
 <message>
 <source>Path to file or URL</source>
@@ -155,12 +163,16 @@
 <translation>Выберите файл</translation>
 </message>
 <message>
-<source>Title of the image link</source>
-<translation>Название ссылки на изображение</translation>
+<source>Title of the attachment link</source>
+<translation>Заголовок ссылки на вложение</translation>
 </message>
 <message>
-<source>Title</source>
-<translation>Название</translation>
+<source>The file name will be used if no title is entered</source>
+<translation>Если заголовок не указан, будет использовано имя файла</translation>
+</message>
+<message>
+<source>Title (optional)</source>
+<translation>Заголовок (необязательно)</translation>
 </message>
 <message>
 <source>Cancel download</source>
@@ -172,8 +184,24 @@
 <translation>URL-адрес загрузки</translation>
 </message>
 <message>
+<source>&amp;Insert attachment</source>
+<translation>&amp;Вставить вложение</translation>
+</message>
+<message>
 <source>Select file to insert</source>
 <translation>Выберите файл для вставки</translation>
+</message>
+<message>
+<source>This is not a valid path or URL</source>
+<translation>Недопустимый путь или URL</translation>
+</message>
+<message>
+<source>The file will be downloaded when inserting the attachment</source>
+<translation>Файл будет скачан при вставке вложения</translation>
+</message>
+<message>
+<source>The file doesn't exist</source>
+<translation>Файл не существует</translation>
 </message>
 <message>
 <source>Download error</source>
@@ -265,7 +293,7 @@
 </message>
 <message>
 <source>Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</source>
-<translation type="unfinished">Your legacy QOwnNotesAPI app version %1 is too low and may cause problems in QOwnNotes. On Nextcloud, please switch to the QOwnNotes Nextcloud app. On ownCloud, a compatible QOwnNotesAPI version is required.</translation>
+<translation>Версия %1 устаревшего приложения QOwnNotesAPI слишком старая и может вызвать проблемы в QOwnNotes. В Nextcloud перейдите на приложение QOwnNotes для Nextcloud. Для ownCloud требуется совместимая версия QOwnNotesAPI.</translation>
 </message>
 <message>
 <source>Nextcloud / ownCloud server connection error</source>
@@ -320,6 +348,22 @@
 <translation>Ошибка сервера Nextcloud / ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Если сервер требует пароль для общих ссылок, введите его в поле пароля диалога общего доступа и попробуйте снова.</translation>
 </message>
 <message>
+<source>Unexpected HTTP response: %1</source>
+<translation>Неожиданный ответ HTTP: %1</translation>
+</message>
+<message>
+<source>Task could not be saved</source>
+<translation>Не удалось сохранить задачу</translation>
+</message>
+<message>
+<source>Could not save the task on the server. The cached task has not been changed.
+
+%1</source>
+<translation>Не удалось сохранить задачу на сервере. Копия задачи в кеше не изменена.
+
+%1</translation>
+</message>
+<message>
 <source>No bookmarks</source>
 <translation>Нет закладок</translation>
 </message>
@@ -348,7 +392,7 @@
 </message>
 <message>
 <source>Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</source>
-<translation type="unfinished">Please install the &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;QOwnNotes Nextcloud app&lt;/b&gt;&lt;/a&gt; to access note versions and trashed notes on Nextcloud. Legacy QOwnNotesAPI servers, including ownCloud, remain supported (at least version QOWNNOTESAPI_MIN_VERSION).</translation>
+<translation>Установите &lt;a href="https://apps.nextcloud.com/apps/qownnotes"&gt;&lt;b&gt;приложение QOwnNotes для Nextcloud&lt;/b&gt;&lt;/a&gt;, чтобы просматривать версии заметок и заметки в корзине Nextcloud. Серверы с устаревшим QOwnNotesAPI, включая ownCloud, по-прежнему поддерживаются (начиная с версии QOWNNOTESAPI_MIN_VERSION).</translation>
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -360,7 +404,7 @@
 </message>
 <message>
 <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser. On Nextcloud, install or update the QOwnNotes Nextcloud app. Enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Открывает в браузере страницу &lt;span style=" font-weight:600;"&gt;настроек приложений&lt;/span&gt; сервера Nextcloud / ownCloud. В Nextcloud установите или обновите приложение QOwnNotes для Nextcloud. Включите встроенные приложения &lt;span style=" font-weight:600;"&gt;Версии&lt;/span&gt; и &lt;span style=" font-weight:600;"&gt;Удалённые файлы&lt;/span&gt;, чтобы просматривать версии заметок и заметки в корзине.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <source>Open your NC / oC server &amp;Apps page</source>
@@ -444,11 +488,11 @@
 </message>
 <message>
 <source>Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</source>
-<translation type="unfinished">Enable QOwnNotes server app support (including legacy QOwnNotesAPI)</translation>
+<translation>Включить поддержку серверного приложения QOwnNotes (включая устаревший QOwnNotesAPI)</translation>
 </message>
 <message>
 <source>connection to QOwnNotes (or legacy QOwnNotesAPI)</source>
-<translation type="unfinished">connection to QOwnNotes (or legacy QOwnNotesAPI)</translation>
+<translation>подключение к QOwnNotes (или устаревшему QOwnNotesAPI)</translation>
 </message>
 <message>
 <source>Enable Nextcloud Deck support</source>
@@ -523,10 +567,10 @@ Server app version: %2</source>
 On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
 
 Connection error message: </source>
-<translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
-On Nextcloud, install and enable the QOwnNotes Nextcloud app. Legacy QOwnNotesAPI servers, including ownCloud, remain supported.
+<translation>Ошибка подключения к серверу Nextcloud / ownCloud!
+В Nextcloud установите и включите приложение QOwnNotes для Nextcloud. Серверы с устаревшим QOwnNotesAPI, включая ownCloud, по-прежнему поддерживаются.
 
-Connection error message: </translation>
+Сообщение об ошибке подключения: </translation>
 </message>
 </context>
 <context>
@@ -654,6 +698,17 @@ Connection error message: </translation>
 <message>
 <source>Select accent color</source>
 <translation>Выбрать акцентный цвет</translation>
+</message>
+</context>
+<context>
+<name>CommandBar</name>
+<message>
+<source>Search for actions…</source>
+<translation>Поиск действий…</translation>
+</message>
+<message>
+<source>No action matches your search</source>
+<translation>Нет действий, соответствующих запросу</translation>
 </message>
 </context>
 <context>
@@ -809,12 +864,20 @@ Connection error message: </translation>
 <translation>Загруженные словари</translation>
 </message>
 <message>
+<source>No dictionaries were downloaded yet. Select a dictionary on the left side to download it.</source>
+<translation>Словари ещё не скачаны. Выберите словарь слева, чтобы скачать его.</translation>
+</message>
+<message>
 <source>If checked only the downloaded dictionaries will be used</source>
 <translation>Если отмечено, то будут использоваться только загруженные словари</translation>
 </message>
 <message>
 <source>Disable external dictionaries</source>
 <translation>Отключить внешние словари</translation>
+</message>
+<message>
+<source>Please restart QOwnNotes to use the changed dictionaries.</source>
+<translation>Перезапустите QOwnNotes, чтобы применить изменения словарей.</translation>
 </message>
 <message>
 <source>Delete selected dictionaries</source>
@@ -1261,6 +1324,23 @@ Connection error message: </translation>
 %1</translation>
 </message>
 <message>
+<source>This dictionary was already downloaded</source>
+<translation>Этот словарь уже скачан</translation>
+</message>
+<message>
+<source>Delete dictionaries</source>
+<translation>Удалить словари</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected dictionary(ies)?</source>
+<translation>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранный словарь?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных словаря?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных словарей?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранного словаря?</numerusform>
+</translation>
+</message>
+<message>
 <source>Could not remove dictionary file:
 %1</source>
 <translation>Не удалось удалить файл соваря:
@@ -1467,6 +1547,14 @@ Connection error message: </translation>
 <translation>Сразу вставлять автодополнение, если есть только один результат</translation>
 </message>
 <message>
+<source>Do not append a space after autocompletion</source>
+<translation>Не добавлять пробел после автодополнения</translation>
+</message>
+<message>
+<source>Do not insert a space after autocompletion</source>
+<translation>Не вставлять пробел после автодополнения</translation>
+</message>
+<message>
 <source>Tabs and Indents</source>
 <translation>Табуляция и отступы</translation>
 </message>
@@ -1638,6 +1726,23 @@ Connection error message: </translation>
 <translation>Данные приложения</translation>
 </message>
 <message>
+<source>The file couldn't be opened: %1</source>
+<translation>Не удалось открыть файл: %1</translation>
+</message>
+<message>
+<source>Importing notes…</source>
+<translation>Импорт заметок…</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were imported</source>
+<translation>
+<numerusform>Импортирована %n заметка</numerusform>
+<numerusform>Импортировано %n заметки</numerusform>
+<numerusform>Импортировано %n заметок</numerusform>
+<numerusform>Импортировано %n заметки</numerusform>
+</translation>
+</message>
+<message>
 <source>Attribute</source>
 <translation>Атрибут</translation>
 </message>
@@ -1687,6 +1792,27 @@ Connection error message: </translation>
 <message>
 <source>Export current note as PDF</source>
 <translation>Экспорт текущей заметки в PDF</translation>
+</message>
+<message>
+<source>Select folder for exported PDFs</source>
+<translation>Выберите папку для экспортированных PDF</translation>
+</message>
+<message>
+<source>PDF export failed</source>
+<translation>Не удалось экспортировать в PDF</translation>
+</message>
+<message>
+<source>Could not export the note to "%1".</source>
+<translation>Не удалось экспортировать заметку в «%1».</translation>
+</message>
+<message numerus="yes">
+<source>Exported %n note(s) as PDF.</source>
+<translation>
+<numerusform>В PDF экспортирована %n заметка.</numerusform>
+<numerusform>В PDF экспортировано %n заметки.</numerusform>
+<numerusform>В PDF экспортировано %n заметок.</numerusform>
+<numerusform>В PDF экспортировано %n заметки.</numerusform>
+</translation>
 </message>
 <message>
 <source>HTML files</source>
@@ -2759,7 +2885,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</source>
 <extracomment>Please don't translate "%notePath%"</extracomment>
-<translation type="unfinished">You optionally can use "%notePath%" as a separate argument for the path of the note. Otherwise, the path is appended. Quote executable paths and arguments containing spaces. The command is run directly, without a shell.</translation>
+<translation>Можно указать «%notePath%» отдельным аргументом для пути к заметке. Иначе путь будет добавлен в конец. Заключайте пути к исполняемым файлам и аргументы с пробелами в кавычки. Команда запускается напрямую, без оболочки.</translation>
 </message>
 <message>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
@@ -3117,12 +3243,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Вставить изображение</translation>
 </message>
 <message>
-<source>Image filename or URL</source>
-<translation>Имя файла или URL-адрес изображения</translation>
-</message>
-<message>
 <source>Path to file or URL</source>
 <translation>Путь до файла или URL-адрес</translation>
+</message>
+<message>
+<source>Title (optional)</source>
+<translation>Заголовок (необязательно)</translation>
 </message>
 <message>
 <source>Scaling width:</source>
@@ -3145,16 +3271,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Не копировать изображение в папку медиа</translation>
 </message>
 <message>
+<source>Image file name or URL</source>
+<translation>Имя файла изображения или URL</translation>
+</message>
+<message>
 <source>Title of the image link</source>
 <translation>Название ссылки на изображение</translation>
 </message>
 <message>
-<source>Title</source>
-<translation>Название</translation>
-</message>
-<message>
 <source>Select image file</source>
 <translation>Выбрать файл изображения</translation>
+</message>
+<message>
+<source>&amp;Insert image</source>
+<translation>&amp;Вставить изображение</translation>
+</message>
+<message>
+<source>Image from the clipboard, %1 × %2 pixels</source>
+<translation>Изображение из буфера обмена, %1 × %2 пикс.</translation>
 </message>
 <message>
 <source>Image files</source>
@@ -3167,6 +3301,34 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Select image to insert</source>
 <translation>Выберите изображение для вставки</translation>
+</message>
+<message>
+<source>This is not a valid path or URL</source>
+<translation>Недопустимый путь или URL</translation>
+</message>
+<message>
+<source>The image couldn't be downloaded</source>
+<translation>Не удалось скачать изображение</translation>
+</message>
+<message>
+<source>The downloaded file isn't an image that can be shown</source>
+<translation>Скачанный файл не является изображением, которое можно отобразить</translation>
+</message>
+<message>
+<source>%1 × %2 pixels, %3</source>
+<translation>%1 × %2 пикс., %3</translation>
+</message>
+<message>
+<source>The file doesn't exist</source>
+<translation>Файл не существует</translation>
+</message>
+<message>
+<source>The file is empty</source>
+<translation>Файл пуст</translation>
+</message>
+<message>
+<source>The file isn't an image that can be shown</source>
+<translation>Файл не является изображением, которое можно отобразить</translation>
 </message>
 </context>
 <context>
@@ -3477,15 +3639,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>Color scheme:</source>
-<translation type="unfinished">Color scheme:</translation>
+<translation>Цветовая схема:</translation>
 </message>
 <message>
 <source>KDE color scheme of the user interface, the editor colors are set in the editor color schema</source>
-<translation type="unfinished">KDE color scheme of the user interface, the editor colors are set in the editor color schema</translation>
+<translation>Цветовая схема KDE для интерфейса. Цвета редактора задаются в его цветовой схеме</translation>
 </message>
 <message>
 <source>The color scheme is not used while the dark mode theme is turned on.</source>
-<translation type="unfinished">The color scheme is not used while the dark mode theme is turned on.</translation>
+<translation>При включённой тёмной теме цветовая схема не используется.</translation>
 </message>
 <message>
 <source>Font rendering (Windows)</source>
@@ -3589,11 +3751,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <source>System default</source>
-<translation type="unfinished">System default</translation>
+<translation>Системная по умолчанию</translation>
 </message>
 <message>
 <source>%1 (not installed)</source>
-<translation type="unfinished">%1 (not installed)</translation>
+<translation>%1 (не установлена)</translation>
 </message>
 <message>
 <source>Automatic (needs restart)</source>
@@ -3613,6 +3775,34 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Minimum 10 characters</source>
 <translation>Минимум 10 символов</translation>
+</message>
+<message>
+<source>Describe your issue</source>
+<translation>Опишите проблему</translation>
+</message>
+<message>
+<source>Please enter a title with at least 8 characters and at least 10 characters in every text field to continue.</source>
+<translation>Чтобы продолжить, введите заголовок длиной не менее 8 символов и не менее 10 символов в каждое текстовое поле.</translation>
+</message>
+<message>
+<source>Log output</source>
+<translation>Вывод журнала</translation>
+</message>
+<message>
+<source>Debug information</source>
+<translation>Отладочная информация</translation>
+</message>
+<message>
+<source>The debug information is needed to report a problem.</source>
+<translation>Для сообщения о проблеме нужна отладочная информация.</translation>
+</message>
+<message>
+<source>Submit your issue</source>
+<translation>Отправить сообщение о проблеме</translation>
+</message>
+<message>
+<source>Step %1 of %2: %3</source>
+<translation>Шаг %1 из %2: %3</translation>
 </message>
 </context>
 <context>
@@ -3666,8 +3856,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Импортировать вложения</translation>
 </message>
 <message>
+<source>Turn on note subfolders for the current note folder to be able to import folders.</source>
+<translation>Чтобы импортировать папки, разрешите вложенные папки в текущей папке заметок.</translation>
+</message>
+<message>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation>Выберите "RAW — каталог экспорта Joplin" для импорта</translation>
+</message>
+<message>
+<source>The selected directory doesn't exist</source>
+<translation>Выбранная папка не существует</translation>
+</message>
+<message>
+<source>Importing notes…</source>
+<translation>Импорт заметок…</translation>
+</message>
+<message>
+<source>No Joplin files were found in the selected directory</source>
+<translation>В выбранной папке не найдены файлы Joplin</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were imported</source>
+<translation>
+<numerusform>Импортирована %n заметка</numerusform>
+<numerusform>Импортировано %n заметки</numerusform>
+<numerusform>Импортировано %n заметок</numerusform>
+<numerusform>Импортировано %n заметки</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -4088,6 +4303,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Поиск целевого заголовка для ссылки</translation>
 </message>
 <message>
+<source>The selected note has no headings, the link will point to the whole note</source>
+<translation>В выбранной заметке нет заголовков. Ссылка будет вести на заметку целиком</translation>
+</message>
+<message>
 <source>Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</source>
 <translation>Вставить ссылку как ссылку в стиле вики ([[Название заметки]]) вместо ссылки Markdown</translation>
 </message>
@@ -4116,6 +4335,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <translation>Поиск целевой заметки для ссылки</translation>
 </message>
 <message>
+<source>Fetching the title of the webpage…</source>
+<translation>Получение заголовка веб-страницы…</translation>
+</message>
+<message>
+<source>&amp;Insert link</source>
+<translation>&amp;Вставить ссылку</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s)</source>
+<translation>
+<numerusform>%n заметка</numerusform>
+<numerusform>%n заметки</numerusform>
+<numerusform>%n заметок</numerusform>
+<numerusform>%n заметки</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n note(s)</source>
+<translation>
+<numerusform>%1 из %n заметки</numerusform>
+<numerusform>%1 из %n заметок</numerusform>
+<numerusform>%1 из %n заметок</numerusform>
+<numerusform>%1 из %n заметки</numerusform>
+</translation>
+</message>
+<message>
 <source>Select file to link to</source>
 <translation>Выбор целевого файла для ссылки</translation>
 </message>
@@ -4141,14 +4386,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 </context>
 <context>
+<name>LoadingOverlayWidget</name>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;Отмена</translation>
+</message>
+<message>
+<source>%1 of %2 received · %3</source>
+<translation>Получено %1 из %2 · %3</translation>
+</message>
+<message>
+<source>%1 received · %2</source>
+<translation>Получено %1 · %2</translation>
+</message>
+<message>
+<source>Waiting for the server · %1</source>
+<translation>Ожидание ответа сервера · %1</translation>
+</message>
+</context>
+<context>
 <name>LocalTrashDialog</name>
 <message>
 <source>Locally trashed notes</source>
 <translation>Удаленные локальные заметки</translation>
 </message>
 <message>
-<source>Find note name</source>
-<translation>Найти имя заметки</translation>
+<source>Find note name or text</source>
+<translation>Поиск по имени или тексту заметки</translation>
 </message>
 <message>
 <source>Name</source>
@@ -4157,6 +4421,10 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <source>Trashed</source>
 <translation>Дата удаления</translation>
+</message>
+<message>
+<source>Select a trashed note to see its text</source>
+<translation>Выберите заметку в корзине, чтобы просмотреть её текст</translation>
 </message>
 <message>
 <source>Restore</source>
@@ -4225,6 +4493,36 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметок было удалено</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметок было удалено</numerusform>
 </translation>
+</message>
+<message numerus="yes">
+<source>%n trashed note(s)</source>
+<translation>
+<numerusform>%n заметка в корзине</numerusform>
+<numerusform>%n заметки в корзине</numerusform>
+<numerusform>%n заметок в корзине</numerusform>
+<numerusform>%n заметки в корзине</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n trashed note(s)</source>
+<translation>
+<numerusform>%1 из %n заметки в корзине</numerusform>
+<numerusform>%1 из %n заметок в корзине</numerusform>
+<numerusform>%1 из %n заметок в корзине</numerusform>
+<numerusform>%1 из %n заметки в корзине</numerusform>
+</translation>
+</message>
+<message>
+<source>No trashed notes</source>
+<translation>В корзине нет заметок</translation>
+</message>
+<message>
+<source>No trashed note matches the search</source>
+<translation>В корзине нет заметок, соответствующих запросу</translation>
+</message>
+<message>
+<source>No trashed note selected</source>
+<translation>Заметка в корзине не выбрана</translation>
 </message>
 </context>
 <context>
@@ -5540,6 +5838,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Поддержка Git не включена для текущей папки заметок, хотите включить ее в настройках?</translation>
 </message>
 <message>
+<source>%1 of up to %2 versions found</source>
+<translation>Найдено версий: %1 из максимально возможных %2</translation>
+</message>
+<message>
 <source>No versions available</source>
 <translation>Нет доступных версий</translation>
 </message>
@@ -5555,6 +5857,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Установлено %n обновлений скриптов</numerusform>
 <numerusform>Установлено %n обновления скрипта</numerusform>
 </translation>
+</message>
+<message>
+<source>Loading bookmarks…</source>
+<translation>Загрузка закладок…</translation>
+</message>
+<message>
+<source>Bookmarks are currently loaded from your Nextcloud server</source>
+<translation>Идёт загрузка закладок с вашего сервера Nextcloud</translation>
 </message>
 <message>
 <source>Note path '%1' was copied to the clipboard</source>
@@ -5646,10 +5956,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Последние %n версий заметок собираются из вашего локального git репозитория</numerusform>
 <numerusform>Последние %n версий заметок собираются из вашего локального git репозитория</numerusform>
 </translation>
-</message>
-<message>
-<source>Done with gathering note versions from git</source>
-<translation>Сбор версий заметок из git завершен</translation>
 </message>
 <message numerus="yes">
 <source>Latest %n git versions of note: %1</source>
@@ -5902,15 +6208,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Send note to</source>
-<translation type="unfinished">Send note to</translation>
+<translation>Отправить заметку в</translation>
 </message>
 <message>
 <source>Send notes to</source>
-<translation type="unfinished">Send notes to</translation>
+<translation>Отправить заметки в</translation>
+</message>
+<message>
+<source>Loading note versions…</source>
+<translation>Загрузка версий заметок…</translation>
 </message>
 <message>
 <source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
 <translation>Версии заметки загружаются с сервера Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Loading trashed notes…</source>
+<translation>Загрузка заметок из корзины…</translation>
 </message>
 <message>
 <source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
@@ -6149,6 +6463,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</source>
 <translation>Применить выбранное выравнивание к выделенным столбцам. Сначала щёлкните заголовок столбца, чтобы выбрать его.</translation>
+</message>
+<message>
+<source>&amp;Update table</source>
+<translation>&amp;Обновить таблицу</translation>
+</message>
+<message>
+<source>Header</source>
+<translation>Заголовок</translation>
 </message>
 <message>
 <source>Cannot remove header</source>
@@ -6503,8 +6825,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Новая заметка</translation>
 </message>
 <message>
-<source>Note name</source>
-<translation>Имя заметки</translation>
+<source>Note name:</source>
+<translation>Имя заметки:</translation>
+</message>
+<message>
+<source>Enter the name of the new note</source>
+<translation>Введите имя новой заметки</translation>
+</message>
+<message>
+<source>&amp;Create note</source>
+<translation>&amp;Создать заметку</translation>
 </message>
 </context>
 <context>
@@ -6524,6 +6854,50 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>-1d</source>
 <translation>-1 д</translation>
+</message>
+<message>
+<source>New card</source>
+<translation>Новая карточка</translation>
+</message>
+<message>
+<source>Select a card from the list, or type a title into the search field and press Enter to create a new card.</source>
+<translation>Выберите карточку в списке или введите заголовок в поле поиска и нажмите Enter, чтобы создать карточку.</translation>
+</message>
+<message>
+<source>Title:</source>
+<translation>Заголовок:</translation>
+</message>
+<message>
+<source>Set a due date for the card</source>
+<translation>Задать срок для карточки</translation>
+</message>
+<message>
+<source>Move the due date one day earlier</source>
+<translation>Перенести срок на день раньше</translation>
+</message>
+<message>
+<source>Move the due date one hour earlier</source>
+<translation>Перенести срок на час раньше</translation>
+</message>
+<message>
+<source>Move the due date ten minutes earlier</source>
+<translation>Перенести срок на десять минут раньше</translation>
+</message>
+<message>
+<source>Move the due date ten minutes later</source>
+<translation>Перенести срок на десять минут позже</translation>
+</message>
+<message>
+<source>Move the due date one hour later</source>
+<translation>Перенести срок на час позже</translation>
+</message>
+<message>
+<source>Move the due date one day later</source>
+<translation>Перенести срок на день позже</translation>
+</message>
+<message>
+<source>Add a description using Markdown</source>
+<translation>Добавить описание в формате Markdown</translation>
 </message>
 <message>
 <source>Move card to another board or stack</source>
@@ -6550,6 +6924,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Удалить</translation>
 </message>
 <message>
+<source>Create card</source>
+<translation>Создать карточку</translation>
+</message>
+<message>
+<source>Create card, insert a link to it into the current note and close the dialog</source>
+<translation>Создать карточку, вставить ссылку на неё в текущую заметку и закрыть диалог</translation>
+</message>
+<message>
+<source>Create and insert link</source>
+<translation>Создать и вставить ссылку</translation>
+</message>
+<message>
 <source>Show archived cards</source>
 <translation>Показать архивные карточки</translation>
 </message>
@@ -6562,16 +6948,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Показать только элементы на сегодня</translation>
 </message>
 <message>
+<source>Reload</source>
+<translation>Перезагрузить</translation>
+</message>
+<message>
 <source>Summary</source>
 <translation>Резюме</translation>
-</message>
-<message>
-<source>Reload the card item list from server</source>
-<translation>Перезагрузить список элементов карточек с сервера</translation>
-</message>
-<message>
-<source>Reload…</source>
-<translation>Перезагрузить…</translation>
 </message>
 <message>
 <source>Search or create card</source>
@@ -6580,10 +6962,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>Select the board and stack to work with</source>
 <translation>Выберите доску и стек для работы</translation>
-</message>
-<message>
-<source>Create card and insert link into current note</source>
-<translation>Создать карточку и вставить ссылку в текущую заметку</translation>
 </message>
 <message>
 <source>&amp;Save</source>
@@ -6615,15 +6993,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Insert Nextcloud Deck card links</source>
-<translation type="unfinished">Insert Nextcloud Deck card links</translation>
+<translation>Вставить ссылки на карточки Nextcloud Deck</translation>
 </message>
 <message>
 <source>Search cards</source>
-<translation type="unfinished">Search cards</translation>
+<translation>Поиск карточек</translation>
 </message>
 <message>
 <source>Insert links</source>
-<translation type="unfinished">Insert links</translation>
+<translation>Вставить ссылки</translation>
 </message>
 <message>
 <source>Save and insert into note</source>
@@ -6634,12 +7012,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Сохранить текущий элемент карточки и вставить ссылку на него в текущую заметку</translation>
 </message>
 <message>
-<source>Reload from server</source>
-<translation>Перезагрузить с сервера</translation>
-</message>
-<message>
 <source>Reload boards, stacks and cards from server</source>
 <translation>Перезагрузить доски, стеки и карточки с сервера</translation>
+</message>
+<message>
+<source>Loading Nextcloud Deck cards…</source>
+<translation>Загрузка карточек Nextcloud Deck…</translation>
+</message>
+<message>
+<source>Data is currently loaded from your Nextcloud server</source>
+<translation>Идёт загрузка данных с вашего сервера Nextcloud</translation>
 </message>
 <message>
 <source>Do you want to delete the selected Nextcloud Deck card?</source>
@@ -6679,6 +7061,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Переместить</translation>
 </message>
 <message>
+<source>Loading Nextcloud Deck boards…</source>
+<translation>Загрузка досок Nextcloud Deck…</translation>
+</message>
+<message>
 <source>%1 / %2</source>
 <translation>%1 / %2</translation>
 </message>
@@ -6687,8 +7073,54 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Срок выполнения уже прошёл</translation>
 </message>
 <message>
+<source>The card is due today</source>
+<translation>Срок карточки истекает сегодня</translation>
+</message>
+<message>
 <source>No due date</source>
 <translation>Нет срока выполнения</translation>
+</message>
+<message numerus="yes">
+<source>%n card(s)</source>
+<translation>
+<numerusform>%n карточка</numerusform>
+<numerusform>%n карточки</numerusform>
+<numerusform>%n карточек</numerusform>
+<numerusform>%n карточки</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n card(s)</source>
+<translation>
+<numerusform>%1 из %n карточки</numerusform>
+<numerusform>%1 из %n карточек</numerusform>
+<numerusform>%1 из %n карточек</numerusform>
+<numerusform>%1 из %n карточки</numerusform>
+</translation>
+</message>
+<message>
+<source>Edit archived card</source>
+<translation>Изменить архивную карточку</translation>
+</message>
+<message>
+<source>Edit card</source>
+<translation>Изменить карточку</translation>
+</message>
+<message>
+<source>Save</source>
+<translation>Сохранить</translation>
+</message>
+<message>
+<source>Save the changes to the card</source>
+<translation>Сохранить изменения карточки</translation>
+</message>
+<message>
+<source>No card selected</source>
+<translation>Карточка не выбрана</translation>
+</message>
+<message>
+<source>Create card and keep the dialog open</source>
+<translation>Создать карточку и оставить диалог открытым</translation>
 </message>
 <message>
 <source>Do you want to delete the current Nextcloud Deck card?</source>
@@ -6769,7 +7201,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</source>
-<translation type="unfinished">The server did not confirm that the card was moved to the destination stack. Reload the cards to check its location.</translation>
+<translation>Сервер не подтвердил перемещение карточки в целевой список. Перезагрузите карточки, чтобы проверить, где она находится.</translation>
 </message>
 <message>
 <source>Moving the card failed with status code %1 and message: %2</source>
@@ -6807,7 +7239,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
 <name>NoteBookmarkDialog</name>
 <message>
-<source>Note Bookmarks</source>
+<source>Note bookmarks</source>
 <translation>Закладки заметок</translation>
 </message>
 <message>
@@ -6847,6 +7279,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Перезагрузить список закладок</translation>
 </message>
 <message>
+<source>Cursor position in the note</source>
+<translation>Положение курсора в заметке</translation>
+</message>
+<message numerus="yes">
+<source>%n bookmark(s)</source>
+<translation>
+<numerusform>%n закладка</numerusform>
+<numerusform>%n закладки</numerusform>
+<numerusform>%n закладок</numerusform>
+<numerusform>%n закладки</numerusform>
+</translation>
+</message>
+<message>
+<source>No bookmarks are stored yet. Use the "Store bookmark at slot" actions to store the current note and cursor position as bookmark.</source>
+<translation>Закладок пока нет. Используйте команды сохранения закладки в ячейку, чтобы запомнить текущую заметку и положение курсора.</translation>
+</message>
+<message>
 <source>Are you sure you want to delete the bookmark at slot %1?</source>
 <translation>Действительно удалить закладку в ячейке %1?</translation>
 </message>
@@ -6881,6 +7330,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Jump to the note in the main window</source>
 <translation>Перейти к заметке в главном окне</translation>
 </message>
+<message>
+<source>Folder: %1</source>
+<translation>Папка: %1</translation>
+</message>
+<message>
+<source>Last modified at %1</source>
+<translation>Последнее изменение: %1</translation>
+</message>
+<message>
+<source>The note is encrypted and can't be decrypted</source>
+<translation>Заметка зашифрована, и её не удалось расшифровать</translation>
+</message>
 </context>
 <context>
 <name>NoteDiffDialog</name>
@@ -6891,6 +7352,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <source>The current note was modified outside of this application!</source>
 <translation>Текущая заметка изменена другой программой!</translation>
+</message>
+<message>
+<source>Text with a red background was removed outside of QOwnNotes, text with a green background was added.</source>
+<translation>Текст на красном фоне был удалён вне QOwnNotes, а текст на зелёном фоне был добавлен.</translation>
 </message>
 <message>
 <source>Differences:</source>
@@ -6909,12 +7374,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>Игнорировать все внешние изменения в будущем</translation>
 </message>
 <message>
-<source>Yes</source>
-<translation>Да</translation>
+<source>&amp;Reload from disk</source>
+<translation>&amp;Перезагрузить с диска</translation>
 </message>
 <message>
-<source>No</source>
-<translation>Нет</translation>
+<source>Accept the external changes and load the note text from disk</source>
+<translation>Принять внешние изменения и загрузить текст заметки с диска</translation>
+</message>
+<message>
+<source>&amp;Keep current text</source>
+<translation>&amp;Оставить текущий текст</translation>
+</message>
+<message>
+<source>Ignore the external changes and overwrite the note on disk with the current text</source>
+<translation>Игнорировать внешние изменения и перезаписать заметку на диске текущим текстом</translation>
 </message>
 </context>
 <context>
@@ -7221,15 +7694,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <source>Note was modified externally</source>
-<translation type="unfinished">Note was modified externally</translation>
+<translation>Заметка изменена извне</translation>
 </message>
 <message>
 <source>The current note was modified outside of QOwnNotes. Please review the changes.</source>
-<translation type="unfinished">The current note was modified outside of QOwnNotes. Please review the changes.</translation>
+<translation>Текущая заметка была изменена вне QOwnNotes. Проверьте изменения.</translation>
 </message>
 <message>
 <source>Review changes</source>
-<translation type="unfinished">Review changes</translation>
+<translation>Просмотреть изменения</translation>
 </message>
 <message>
 <source>Overwriting external changes of: %1</source>
@@ -7777,6 +8250,10 @@ Do you want to delete those files as well?</source>
 <translation>Сравнить выбранные заметки</translation>
 </message>
 <message>
+<source>Export selected notes to individual PDFs…</source>
+<translation>Экспортировать выбранные заметки в отдельные PDF…</translation>
+</message>
+<message>
 <source>Open note in external editor</source>
 <translation>Открыть заметку во внешнем редакторе</translation>
 </message>
@@ -7845,7 +8322,7 @@ Do you want to delete those files as well?</source>
 <name>NotificationService</name>
 <message>
 <source>Open QOwnNotes</source>
-<translation type="unfinished">Open QOwnNotes</translation>
+<translation>Открыть QOwnNotes</translation>
 </message>
 </context>
 <context>
@@ -8119,6 +8596,13 @@ Do you want to delete those files as well?</source>
 </message>
 </context>
 <context>
+<name>PreviewDetails</name>
+<message>
+<source>Details</source>
+<translation>Подробности</translation>
+</message>
+</context>
+<context>
 <name>PreviewFontSettingsWidget</name>
 <message>
 <source>Rendering</source>
@@ -8222,12 +8706,84 @@ Do you want to delete those files as well?</source>
 <source>Could not delete password</source>
 <translation>Не удалось удалить пароль</translation>
 </message>
+<message>
+<source>Password not found</source>
+<translation>Пароль не найден</translation>
+</message>
 </context>
 <context>
 <name>QKeychain::Job</name>
 <message>
 <source>Both service name and key are empty</source>
 <translation>Имя службы и ключ не заданы</translation>
+</message>
+<message>
+<source>No error</source>
+<translation>Нет ошибок</translation>
+</message>
+<message>
+<source>The specified item could not be found in the keychain</source>
+<translation>Указанная запись не найдена в связке ключей</translation>
+</message>
+<message>
+<source>User canceled the operation</source>
+<translation>Пользователь отменил операцию</translation>
+</message>
+<message>
+<source>User interaction is not allowed</source>
+<translation>Взаимодействие с пользователем запрещено</translation>
+</message>
+<message>
+<source>No keychain is available. You may need to restart your computer</source>
+<translation>Нет доступной связки ключей. Возможно, потребуется перезагрузить компьютер</translation>
+</message>
+<message>
+<source>The user name or passphrase you entered is not correct</source>
+<translation>Введено неверное имя пользователя или неверная парольная фраза</translation>
+</message>
+<message>
+<source>A cryptographic verification failure has occurred</source>
+<translation>Ошибка криптографической проверки</translation>
+</message>
+<message>
+<source>Function or operation not implemented</source>
+<translation>Функция или операция не реализована</translation>
+</message>
+<message>
+<source>I/O error</source>
+<translation>Ошибка ввода-вывода</translation>
+</message>
+<message>
+<source>Already open with with write permission</source>
+<translation>Уже открыто с правом записи</translation>
+</message>
+<message>
+<source>Invalid parameters passed to a function</source>
+<translation>В функцию переданы недопустимые параметры</translation>
+</message>
+<message>
+<source>Failed to allocate memory</source>
+<translation>Не удалось выделить память</translation>
+</message>
+<message>
+<source>Bad parameter or invalid state for operation</source>
+<translation>Недопустимый параметр или состояние для операции</translation>
+</message>
+<message>
+<source>An internal component failed</source>
+<translation>Сбой внутреннего компонента</translation>
+</message>
+<message>
+<source>The specified item already exists in the keychain</source>
+<translation>Указанная запись уже существует в связке ключей</translation>
+</message>
+<message>
+<source>Unable to decode the provided data</source>
+<translation>Не удалось декодировать предоставленные данные</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation>Неизвестная ошибка</translation>
 </message>
 </context>
 <context>
@@ -8338,6 +8894,10 @@ Do you want to delete those files as well?</source>
 <source>Could not decrypt data: %1</source>
 <translation>Не удалось расшифровать данные: %1</translation>
 </message>
+<message>
+<source>Password not found</source>
+<translation>Пароль не найден</translation>
+</message>
 </context>
 <context>
 <name>QKeychain::WritePasswordJobPrivate</name>
@@ -8408,6 +8968,10 @@ Do you want to delete those files as well?</source>
 <message>
 <source>Writing credentials failed: %1</source>
 <translation>Не удалось записать учётные данные: %1</translation>
+</message>
+<message>
+<source>Password not found</source>
+<translation>Пароль не найден</translation>
 </message>
 </context>
 <context>
@@ -8716,10 +9280,6 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 </translation>
 </message>
 <message>
-<source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation>Включить подпапки заметок в текущей папке заметок для импорта папок.</translation>
-</message>
-<message>
 <source>Login flow failed</source>
 <translation>Процесс входа в систему провалился</translation>
 </message>
@@ -8846,6 +9406,10 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 <message>
 <source>Entry not found</source>
 <translation>Запись не найдена</translation>
+</message>
+<message>
+<source>error 0x%1: %2</source>
+<translation>ошибка 0x%1: %2</translation>
 </message>
 </context>
 <context>
@@ -9098,6 +9662,14 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 <source>Match case sensitive</source>
 <translation>Учитывать регистр</translation>
 </message>
+<message>
+<source>Current match / number of matches</source>
+<translation>Текущее совпадение / число совпадений</translation>
+</message>
+<message>
+<source>No matches</source>
+<translation>Нет совпадений</translation>
+</message>
 </context>
 <context>
 <name>QTextEditSearchWidget</name>
@@ -9160,6 +9732,23 @@ Your system may now ask you to unlock the keychain, possibly more than once. Thi
 <message>
 <source>Match case sensitive</source>
 <translation>Совпадение с учетом регистра</translation>
+</message>
+<message>
+<source>No matches</source>
+<translation>Нет совпадений</translation>
+</message>
+<message>
+<source>%1 of %2</source>
+<translation>%1 из %2</translation>
+</message>
+<message numerus="yes">
+<source>%n match(es)</source>
+<translation>
+<numerusform>%n совпадение</numerusform>
+<numerusform>%n совпадения</numerusform>
+<numerusform>%n совпадений</numerusform>
+<numerusform>%n совпадения</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -9262,6 +9851,48 @@ Are the folder and the file writable?</source>
 <message>
 <source>Find script</source>
 <translation>Найти сценарий</translation>
+</message>
+<message>
+<source>The script repository couldn't be loaded</source>
+<translation>Не удалось загрузить репозиторий скриптов</translation>
+</message>
+<message numerus="yes">
+<source>%n script(s)</source>
+<translation>
+<numerusform>%n скрипт</numerusform>
+<numerusform>%n скрипта</numerusform>
+<numerusform>%n скриптов</numerusform>
+<numerusform>%n скрипта</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n script(s)</source>
+<translation>
+<numerusform>%1 из %n скрипта</numerusform>
+<numerusform>%1 из %n скриптов</numerusform>
+<numerusform>%1 из %n скриптов</numerusform>
+<numerusform>%1 из %n скрипта</numerusform>
+</translation>
+</message>
+<message>
+<source>The script repository couldn't be loaded, please check your internet connection.</source>
+<translation>Не удалось загрузить репозиторий скриптов. Проверьте подключение к Интернету.</translation>
+</message>
+<message>
+<source>No script matches your search.</source>
+<translation>Нет скриптов, соответствующих запросу.</translation>
+</message>
+<message>
+<source>This script isn't supported on your platform</source>
+<translation>Этот скрипт не поддерживается на вашей платформе</translation>
+</message>
+<message>
+<source>This script needs a newer version of QOwnNotes</source>
+<translation>Для этого скрипта нужна более новая версия QOwnNotes</translation>
+</message>
+<message>
+<source>This script is already installed</source>
+<translation>Этот скрипт уже установлен</translation>
 </message>
 <message>
 <source>Script updates</source>
@@ -9553,12 +10184,25 @@ Do you want to install it anyway?</source>
 <translation>%v из %m закладок импортировано</translation>
 </message>
 <message numerus="yes">
-<source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
+<source>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; found on server. They will be added to the note &lt;strong&gt;%1&lt;/strong&gt;.</source>
 <translation>
-<numerusform>&lt;strong&gt;%n закладка&lt;/strong&gt; найдено на сервере</numerusform>
-<numerusform>&lt;strong&gt;%n закладки&lt;/strong&gt; найдено на сервере</numerusform>
-<numerusform>&lt;strong&gt;%n закладок&lt;/strong&gt; найдено на сервере</numerusform>
-<numerusform>&lt;strong&gt;%n закладок&lt;/strong&gt; найдено на сервере</numerusform>
+<numerusform>На сервере найдена &lt;strong&gt;%n закладка&lt;/strong&gt;. Она будет добавлена в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>На сервере найдено &lt;strong&gt;%n закладки&lt;/strong&gt;. Они будут добавлены в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>На сервере найдено &lt;strong&gt;%n закладок&lt;/strong&gt;. Они будут добавлены в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>На сервере найдено &lt;strong&gt;%n закладки&lt;/strong&gt;. Они будут добавлены в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+</translation>
+</message>
+<message>
+<source>No bookmarks were found on the server.</source>
+<translation>На сервере не найдено ни одной закладки.</translation>
+</message>
+<message numerus="yes">
+<source>&lt;strong&gt;%n bookmark(s)&lt;/strong&gt; were added to the note &lt;strong&gt;%1&lt;/strong&gt;.</source>
+<translation>
+<numerusform>&lt;strong&gt;%n закладка&lt;/strong&gt; добавлена в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n закладки&lt;/strong&gt; добавлены в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n закладок&lt;/strong&gt; добавлено в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
+<numerusform>&lt;strong&gt;%n закладки&lt;/strong&gt; добавлено в заметку &lt;strong&gt;%1&lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 </context>
@@ -9761,6 +10405,10 @@ Do you want to install it anyway?</source>
 <translation>доступно</translation>
 </message>
 <message>
+<source>No settings match your search</source>
+<translation>Нет настроек, соответствующих запросу</translation>
+</message>
+<message>
 <source>KDE Plasma activities</source>
 <translation>Активности KDE Plasma</translation>
 </message>
@@ -9812,6 +10460,10 @@ Do you want to install it anyway?</source>
 <translation>Пароль общей ссылки (необязательно)</translation>
 </message>
 <message>
+<source>Waiting for the link from the server…</source>
+<translation>Ожидание ссылки от сервера…</translation>
+</message>
+<message>
 <source>Share note on Nextcloud / ownCloud</source>
 <translation>Поделиться заметкой в Nextcloud / ownCloud</translation>
 </message>
@@ -9826,6 +10478,18 @@ Do you want to install it anyway?</source>
 <message>
 <source>The public url of your note</source>
 <translation>Общедоступный URL-адрес заметки</translation>
+</message>
+<message>
+<source>Copy link to clipboard</source>
+<translation>Копировать ссылку в буфер обмена</translation>
+</message>
+<message>
+<source>The link was copied to the clipboard</source>
+<translation>Ссылка скопирована в буфер обмена</translation>
+</message>
+<message>
+<source>Open link in the browser</source>
+<translation>Открыть ссылку в браузере</translation>
 </message>
 <message>
 <source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
@@ -10041,6 +10705,31 @@ Do you want to install it anyway?</source>
 <translation>Последние изменения в %1</translation>
 </message>
 <message>
+<source>No orphaned attachments</source>
+<translation>Нет неиспользуемых вложений</translation>
+</message>
+<message>
+<source>No attachments in the current note</source>
+<translation>В текущей заметке нет вложений</translation>
+</message>
+<message>
+<source>No attachments</source>
+<translation>Нет вложений</translation>
+</message>
+<message>
+<source>No attachment selected</source>
+<translation>Вложение не выбрано</translation>
+</message>
+<message numerus="yes">
+<source>Used in %n note(s):</source>
+<translation>
+<numerusform>Используется в %n заметке:</numerusform>
+<numerusform>Используется в %n заметках:</numerusform>
+<numerusform>Используется в %n заметках:</numerusform>
+<numerusform>Заметки, в которых используется вложение — всего %n:</numerusform>
+</translation>
+</message>
+<message>
 <source>Path: %1</source>
 <translation>Путь: %1</translation>
 </message>
@@ -10072,6 +10761,24 @@ Do you want to install it anyway?</source>
 <message>
 <source>&amp;Add attachments to current note</source>
 <translation>&amp;Добавить вложения к текущей заметке</translation>
+</message>
+<message numerus="yes">
+<source>%n attachment(s)</source>
+<translation>
+<numerusform>%n вложение</numerusform>
+<numerusform>%n вложения</numerusform>
+<numerusform>%n вложений</numerusform>
+<numerusform>%n вложения</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n attachment(s)</source>
+<translation>
+<numerusform>%1 из %n вложения</numerusform>
+<numerusform>%1 из %n вложений</numerusform>
+<numerusform>%1 из %n вложений</numerusform>
+<numerusform>%1 из %n вложения</numerusform>
+</translation>
 </message>
 <message>
 <source>File doesn't exist</source>
@@ -10173,6 +10880,43 @@ Do you want to install it anyway?</source>
 <translation>Последние изменения в %1</translation>
 </message>
 <message>
+<source>No orphaned images</source>
+<translation>Нет неиспользуемых изображений</translation>
+</message>
+<message>
+<source>No images in the current note</source>
+<translation>В текущей заметке нет изображений</translation>
+</message>
+<message>
+<source>No images</source>
+<translation>Нет изображений</translation>
+</message>
+<message>
+<source>No image selected</source>
+<translation>Изображение не выбрано</translation>
+</message>
+<message>
+<source>%1 × %2 pixels</source>
+<translation>%1 × %2 пикс.</translation>
+</message>
+<message>
+<source>Image can't be shown</source>
+<translation>Не удалось отобразить изображение</translation>
+</message>
+<message>
+<source>Not used in any note</source>
+<translation>Не используется ни в одной заметке</translation>
+</message>
+<message numerus="yes">
+<source>Used in %n note(s):</source>
+<translation>
+<numerusform>Используется в %n заметке:</numerusform>
+<numerusform>Используется в %n заметках:</numerusform>
+<numerusform>Используется в %n заметках:</numerusform>
+<numerusform>Заметки, в которых используется изображение — всего %n:</numerusform>
+</translation>
+</message>
+<message>
 <source>Path: %1</source>
 <translation>Путь: %1</translation>
 </message>
@@ -10187,6 +10931,24 @@ Do you want to install it anyway?</source>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n image(s)</source>
+<translation>
+<numerusform>%n изображение</numerusform>
+<numerusform>%n изображения</numerusform>
+<numerusform>%n изображений</numerusform>
+<numerusform>%n изображения</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n image(s)</source>
+<translation>
+<numerusform>%1 из %n изображения</numerusform>
+<numerusform>%1 из %n изображений</numerusform>
+<numerusform>%1 из %n изображений</numerusform>
+<numerusform>%1 из %n изображения</numerusform>
 </translation>
 </message>
 <message>
@@ -10340,6 +11102,10 @@ Do you want to install it anyway?</source>
 <translation>Разделитель текста:</translation>
 </message>
 <message>
+<source>&amp;Insert table</source>
+<translation>&amp;Вставить таблицу</translation>
+</message>
+<message>
 <source>CSV files</source>
 <translation>CSV-файлы</translation>
 </message>
@@ -10351,6 +11117,10 @@ Do you want to install it anyway?</source>
 <source>Select CSV file to import</source>
 <translation>Выберите CSV-файл для импорта</translation>
 </message>
+<message>
+<source>The clipboard doesn't contain any text</source>
+<translation>В буфере обмена нет текста</translation>
+</message>
 </context>
 <context>
 <name>TagAddDialog</name>
@@ -10359,12 +11129,16 @@ Do you want to install it anyway?</source>
 <translation>Добавить новый тег</translation>
 </message>
 <message>
-<source>Add new tag</source>
-<translation>Добавить новый тег</translation>
+<source>Tag name:</source>
+<translation>Имя тега:</translation>
 </message>
 <message>
 <source>New tag</source>
 <translation>Новый тег</translation>
+</message>
+<message>
+<source>&amp;Add tag</source>
+<translation>&amp;Добавить тег</translation>
 </message>
 </context>
 <context>
@@ -10558,6 +11332,10 @@ Do you want to install it anyway?</source>
 <translation>Различия:</translation>
 </message>
 <message>
+<source>Text with a red background will be removed, text with a green background will be added.</source>
+<translation>Текст на красном фоне будет удалён, а текст на зелёном фоне будет добавлен.</translation>
+</message>
+<message>
 <source>Don't show dialog again</source>
 <translation>Не показывать диалог снова</translation>
 </message>
@@ -10573,16 +11351,56 @@ Do you want to install it anyway?</source>
 <translation>Список задач</translation>
 </message>
 <message>
+<source>Select a todo item from the list, or type a summary into the search field and press Enter to create a new todo item.</source>
+<translation>Выберите задачу из списка или введите краткое описание в поле поиска и нажмите Enter, чтобы создать задачу.</translation>
+</message>
+<message>
+<source>Summary:</source>
+<translation>Краткое описание:</translation>
+</message>
+<message>
+<source>Priority:</source>
+<translation>Приоритет:</translation>
+</message>
+<message>
 <source>Priority</source>
 <translation>Приоритет</translation>
 </message>
 <message>
-<source>Reminder</source>
-<translation>Напоминание</translation>
-</message>
-<message>
 <source>Summary</source>
 <translation>Резюме</translation>
+</message>
+<message>
+<source>Reminder:</source>
+<translation>Напоминание:</translation>
+</message>
+<message>
+<source>Set a reminder for the todo item</source>
+<translation>Задать напоминание для задачи</translation>
+</message>
+<message>
+<source>Tags:</source>
+<translation>Теги:</translation>
+</message>
+<message>
+<source>Description:</source>
+<translation>Описание:</translation>
+</message>
+<message>
+<source>Add a description using Markdown</source>
+<translation>Добавить описание в формате Markdown</translation>
+</message>
+<message>
+<source>Insert a link to the todo item into the current note or import it as a note</source>
+<translation>Вставить ссылку на задачу в текущую заметку или импортировать её как заметку</translation>
+</message>
+<message>
+<source>Remove the current todo item (Ctrl+R)</source>
+<translation>Удалить текущую задачу (Ctrl+R)</translation>
+</message>
+<message>
+<source>Save the current todo item (Ctrl+S)</source>
+<translation>Сохранить текущую задачу (Ctrl+S)</translation>
 </message>
 <message>
 <source>Save</source>
@@ -10591,6 +11409,10 @@ Do you want to install it anyway?</source>
 <message>
 <source>Note…</source>
 <translation>Заметка…</translation>
+</message>
+<message>
+<source>Select your todo list</source>
+<translation>Выберите список задач</translation>
 </message>
 <message>
 <source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
@@ -10625,24 +11447,12 @@ Do you want to install it anyway?</source>
 <translation>Поиск или создание элемента todo</translation>
 </message>
 <message>
-<source>Tags</source>
-<translation>Теги</translation>
-</message>
-<message>
 <source>Add new tag</source>
 <translation>Добавить новый тег</translation>
 </message>
 <message>
 <source>Due date</source>
 <translation>Дата выполнения</translation>
-</message>
-<message>
-<source>select your todo list</source>
-<translation>выберите свой список задач</translation>
-</message>
-<message>
-<source>Save the current todo item</source>
-<translation>Сохранить текущий элемент списка задач</translation>
 </message>
 <message>
 <source>Save the current todo item and insert a link to it into the current note</source>
@@ -10657,12 +11467,16 @@ Do you want to install it anyway?</source>
 <translation>Импортировать как заметку</translation>
 </message>
 <message>
-<source>Remove the current todo item</source>
-<translation>Удалить текущий элемент списка задач</translation>
-</message>
-<message>
 <source>Todo list items are being loaded from the server</source>
 <translation>Список задач загружается с сервера</translation>
+</message>
+<message>
+<source>Task could not be saved</source>
+<translation>Не удалось сохранить задачу</translation>
+</message>
+<message>
+<source>Could not load the task from the server. Please try again.</source>
+<translation>Не удалось загрузить задачу с сервера. Повторите попытку.</translation>
 </message>
 <message>
 <source>Reload from server</source>
@@ -10681,6 +11495,34 @@ Do you want to install it anyway?</source>
 <translation>Очистить кэш календаря и перезагрузить задачи с сервера</translation>
 </message>
 <message>
+<source>The due date is in the past</source>
+<translation>Срок уже истёк</translation>
+</message>
+<message>
+<source>The todo item is due today</source>
+<translation>Срок задачи истекает сегодня</translation>
+</message>
+<message>
+<source>Not set</source>
+<translation>Не задан</translation>
+</message>
+<message>
+<source>Low</source>
+<translation>Низкий</translation>
+</message>
+<message>
+<source>Medium</source>
+<translation>Средний</translation>
+</message>
+<message>
+<source>High</source>
+<translation>Высокий</translation>
+</message>
+<message>
+<source>Priority: %1</source>
+<translation>Приоритет: %1</translation>
+</message>
+<message>
 <source>Remove todo item</source>
 <translation>Удалить задачу из списка</translation>
 </message>
@@ -10689,6 +11531,36 @@ Do you want to install it anyway?</source>
 This cannot be undone!</source>
 <translation>Удалить выделенную задачу из списка?
 Удалённые задачи восстановить нельзя!</translation>
+</message>
+<message numerus="yes">
+<source>%n todo item(s)</source>
+<translation>
+<numerusform>%n задача</numerusform>
+<numerusform>%n задачи</numerusform>
+<numerusform>%n задач</numerusform>
+<numerusform>%n задачи</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n todo item(s)</source>
+<translation>
+<numerusform>%1 из %n задачи</numerusform>
+<numerusform>%1 из %n задач</numerusform>
+<numerusform>%1 из %n задач</numerusform>
+<numerusform>%1 из %n задачи</numerusform>
+</translation>
+</message>
+<message>
+<source>Edit completed todo item</source>
+<translation>Изменить выполненную задачу</translation>
+</message>
+<message>
+<source>Edit todo item</source>
+<translation>Изменить задачу</translation>
+</message>
+<message>
+<source>No todo item selected</source>
+<translation>Задача не выбрана</translation>
 </message>
 <message>
 <source>Create sub-task</source>
@@ -10944,8 +11816,8 @@ This cannot be undone!</source>
 <translation>Корзина для заметок</translation>
 </message>
 <message>
-<source>Find note name</source>
-<translation>Найти имя заметки</translation>
+<source>Find note name or text</source>
+<translation>Поиск по имени или тексту заметки</translation>
 </message>
 <message>
 <source>&amp;Restore selected note on server</source>
@@ -10958,6 +11830,10 @@ This cannot be undone!</source>
 <message>
 <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
 <translation>&lt;h3&gt;Медленнее, но с версиями заметки&lt;/h3&gt;&lt;p&gt;Заметка будет восстановлена на сервере Nextcloud / ownCloud со всеми версиями.&lt;/p&gt;&lt;p&gt;Нужно дождаться её синхронизации с QOwnNotes через клиент Nextcloud / ownCloud.&lt;/p&gt;</translation>
+</message>
+<message>
+<source>Select a trashed note to see its text</source>
+<translation>Выберите заметку в корзине, чтобы просмотреть её текст</translation>
 </message>
 <message>
 <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
@@ -10974,6 +11850,40 @@ This cannot be undone!</source>
 <message>
 <source>&amp;Cancel</source>
 <translation>&amp;Отмена</translation>
+</message>
+<message numerus="yes">
+<source>%n trashed note(s)</source>
+<translation>
+<numerusform>%n заметка в корзине</numerusform>
+<numerusform>%n заметки в корзине</numerusform>
+<numerusform>%n заметок в корзине</numerusform>
+<numerusform>%n заметки в корзине</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n trashed note(s)</source>
+<translation>
+<numerusform>%1 из %n заметки в корзине</numerusform>
+<numerusform>%1 из %n заметок в корзине</numerusform>
+<numerusform>%1 из %n заметок в корзине</numerusform>
+<numerusform>%1 из %n заметки в корзине</numerusform>
+</translation>
+</message>
+<message>
+<source>Trashed: %1</source>
+<translation>Перемещена в корзину: %1</translation>
+</message>
+<message>
+<source>No trashed notes</source>
+<translation>В корзине нет заметок</translation>
+</message>
+<message>
+<source>No trashed note matches the search</source>
+<translation>В корзине нет заметок, соответствующих запросу</translation>
+</message>
+<message>
+<source>No trashed note selected</source>
+<translation>Заметка в корзине не выбрана</translation>
 </message>
 <message>
 <source>Delete note on server</source>
@@ -11031,12 +11941,36 @@ This cannot be undone!</source>
 <translation>Только скачивание</translation>
 </message>
 <message>
+<source>Version %1</source>
+<translation>Версия %1</translation>
+</message>
+<message>
+<source>You are currently using version %1</source>
+<translation>Вы используете версию %1</translation>
+</message>
+<message>
+<source>Download the new version without installing it</source>
+<translation>Скачать новую версию без установки</translation>
+</message>
+<message>
+<source>Download and install the new version</source>
+<translation>Скачать и установить новую версию</translation>
+</message>
+<message>
 <source>&amp;Download latest</source>
 <translation>&amp;Загрузить последнее</translation>
 </message>
 <message>
+<source>Open the download of the new version in your browser</source>
+<translation>Открыть ссылку для скачивания новой версии в браузере</translation>
+</message>
+<message>
 <source>&amp;Skip version</source>
 <translation>&amp;Пропустить версию</translation>
+</message>
+<message>
+<source>Don't show this dialog again for this version</source>
+<translation>Больше не показывать этот диалог для данной версии</translation>
 </message>
 <message>
 <source>&amp;Disable dialog</source>
@@ -11200,6 +12134,10 @@ This cannot be undone!</source>
 <translation>Версии заметки на сервере Nextcloud / ownCloud</translation>
 </message>
 <message>
+<source>Find text in versions</source>
+<translation>Поиск текста в версиях</translation>
+</message>
+<message>
 <source>Diff</source>
 <translation>Отличия</translation>
 </message>
@@ -11208,12 +12146,58 @@ This cannot be undone!</source>
 <translation>Текст заметки</translation>
 </message>
 <message>
+<source>Select a version to see its changes</source>
+<translation>Выберите версию, чтобы просмотреть изменения</translation>
+</message>
+<message>
+<source>Select a version to see its note text</source>
+<translation>Выберите версию, чтобы просмотреть её текст</translation>
+</message>
+<message>
 <source>&amp;Restore selected version</source>
 <translation>&amp;Восстановить выбранную версию</translation>
 </message>
 <message>
+<source>Replace the text of the current note with the selected version</source>
+<translation>Заменить текст текущей заметки текстом выбранной версии</translation>
+</message>
+<message>
 <source>&amp;Cancel</source>
 <translation>&amp;Отмена</translation>
+</message>
+<message>
+<source>Version from %1</source>
+<translation>Версия от %1</translation>
+</message>
+<message>
+<source>No versions loaded</source>
+<translation>Версии не загружены</translation>
+</message>
+<message>
+<source>No version matches the search</source>
+<translation>Нет версий, соответствующих запросу</translation>
+</message>
+<message>
+<source>No version selected</source>
+<translation>Версия не выбрана</translation>
+</message>
+<message numerus="yes">
+<source>%n version(s)</source>
+<translation>
+<numerusform>%n версия</numerusform>
+<numerusform>%n версии</numerusform>
+<numerusform>%n версий</numerusform>
+<numerusform>%n версии</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%1 of %n version(s)</source>
+<translation>
+<numerusform>%1 из %n версии</numerusform>
+<numerusform>%1 из %n версий</numerusform>
+<numerusform>%1 из %n версий</numerusform>
+<numerusform>%1 из %n версии</numerusform>
+</translation>
 </message>
 </context>
 <context>
@@ -11553,6 +12537,10 @@ This cannot be undone!</source>
 <source>Copy token</source>
 <translation>Скопировать токен</translation>
 </message>
+<message>
+<source>The token was copied to the clipboard.</source>
+<translation>Токен скопирован в буфер обмена.</translation>
+</message>
 </context>
 <context>
 <name>WelcomeDialog</name>
@@ -11627,6 +12615,22 @@ This cannot be undone!</source>
 <message>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить части программы, которые нуждаются в улучшении и исправлении ошибок. Это поведение можно отключить в настройках.</translation>
+</message>
+<message>
+<source>Layout</source>
+<translation>Компоновка</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud</source>
+<translation>Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Metrics</source>
+<translation>Показатели</translation>
+</message>
+<message>
+<source>Step %1 of %2: %3</source>
+<translation>Шаг %1 из %2: %3</translation>
 </message>
 <message>
 <source>Cannot create note path! You have to create the note folder manually!</source>
